@@ -7,16 +7,17 @@ TagManager:
   - Manager_Scene
   - Character
   - Exp
+  - Monster
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Chararcter
+  - Character
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Monster
+  - Bullet
+  - Exp
   - 
   - 
   - 
@@ -41,8 +42,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Land
+    uniqueID: 1862509435
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Weapon
+    uniqueID: 173898227
+    locked: 0
+  - name: Bullet
+    uniqueID: 795831043
     locked: 0
   m_RenderingLayers:
   - Default

@@ -4,7 +4,7 @@ namespace ZUN
 {
     public abstract class Item : MonoBehaviour
     {
-        [Header("Weaopn Info")]
+        [Header("Item Info")]
         [SerializeField] protected string serialNumber;
         [SerializeField] protected Sprite sprite;
         [SerializeField] protected string[] upgradeInfos;

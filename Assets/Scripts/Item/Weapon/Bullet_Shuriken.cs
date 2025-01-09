@@ -3,17 +3,11 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bullet_00 : MonoBehaviour
+    public class Bullet_Shuriken : Bullet
     {
-        [SerializeField] private float damage = 1.0f;
         [SerializeField] private float moveSpeed = 1.0f;
 
-        public float Damage
-        {
-            set{ damage = value; }
-        }
-
-        private void OnEnable() 
+        private void OnEnable()
         {
             StartCoroutine(DisableBullet());
         }
@@ -25,14 +19,14 @@ namespace ZUN
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if(other.gameObject.tag == "Monster")
+            if (other.gameObject.tag == "Monster")
             {
                 Monster monster = other.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
             }
         }
 
-        // ÏùºÏ†ï ÏãúÍ∞Ñ ÌõÑ ÎπÑÌôúÏÑ±Ìôî
+        // ¿œ¡§ Ω√∞£ »ƒ ∫Ò»∞º∫»≠
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(3.0f);

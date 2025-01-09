@@ -51,8 +51,8 @@ MonoBehaviour:
   - 'W00 : 1'
   - 'W00 : 2'
   character: {fileID: 0}
-  muzzle: {fileID: 0}
+  shootDirection: {fileID: 0}
   bullet: {fileID: 8328240190353918501, guid: b854e0767cf83d04f8e3cef10fc010be, type: 3}
   defaultDamage: 10
-  reloadTime: 1
+  reloadTime: 0.5
   magazine: []

@@ -4,24 +4,27 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Weapon_00 : Weapon
+    public class Soccerball : Weapon
     {
         [SerializeField] private Transform shootDirection = null;
 
+        [Header("Spac")]
         [SerializeField] private float defaultDamage = 0.0f;
         [SerializeField] private float reloadTime = 1.0f;
+
+        LayerMask monsterLayer;
 
         [Header("Magazine")]
         [SerializeField] private List<Bullet> magazine = null;
 
-        public float BulletDamage { get{ return defaultDamage + character.AttackPower; } }
-        
+        public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
+
         IEnumerator enumerator;
 
-        private void Awake() 
+        private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            shootDirection = character.GetShootDirection();
+            monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
         }
 
         public override void ActivateWeapon(float attackSpeed)
@@ -37,6 +40,7 @@ namespace ZUN
                 yield return new WaitForSeconds(reloadTime * attackSpeed);
 
                 bool bulletFound = false;
+                shootDirection.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
 
                 for (int i = 0; i < magazine.Count; i++)
                 {

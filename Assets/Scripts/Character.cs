@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace ZUN
 {
@@ -9,8 +8,7 @@ namespace ZUN
         [SerializeField] private Manager_Stage manager_Stage = null;
         [Space]
         [SerializeField] private Collider2D playerCollider = null;
-        [SerializeField] private GameObject shootDirection = null;
-        [SerializeField] private Transform muzzle = null;
+        [SerializeField] private Transform shootDirection = null;
         [SerializeField] private Weapon[] weapons = new Weapon[6];
         [SerializeField] private Passive[] passives = new Passive[6];
 
@@ -31,6 +29,7 @@ namespace ZUN
 
         public float AttackPower { get { return attackPower; } }
         public string InitialWeaponSN { get { return initialWeaponSN; } }
+        public Transform GetShootDirection() { return shootDirection; }
 
         private void Update()
         {

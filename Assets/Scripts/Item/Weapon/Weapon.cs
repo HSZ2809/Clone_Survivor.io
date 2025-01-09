@@ -5,6 +5,7 @@ namespace ZUN
     public abstract class Weapon : Item
     {
         [SerializeField] protected Character character = null;
+        [SerializeField] protected Bullet bullet = null;
 
         private void Start()
         {

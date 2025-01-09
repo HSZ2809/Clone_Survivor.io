@@ -1,31 +1,29 @@
+using UnityEditor.U2D.Aseprite;
+using UnityEditor.UIElements;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace ZUN
 {
-    public class Monster : MonoBehaviour
+    public abstract class Monster : MonoBehaviour
     {
         [Header("EXP Prefab")]
-        [SerializeField] private DropedEXP dropedEXP;
+        [SerializeField] protected DropedEXP dropedEXP;
 
         [Header("Status")]
-        [SerializeField] private float hp = 0.0f;
-        [SerializeField] private float attackPower = 0.0f;
-        [SerializeField] private float moveSpeed = 0.0f;
+        [SerializeField] protected float hp = 0.0f;
+        [SerializeField] protected float attackPower = 0.0f;
+        [SerializeField] protected float moveSpeed = 0.0f;
 
         [Header("Character Transform")]
-        [SerializeField] private Transform character = null;
+        [SerializeField] protected Transform character = null;
+
 
         private void Awake()
         {
+            tag = "Monster";
+            gameObject.layer = LayerMask.NameToLayer(tag);
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Transform>();
-        }
-
-        private void Update()
-        {
-            Vector3 moveDirection = (character.position - transform.position).normalized;
-            moveDirection *= moveSpeed;
-
-            transform.Translate(moveDirection * Time.deltaTime);
         }
 
         public float Hp
