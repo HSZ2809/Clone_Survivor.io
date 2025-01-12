@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bullet_00 : Bullet
+    public class Bullet_Shotgun : Bullet
     {
         [SerializeField] private float moveSpeed = 1.0f;
+        [SerializeField] private float disableTime = 1.0f;
 
         private void OnEnable() 
         {
@@ -29,7 +30,7 @@ namespace ZUN
         // 일정 시간 후 비활성화
         IEnumerator DisableBullet()
         {
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(disableTime);
             gameObject.SetActive(false);
         }
     }

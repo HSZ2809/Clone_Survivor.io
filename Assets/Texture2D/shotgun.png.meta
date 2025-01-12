@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bfeaf15cee3b41844a9fb237734bd7ba
+guid: e5a8b2f5ae282a145b8d430f4ac045fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6202774939744611811
-    second: Loading_BG_0
+      213: 1431373592901545995
+    second: xiandanqiang_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Loading_BG_0
+      name: shotgun_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 885
-        height: 2048
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d12d3d65e015be9a0800000000000000
-      internalID: -6202774939744611811
+      spriteID: b0075c1f2b24dd310800000000000000
+      internalID: 1431373592901545995
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 49672aabbf90bcb4c9848277c63d4eb4
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Loading_BG_0: -6202774939744611811
+      shotgun_0: 1431373592901545995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

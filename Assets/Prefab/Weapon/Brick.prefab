@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3666342212889238070}
   - component: {fileID: 7726620238666025770}
   m_Layer: 0
-  m_Name: Weapon_03
+  m_Name: Brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,9 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serialNumber: W03
-  sprite: {fileID: 0}
+  sprite: {fileID: 2633145506063642990, guid: ac057ae4acb40214394bdc09af217cb6, type: 3}
   upgradeInfos:
   - 'W03 : NEW'
   - 'W03 : 1'
   - 'W03 : 2'
   character: {fileID: 0}
+  bullet: {fileID: 3548736697122875988, guid: 01f4e18428ef2d34c9a4267b70b84f75, type: 3}
+  defaultDamage: 0
+  reloadTime: 1
+  magazine: []

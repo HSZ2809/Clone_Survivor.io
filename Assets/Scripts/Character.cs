@@ -8,7 +8,7 @@ namespace ZUN
         [SerializeField] private Manager_Stage manager_Stage = null;
         [Space]
         [SerializeField] private Collider2D playerCollider = null;
-        [SerializeField] private Transform shootDirection = null;
+        [SerializeField] private Transform moveDirection = null;
         [SerializeField] private Weapon[] weapons = new Weapon[6];
         [SerializeField] private Passive[] passives = new Passive[6];
 
@@ -28,8 +28,9 @@ namespace ZUN
         [SerializeField] private int amountOfPassive = 0;
 
         public float AttackPower { get { return attackPower; } }
+        public float AttackSpeed { get { return attackSpeed; } }
         public string InitialWeaponSN { get { return initialWeaponSN; } }
-        public Transform GetShootDirection() { return shootDirection; }
+        public Transform GetShootDirection() { return moveDirection; }
 
         private void Update()
         {
@@ -44,7 +45,7 @@ namespace ZUN
             if (h != 0.0f || v != 0.0f)
             {
                 float angle = Mathf.Atan2(v, h) * Mathf.Rad2Deg;
-                shootDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+                this.moveDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             }
         }
 
@@ -72,7 +73,7 @@ namespace ZUN
             if (amountOfWeapon < weapons.Length)
             {
                 weapons[amountOfWeapon] = newWeapon;
-                weapons[amountOfWeapon].ActivateWeapon(attackSpeed);
+                weapons[amountOfWeapon].ActivateWeapon();
                 amountOfWeapon += 1;
                 return;
             }

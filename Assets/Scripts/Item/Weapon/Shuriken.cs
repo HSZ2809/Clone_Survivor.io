@@ -8,18 +8,17 @@ namespace ZUN
     {
         [SerializeField] private SpriteRenderer handSprite = null;
 
-        [SerializeField] private Transform shootDirection = null;
+        [SerializeField] private Transform shootDir = null;
 
         [Header("Spac")]
         [SerializeField] private float defaultDamage = 0.0f;
         [SerializeField] private float reloadTime = 1.0f;
-
-        [Header("Range")]
-        LayerMask monsterLayer;
         [SerializeField] float findRange = 10.0f;
+        LayerMask monsterLayer;
 
         [Header("Magazine")]
-        [SerializeField] private List<Bullet> magazine = null;
+        [SerializeField] private Bullet_Shuriken bullet = null;
+        [SerializeField] private List<Bullet_Shuriken> magazine = null;
 
         public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
 
@@ -32,17 +31,17 @@ namespace ZUN
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
         }
 
-        public override void ActivateWeapon(float attackSpeed)
+        public override void ActivateWeapon()
         {
-            enumerator = Shoot(attackSpeed);
+            enumerator = Shoot();
             StartCoroutine(enumerator);
         }
 
-        IEnumerator Shoot(float attackSpeed)
+        IEnumerator Shoot()
         {
             while (true)
             {
-                yield return new WaitForSeconds(reloadTime * attackSpeed);
+                yield return new WaitForSeconds(reloadTime * character.AttackSpeed);
 
                 bool bulletFound = false;
                 SetAim();
@@ -51,8 +50,8 @@ namespace ZUN
                 {
                     if (!magazine[i].gameObject.activeSelf)
                     {
-                        magazine[i].gameObject.transform.position = shootDirection.position;
-                        magazine[i].gameObject.transform.localRotation = shootDirection.rotation;
+                        magazine[i].gameObject.transform.position = shootDir.position;
+                        magazine[i].gameObject.transform.localRotation = shootDir.rotation;
                         magazine[i].Damage = BulletDamage;
                         magazine[i].gameObject.SetActive(true);
                         bulletFound = true;
@@ -62,7 +61,7 @@ namespace ZUN
 
                 if (!bulletFound)
                 {
-                    Bullet bulletInstance = Instantiate(bullet, shootDirection.position, shootDirection.rotation);
+                    Bullet_Shuriken bulletInstance = Instantiate(bullet, shootDir.position, shootDir.rotation);
                     bulletInstance.Damage = BulletDamage;
                     magazine.Add(bulletInstance);
                 }
@@ -74,7 +73,6 @@ namespace ZUN
             Vector3 aim;
 
             Collider2D[] monsterCol;
-
             monsterCol = Physics2D.OverlapCircleAll(transform.position, findRange, monsterLayer);
 
             if (monsterCol.Length < 1)
@@ -101,7 +99,7 @@ namespace ZUN
 
                 aim = (transform.position - nearestMon.position).normalized;
                 float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-                shootDirection.transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+                shootDir.transform.rotation = Quaternion.Euler(0, 0, angle + 90);
             }
         }
 

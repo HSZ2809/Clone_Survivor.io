@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bfeaf15cee3b41844a9fb237734bd7ba
+guid: 75ff283e661686d45b4a558f5a6aaada
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6202774939744611811
-    second: Loading_BG_0
+      213: -4344672679298443742
+    second: Glow_010_Red #311341_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Loading_BG_0
+      name: Glow_010_Red #311341_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 885
-        height: 2048
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d12d3d65e015be9a0800000000000000
-      internalID: -6202774939744611811
+      spriteID: 226521d973f94b3c0800000000000000
+      internalID: -4344672679298443742
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Loading_BG_0: -6202774939744611811
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

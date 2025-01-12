@@ -44,7 +44,7 @@ namespace ZUN
             
             for (int i = 0; i < Btn_Options.Length; i++)
             {
-                int randomIndex = UnityEngine.Random.Range(0, shuffle.Count);
+                int randomIndex = Random.Range(0, shuffle.Count);
                 string pichedSN = shuffle[randomIndex];
 
                 itemDictionary.TryGetValue(pichedSN, out Item item);
@@ -82,6 +82,8 @@ namespace ZUN
             {
                 Debug.LogWarning("Initial Weapon Not Found");
             }
+
+            initialWeapon.Upgrade();
         }
 
         public void SelectItem(string _itemSN)

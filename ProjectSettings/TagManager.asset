@@ -8,6 +8,7 @@ TagManager:
   - Character
   - Exp
   - Monster
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Monster
   - Bullet
   - Exp
-  - 
+  - Wall
   - 
   - 
   - 
@@ -44,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Land
     uniqueID: 1862509435
+    locked: 0
+  - name: Bullet_Floor
+    uniqueID: 2989597611
     locked: 0
   - name: Default
     uniqueID: 0

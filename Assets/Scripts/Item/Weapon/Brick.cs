@@ -4,37 +4,36 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Weapon_00 : Weapon
+    public class Brick : Weapon
     {
-        [SerializeField] private Transform shootDirection = null;
-
+        [Header("Spac")]
         [SerializeField] private float defaultDamage = 0.0f;
         [SerializeField] private float reloadTime = 1.0f;
 
         [Header("Magazine")]
-        [SerializeField] private List<Bullet> magazine = null;
+        [SerializeField] private Bullet_Brick bullet = null;
+        [SerializeField] private List<Bullet_Brick> magazine = null;
 
-        public float BulletDamage { get{ return defaultDamage + character.AttackPower; } }
-        
+        public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
+
         IEnumerator enumerator;
 
-        private void Awake() 
+        private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            shootDirection = character.GetShootDirection();
         }
 
-        public override void ActivateWeapon(float attackSpeed)
+        public override void ActivateWeapon()
         {
-            enumerator = Shoot(attackSpeed);
+            enumerator = Shoot();
             StartCoroutine(enumerator);
         }
 
-        IEnumerator Shoot(float attackSpeed)
+        IEnumerator Shoot()
         {
             while (true)
             {
-                yield return new WaitForSeconds(reloadTime * attackSpeed);
+                yield return new WaitForSeconds(reloadTime * character.AttackSpeed);
 
                 bool bulletFound = false;
 
@@ -42,8 +41,7 @@ namespace ZUN
                 {
                     if (!magazine[i].gameObject.activeSelf)
                     {
-                        magazine[i].gameObject.transform.position = shootDirection.position;
-                        magazine[i].gameObject.transform.localRotation = shootDirection.rotation;
+                        magazine[i].gameObject.transform.position = transform.position;
                         magazine[i].Damage = BulletDamage;
                         magazine[i].gameObject.SetActive(true);
                         bulletFound = true;
@@ -53,11 +51,17 @@ namespace ZUN
 
                 if (!bulletFound)
                 {
-                    Bullet bulletInstance = Instantiate(bullet, shootDirection.position, shootDirection.rotation);
+                    Bullet_Brick bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
                     bulletInstance.Damage = BulletDamage;
                     magazine.Add(bulletInstance);
                 }
             }
+        }
+
+        public override void Upgrade()
+        {
+            Debug.Log("Brick Mathod");
+            return;
         }
     }
 }

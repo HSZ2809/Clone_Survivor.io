@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bfeaf15cee3b41844a9fb237734bd7ba
+guid: cedd8c61cf8834849aab3940dc65806a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6202774939744611811
-    second: Loading_BG_0
+      213: 8593462655657743714
+    second: JoystickBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Loading_BG_0
+      name: JoystickBG_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 885
-        height: 2048
+        width: 332
+        height: 332
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d12d3d65e015be9a0800000000000000
-      internalID: -6202774939744611811
+      spriteID: 265901551cc124770800000000000000
+      internalID: 8593462655657743714
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Loading_BG_0: -6202774939744611811
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
