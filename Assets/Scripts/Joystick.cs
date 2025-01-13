@@ -7,20 +7,22 @@ namespace ZUN
     {
         [SerializeField] private RectTransform lever = new RectTransform();
         [SerializeField] private RectTransform stickBase = new RectTransform();
-        private Vector3 leverCenter = Vector3.zero;
+        private Vector3 baseOriginalLocation;
+        private Vector3 leverCenter;
         private float radius = 1.0f;
-        private float deadZone = 0.0f;
-        private float joystickSize = 20.0f;
+        private readonly float deadZone = 0.0f;
+        private readonly float joystickSize = 20.0f;
 
         private void Start()
         {
+            baseOriginalLocation = stickBase.position;
             leverCenter = stickBase.position;
             radius = Screen.height / joystickSize;
         }
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            ProcessInput(eventData.position);
+            LocationSet(eventData.position);
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -32,7 +34,20 @@ namespace ZUN
         {
             lever.anchoredPosition = Vector2.zero;
 
+            BackOriginalLocation();
             UpdatePositionValues();
+        }
+
+        private void LocationSet(Vector2 eventData)
+        {
+            stickBase.transform.position = eventData;
+            leverCenter = new Vector3(eventData.x, eventData.y);
+        }
+
+        private void BackOriginalLocation()
+        {
+            stickBase.transform.position = baseOriginalLocation;
+            leverCenter = baseOriginalLocation;
         }
 
         private void ProcessInput(Vector2 inputPosition)

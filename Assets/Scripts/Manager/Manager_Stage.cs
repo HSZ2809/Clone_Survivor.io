@@ -82,8 +82,6 @@ namespace ZUN
             {
                 Debug.LogWarning("Initial Weapon Not Found");
             }
-
-            initialWeapon.Upgrade();
         }
 
         public void SelectItem(string _itemSN)

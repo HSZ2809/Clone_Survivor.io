@@ -1479,7 +1479,7 @@ MonoBehaviour:
   attackPower: 10
   attackSpeed: 2
   exp: 0
-  initialWeaponSN: W03
+  initialWeaponSN: 000
   amountOfWeapon: 0
   amountOfPassive: 0
 --- !u!50 &552528802
@@ -3034,10 +3034,10 @@ RectTransform:
   - {fileID: 1557329542}
   m_Father: {fileID: 768569855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 86}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235348936
 MonoBehaviour:
@@ -3836,9 +3836,9 @@ RectTransform:
   - {fileID: 1956554522}
   m_Father: {fileID: 1235348935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557329543
