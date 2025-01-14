@@ -8,12 +8,14 @@ namespace ZUN
         [SerializeField] private Transform sprite;
 
         [SerializeField] private float rotationSpeed = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        // [SerializeField] private float disableTime = 1.0f;
+        // public float DisableTime { get; set; }
 
-        private void OnEnable()
-        {
-            StartCoroutine(DisableBullet());
-        }
+
+        //private void OnEnable()
+        //{
+        //    StartCoroutine(DisableBullet());
+        //}
 
         private void Update()
         {
@@ -29,11 +31,10 @@ namespace ZUN
             }
         }
 
-        // 일정 시간 후 비활성화
-        IEnumerator DisableBullet()
-        {
-            yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
-        }
+        //IEnumerator DisableBullet()
+        //{
+        //    yield return new WaitForSeconds(DisableTime);
+        //    gameObject.SetActive(false);
+        //}
     }
 }

@@ -1479,7 +1479,7 @@ MonoBehaviour:
   attackPower: 10
   attackSpeed: 2
   exp: 0
-  initialWeaponSN: 000
+  initialWeaponSN: W03
   amountOfWeapon: 0
   amountOfPassive: 0
 --- !u!50 &552528802

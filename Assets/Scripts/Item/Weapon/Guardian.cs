@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ZUN
@@ -9,19 +10,17 @@ namespace ZUN
         [SerializeField] private Transform pivot = null;
 
         [Header("Spac")]
-        [SerializeField] private float defaultDamage = 0.0f;
-        [SerializeField] private float reloadTime = 1.0f;
-        [SerializeField] private float rotationSpeed = 1.0f;
-        [SerializeField] private float range = 1.0f;
-        [SerializeField] int initMag = 2;
+        [SerializeField] float damage = 0.0f;
+        [SerializeField] float cooldown = 1.0f;
+        [SerializeField] float rotationSpeed = 1.0f;
+        [SerializeField] float range = 1.0f;
+        [SerializeField] int magazineSize = 2;
 
         [Header("Magazine")]
         [SerializeField] private Bullet_Guardian bullet = null;
-        [SerializeField] private List<Bullet_Guardian> magazine = null;
+        [SerializeField] private List<Bullet_Guardian> objPool = null;
 
-        public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
-
-        IEnumerator enumerator;
+        public float BulletDamage { get { return damage + character.AttackPower; } }
 
         private void Awake()
         {
@@ -34,40 +33,34 @@ namespace ZUN
 
         public override void ActivateWeapon()
         {
-            enumerator = Shoot();
+            
 
-            float angle = (360f / initMag) * Mathf.Deg2Rad;
-
-            for (int i = 0; i < initMag; i++)
-            {
-                float x = Mathf.Cos(angle * i);
-                float y = Mathf.Sin(angle * i);
-                Vector3 temp = new(x * range, y * range, 0);
-
-                Bullet_Guardian bulletInstance = Instantiate(bullet, temp, transform.rotation);
-                bulletInstance.transform.parent = pivot.transform;
-                bulletInstance.Damage = BulletDamage;
-                magazine.Add(bulletInstance);
-            }
-
-            StartCoroutine(enumerator);
+            StartCoroutine(LoadWeapon());
         }
-
-        IEnumerator Shoot()
+        IEnumerator LoadWeapon()
         {
-            while (true)
-            {
-                yield return new WaitForSeconds(reloadTime * character.AttackSpeed);
+            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
 
-                for (int i = 0; i < magazine.Count; i++)
-                {
-                    if (!magazine[i].gameObject.activeSelf)
-                    {
-                        magazine[i].Damage = BulletDamage;
-                        magazine[i].gameObject.SetActive(true);
-                    }
-                }
-            }
+            // StartCoroutine(Shoot());
         }
+
+        //IEnumerator Shoot()
+        //{
+        //    float angle = (360f / magazineSize) * Mathf.Deg2Rad;
+
+        //    for (int i = 0; i < magazineSize; i++)
+        //    {
+        //        float x = Mathf.Cos(angle * i);
+        //        float y = Mathf.Sin(angle * i);
+        //        Vector3 temp = new(x * range, y * range, 0);
+
+                
+
+        //        Bullet_Guardian bulletInstance = Instantiate(bullet, temp, transform.rotation);
+        //        bulletInstance.transform.parent = pivot.transform;
+        //        bulletInstance.Damage = BulletDamage;
+        //        objPool.Add(bulletInstance);
+        //    }
+        //}
     }
 }

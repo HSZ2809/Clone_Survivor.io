@@ -17,10 +17,10 @@ namespace ZUN
             return; 
         }
 
-        public override void Upgrade()
+        public override bool TryUpgrade(int level)
         {
             Debug.LogWarning("Weapon : Upgrade Mathod Not Set");
-            return;
+            return false;
         }
     }
 }

@@ -14,10 +14,10 @@ namespace ZUN
         public Sprite Sprite { get { return sprite; } }
         public string[] UpgradeInfos { get { return upgradeInfos; } }
 
-        public virtual void Upgrade() 
+        public virtual bool TryUpgrade(int level) 
         {
             Debug.LogWarning("Item : Upgrade Mathod Not Set");
-            return; 
+            return false; 
         }
     }
 }
