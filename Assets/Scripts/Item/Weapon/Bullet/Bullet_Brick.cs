@@ -20,7 +20,7 @@ namespace ZUN
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Monster")
+            if (other.gameObject.CompareTag("Monster"))
             {
                 Monster monster = other.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);

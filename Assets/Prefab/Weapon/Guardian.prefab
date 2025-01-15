@@ -82,12 +82,14 @@ MonoBehaviour:
   - 'W04 : NEW'
   - 'W04 : 1'
   - 'W04 : 2'
+  level: 1
   character: {fileID: 0}
-  bullet: {fileID: 3242241058138910677, guid: def4f5caa5d7f4f459a8d9d159dd3b7f, type: 3}
   pivot: {fileID: 67278748951394305}
-  defaultDamage: 0
-  reloadTime: 1
-  rotationSpeed: 30
-  range: 5
-  initMag: 2
-  magazine: []
+  damage: 0
+  cooldown: 1
+  rotationSpeed: 150
+  range: 4
+  duration: 5
+  magazineSize: 2
+  prefab_bullet: {fileID: 3242241058138910677, guid: def4f5caa5d7f4f459a8d9d159dd3b7f, type: 3}
+  objPool: []

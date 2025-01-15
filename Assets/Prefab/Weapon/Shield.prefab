@@ -47,9 +47,10 @@ MonoBehaviour:
   serialNumber: W06
   sprite: {fileID: -5889086245967186940, guid: e3ebf6ee558a9da48975f661d5730a7a, type: 3}
   upgradeInfos: []
+  level: 1
   character: {fileID: 0}
   defaultDamage: 0
   attackTerm: 1
   range: 1
-  bullet: {fileID: 564299865242549548, guid: 0434c5503db5c3d458df14215b69abe5, type: 3}
+  prefab_bullet: {fileID: 564299865242549548, guid: 0434c5503db5c3d458df14215b69abe5, type: 3}
   magazine: {fileID: 0}

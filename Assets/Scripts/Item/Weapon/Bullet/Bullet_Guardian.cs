@@ -8,14 +8,6 @@ namespace ZUN
         [SerializeField] private Transform sprite;
 
         [SerializeField] private float rotationSpeed = 1.0f;
-        // [SerializeField] private float disableTime = 1.0f;
-        // public float DisableTime { get; set; }
-
-
-        //private void OnEnable()
-        //{
-        //    StartCoroutine(DisableBullet());
-        //}
 
         private void Update()
         {
@@ -24,17 +16,11 @@ namespace ZUN
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Monster")
+            if (other.gameObject.CompareTag("Monster"))
             {
                 Monster monster = other.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
             }
         }
-
-        //IEnumerator DisableBullet()
-        //{
-        //    yield return new WaitForSeconds(DisableTime);
-        //    gameObject.SetActive(false);
-        //}
     }
 }

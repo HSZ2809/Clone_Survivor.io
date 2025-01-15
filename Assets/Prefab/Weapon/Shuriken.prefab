@@ -170,11 +170,13 @@ MonoBehaviour:
   - 'W01 : NEW'
   - 'W01 : 1'
   - 'W01 : 2'
+  level: 1
   character: {fileID: 0}
-  bullet: {fileID: 290257998231394159, guid: 44c3b09c808dbc24d9fc11ee2d65071f, type: 3}
   handSprite: {fileID: 4231129112234039560}
   shootDir: {fileID: 4765015687711468970}
-  defaultDamage: 0
-  reloadTime: 0.5
-  findRange: 10
-  magazine: []
+  damage: 0
+  cooldown: 1
+  magazineSize: 1
+  firerate: 0.1
+  prefab_bullet: {fileID: 290257998231394159, guid: 44c3b09c808dbc24d9fc11ee2d65071f, type: 3}
+  objPool: []

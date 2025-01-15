@@ -15,13 +15,10 @@ namespace ZUN
         [SerializeField] private float range = 1.0f;
         LayerMask monsterLayer;
 
-        IEnumerator enumerator;
-
         private void Start()
         {
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
-            enumerator = Attack();
-            StartCoroutine(enumerator);
+            StartCoroutine(Attack());
         }
 
         IEnumerator Attack()
@@ -38,6 +35,12 @@ namespace ZUN
                     col.gameObject.GetComponent<Monster>().Hit(damage);
                 }
             }
+        }
+
+        public void SetRange(float r)
+        {
+            range = r;
+            transform.localScale = new Vector3(range, range, 0);
         }
     }
 }

@@ -12,8 +12,8 @@ namespace ZUN
         [SerializeField] private float firerate = 0.3f;
         [SerializeField] private int magazineSize = 1;
 
-        [Header("bullet")]
-        [SerializeField] private Bullet_Brick bullet = null;
+        [Header("Bullet")]
+        [SerializeField] private Bullet_Brick prefab_bullet = null;
         [SerializeField] private List<Bullet_Brick> objPool = null;
 
         public float BulletDamage { get { return damage + character.AttackPower; } }
@@ -57,7 +57,7 @@ namespace ZUN
 
                 if (!bulletFound)
                 {
-                    Bullet_Brick bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
+                    Bullet_Brick bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
                     bulletInstance.Damage = BulletDamage;
                     objPool.Add(bulletInstance);
                 }
@@ -68,21 +68,8 @@ namespace ZUN
 
         public override bool TryUpgrade(int level)
         {
-            /********************************
-             * 
-             * 1. 업그레이드할 레벨을 받아온다
-             * 2. switch문으로 해당 효과를 적용한다
-             * 3. 성공하면 성공 확인, 실패하면 실패 로직
-             * 
-             * @ case를 enum화 한다?
-             ********************************/
-
             switch(level)
             {
-                case 1:
-                    magazineSize += 1;
-                    damage += 10;
-                    return true;
                 case 2:
                     magazineSize += 1;
                     damage += 10;

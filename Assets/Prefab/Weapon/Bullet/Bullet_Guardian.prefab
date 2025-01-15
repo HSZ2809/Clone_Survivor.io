@@ -104,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5237422419740159151
 Transform:
   m_ObjectHideFlags: 0
@@ -135,8 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   sprite: {fileID: 9049311584320088356}
-  rotationSpeed: 30
-  disableTime: 5
+  rotationSpeed: 400
 --- !u!58 &4984671004778868511
 CircleCollider2D:
   m_ObjectHideFlags: 0

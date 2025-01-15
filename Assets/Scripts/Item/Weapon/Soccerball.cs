@@ -7,16 +7,16 @@ namespace ZUN
     public class Soccerball : Weapon
     {
         [Header("Spac")]
-        [SerializeField] private float defaultDamage = 0.0f;
-        [SerializeField] private float reloadTime = 1.0f;
+        [SerializeField] private float damage;
+        [SerializeField] private float cooldown;
+        [SerializeField] private int magazineSize;
+        [SerializeField] private float moveSpeed;
 
         [Header("Magazine")]
         [SerializeField] private Bullet_Soccerball Bullet = null;
         [SerializeField] private List<Bullet_Soccerball> magazine = null;
 
-        public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
-
-        IEnumerator enumerator;
+        public float BulletDamage { get { return damage + character.AttackPower; } }
 
         private void Awake()
         {
@@ -25,25 +25,30 @@ namespace ZUN
 
         public override void ActivateWeapon()
         {
-            enumerator = Shoot();
-            StartCoroutine(enumerator);
+            StartCoroutine(Shoot());
+        }
+
+        IEnumerator LoadWeapon()
+        {
+            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
+
+            StartCoroutine(Shoot());
         }
 
         IEnumerator Shoot()
         {
-            while (true)
+            for (int i = 0; i < magazineSize; i++)
             {
-                yield return new WaitForSeconds(reloadTime * character.AttackSpeed);
-
                 bool bulletFound = false;
 
-                for (int i = 0; i < magazine.Count; i++)
+                for (int k = 0; k < magazine.Count; k++)
                 {
-                    if (!magazine[i].gameObject.activeSelf)
+                    if (!magazine[k].gameObject.activeSelf)
                     {
-                        magazine[i].gameObject.transform.position = transform.position;
-                        magazine[i].Damage = BulletDamage;
-                        magazine[i].gameObject.SetActive(true);
+                        magazine[k].gameObject.transform.position = transform.position;
+                        magazine[k].Damage = BulletDamage;
+                        magazine[k].MoveSpeed = moveSpeed;
+                        magazine[k].gameObject.SetActive(true);
                         bulletFound = true;
                         break;
                     }
@@ -53,9 +58,45 @@ namespace ZUN
                 {
                     Bullet_Soccerball bulletInstance = Instantiate(Bullet, transform.position, transform.rotation);
                     bulletInstance.Damage = BulletDamage;
+                    bulletInstance.MoveSpeed = moveSpeed;
                     magazine.Add(bulletInstance);
                 }
             }
+
+            StartCoroutine(LoadWeapon());
+            yield return null;
+        }
+
+        public override bool TryUpgrade(int level)
+        {
+            switch (level)
+            {
+                case 2:
+                    magazineSize += 1;
+                    return true;
+                case 3:
+                    moveSpeed += 3;
+                    damage += 10;
+                    return true;
+                case 4:
+                    moveSpeed += 3;
+                    damage += 10;
+                    return true;
+                case 5:
+                    magazineSize += 1;
+                    return true;
+                case 6:
+                    Debug.Log("Brick TryUpgrade() : evolution");
+                    return true;
+                default:
+                    Debug.LogWarning("Brick TryUpgrade() : invalid level");
+                    return false;
+            }
+        }
+
+        public void TempMethod()
+        {
+            TryUpgrade(2);
         }
     }
 }

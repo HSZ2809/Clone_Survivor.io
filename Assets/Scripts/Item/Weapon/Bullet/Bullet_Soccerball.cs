@@ -5,9 +5,11 @@ namespace ZUN
 {
     public class Bullet_Soccerball : Bullet
     {
-        [SerializeField] private float moveSpeed = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float disableTime;
         [SerializeField] private Vector2 direction = Vector2.up;
+
+        public float MoveSpeed { set { moveSpeed = value; } }
 
         private Camera mainCam;
 
@@ -18,19 +20,19 @@ namespace ZUN
 
         private void OnEnable()
         {
-            direction = Random.insideUnitCircle;
+            direction = Random.insideUnitCircle.normalized;
             StartCoroutine(DisableBullet());
         }
 
         private void Update()
         {
             CamBoundCheck();
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
+            transform.Translate(moveSpeed * Time.deltaTime * direction);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Monster")
+            if (other.gameObject.CompareTag("Monster"))
             {
                 Vector2 normal = other.contacts[0].normal;
                 direction = Vector2.Reflect(direction, normal);
@@ -42,16 +44,19 @@ namespace ZUN
 
         private void CamBoundCheck()
         {
-            Vector3 position = transform.position;
+            Vector3 pos = transform.position;
+            Vector3 camPos = mainCam.transform.position;
+
             float halfHeight = mainCam.orthographicSize;
             float halfWidth = halfHeight * mainCam.aspect;
 
-            if(position.x > halfWidth || position.x < -halfWidth)
+            if (pos.x > camPos.x + halfWidth || pos.x < camPos.x - halfWidth)
                 direction.x = -direction.x;
 
-            if(position.y > halfHeight || position.y < -halfHeight)
+            if (pos.y > camPos.y + halfHeight || pos.y < camPos.y - halfHeight)
                 direction.y = -direction.y;
         }
+
 
         // 일정 시간 후 비활성화
         IEnumerator DisableBullet()

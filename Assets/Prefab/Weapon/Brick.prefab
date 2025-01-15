@@ -50,8 +50,11 @@ MonoBehaviour:
   - 'W03 : NEW'
   - 'W03 : 1'
   - 'W03 : 2'
+  level: 1
   character: {fileID: 0}
-  bullet: {fileID: 3548736697122875988, guid: 01f4e18428ef2d34c9a4267b70b84f75, type: 3}
-  defaultDamage: 0
-  reloadTime: 1
-  magazine: []
+  damage: 0
+  cooldown: 1
+  firerate: 0.3
+  magazineSize: 1
+  prefab_bullet: {fileID: 3548736697122875988, guid: 01f4e18428ef2d34c9a4267b70b84f75, type: 3}
+  objPool: []

@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  moveSpeed: 10
-  disableTime: 3
+  moveSpeed: 15
+  disableTime: 1

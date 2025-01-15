@@ -7,15 +7,15 @@ namespace ZUN
     public class Shield : Weapon
     {
         [Header("Spac")]
-        [SerializeField] private float defaultDamage = 0.0f;
-        [SerializeField] private float attackTerm = 1.0f;
+        [SerializeField] private float damage = 0.0f;
+        // [SerializeField] private float attackTerm = 1.0f;
         [SerializeField] private float range = 1.0f;
 
         [Header("Magazine")]
-        [SerializeField] private Bullet_Shield bullet = null;
+        [SerializeField] private Bullet_Shield prefab_bullet = null;
         [SerializeField] private Bullet_Shield magazine = null;
 
-        public float BulletDamage { get { return defaultDamage + character.AttackPower; } }
+        public float BulletDamage { get { return damage + character.AttackPower; } }
 
         private void Awake()
         {
@@ -24,10 +24,47 @@ namespace ZUN
 
         public override void ActivateWeapon()
         {
-            Bullet_Shield bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
+            Bullet_Shield bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
             bulletInstance.Damage = BulletDamage;
             bulletInstance.transform.parent = transform;
             magazine = bulletInstance;
+        }
+
+        public override bool TryUpgrade(int level)
+        {
+            switch(level)
+            {
+                case 2:
+                    range *= 1.2f;
+                    damage += 10.0f;
+                    magazine.Damage = BulletDamage;
+                    magazine.SetRange(range);
+                    return true;
+                case 3:
+                    range *= 1.2f;
+                    damage += 10.0f;
+                    magazine.Damage = BulletDamage;
+                    magazine.SetRange(range);
+                    return true;
+                case 4:
+                    range *= 1.2f;
+                    damage += 10.0f;
+                    magazine.Damage = BulletDamage;
+                    magazine.SetRange(range);
+                    return true;
+                case 5:
+                    range *= 1.2f;
+                    damage += 10.0f;
+                    magazine.Damage = BulletDamage;
+                    magazine.SetRange(range);
+                    return true;
+                case 6:
+                    Debug.Log("Shield TryUpgrade() : evolution");
+                    return true;
+                default:
+                    Debug.LogWarning("Shield TryUpgrade() : invalid level");
+                    return false;
+            }
         }
     }
 }

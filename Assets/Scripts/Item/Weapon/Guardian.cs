@@ -10,14 +10,15 @@ namespace ZUN
         [SerializeField] private Transform pivot = null;
 
         [Header("Spac")]
-        [SerializeField] float damage = 0.0f;
-        [SerializeField] float cooldown = 1.0f;
-        [SerializeField] float rotationSpeed = 1.0f;
-        [SerializeField] float range = 1.0f;
-        [SerializeField] int magazineSize = 2;
+        [SerializeField] float damage;
+        [SerializeField] float cooldown;
+        [SerializeField] float rotationSpeed;
+        [SerializeField] float range;
+        [SerializeField] float duration;
+        [SerializeField] int magazineSize;
 
-        [Header("Magazine")]
-        [SerializeField] private Bullet_Guardian bullet = null;
+        [Header("Bullet")]
+        [SerializeField] private Bullet_Guardian prefab_bullet = null;
         [SerializeField] private List<Bullet_Guardian> objPool = null;
 
         public float BulletDamage { get { return damage + character.AttackPower; } }
@@ -30,37 +31,93 @@ namespace ZUN
         {
             pivot.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
-
+        
         public override void ActivateWeapon()
         {
-            
-
-            StartCoroutine(LoadWeapon());
+            SetAngle();
         }
+
         IEnumerator LoadWeapon()
         {
             yield return new WaitForSeconds(cooldown * character.AttackSpeed);
 
-            // StartCoroutine(Shoot());
+            StartCoroutine(Shoot());
         }
 
-        //IEnumerator Shoot()
-        //{
-        //    float angle = (360f / magazineSize) * Mathf.Deg2Rad;
+        IEnumerator Shoot()
+        {
+            foreach (var obj in objPool)
+                obj.gameObject.SetActive(true);
 
-        //    for (int i = 0; i < magazineSize; i++)
-        //    {
-        //        float x = Mathf.Cos(angle * i);
-        //        float y = Mathf.Sin(angle * i);
-        //        Vector3 temp = new(x * range, y * range, 0);
+            yield return new WaitForSeconds(duration);
 
-                
+            foreach (var obj in objPool)
+                obj.gameObject.SetActive(false);
 
-        //        Bullet_Guardian bulletInstance = Instantiate(bullet, temp, transform.rotation);
-        //        bulletInstance.transform.parent = pivot.transform;
-        //        bulletInstance.Damage = BulletDamage;
-        //        objPool.Add(bulletInstance);
-        //    }
-        //}
+            StartCoroutine(LoadWeapon());
+        }
+
+        void SetAngle()
+        {
+            StopCoroutine(LoadWeapon());
+            StopCoroutine(Shoot());
+
+            foreach(var obj in objPool)
+                obj.gameObject.SetActive(false);
+
+            while(magazineSize > objPool.Count)
+            {
+                Bullet_Guardian bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
+                bulletInstance.transform.parent = pivot.transform;
+                objPool.Add(bulletInstance);
+            }
+
+            float angle = (360f / magazineSize) * Mathf.Deg2Rad;
+
+            for (int i = 0; i < objPool.Count; i++)
+            {
+                float x = Mathf.Cos(angle * i);
+                float y = Mathf.Sin(angle * i);
+                Vector3 temp = new(transform.position.x + (x * range), transform.position.y + (y * range), 0);
+
+                objPool[i].gameObject.transform.position = temp;
+                objPool[i].Damage = BulletDamage;
+            }
+
+            StartCoroutine(Shoot());
+        }
+
+        public override bool TryUpgrade(int level)
+        {
+            switch(level)
+            {
+                case 2:
+                    magazineSize += 1;
+                    damage += 10;
+                    SetAngle();
+                    return true;
+                case 3:
+                    magazineSize += 1;
+                    damage += 10;
+                    SetAngle();
+                    return true;
+                case 4:
+                    magazineSize += 1;
+                    damage += 10;
+                    SetAngle();
+                    return true;
+                case 5:
+                    magazineSize += 1;
+                    damage += 10;
+                    SetAngle();
+                    return true;
+                case 6:
+                    Debug.Log("Guardian TryUpgrade() : evolution");
+                    return true;
+                default:
+                    Debug.LogWarning("Guardian TryUpgrade() : invalid level");
+                    return false;
+            }
+        }
     }
 }
