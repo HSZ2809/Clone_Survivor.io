@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ZUN
@@ -18,62 +17,61 @@ namespace ZUN
         readonly float findRange = 10.0f;
         LayerMask monsterLayer;
 
-        [Header("Magazine")]
+        [Header("Bullet")]
         [SerializeField] private Bullet_Shuriken prefab_bullet = null;
         [SerializeField] private List<Bullet_Shuriken> objPool = null;
 
         public float BulletDamage { get { return damage + character.AttackPower; } }
+
+        IEnumerator enumerator;
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             handSprite.sortingLayerName = "Weapon";
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
+            enumerator = Shoot();
         }
 
         public override void ActivateWeapon()
         {
-            StartCoroutine(LoadWeapon());
-        }
-
-        IEnumerator LoadWeapon()
-        {
-            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
-
-            StartCoroutine(Shoot());
+            StartCoroutine(enumerator);
         }
 
         IEnumerator Shoot()
         {
-            for(int i = 0; i < magazineSize; i++)
+            while (true)
             {
-                yield return new WaitForSeconds(firerate);
-
-                bool bulletFound = false;
-                SetAim();
-
-                for (int k = 0; k < objPool.Count; k++)
+                for (int i = 0; i < magazineSize; i++)
                 {
-                    if (!objPool[k].gameObject.activeSelf)
+                    yield return new WaitForSeconds(firerate);
+
+                    bool bulletFound = false;
+                    SetAim();
+
+                    for (int k = 0; k < objPool.Count; k++)
                     {
-                        objPool[k].gameObject.transform.position = shootDir.position;
-                        objPool[k].gameObject.transform.localRotation = shootDir.rotation;
-                        objPool[k].Damage = BulletDamage;
-                        objPool[k].gameObject.SetActive(true);
-                        bulletFound = true;
-                        break;
+                        if (!objPool[k].gameObject.activeSelf)
+                        {
+                            objPool[k].gameObject.transform.position = shootDir.position;
+                            objPool[k].gameObject.transform.localRotation = shootDir.rotation;
+                            objPool[k].Damage = BulletDamage;
+                            objPool[k].gameObject.SetActive(true);
+                            bulletFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!bulletFound)
+                    {
+                        Bullet_Shuriken bulletInstance = Instantiate(prefab_bullet, shootDir.position, shootDir.rotation);
+                        bulletInstance.Damage = BulletDamage;
+                        objPool.Add(bulletInstance);
                     }
                 }
 
-                if (!bulletFound)
-                {
-                    Bullet_Shuriken bulletInstance = Instantiate(prefab_bullet, shootDir.position, shootDir.rotation);
-                    bulletInstance.Damage = BulletDamage;
-                    objPool.Add(bulletInstance);
-                }
+                yield return new WaitForSeconds(cooldown * character.AttackSpeed);
             }
-
-            StartCoroutine(LoadWeapon());
         }
 
         private void SetAim()
@@ -113,31 +111,38 @@ namespace ZUN
 
         public override bool TryUpgrade(int level)
         {
+            StopCoroutine(enumerator);
+
             switch (level)
             {
                 case 2:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 3:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 4:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break; ;
                 case 5:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 6:
                     Debug.Log("Brick TryUpgrade() : evolution");
-                    return true;
+                    break;
                 default:
                     Debug.LogWarning("Brick TryUpgrade() : invalid level");
                     return false;
             }
+
+            enumerator = Shoot();
+            StartCoroutine(enumerator);
+
+            return true;
         }
 
         private void OnDrawGizmos()

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ZUN
@@ -21,11 +20,14 @@ namespace ZUN
         [SerializeField] private Bullet_Guardian prefab_bullet = null;
         [SerializeField] private List<Bullet_Guardian> objPool = null;
 
+        IEnumerator enumerator;
+
         public float BulletDamage { get { return damage + character.AttackPower; } }
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            enumerator = Shoot();
         }
         private void Update()
         {
@@ -37,30 +39,25 @@ namespace ZUN
             SetAngle();
         }
 
-        IEnumerator LoadWeapon()
-        {
-            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
-
-            StartCoroutine(Shoot());
-        }
-
         IEnumerator Shoot()
         {
-            foreach (var obj in objPool)
-                obj.gameObject.SetActive(true);
+            while(true)
+            {
+                foreach (var obj in objPool)
+                    obj.gameObject.SetActive(true);
 
-            yield return new WaitForSeconds(duration);
+                yield return new WaitForSeconds(duration);
 
-            foreach (var obj in objPool)
-                obj.gameObject.SetActive(false);
+                foreach (var obj in objPool)
+                    obj.gameObject.SetActive(false);
 
-            StartCoroutine(LoadWeapon());
+                yield return new WaitForSeconds(cooldown * character.AttackSpeed);
+            }
         }
 
         void SetAngle()
         {
-            StopCoroutine(LoadWeapon());
-            StopCoroutine(Shoot());
+            StopCoroutine(enumerator);
 
             foreach(var obj in objPool)
                 obj.gameObject.SetActive(false);
@@ -84,7 +81,8 @@ namespace ZUN
                 objPool[i].Damage = BulletDamage;
             }
 
-            StartCoroutine(Shoot());
+            enumerator = Shoot();
+            StartCoroutine(enumerator);
         }
 
         public override bool TryUpgrade(int level)
@@ -94,30 +92,29 @@ namespace ZUN
                 case 2:
                     magazineSize += 1;
                     damage += 10;
-                    SetAngle();
-                    return true;
+                    break;
                 case 3:
                     magazineSize += 1;
                     damage += 10;
-                    SetAngle();
-                    return true;
+                    break;
                 case 4:
                     magazineSize += 1;
                     damage += 10;
-                    SetAngle();
-                    return true;
+                    break;
                 case 5:
                     magazineSize += 1;
                     damage += 10;
-                    SetAngle();
-                    return true;
+                    break;
                 case 6:
                     Debug.Log("Guardian TryUpgrade() : evolution");
-                    return true;
+                    break;
                 default:
                     Debug.LogWarning("Guardian TryUpgrade() : invalid level");
                     return false;
             }
+
+            SetAngle();
+            return true;
         }
     }
 }

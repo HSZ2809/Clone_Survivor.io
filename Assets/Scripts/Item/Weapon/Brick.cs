@@ -16,83 +16,89 @@ namespace ZUN
         [SerializeField] private Bullet_Brick prefab_bullet = null;
         [SerializeField] private List<Bullet_Brick> objPool = null;
 
+        IEnumerator enumerator;
+
         public float BulletDamage { get { return damage + character.AttackPower; } }
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            enumerator = Shoot();
         }
 
         public override void ActivateWeapon()
         {
-            StartCoroutine(LoadWeapon());
-        }
-
-        IEnumerator LoadWeapon()
-        {
-            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
-
-            StartCoroutine(Shoot());
+            StartCoroutine(enumerator);
         }
 
         IEnumerator Shoot()
         {
-            for(int i = 0; i < magazineSize; i++)
+            while(true)
             {
-                yield return new WaitForSeconds(firerate);
-
-                bool bulletFound = false;
-
-                for (int k = 0; k < objPool.Count; k++)
+                for (int i = 0; i < magazineSize; i++)
                 {
-                    if (!objPool[i].gameObject.activeSelf)
+                    yield return new WaitForSeconds(firerate);
+
+                    bool bulletFound = false;
+
+                    for (int k = 0; k < objPool.Count; k++)
                     {
-                        objPool[i].gameObject.transform.position = transform.position;
-                        objPool[i].Damage = BulletDamage;
-                        objPool[i].gameObject.SetActive(true);
-                        bulletFound = true;
-                        break;
+                        if (!objPool[i].gameObject.activeSelf)
+                        {
+                            objPool[i].gameObject.transform.position = transform.position;
+                            objPool[i].Damage = BulletDamage;
+                            objPool[i].gameObject.SetActive(true);
+                            bulletFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!bulletFound)
+                    {
+                        Bullet_Brick bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
+                        bulletInstance.Damage = BulletDamage;
+                        objPool.Add(bulletInstance);
                     }
                 }
 
-                if (!bulletFound)
-                {
-                    Bullet_Brick bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
-                    bulletInstance.Damage = BulletDamage;
-                    objPool.Add(bulletInstance);
-                }
+                yield return new WaitForSeconds(cooldown * character.AttackSpeed);
             }
-
-            StartCoroutine(LoadWeapon());
         }
 
         public override bool TryUpgrade(int level)
         {
+            StopCoroutine(enumerator);
+
             switch(level)
             {
                 case 2:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 3:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 4:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 5:
                     magazineSize += 1;
                     damage += 10;
-                    return true;
+                    break;
                 case 6:
                     Debug.Log("Brick TryUpgrade() : evolution");
-                    return true;
+                    break;
                 default:
                     Debug.LogWarning("Brick TryUpgrade() : invalid level");
                     return false;
             }
+
+            enumerator = Shoot();
+            StartCoroutine(enumerator);
+
+            return true;
         }
     }
 }

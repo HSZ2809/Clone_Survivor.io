@@ -12,91 +12,93 @@ namespace ZUN
         [SerializeField] private int magazineSize;
         [SerializeField] private float moveSpeed;
 
-        [Header("Magazine")]
+        [Header("Bullet")]
         [SerializeField] private Bullet_Soccerball Bullet = null;
         [SerializeField] private List<Bullet_Soccerball> magazine = null;
 
         public float BulletDamage { get { return damage + character.AttackPower; } }
 
+        IEnumerator enumerator;
+
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            enumerator = Shoot();
         }
 
         public override void ActivateWeapon()
         {
-            StartCoroutine(Shoot());
-        }
-
-        IEnumerator LoadWeapon()
-        {
-            yield return new WaitForSeconds(cooldown * character.AttackSpeed);
-
-            StartCoroutine(Shoot());
+            StartCoroutine(enumerator);
         }
 
         IEnumerator Shoot()
         {
-            for (int i = 0; i < magazineSize; i++)
+            while (true)
             {
-                bool bulletFound = false;
-
-                for (int k = 0; k < magazine.Count; k++)
+                for (int i = 0; i < magazineSize; i++)
                 {
-                    if (!magazine[k].gameObject.activeSelf)
+                    bool bulletFound = false;
+
+                    for (int k = 0; k < magazine.Count; k++)
                     {
-                        magazine[k].gameObject.transform.position = transform.position;
-                        magazine[k].Damage = BulletDamage;
-                        magazine[k].MoveSpeed = moveSpeed;
-                        magazine[k].gameObject.SetActive(true);
-                        bulletFound = true;
-                        break;
+                        if (!magazine[k].gameObject.activeSelf)
+                        {
+                            magazine[k].gameObject.transform.position = transform.position;
+                            magazine[k].Damage = BulletDamage;
+                            magazine[k].MoveSpeed = moveSpeed;
+                            magazine[k].CharMoveSpeed = character.MoveSpeed;
+                            magazine[k].gameObject.SetActive(true);
+                            bulletFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!bulletFound)
+                    {
+                        Bullet_Soccerball bulletInstance = Instantiate(Bullet, transform.position, transform.rotation);
+                        bulletInstance.Damage = BulletDamage;
+                        bulletInstance.MoveSpeed = moveSpeed;
+                        bulletInstance.CharMoveSpeed = character.MoveSpeed;
+                        magazine.Add(bulletInstance);
                     }
                 }
 
-                if (!bulletFound)
-                {
-                    Bullet_Soccerball bulletInstance = Instantiate(Bullet, transform.position, transform.rotation);
-                    bulletInstance.Damage = BulletDamage;
-                    bulletInstance.MoveSpeed = moveSpeed;
-                    magazine.Add(bulletInstance);
-                }
+                yield return new WaitForSeconds(cooldown * character.AttackSpeed);
             }
-
-            StartCoroutine(LoadWeapon());
-            yield return null;
         }
 
         public override bool TryUpgrade(int level)
         {
+            StopCoroutine(enumerator);
+
             switch (level)
             {
                 case 2:
                     magazineSize += 1;
-                    return true;
+                    break;
                 case 3:
                     moveSpeed += 3;
                     damage += 10;
-                    return true;
+                    break;
                 case 4:
                     moveSpeed += 3;
                     damage += 10;
-                    return true;
+                    break;
                 case 5:
                     magazineSize += 1;
-                    return true;
+                    break;
                 case 6:
                     Debug.Log("Brick TryUpgrade() : evolution");
-                    return true;
+                    break;
                 default:
                     Debug.LogWarning("Brick TryUpgrade() : invalid level");
                     return false;
             }
-        }
 
-        public void TempMethod()
-        {
-            TryUpgrade(2);
+            enumerator = Shoot();
+            StartCoroutine(enumerator);
+
+            return true;
         }
     }
 }

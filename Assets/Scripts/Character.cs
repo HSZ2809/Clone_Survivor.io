@@ -29,8 +29,9 @@ namespace ZUN
 
         public float AttackPower { get { return attackPower; } }
         public float AttackSpeed { get { return attackSpeed; } }
+        public float MoveSpeed { get { return moveSpeed; } }
         public string InitialWeaponSN { get { return initialWeaponSN; } }
-        public Transform GetShootDirection() { return moveDirection; }
+        public Transform GetShootDir() { return moveDirection; }
 
         private void Update()
         {

@@ -11,7 +11,7 @@ namespace ZUN
         // [SerializeField] private float attackTerm = 1.0f;
         [SerializeField] private float range = 1.0f;
 
-        [Header("Magazine")]
+        [Header("Bullet")]
         [SerializeField] private Bullet_Shield prefab_bullet = null;
         [SerializeField] private Bullet_Shield magazine = null;
 
@@ -39,32 +39,34 @@ namespace ZUN
                     damage += 10.0f;
                     magazine.Damage = BulletDamage;
                     magazine.SetRange(range);
-                    return true;
+                    break;
                 case 3:
                     range *= 1.2f;
                     damage += 10.0f;
                     magazine.Damage = BulletDamage;
                     magazine.SetRange(range);
-                    return true;
+                    break;
                 case 4:
                     range *= 1.2f;
                     damage += 10.0f;
                     magazine.Damage = BulletDamage;
                     magazine.SetRange(range);
-                    return true;
+                    break;
                 case 5:
                     range *= 1.2f;
                     damage += 10.0f;
                     magazine.Damage = BulletDamage;
                     magazine.SetRange(range);
-                    return true;
+                    break;
                 case 6:
                     Debug.Log("Shield TryUpgrade() : evolution");
-                    return true;
+                    break;
                 default:
                     Debug.LogWarning("Shield TryUpgrade() : invalid level");
                     return false;
             }
+
+            return true;
         }
     }
 }

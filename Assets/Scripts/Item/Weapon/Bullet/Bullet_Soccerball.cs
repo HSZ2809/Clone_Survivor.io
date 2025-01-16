@@ -7,9 +7,10 @@ namespace ZUN
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
-        [SerializeField] private Vector2 direction = Vector2.up;
+        [SerializeField] private Vector2 direction;
 
         public float MoveSpeed { set { moveSpeed = value; } }
+        public float CharMoveSpeed { get; set; }
 
         private Camera mainCam;
 
@@ -50,11 +51,26 @@ namespace ZUN
             float halfHeight = mainCam.orthographicSize;
             float halfWidth = halfHeight * mainCam.aspect;
 
-            if (pos.x > camPos.x + halfWidth || pos.x < camPos.x - halfWidth)
+            if (pos.x > camPos.x + halfWidth)
+            {
                 direction.x = -direction.x;
-
-            if (pos.y > camPos.y + halfHeight || pos.y < camPos.y - halfHeight)
+                transform.Translate(CharMoveSpeed * Time.deltaTime * Vector3.left);
+            }   
+            if (pos.x < camPos.x - halfWidth)
+            {
+                direction.x = -direction.x;
+                transform.Translate(CharMoveSpeed * Time.deltaTime * Vector3.right);
+            }
+            if (pos.y > camPos.y + halfHeight)
+            {
                 direction.y = -direction.y;
+                transform.Translate(CharMoveSpeed * Time.deltaTime * Vector3.down);
+            }   
+            if (pos.y < camPos.y - halfHeight)
+            {
+                direction.y = -direction.y;
+                transform.Translate(CharMoveSpeed * Time.deltaTime * Vector3.up);
+            }
         }
 
 
