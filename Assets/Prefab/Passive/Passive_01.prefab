@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c28516efc34c084695d994887d6822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serialNumber: P01
+  id: P1
+  skillName: P1
   sprite: {fileID: 0}
   upgradeInfos:
   - 'P01 : NEW'
   - 'P01 : 1'
   - 'P01 : 2'
+  level: 1
   character: {fileID: 0}

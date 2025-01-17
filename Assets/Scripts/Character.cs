@@ -1,3 +1,5 @@
+using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace ZUN
@@ -7,10 +9,9 @@ namespace ZUN
         [Header("Connected Components")]
         [SerializeField] private Manager_Stage manager_Stage = null;
         [Space]
-        [SerializeField] private Collider2D playerCollider = null;
         [SerializeField] private Transform moveDirection = null;
-        [SerializeField] private Weapon[] weapons = new Weapon[6];
-        [SerializeField] private Passive[] passives = new Passive[6];
+        [SerializeField] private ActiveSkill[] actives = new ActiveSkill[6];
+        [SerializeField] private PassiveSkill[] passives = new PassiveSkill[6];
 
         [Header("Connected Joystick")]
         [SerializeField] private Joystick joystick;
@@ -19,18 +20,18 @@ namespace ZUN
         [SerializeField] int level = 1;
         [SerializeField] private float hp = 0.0f;
         [SerializeField] private float moveSpeed = 0.0f;
-        [SerializeField] private float attackPower = 0.0f;
-        [SerializeField] private float attackSpeed = 0.0f;
+        [SerializeField] private float atkPower = 0.0f;
+        [SerializeField] private float atkSpeed = 0.0f;
         [SerializeField] private int exp = 0;
-        [SerializeField] private string initialWeaponSN = "default";
+        [SerializeField] private string initialActiveID = "default";
 
-        [SerializeField] private int amountOfWeapon = 0;
+        [SerializeField] private int amountOfActive = 0;
         [SerializeField] private int amountOfPassive = 0;
 
-        public float AttackPower { get { return attackPower; } }
-        public float AttackSpeed { get { return attackSpeed; } }
+        public float AtkPower { get { return atkPower; } }
+        public float AtkSpeed { get { return atkSpeed; } }
         public float MoveSpeed { get { return moveSpeed; } }
-        public string InitialWeaponSN { get { return initialWeaponSN; } }
+        public string InitialActiveID { get { return initialActiveID; } }
         public Transform GetShootDir() { return moveDirection; }
 
         private void Update()
@@ -69,20 +70,20 @@ namespace ZUN
             }
         }
 
-        public void RegistrationWeapon(Weapon newWeapon)
+        public void SetActive(ActiveSkill newActive)
         {
-            if (amountOfWeapon < weapons.Length)
+            if (amountOfActive < actives.Length)
             {
-                weapons[amountOfWeapon] = newWeapon;
-                weapons[amountOfWeapon].ActivateWeapon();
-                amountOfWeapon += 1;
+                actives[amountOfActive] = newActive;
+                actives[amountOfActive].ActiveSkillOn();
+                amountOfActive += 1;
                 return;
             }
             else
-                Debug.Log("Weapon Overflow!");
+                Debug.Log("Active Overflow!");
         }
 
-        public void RegistrationPassive(Passive newPassive)
+        public void SetPassive(PassiveSkill newPassive)
         {
             if (amountOfPassive < passives.Length)
             {
@@ -103,25 +104,30 @@ namespace ZUN
                 exp -= 10;
                 level += 1;
 
-                manager_Stage.ShowOptions(amountOfWeapon, GetWISNs(), amountOfPassive);
+                manager_Stage.LevelUp(ref actives, ref passives);
             }
         }
 
-        private string[] GetWISNs()
+        public void SetSkill(string skillName)
         {
-            string[] SNs = new string[6];
+            int index = -1;
 
-            for (int i = 0; i < 6; i++)
+            index = Array.FindIndex(actives, element => element != null && element.ID == skillName);
+            if(index > -1)
             {
-                if (weapons[i] == null)
-                    break;
-                else
-                {
-                    SNs[i] = weapons[i].SerialNumber;
-                }
+                actives[index].Upgrade();
+                return;
+            }
+                
+
+            index = Array.FindIndex(passives, element => element != null && element.ID == skillName);
+            if (index > -1)
+            {
+                passives[index].Upgrade();
+                return;
             }
 
-            return SNs;
+            manager_Stage.InitSkill(skillName);
         }
     }
 }

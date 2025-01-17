@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3174361370431055247
+--- !u!1 &8291868288942675357
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4407988361477620937}
-  - component: {fileID: 3127066307590382915}
+  - component: {fileID: 2760591952253411816}
+  - component: {fileID: 9023929729611267968}
   m_Layer: 0
-  m_Name: Passive_00
+  m_Name: Soccerball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4407988361477620937
+--- !u!4 &2760591952253411816
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3174361370431055247}
+  m_GameObject: {fileID: 8291868288942675357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,24 +32,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3127066307590382915
+--- !u!114 &9023929729611267968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3174361370431055247}
+  m_GameObject: {fileID: 8291868288942675357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f369615988a8c46bac059201fe92a8, type: 3}
+  m_Script: {fileID: 11500000, guid: ed55051348ece1a498b2755e67f06424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: P0
-  skillName: P0
-  sprite: {fileID: 0}
+  id: Soccerball
+  skillName: "\uCD95\uAD6C\uACF5"
+  sprite: {fileID: 2713212259442328949, guid: ae9b66fde94096343abd39f595212cdc, type: 3}
   upgradeInfos:
-  - 'P00 : NEW'
-  - 'P00 : 1'
-  - 'P00 : 2'
+  - 'W02 : NEW'
+  - 'W02 : 1'
+  - 'W02 : 2'
   level: 1
   character: {fileID: 0}
+  synergyID: 
+  coefficient: 6
+  cooldown: 15
+  magazineSize: 1
+  moveSpeed: 12
+  Bullet: {fileID: 6988003984139392093, guid: 1e691c2495550614485906fb6ab12b49, type: 3}
+  magazine: []
