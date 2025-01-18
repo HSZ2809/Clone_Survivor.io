@@ -16,7 +16,8 @@ namespace ZUN
         [SerializeField] private Bullet_Shotgun prefab_bullet = null;
         [SerializeField] private List<Bullet_Shotgun> objPool = null;
 
-        public float BulletDamage { get { return coefficient * character.AtkPower; } }
+        public float BulletDamage { get { return coefficient * character.Atk; } }
+        public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
 
@@ -47,7 +48,7 @@ namespace ZUN
                     objPool[i].gameObject.SetActive(true);
                 }
                 
-                yield return new WaitForSeconds(cooldown * character.AtkSpeed);
+                yield return new WaitForSeconds(Cooldown);
             }
         }
 
@@ -70,6 +71,8 @@ namespace ZUN
 
         public override void Upgrade()
         {
+            level += 1;
+
             switch (level)
             {
                 case 2:

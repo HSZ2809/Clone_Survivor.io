@@ -18,16 +18,16 @@ namespace ZUN
             transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (other.gameObject.CompareTag("Monster"))
+            if (coll.gameObject.CompareTag("Monster"))
             {
-                Monster monster = other.gameObject.GetComponent<Monster>();
+                Monster monster = coll.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
             }
         }
 
-        // ÀÏÁ¤ ½Ã°£ ÈÄ ºñÈ°¼ºÈ­
+        // ì¼ì • ì‹œê°„ í›„ ë¹„í™œì„±í™”
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);

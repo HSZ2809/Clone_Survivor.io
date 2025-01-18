@@ -22,7 +22,7 @@ namespace ZUN
 
         IEnumerator enumerator;
 
-        public float BulletDamage { get { return coefficient * character.AtkPower; } }
+        public float BulletDamage { get { return coefficient * character.Atk; } }
 
         private void Awake()
         {
@@ -87,7 +87,9 @@ namespace ZUN
 
         public override void Upgrade()
         {
-            switch(level)
+            level += 1;
+
+            switch (level)
             {
                 case 2:
                     magazineSize += 1;

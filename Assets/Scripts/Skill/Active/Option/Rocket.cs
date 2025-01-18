@@ -22,7 +22,7 @@ namespace ZUN
 
         IEnumerator enumerator;
 
-        public float BulletDamage { get { return coefficient * character.AtkPower; } }
+        public float BulletDamage { get { return coefficient * character.Atk; } }
 
         private void Awake()
         {
@@ -110,6 +110,8 @@ namespace ZUN
         public override void Upgrade()
         {
             StopCoroutine(enumerator);
+
+            level += 1;
 
             switch (level)
             {

@@ -14,11 +14,11 @@ namespace ZUN
             sprite.Rotate(0, 0, rotationSpeed *(Time.deltaTime));
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (other.gameObject.CompareTag("Monster"))
+            if (coll.gameObject.CompareTag("Monster"))
             {
-                Monster monster = other.gameObject.GetComponent<Monster>();
+                Monster monster = coll.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
             }
         }

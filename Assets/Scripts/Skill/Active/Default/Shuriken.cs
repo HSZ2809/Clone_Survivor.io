@@ -21,7 +21,8 @@ namespace ZUN
         [SerializeField] private Bullet_Shuriken prefab_bullet = null;
         [SerializeField] private List<Bullet_Shuriken> objPool = null;
 
-        public float BulletDamage { get { return coefficient * character.AtkPower; } }
+        public float BulletDamage { get { return coefficient * character.Atk; } }
+        public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
 
@@ -70,7 +71,7 @@ namespace ZUN
                     }
                 }
 
-                yield return new WaitForSeconds(cooldown * character.AtkSpeed);
+                yield return new WaitForSeconds(Cooldown);
             }
         }
 
@@ -113,22 +114,24 @@ namespace ZUN
         {
             StopCoroutine(enumerator);
 
+            level += 1;
+
             switch (level)
             {
                 case 2:
-                    magazineSize += 1;
+                    magazineSize = 2;
                     coefficient = 2;
                     break;
                 case 3:
-                    magazineSize += 1;
+                    magazineSize = 3;
                     coefficient = 3;
                     break;
                 case 4:
-                    magazineSize += 1;
+                    magazineSize = 4;
                     coefficient = 4;
                     break; ;
                 case 5:
-                    magazineSize += 1;
+                    magazineSize = 5;
                     coefficient = 5.6f;
                     break;
                 case 6:

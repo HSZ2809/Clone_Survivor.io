@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 02.Lobby
-  sceneChangeTime: 2
+  sceneChangeTime: 1
 --- !u!1 &1761212619
 GameObject:
   m_ObjectHideFlags: 0

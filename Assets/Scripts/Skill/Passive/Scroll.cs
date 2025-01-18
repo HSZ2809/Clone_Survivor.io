@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace ZUN
+{
+    public class Scroll : PassiveSkill
+    {
+        [SerializeField] float coefficient;
+        [SerializeField] float addExpGain;
+
+        private void Awake()
+        {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            addExpGain = character.ExpGain * coefficient;
+            character.UpgradeExpGain(addExpGain);
+        }
+
+        public override void Upgrade()
+        {
+            level += 1;
+
+            if (level < 6)
+                character.UpgradeExpGain(addExpGain);
+            else
+                Debug.LogWarning("Scroll Upgrade() : level exceeded");
+        }
+    }
+}

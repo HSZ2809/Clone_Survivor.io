@@ -16,7 +16,7 @@ namespace ZUN
         [SerializeField] private Bullet_Soccerball Bullet = null;
         [SerializeField] private List<Bullet_Soccerball> magazine = null;
 
-        public float BulletDamage { get { return coefficient * character.AtkPower; } }
+        public float BulletDamage { get { return coefficient * character.Atk; } }
 
         IEnumerator enumerator;
 
@@ -70,6 +70,8 @@ namespace ZUN
         public override void Upgrade()
         {
             StopCoroutine(enumerator);
+
+            level += 1;
 
             switch (level)
             {

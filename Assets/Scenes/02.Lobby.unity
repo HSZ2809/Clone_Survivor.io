@@ -579,8 +579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64be4ae6041df0b4b97b05c075f6c78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 03.1.1Stage
-  sceneChangeTime: 2
+  sceneName: 03.Stage.1
+  sceneChangeTime: 1
 --- !u!1 &1067938190
 GameObject:
   m_ObjectHideFlags: 0

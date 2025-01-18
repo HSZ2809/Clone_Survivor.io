@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
@@ -13,6 +14,12 @@ namespace ZUN
         [SerializeField] private Canvas selectWindow = null;
         [SerializeField] private SelectSkill[] Options = null;
 
+        [Header("Monster")]
+        [SerializeField] private Monster mon1;
+        public Transform tempPos;
+        int monsterAmount = 10;
+        List<Monster> monObjPool = new List<Monster>();
+
         [Header("Item List")]
         [SerializeField] private ActiveSkill[] actives = null;
         [SerializeField] private PassiveSkill[] passives = null;
@@ -22,9 +29,45 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+        }
 
-            FillItemDictionary(actives, skillDic);
-            FillItemDictionary(passives, skillDic);
+        private void Start()
+        {
+            InitSkillDic(actives, skillDic);
+            InitSkillDic(passives, skillDic);
+
+            StartCoroutine(SetMon());
+        }
+
+        IEnumerator SetMon()
+        {
+            while (true)
+            {
+                for (int i = 0; i < monsterAmount; i++)
+                {
+                    bool monFound = false;
+
+                    for (int k = 0; k < monObjPool.Count; k++)
+                    {
+                        if (!monObjPool[k].gameObject.activeSelf)
+                        {
+                            monObjPool[k].gameObject.transform.position = tempPos.position;
+                            monObjPool[k].Hp = 100;
+                            monObjPool[k].gameObject.SetActive(true);
+                            monFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!monFound)
+                    {
+                        Monster mon = Instantiate(mon1, tempPos.position, tempPos.rotation);
+                        monObjPool.Add(mon);
+                    }
+
+                    yield return new WaitForSeconds(1.0f);
+                }
+            }
         }
 
         public void LevelUp(ref ActiveSkill[] actives, ref PassiveSkill[] passives)
@@ -141,7 +184,12 @@ namespace ZUN
             }
         }
 
-        private void FillItemDictionary<T>(T[] items, Dictionary<string, T> itemDictionary) where T : Skill
+        public void AddSkillDic(ActiveSkill skill)
+        {
+            skillDic.Add(skill.SkillName, skill);
+        }
+
+        private void InitSkillDic<T>(T[] items, Dictionary<string, T> itemDictionary) where T : Skill
         {
             foreach (var item in items)
             {

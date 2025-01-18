@@ -74,7 +74,7 @@ namespace ZUN
         }
 
 
-        // ÀÏÁ¤ ½Ã°£ ÈÄ ºñÈ°¼ºÈ­
+        // ì¼ì • ì‹œê°„ í›„ ë¹„í™œì„±í™”
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);

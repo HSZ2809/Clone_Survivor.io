@@ -7,32 +7,57 @@ namespace ZUN
     public class Character : MonoBehaviour
     {
         [Header("Connected Components")]
-        [SerializeField] private Manager_Stage manager_Stage = null;
-        [Space]
         [SerializeField] private Transform moveDirection = null;
         [SerializeField] private ActiveSkill[] actives = new ActiveSkill[6];
         [SerializeField] private PassiveSkill[] passives = new PassiveSkill[6];
+
+        Manager_Stage manager_Stage;
+        Manager_Inventory inventory;
 
         [Header("Connected Joystick")]
         [SerializeField] private Joystick joystick;
 
         [Header("Status")]
-        [SerializeField] int level = 1;
-        [SerializeField] private float hp = 0.0f;
-        [SerializeField] private float moveSpeed = 0.0f;
-        [SerializeField] private float atkPower = 0.0f;
-        [SerializeField] private float atkSpeed = 0.0f;
-        [SerializeField] private int exp = 0;
-        [SerializeField] private string initialActiveID = "default";
+        [SerializeField] int level;
+        [SerializeField] int exp;
+        [SerializeField] float maxHp;
+        [SerializeField] float currentHp;
+        [SerializeField] float atk;
+        [SerializeField] float atkSpeed;
+        [SerializeField] float bulletSpeed;
+        [SerializeField] float range;
+        [SerializeField] float def;
+        [SerializeField] float moveSpeed;
+        [SerializeField] float expGain;
+        [SerializeField] float goldGain;
+        [SerializeField] float regeneration;
+        [SerializeField] float duration;
+        [SerializeField] float itemRange;
 
+        [Space]
         [SerializeField] private int amountOfActive = 0;
         [SerializeField] private int amountOfPassive = 0;
 
-        public float AtkPower { get { return atkPower; } }
+        public float MaxHp { get { return maxHp; } }
+        public float Atk { get { return atk; } }
         public float AtkSpeed { get { return atkSpeed; } }
+        public float BulletSpeed { get { return bulletSpeed; } }
         public float MoveSpeed { get { return moveSpeed; } }
-        public string InitialActiveID { get { return initialActiveID; } }
+        public float ExpGain { get { return expGain; } }
+        public float Duration { get { return duration; } }
         public Transform GetShootDir() { return moveDirection; }
+
+        private void Awake()
+        {
+            manager_Stage = GameObject.FindGameObjectWithTag("Manager_Stage").GetComponent<Manager_Stage>();
+            inventory = GameObject.FindGameObjectWithTag("Manager_Inventory").GetComponent<Manager_Inventory>();
+        }
+
+        private void Start()
+        {
+            manager_Stage.AddSkillDic(inventory.Active);
+            manager_Stage.InitSkill(inventory.Active.SkillName);
+        }
 
         private void Update()
         {
@@ -56,7 +81,7 @@ namespace ZUN
             if (other.gameObject.CompareTag("Monster"))
             {
                 float damage = other.gameObject.GetComponent<Monster>().AttackPower;
-                hp -= damage;
+                currentHp -= damage;
                 Debug.Log("Player : hit! - damage : " + damage);
             }
         }
@@ -66,11 +91,11 @@ namespace ZUN
             if (other.CompareTag("Exp"))
             {
                 AddExp(other.GetComponent<DropedEXP>().Exp);
-                Destroy(other.gameObject);
+                other.gameObject.SetActive(false);
             }
         }
 
-        public void SetActive(ActiveSkill newActive)
+        public void SetActiveSkill(ActiveSkill newActive)
         {
             if (amountOfActive < actives.Length)
             {
@@ -83,7 +108,7 @@ namespace ZUN
                 Debug.Log("Active Overflow!");
         }
 
-        public void SetPassive(PassiveSkill newPassive)
+        public void SetPassiveSkill(PassiveSkill newPassive)
         {
             if (amountOfPassive < passives.Length)
             {
@@ -99,9 +124,9 @@ namespace ZUN
         {
             exp += _exp;
 
-            if (exp >= 10)
+            if (exp >= 100)
             {
-                exp -= 10;
+                exp = 0;
                 level += 1;
 
                 manager_Stage.LevelUp(ref actives, ref passives);
@@ -128,6 +153,36 @@ namespace ZUN
             }
 
             manager_Stage.InitSkill(skillName);
+        }
+
+        public void UpgradeRegeneration(float plus)
+        {
+            regeneration += plus;
+        }
+
+        public void UpgradeDuration(float plus)
+        {
+            duration += plus;
+        }
+
+        public void UpgradeMaxHp(float plus)
+        {
+            maxHp += plus;
+        }
+
+        public void UpgradeAtk(float plus)
+        {
+            atk += plus;
+        }
+
+        public void UpgradeExpGain(float plus)
+        {
+            expGain += plus;
+        }
+
+        public void UpgradeMoveSpeed(float plus)
+        {
+            moveSpeed += plus;
         }
     }
 }

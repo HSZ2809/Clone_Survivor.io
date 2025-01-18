@@ -5,8 +5,8 @@ namespace ZUN
 {
     public class Bullet_Shotgun : Bullet
     {
-        [SerializeField] private float moveSpeed = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float disableTime;
 
         private void OnEnable() 
         {
@@ -18,11 +18,11 @@ namespace ZUN
             transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (other.gameObject.CompareTag("Monster"))
+            if (coll.gameObject.CompareTag("Monster"))
             {
-                Monster monster = other.gameObject.GetComponent<Monster>();
+                Monster monster = coll.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
             }
         }

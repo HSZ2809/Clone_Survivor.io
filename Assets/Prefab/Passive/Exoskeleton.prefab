@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7370139136099856776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2698697982985205553}
+  - component: {fileID: 4506064445280535573}
+  m_Layer: 0
+  m_Name: Exoskeleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2698697982985205553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370139136099856776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4506064445280535573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370139136099856776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ca195f0ac59c4393603c1e0fb306a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: P3
+  skillName: P3
+  sprite: {fileID: -2962751656340157471, guid: bfdaa75371c435047b38fa547f6315a1, type: 3}
+  upgradeInfos:
+  - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +10%"
+  - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +20%"
+  - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +30%"
+  - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +40%"
+  - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +50%"
+  level: 1
+  coefficient: 0.1
+  addDuration: 0

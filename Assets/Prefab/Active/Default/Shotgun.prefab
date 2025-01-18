@@ -49,9 +49,12 @@ MonoBehaviour:
   skillName: "\uC0F7\uAC74"
   sprite: {fileID: 1431373592901545995, guid: e5a8b2f5ae282a145b8d430f4ac045fd, type: 3}
   upgradeInfos:
-  - 'W00 : NEW'
-  - 'W00 : 1'
-  - 'W00 : 2'
+  - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC"
+  - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
+  - "\uC8FD\uC74C\uC758 \uC218\uB808\uBC14\uD034"
   level: 1
   character: {fileID: 0}
   synergyID: 

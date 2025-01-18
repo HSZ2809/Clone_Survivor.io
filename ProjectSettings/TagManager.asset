@@ -9,6 +9,9 @@ TagManager:
   - Exp
   - Monster
   - Wall
+  - Manager_Inventory
+  - Manager_Storage
+  - Manager_Stage
   layers:
   - Default
   - TransparentFX
