@@ -81,7 +81,6 @@ namespace ZUN
                 objPool[i].Damage = BulletDamage;
             }
 
-            enumerator = Shoot();
             StartCoroutine(enumerator);
         }
 

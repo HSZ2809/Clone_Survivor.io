@@ -137,7 +137,6 @@ namespace ZUN
                     break;
             }
 
-            enumerator = Shoot();
             StartCoroutine(enumerator);
         }
 

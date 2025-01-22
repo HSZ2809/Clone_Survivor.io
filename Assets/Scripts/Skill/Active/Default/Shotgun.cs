@@ -65,7 +65,6 @@ namespace ZUN
                 objPool.Add(bulletInstance);
             }
 
-            enumerator = Shoot();
             StartCoroutine(enumerator);
         }
 

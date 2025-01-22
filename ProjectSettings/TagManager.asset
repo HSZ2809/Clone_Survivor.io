@@ -9,8 +9,7 @@ TagManager:
   - Exp
   - Monster
   - Wall
-  - Manager_Inventory
-  - Manager_Storage
+  - Manager
   - Manager_Stage
   layers:
   - Default

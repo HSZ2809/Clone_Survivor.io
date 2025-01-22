@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2304856034302698010
 Transform:
   m_ObjectHideFlags: 0
@@ -110,11 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0db5e664615444cb4a21c82593e452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropedEXP: {fileID: 9196344863446389852, guid: 97aa0e91649424d42b6b14d23ddf8e4e, type: 3}
   hp: 1
   attackPower: 1
   moveSpeed: 1
-  character: {fileID: 0}
+  shardType: 1
 --- !u!1 &5694985130085604764
 GameObject:
   m_ObjectHideFlags: 0

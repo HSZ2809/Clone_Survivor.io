@@ -7,32 +7,36 @@ namespace ZUN
     public class Manager_Scene : MonoBehaviour
     {
         private bool isSceneChangeable = true;
+        AsyncOperation async;
+
+        public AsyncOperation Async {  get { return async; } }
 
         private void Start()
         {
-            DontDestroyOnLoad(this);
+            async = SceneManager.LoadSceneAsync("Splash", LoadSceneMode.Additive);
         }
 
-        public void LoadScene(string sceneName)
+        public void LoadScene(string destination, int origin)
         {
             if (isSceneChangeable)
             {
                 isSceneChangeable = false;
 
-                StartCoroutine(LoadTargetScene(sceneName));
+                StartCoroutine(LoadTargetScene(destination, origin));
             }
         }
 
-        IEnumerator LoadTargetScene(string sceneName)
+        IEnumerator LoadTargetScene(string sceneName, int origin)
         {
-#if UNITY_EDITOR
+            #if UNITY_EDITOR
             Debug.Log("Manager_Scene >> Scene Load : " + sceneName);
-#endif
+            #endif
 
-            AsyncOperation async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+            async = SceneManager.UnloadSceneAsync(origin);
+            async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+            yield return new WaitUntil(() => async.isDone); 
             isSceneChangeable = true;
-
-            yield return true;
         }
     }
 }
