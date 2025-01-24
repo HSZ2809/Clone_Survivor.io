@@ -6,6 +6,10 @@ namespace ZUN
 {
     public class Brick : ActiveSkill
     {
+        [Space]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
+
         [Header("Spac")]
         [SerializeField] private float coefficient = 0.0f;
         [SerializeField] private float cooldown = 1.0f;
@@ -59,6 +63,8 @@ namespace ZUN
                         bulletInstance.Damage = BulletDamage;
                         objPool.Add(bulletInstance);
                     }
+
+                    audioSource.PlayOneShot(clip);
                 }
 
                 yield return new WaitForSeconds(cooldown * character.AtkSpeed);

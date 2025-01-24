@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f319f6afa7ab4c54e849ea98c2105916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: P4
-  skillName: P4
+  id: Sneakers
+  skillName: "\uC6B4\uB3D9\uD654"
+  type: 1
   sprite: {fileID: 5033872504566220842, guid: cb3547e2e8f4faa4d80ec5ef37d52ee0, type: 3}
   upgradeInfos:
   - "\uC774\uB3D9\uC18D\uB3C4 +10%"

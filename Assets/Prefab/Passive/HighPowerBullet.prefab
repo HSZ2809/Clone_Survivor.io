@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f369615988a8c46bac059201fe92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: P0
-  skillName: P0
+  id: HighPowerBullet
+  skillName: "\uACE0\uD654\uB825 \uCD1D\uD0C4"
+  type: 1
   sprite: {fileID: -3191536272738044829, guid: edff0d9bac375a04eb5d1363bf0ee791, type: 3}
   upgradeInfos:
   - "\uACF5\uACA9\uB825 +10%"

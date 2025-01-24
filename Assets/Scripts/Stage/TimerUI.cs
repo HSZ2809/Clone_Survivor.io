@@ -5,7 +5,7 @@ namespace ZUN
 {
     public class TimerUI : MonoBehaviour
     {
-        Manager_Stage manager_Stage;
+        StageCtrl stageCtrl;
         [SerializeField] TMP_Text text_time;
 
         int minute = 0;
@@ -13,13 +13,13 @@ namespace ZUN
 
         private void Awake()
         {
-            manager_Stage = GameObject.FindGameObjectWithTag("Manager_Stage").GetComponent<Manager_Stage>();
+            stageCtrl = GameObject.FindGameObjectWithTag("StageCtrl").GetComponent<StageCtrl>();
         }
 
         private void FixedUpdate()
         {
-            minute = Mathf.FloorToInt(manager_Stage.PlayTime / 60);
-            second = Mathf.FloorToInt(manager_Stage.PlayTime % 60);
+            minute = Mathf.FloorToInt(stageCtrl.PlayTime / 60);
+            second = Mathf.FloorToInt(stageCtrl.PlayTime % 60);
 
             text_time.text = string.Format("{0:00} : {1:00}", minute, second);
         }

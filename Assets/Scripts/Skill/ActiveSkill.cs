@@ -7,7 +7,7 @@ namespace ZUN
         [SerializeField] protected Character character;
         [SerializeField] protected string synergyID;
 
-        [SerializeField] public string SynergyIN { get { return synergyID; } }
+        [SerializeField] public string SynergyID { get { return synergyID; } }
 
         private void Start()
         {

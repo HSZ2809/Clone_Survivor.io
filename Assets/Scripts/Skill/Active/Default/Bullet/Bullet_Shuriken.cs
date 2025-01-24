@@ -5,6 +5,7 @@ namespace ZUN
 {
     public class Bullet_Shuriken : Bullet
     {
+        [SerializeField] private AudioSource audioSource;
         [SerializeField] private float moveSpeed = 1.0f;
         [SerializeField] private float disableTime = 1.0f;
 

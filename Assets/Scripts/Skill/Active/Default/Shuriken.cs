@@ -6,6 +6,9 @@ namespace ZUN
 {
     public class Shuriken : ActiveSkill
     {
+        [Space]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
         [SerializeField] private SpriteRenderer handSprite = null;
         [SerializeField] private Transform shootDir = null;
 
@@ -69,6 +72,8 @@ namespace ZUN
                         bulletInstance.Damage = BulletDamage;
                         objPool.Add(bulletInstance);
                     }
+
+                    audioSource.PlayOneShot(clip);
                 }
 
                 yield return new WaitForSeconds(Cooldown);

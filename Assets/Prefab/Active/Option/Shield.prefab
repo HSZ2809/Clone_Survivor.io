@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Shield
   skillName: "\uBC29\uC5B4\uB9C9"
+  type: 0
   sprite: {fileID: -5889086245967186940, guid: e3ebf6ee558a9da48975f661d5730a7a, type: 3}
   upgradeInfos:
   - "\uC735\uD574\uC2DC\uD0A4\uB294 \uBC29\uC5B4\uB9C9\uC744 \uC0DD\uC131"
@@ -56,7 +57,7 @@ MonoBehaviour:
   - "\uB098\uC758 \uC601\uC5ED"
   level: 1
   character: {fileID: 0}
-  synergyID: 
+  synergyID: test
   coefficient: 1
   range: 1
   prefab_bullet: {fileID: 564299865242549548, guid: 0434c5503db5c3d458df14215b69abe5, type: 3}

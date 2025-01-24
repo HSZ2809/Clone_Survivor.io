@@ -5,6 +5,8 @@ namespace ZUN
 {
     public class Bullet_Guardian : Bullet
     {
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
         [SerializeField] private Transform sprite;
 
         [SerializeField] private float rotationSpeed = 1.0f;
@@ -20,6 +22,7 @@ namespace ZUN
             {
                 Monster monster = coll.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
+                audioSource.PlayOneShot(clip);
             }
         }
     }

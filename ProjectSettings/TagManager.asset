@@ -10,7 +10,7 @@ TagManager:
   - Monster
   - Wall
   - Manager
-  - Manager_Stage
+  - StageCtrl
   layers:
   - Default
   - TransparentFX

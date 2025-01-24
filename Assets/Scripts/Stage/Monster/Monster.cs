@@ -8,6 +8,7 @@ namespace ZUN
         [SerializeField] protected float hp = 0.0f;
         [SerializeField] protected float attackPower = 0.0f;
         [SerializeField] protected float moveSpeed = 0.0f;
+        protected float speed;
 
         protected Transform character = null;
 

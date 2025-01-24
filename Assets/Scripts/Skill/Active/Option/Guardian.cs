@@ -6,6 +6,9 @@ namespace ZUN
 {
     public class Guardian : ActiveSkill
     {
+        [Space]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
         [SerializeField] private Transform pivot = null;
 
         [Header("Spac")]
@@ -45,6 +48,8 @@ namespace ZUN
             {
                 foreach (var obj in objPool)
                     obj.gameObject.SetActive(true);
+
+                audioSource.PlayOneShot(clip);
 
                 yield return new WaitForSeconds(duration);
 

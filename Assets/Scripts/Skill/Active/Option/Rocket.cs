@@ -6,6 +6,9 @@ namespace ZUN
 {
     public class Rocket : ActiveSkill
     {
+        [Space]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir = null;
 
         [Header("Spac")]
@@ -66,6 +69,8 @@ namespace ZUN
                         bulletInstance.Damage = BulletDamage;
                         objPool.Add(bulletInstance);
                     }
+
+                    audioSource.PlayOneShot(clip);
                 }
 
                 yield return new WaitForSeconds(cooldown * character.AtkSpeed);

@@ -11,7 +11,7 @@ namespace ZUN
         [SerializeField] private ActiveSkill[] actives = new ActiveSkill[6];
         [SerializeField] private PassiveSkill[] passives = new PassiveSkill[6];
 
-        Manager_Stage manager_Stage;
+        StageCtrl stageCtrl;
         Manager_Inventory inventory;
 
         [Header("Connected Joystick")]
@@ -19,6 +19,7 @@ namespace ZUN
 
         [Header("Status")]
         [SerializeField] int level;
+        [SerializeField] int maxExp;
         [SerializeField] int exp;
         [SerializeField] float maxHp;
         [SerializeField] float currentHp;
@@ -34,9 +35,8 @@ namespace ZUN
         [SerializeField] float duration;
         [SerializeField] float itemRange;
 
-        [Space]
-        [SerializeField] private int amountOfActive = 0;
-        [SerializeField] private int amountOfPassive = 0;
+        public int AmountOfActive { get; private set; }
+        public int AmountOfPassive { get; private set; }
 
         public float MaxHp { get { return maxHp; } }
         public float Atk { get { return atk; } }
@@ -49,14 +49,14 @@ namespace ZUN
 
         private void Awake()
         {
-            manager_Stage = GameObject.FindGameObjectWithTag("Manager_Stage").GetComponent<Manager_Stage>();
+            stageCtrl = GameObject.FindGameObjectWithTag("StageCtrl").GetComponent<StageCtrl>();
             inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
         }
 
         private void Start()
         {
-            manager_Stage.AddSkillDic(inventory.Active);
-            manager_Stage.InitSkill(inventory.Active.SkillName);
+            // stageCtrl.AddSkillDic(inventory.Active);
+            // stageCtrl.InitSkill(inventory.Active.ID);
         }
 
         private void Update()
@@ -97,11 +97,11 @@ namespace ZUN
 
         public void SetActiveSkill(ActiveSkill newActive)
         {
-            if (amountOfActive < actives.Length)
+            if (AmountOfActive < actives.Length)
             {
-                actives[amountOfActive] = newActive;
-                actives[amountOfActive].ActiveSkillOn();
-                amountOfActive += 1;
+                actives[AmountOfActive] = newActive;
+                actives[AmountOfActive].ActiveSkillOn();
+                AmountOfActive += 1;
                 return;
             }
             else
@@ -110,10 +110,10 @@ namespace ZUN
 
         public void SetPassiveSkill(PassiveSkill newPassive)
         {
-            if (amountOfPassive < passives.Length)
+            if (AmountOfPassive < passives.Length)
             {
-                passives[amountOfPassive] = newPassive;
-                amountOfPassive += 1;
+                passives[AmountOfPassive] = newPassive;
+                AmountOfPassive += 1;
                 return;
             }
             else
@@ -124,20 +124,21 @@ namespace ZUN
         {
             exp += _exp;
 
-            if (exp >= 50)
+            if (exp >= maxExp)
             {
-                exp = 0;
+                exp -= maxExp;
+                maxExp *= 2; ;
                 level += 1;
 
-                manager_Stage.LevelUp(ref actives, ref passives);
+                stageCtrl.LevelUp(ref actives, ref passives);
             }
         }
 
-        public void SetSkill(string skillName)
+        public void SetSkill(string skillID)
         {
             int index = -1;
 
-            index = Array.FindIndex(actives, element => element != null && element.ID == skillName);
+            index = Array.FindIndex(actives, element => element != null && element.ID == skillID);
             if(index > -1)
             {
                 actives[index].Upgrade();
@@ -145,14 +146,14 @@ namespace ZUN
             }
                 
 
-            index = Array.FindIndex(passives, element => element != null && element.ID == skillName);
+            index = Array.FindIndex(passives, element => element != null && element.ID == skillID);
             if (index > -1)
             {
                 passives[index].Upgrade();
                 return;
             }
 
-            manager_Stage.InitSkill(skillName);
+            stageCtrl.InitSkill(skillID);
         }
 
         public void UpgradeRegeneration(float plus)

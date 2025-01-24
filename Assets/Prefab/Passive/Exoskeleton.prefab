@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ca195f0ac59c4393603c1e0fb306a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: P3
-  skillName: P3
+  id: Exoskeleton
+  skillName: "\uC678\uACE8\uACA9 \uAC11\uC637"
+  type: 1
   sprite: {fileID: -2962751656340157471, guid: bfdaa75371c435047b38fa547f6315a1, type: 3}
   upgradeInfos:
   - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +10%"

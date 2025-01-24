@@ -5,6 +5,9 @@ namespace ZUN
 {
     public class Bullet_Soccerball : Bullet
     {
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
+
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
         [SerializeField] private Vector2 direction;
@@ -40,6 +43,8 @@ namespace ZUN
 
                 Monster monster = other.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
+
+                audioSource.PlayOneShot(clip);
             }
         }
 

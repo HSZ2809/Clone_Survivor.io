@@ -6,6 +6,9 @@ namespace ZUN
 {
     public class Shotgun : ActiveSkill
     {
+        [Space]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir = null;
 
         [SerializeField] private float coefficient;
@@ -46,6 +49,8 @@ namespace ZUN
                     objPool[i].gameObject.transform.Rotate(new Vector3(0, 0, 4 * (Angle - i)));
                     objPool[i].Damage = BulletDamage;
                     objPool[i].gameObject.SetActive(true);
+
+                    audioSource.PlayOneShot(clip);
                 }
                 
                 yield return new WaitForSeconds(Cooldown);
