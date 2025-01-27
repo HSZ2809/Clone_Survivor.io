@@ -55,7 +55,7 @@ MonoBehaviour:
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uB098\uC758 \uC601\uC5ED"
-  level: 1
+  level: 0
   character: {fileID: 0}
   synergyID: test
   coefficient: 1

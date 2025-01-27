@@ -54,6 +54,6 @@ MonoBehaviour:
   - "EXP \uD68D\uB4DD +24%"
   - "EXP \uD68D\uB4DD +32%"
   - "EXP \uD68D\uB4DD +40%"
-  level: 1
+  level: 0
   coefficient: 0.08
   addExpGain: 0

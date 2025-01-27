@@ -54,6 +54,6 @@ MonoBehaviour:
   - "\uC774\uB3D9\uC18D\uB3C4 +30%"
   - "\uC774\uB3D9\uC18D\uB3C4 +40%"
   - "\uC774\uB3D9\uC18D\uB3C4 +50%"
-  level: 1
+  level: 0
   coefficient: 0.1
   addMoveSpeed: 0

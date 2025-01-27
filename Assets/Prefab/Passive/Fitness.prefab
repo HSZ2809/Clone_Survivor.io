@@ -54,6 +54,6 @@ MonoBehaviour:
   - "\uCD5C\uB300 HP +60%"
   - "\uCD5C\uB300 HP +80%"
   - "\uCD5C\uB300 HP +100%"
-  level: 1
+  level: 0
   coefficient: 0.2
   addMaxHp: 0

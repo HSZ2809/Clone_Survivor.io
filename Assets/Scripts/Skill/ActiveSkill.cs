@@ -12,6 +12,7 @@ namespace ZUN
         private void Start()
         {
             character.SetActiveSkill(this);
+            level = 1;
         }
 
         public virtual void ActiveSkillOn() 

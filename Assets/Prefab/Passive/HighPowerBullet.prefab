@@ -54,6 +54,6 @@ MonoBehaviour:
   - "\uACF5\uACA9\uB825 +30%"
   - "\uACF5\uACA9\uB825 +40%"
   - "\uACF5\uACA9\uB825 +50%"
-  level: 1
+  level: 0
   coefficient: 0.1
   addAtk: 0

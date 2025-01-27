@@ -54,6 +54,6 @@ MonoBehaviour:
   - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +30%"
   - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +40%"
   - "\uD6A8\uACFC \uC9C0\uC18D \uC2DC\uAC04 +50%"
-  level: 1
+  level: 0
   coefficient: 0.1
   addDuration: 0

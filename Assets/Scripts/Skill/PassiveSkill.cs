@@ -9,6 +9,7 @@ namespace ZUN
         private void Start()
         {
             character.SetPassiveSkill(this);
+            level = 1;
         }
     }
 }
