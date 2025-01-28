@@ -26,11 +26,6 @@ namespace ZUN
 
         public Type ShardType { get { return shardType; } }
 
-        public int Exp
-        {
-            get { return exp; }
-        }
-
         public void SetType(Type type)
         {
             shardType = type;
@@ -75,7 +70,7 @@ namespace ZUN
             }
 
             transform.position = target.position;
-            character.AddExp(Exp);
+            character.AddExp(exp);
             gameObject.SetActive(false);
             col.enabled = true;
         }

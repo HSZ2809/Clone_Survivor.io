@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  moveSpeed: 15
+  audioSource: {fileID: 0}
+  moveSpeed: 30
   disableTime: 2

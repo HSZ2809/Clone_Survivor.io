@@ -10,14 +10,31 @@ namespace ZUN
         [SerializeField] protected float moveSpeed = 0.0f;
         protected float speed;
 
-        protected Transform character = null;
+        protected MissionCtrl missionCtrl;
+        protected Transform characterTF;
 
+        public MissionCtrl _MissionCtrl 
+        { 
+            set 
+            {
+                if (missionCtrl == null)
+                    missionCtrl = value; 
+            } 
+        }
+
+        public Transform CharacterTF
+        {
+            set
+            {
+                if (characterTF == null)
+                    characterTF = value;
+            }
+        }
 
         private void Awake()
         {
             tag = "Monster";
             gameObject.layer = LayerMask.NameToLayer(tag);
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Transform>();
         }
 
         public float Hp
@@ -33,10 +50,7 @@ namespace ZUN
 
         public virtual void Hit(float damage)
         {
-            hp -= damage;
-
-            if (hp < 0)
-                gameObject.SetActive(false);
+            Debug.LogWarning("Monster : Hit() is not Set");
         }
     }
 }

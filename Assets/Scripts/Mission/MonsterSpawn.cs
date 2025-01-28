@@ -6,6 +6,9 @@ namespace ZUN
 {
     public class MonsterSpawn : MonoBehaviour
     {
+        MissionCtrl missionCtrl;
+        Character character;
+
         [Header("Monster")]
         [SerializeField] Monster mon1;
         Monster[] objPool;
@@ -20,6 +23,12 @@ namespace ZUN
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
 
+        private void Awake()
+        {
+            missionCtrl = GameObject.FindGameObjectWithTag("MissionCtrl").GetComponent<MissionCtrl>();
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+        }
+
         private void Start()
         {
             enumerator = SummonMonster();
@@ -32,7 +41,8 @@ namespace ZUN
             for (int i = 0; i < objPool.Length; i++)
             {
                 Monster mon = Instantiate(mon1, transform.position, transform.rotation);
-
+                mon._MissionCtrl = missionCtrl;
+                mon.CharacterTF = character.gameObject.transform;
                 objPool[i] = mon;
             }
 
@@ -59,7 +69,8 @@ namespace ZUN
             for(int i = lengthBefore; i < lengthAfter; i++)
             {
                 Monster mon = Instantiate(mon1, transform.position, transform.rotation);
-                
+                mon._MissionCtrl = missionCtrl;
+                mon.CharacterTF = character.gameObject.transform;
                 objPool[i] = mon;
             }
 
@@ -102,13 +113,13 @@ namespace ZUN
             }
         }
 
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, minDistance);
+        //private void OnDrawGizmos()
+        //{
+        //    Gizmos.color = Color.green;
+        //    Gizmos.DrawWireSphere(transform.position, minDistance);
 
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, maxDistance);
-        }
+        //    Gizmos.color = Color.yellow;
+        //    Gizmos.DrawWireSphere(transform.position, maxDistance);
+        //}
     }
 }

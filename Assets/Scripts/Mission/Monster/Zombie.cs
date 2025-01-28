@@ -23,12 +23,7 @@ namespace ZUN
 
         private void Update()
         {
-            //Vector3 moveDirection = (character.position - transform.position).normalized;
-            //moveDirection *= moveSpeed;
-
-            //transform.Translate(moveDirection * Time.deltaTime);
-
-            transform.position = Vector3.MoveTowards(transform.position, character.position, Time.deltaTime * speed);
+            transform.position = Vector3.MoveTowards(transform.position, characterTF.position, Time.deltaTime * speed);
         }
 
         public override void Hit(float damage)
@@ -45,6 +40,7 @@ namespace ZUN
         public void Die()
         {
             EXPPool.SetShard(shardType, transform.position);
+            missionCtrl.AddKillCount();
             gameObject.SetActive(false);
         }
     }

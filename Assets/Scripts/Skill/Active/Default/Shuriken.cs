@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZUN
 {
@@ -11,12 +12,12 @@ namespace ZUN
         [SerializeField] private AudioClip clip;
         [SerializeField] private SpriteRenderer handSprite = null;
         [SerializeField] private Transform shootDir = null;
+        [SerializeField] private Image reloadBar;
 
         [Header("Spac")]
         [SerializeField] private float coefficient;
         [SerializeField] private float cooldown;
         [SerializeField] private int magazineSize;
-        [SerializeField] private float firerate;
         readonly float findRange = 10.0f;
         LayerMask monsterLayer;
 
@@ -28,12 +29,15 @@ namespace ZUN
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
+        readonly WaitForFixedUpdate waitForFixedUpdate = new();
+        readonly WaitForSeconds firerate = new(0.1f);
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             handSprite.sortingLayerName = "Weapon";
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
+            reloadBar = character.ReloadBar();
             enumerator = Shoot();
         }
 
@@ -48,7 +52,7 @@ namespace ZUN
             {
                 for (int i = 0; i < magazineSize; i++)
                 {
-                    yield return new WaitForSeconds(firerate);
+                    yield return firerate;
 
                     bool bulletFound = false;
                     SetAim();
@@ -76,7 +80,11 @@ namespace ZUN
                     audioSource.PlayOneShot(clip);
                 }
 
-                yield return new WaitForSeconds(Cooldown);
+                for(float waitTime = 0.0f; waitTime < Cooldown; waitTime += Time.deltaTime)
+                {
+                    yield return waitForFixedUpdate;
+                    reloadBar.fillAmount = waitTime / Cooldown;
+                }
             }
         }
 

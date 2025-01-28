@@ -1,28 +1,33 @@
 using System;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZUN
 {
     public class Character : MonoBehaviour
     {
-        [Header("Connected Components")]
-        [SerializeField] private Transform moveDirection = null;
-        [SerializeField] private ActiveSkill[] actives = new ActiveSkill[6];
-        [SerializeField] private PassiveSkill[] passives = new PassiveSkill[6];
+        [Header("Components")]
+        [SerializeField] Transform moveDirection = null;
+        [SerializeField] Image expBar;
+        [SerializeField] Image hpBar;
+        [SerializeField] Image reloadBar;
+
+        [Header("Skill")]
+        [SerializeField] ActiveSkill[] actives = new ActiveSkill[6];
+        [SerializeField] PassiveSkill[] passives = new PassiveSkill[6];
 
         MissionCtrl missionCtrl;
         Manager_Inventory inventory;
 
         [Header("Connected Joystick")]
-        [SerializeField] private Joystick joystick;
+        [SerializeField] Joystick joystick;
 
         [Header("Status")]
         [SerializeField] int level;
-        [SerializeField] int maxExp;
-        [SerializeField] int exp;
+        [SerializeField] float maxExp;
+        [SerializeField] float exp;
         [SerializeField] float maxHp;
-        [SerializeField] float currentHp;
+        [SerializeField] float hp;
         [SerializeField] float atk;
         [SerializeField] float atkSpeed;
         [SerializeField] float bulletSpeed;
@@ -39,6 +44,17 @@ namespace ZUN
         public int AmountOfPassive { get; private set; }
 
         public float MaxHp { get { return maxHp; } }
+        public float Hp 
+        { 
+            get { return hp; }
+            set 
+            {
+                hp = value;
+
+                if(hp > maxHp)
+                    hp = maxHp;
+            } 
+        }
         public float Atk { get { return atk; } }
         public float AtkSpeed { get { return atkSpeed; } }
         public float BulletSpeed { get { return bulletSpeed; } }
@@ -46,6 +62,7 @@ namespace ZUN
         public float ExpGain { get { return expGain; } }
         public float Duration { get { return duration; } }
         public Transform GetShootDir() { return moveDirection; }
+        public Image ReloadBar() { return reloadBar; }
 
         private void Awake()
         {
@@ -58,15 +75,20 @@ namespace ZUN
             float h = joystick.GetHorizontalAxis();
             float v = joystick.GetVerticalAxis();
 
-            Vector3 moveDirection = new Vector3(h, v, 0).normalized;
-            moveDirection *= moveSpeed;
+            Vector3 direction = new Vector3(h, v, 0).normalized;
+            direction *= moveSpeed;
 
-            transform.Translate(moveDirection * Time.deltaTime);
+            transform.Translate(direction * Time.deltaTime);
 
             if (h != 0.0f || v != 0.0f)
             {
+                moveDirection.gameObject.SetActive(true);
                 float angle = Mathf.Atan2(v, h) * Mathf.Rad2Deg;
-                this.moveDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+                moveDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+            }
+            else
+            {
+                moveDirection.gameObject.SetActive(false);
             }
         }
 
@@ -75,8 +97,8 @@ namespace ZUN
             if (other.gameObject.CompareTag("Monster"))
             {
                 float damage = other.gameObject.GetComponent<Monster>().AttackPower;
-                currentHp -= damage;
-                Debug.Log("Player : hit! - damage : " + damage);
+                hp -= damage;
+                hpBar.fillAmount = hp / maxHp;
             }
         }
 
@@ -116,15 +138,16 @@ namespace ZUN
         public void AddExp(int _exp)
         {
             exp += _exp;
-
+            
             if (exp >= maxExp)
             {
                 exp -= maxExp;
-                maxExp *= 2; ;
+                maxExp *= 2;
                 level += 1;
-
                 missionCtrl.LevelUp(ref actives, ref passives);
             }
+
+            expBar.fillAmount = exp / maxExp;
         }
 
         public void UpgradeRegeneration(float plus)

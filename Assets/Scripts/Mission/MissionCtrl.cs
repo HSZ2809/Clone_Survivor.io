@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
 
 namespace ZUN
 {
@@ -12,9 +12,14 @@ namespace ZUN
         Manager_Inventory inventory;
         Character character = null;
 
-        [Header("Menu")]
+        [Header("UI")]
         [SerializeField] Canvas selectWindow = null;
         [SerializeField] Btn_SelectSkill[] Options = null;
+        [SerializeField] TextMeshProUGUI goldCount;
+        [SerializeField] TextMeshProUGUI killCount;
+
+        int gold;
+        int kill;
 
         [Header("PlayTime")]
         [SerializeField] float playTime;
@@ -156,7 +161,7 @@ namespace ZUN
                 foreach (var option in Options)
                     option.gameObject.SetActive(false);
 
-                // 고기 제공
+                /* 고기 제공 */
 
                 selectWindow.gameObject.SetActive(true);
                 return;
@@ -208,6 +213,23 @@ namespace ZUN
         public void InitSkill(Skill skill)
         {
             Instantiate(skill, character.gameObject.transform);
+        }
+
+        public void AddGoldCount(int gold)
+        {
+            this.gold += gold;
+        }
+
+        public void AddKillCount()
+        {
+            kill += 1;
+            killCount.text = kill.ToString();
+        }
+
+        /* 임시 메소드. 수정이 필요합니다. */
+        public void GetMeat()
+        {
+            character.Hp += character.MaxHp * 0.3f;
         }
     }
 }

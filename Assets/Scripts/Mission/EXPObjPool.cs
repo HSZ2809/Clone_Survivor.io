@@ -59,7 +59,7 @@ namespace ZUN
                 index++;
             }
 
-            if(index ==  shards.Length)
+            if(index == shards.Length)
             {
                 Array.Resize(ref shards, shards.Length * 2);
                 AddShard(index);
