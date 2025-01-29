@@ -24,10 +24,10 @@ namespace ZUN
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             enumerator = Shoot();
+            character.SetActiveSkill(this);
         }
 
         public override void ActiveSkillOn()

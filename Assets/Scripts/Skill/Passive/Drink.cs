@@ -8,9 +8,9 @@ namespace ZUN
     {
         [SerializeField] float regeneration;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             character.UpgradeRegeneration(regeneration);
         }
 

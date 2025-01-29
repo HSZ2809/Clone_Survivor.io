@@ -24,11 +24,11 @@ namespace ZUN
 
         IEnumerator enumerator;
 
-        private void Awake() 
+        private void Start() 
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             shootDir = character.GetShootDir();
             enumerator = Shoot();
+            character.SetActiveSkill(this);
         }
 
         public override void ActiveSkillOn()

@@ -9,9 +9,9 @@ namespace ZUN
         [SerializeField] float coefficient;
         [SerializeField] float addExpGain;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             addExpGain = character.ExpGain * coefficient;
             character.UpgradeExpGain(addExpGain);
         }

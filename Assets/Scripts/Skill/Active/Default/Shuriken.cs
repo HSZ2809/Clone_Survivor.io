@@ -32,13 +32,13 @@ namespace ZUN
         readonly WaitForFixedUpdate waitForFixedUpdate = new();
         readonly WaitForSeconds firerate = new(0.1f);
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             handSprite.sortingLayerName = "Weapon";
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
             reloadBar = character.ReloadBar();
             enumerator = Shoot();
+            character.SetActiveSkill(this);
         }
 
         public override void ActiveSkillOn()

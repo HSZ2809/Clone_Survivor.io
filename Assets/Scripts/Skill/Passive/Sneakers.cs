@@ -9,9 +9,9 @@ namespace ZUN
         [SerializeField] float coefficient;
         [SerializeField] float addMoveSpeed;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             addMoveSpeed = character.MoveSpeed * coefficient;
             character.UpgradeMoveSpeed(addMoveSpeed);
         }

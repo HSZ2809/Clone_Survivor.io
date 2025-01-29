@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 namespace ZUN
 {
@@ -15,8 +15,10 @@ namespace ZUN
         [Header("UI")]
         [SerializeField] Canvas selectWindow = null;
         [SerializeField] Btn_SelectSkill[] Options = null;
-        [SerializeField] TextMeshProUGUI goldCount;
-        [SerializeField] TextMeshProUGUI killCount;
+        [SerializeField] TextMeshProUGUI txt_goldCount;
+        [SerializeField] TextMeshProUGUI txt_killCount;
+        [SerializeField] Image[] img_ownedActive;
+        [SerializeField] Image[] img_ownedPassive;
 
         int gold;
         int kill;
@@ -27,7 +29,7 @@ namespace ZUN
         [Header("Event")]
         [SerializeField] TimedEvent[] events;
 
-        [Header("Item List")]
+        [Header("Appearance Item List")]
         [SerializeField] ActiveSkill[] actives = null;
         [SerializeField] PassiveSkill[] passives = null;
 
@@ -47,8 +49,8 @@ namespace ZUN
 
         private void Start()
         {
+            /* 인벤토리의 기본 아이템 적용 */
             actives[0] = inventory.Active;
-
             InitSkill(inventory.Active);
         }
 
@@ -180,11 +182,9 @@ namespace ZUN
                 }
 
                 Skill skill = GetRandomSkill(ref shuffleBox);
-
                 shuffleBox.Remove(skill);
 
                 Options[i].skill = skill;
-
                 Options[i].gameObject.SetActive(true);
             }
 
@@ -212,7 +212,18 @@ namespace ZUN
 
         public void InitSkill(Skill skill)
         {
-            Instantiate(skill, character.gameObject.transform);
+            skill = Instantiate(skill, character.gameObject.transform);
+
+            if (skill.Type == Skill.SkillType.ACTIVE)
+            {
+                img_ownedActive[skill.Order].sprite = skill.Sprite;
+                img_ownedActive[skill.Order].gameObject.SetActive(true);
+            }
+            else
+            {
+                img_ownedPassive[skill.Order].sprite = skill.Sprite;
+                img_ownedPassive[skill.Order].gameObject.SetActive(true);
+            }
         }
 
         public void AddGoldCount(int gold)
@@ -223,7 +234,7 @@ namespace ZUN
         public void AddKillCount()
         {
             kill += 1;
-            killCount.text = kill.ToString();
+            txt_killCount.text = kill.ToString();
         }
 
         /* 임시 메소드. 수정이 필요합니다. */

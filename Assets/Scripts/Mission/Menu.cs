@@ -1,10 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZUN
 {
     public class Menu : MonoBehaviour
     {
         [SerializeField] private GameObject pause = null;
+
+        [Space]
+        [SerializeField] private Image[] img_ownedActives;
+
+        [Space]
+        [SerializeField] private Image[] img_ownedPassives;
+
 
         public void Continue()
         {
@@ -15,11 +23,11 @@ namespace ZUN
 
         public void Home()
         {
-#if UNITY_EDITOR
+            #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
-#else
+            #else
                 Application.Quit();
-#endif
+            #endif
         }
     }
 }

@@ -9,9 +9,10 @@ namespace ZUN
 
         [SerializeField] public string SynergyID { get { return synergyID; } }
 
-        private void Start()
+        private void Awake()
         {
-            character.SetActiveSkill(this);
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            order = character.AmountOfActive;
             level = 1;
         }
 

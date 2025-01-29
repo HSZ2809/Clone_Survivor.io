@@ -7,9 +7,9 @@ namespace ZUN
         [SerializeField] float coefficient;
         [SerializeField] float addMaxHp;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             addMaxHp = character.MaxHp * coefficient;
             character.UpgradeMaxHp(addMaxHp);
         }

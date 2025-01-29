@@ -9,9 +9,9 @@ namespace ZUN
         [SerializeField] float coefficient;
         [SerializeField] float addAtk;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             addAtk = character.Atk * coefficient;
             character.UpgradeAtk(addAtk);
         }

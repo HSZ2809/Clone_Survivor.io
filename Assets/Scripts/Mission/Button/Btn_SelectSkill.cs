@@ -10,6 +10,7 @@ namespace ZUN
 
         [SerializeField] Sprite[] sprite;
         [SerializeField] Image panelImage;
+        [SerializeField] TextMeshProUGUI newTxt;
 
         [Space]
         public Skill skill;
@@ -28,6 +29,14 @@ namespace ZUN
             upgradeInfo.text = skill.UpgradeInfos[skill.Level];
 
             panelImage.sprite = sprite[(int)skillType];
+            if(skill.Level < 1)
+                newTxt.gameObject.SetActive(true);
+        }
+
+        private void OnDisable()
+        {
+            if (newTxt.gameObject.activeSelf)
+                newTxt.gameObject.SetActive(false);
         }
 
         public void Select()

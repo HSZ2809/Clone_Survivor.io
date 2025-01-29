@@ -9,9 +9,9 @@ namespace ZUN
         [SerializeField] float coefficient;
         [SerializeField] float addDuration;
 
-        private void Awake()
+        private void Start()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character.SetPassiveSkill(this);
             addDuration = character.Duration * coefficient;
             character.UpgradeDuration(addDuration);
         }

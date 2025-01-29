@@ -6,9 +6,10 @@ namespace ZUN
     {
         protected Character character = null;
 
-        private void Start()
+        private void Awake()
         {
-            character.SetPassiveSkill(this);
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            order = character.AmountOfActive;
             level = 1;
         }
     }

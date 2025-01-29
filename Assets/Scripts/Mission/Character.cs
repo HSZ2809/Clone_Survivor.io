@@ -64,6 +64,9 @@ namespace ZUN
         public Transform GetShootDir() { return moveDirection; }
         public Image ReloadBar() { return reloadBar; }
 
+        public ActiveSkill[] Actives { get { return actives; } }
+        public PassiveSkill[] Passives { get { return passives; } }
+
         private void Awake()
         {
             missionCtrl = GameObject.FindGameObjectWithTag("MissionCtrl").GetComponent<MissionCtrl>();
