@@ -12,7 +12,6 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            order = character.AmountOfActive;
             level = 1;
         }
 

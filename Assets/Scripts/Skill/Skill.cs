@@ -11,7 +11,6 @@ namespace ZUN
         [SerializeField] protected Sprite sprite;
         [SerializeField] protected string[] upgradeInfos;
         [SerializeField] protected int level = 1;
-        protected int order;
 
         public string ID { get { return id; } }
         public string SkillName { get { return skillName; } }
@@ -19,7 +18,6 @@ namespace ZUN
         public Sprite Sprite { get { return sprite; } }
         public string[] UpgradeInfos { get { return upgradeInfos; } }
         public int Level { get { return level; } }
-        public int Order { get { return order; } }
 
         public virtual void Upgrade() 
         {

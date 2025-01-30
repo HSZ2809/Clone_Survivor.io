@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: fdf7b4e6dd620da4aa8f944e1d45c3ee
   - enabled: 1
-    path: Assets/Scenes/Mission/Mission_1.unity
+    path: Assets/Scenes/Chapter/Chapter_1.unity
     guid: 317450cc4a988ab458865a05c0781e28
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

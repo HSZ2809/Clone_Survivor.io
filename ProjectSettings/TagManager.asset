@@ -10,7 +10,7 @@ TagManager:
   - Monster
   - Wall
   - Manager
-  - MissionCtrl
+  - ChapterCtrl
   layers:
   - Default
   - TransparentFX
