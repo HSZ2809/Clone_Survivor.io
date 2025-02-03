@@ -19,7 +19,7 @@ namespace ZUN
         [SerializeField] private SpriteRenderer sr;
         [SerializeField] private int exp;
         [SerializeField] private float initialSpeed;
-        float gravity = 25f;
+        float gravity = 50f;
 
         [SerializeField] private Sprite[] sprites;
         [SerializeField] private int[] amount;

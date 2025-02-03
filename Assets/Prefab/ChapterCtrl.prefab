@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39c979551294174da4e715a5deadee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterCtrl: {fileID: 0}
+  chapterCtrl: {fileID: 3970760962419468653}
   sprite:
   - {fileID: -2885984877408746495, guid: 89917e1d64b61234b840a8018c8febb8, type: 3}
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}
@@ -4234,7 +4234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39c979551294174da4e715a5deadee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterCtrl: {fileID: 0}
+  chapterCtrl: {fileID: 3970760962419468653}
   sprite:
   - {fileID: -2885984877408746495, guid: 89917e1d64b61234b840a8018c8febb8, type: 3}
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}
@@ -4941,8 +4941,96 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
-          m_MethodName: InitSet
-          m_Mode: 1
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 8
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 30
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 90
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 120
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4951,18 +5039,46 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - triggerTime: 10
+  - triggerTime: 150
     onEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
-          m_MethodName: Setting
-          m_Mode: 1
+          m_MethodName: SetAmount
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 15
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 180
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -5236,7 +5352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39c979551294174da4e715a5deadee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterCtrl: {fileID: 0}
+  chapterCtrl: {fileID: 3970760962419468653}
   sprite:
   - {fileID: -2885984877408746495, guid: 89917e1d64b61234b840a8018c8febb8, type: 3}
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}

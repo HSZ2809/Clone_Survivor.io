@@ -8,6 +8,7 @@ namespace ZUN
     {
         [Header("Components")]
         [SerializeField] Transform moveDirection = null;
+        [SerializeField] SpriteRenderer dirArrow;
         [SerializeField] Image expBar;
         [SerializeField] Image hpBar;
         [SerializeField] Image reloadBar;
@@ -61,7 +62,7 @@ namespace ZUN
         public float MoveSpeed { get { return moveSpeed; } }
         public float ExpGain { get { return expGain; } }
         public float Duration { get { return duration; } }
-        public Transform GetShootDir() { return moveDirection; }
+        public Transform GetMoveDir() { return moveDirection; }
         public Image ReloadBar() { return reloadBar; }
 
         public ActiveSkill[] Actives { get { return actives; } }
@@ -79,19 +80,28 @@ namespace ZUN
             float v = joystick.GetVerticalAxis();
 
             Vector3 direction = new Vector3(h, v, 0).normalized;
-            direction *= moveSpeed;
 
-            transform.Translate(direction * Time.deltaTime);
+            transform.Translate(Time.deltaTime * moveSpeed * direction);
 
             if (h != 0.0f || v != 0.0f)
             {
-                moveDirection.gameObject.SetActive(true);
+                dirArrow.gameObject.SetActive(true);
                 float angle = Mathf.Atan2(v, h) * Mathf.Rad2Deg;
                 moveDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             }
             else
             {
-                moveDirection.gameObject.SetActive(false);
+                dirArrow.gameObject.SetActive(false);
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("MonsterBullet"))
+            {
+                float damage = collision.gameObject.GetComponent<MonsterBullet>().Damage;
+                Hit(damage);
+                collision.gameObject.GetComponent<MonsterBullet>().SetFalse();
             }
         }
 
@@ -100,8 +110,7 @@ namespace ZUN
             if (other.gameObject.CompareTag("Monster"))
             {
                 float damage = other.gameObject.GetComponent<Monster>().AttackPower;
-                hp -= damage;
-                hpBar.fillAmount = hp / maxHp;
+                Hit(damage);
             }
         }
 
@@ -151,6 +160,12 @@ namespace ZUN
             }
 
             expBar.fillAmount = exp / maxExp;
+        }
+
+        public void Hit(float damage)
+        {
+            hp -= damage;
+            hpBar.fillAmount = hp / maxHp;
         }
 
         public void UpgradeRegeneration(float plus)

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2304856034302698010}
   - component: {fileID: 7157152260953389453}
   - component: {fileID: 3839155974452726748}
-  - component: {fileID: 6967121792191880138}
   - component: {fileID: 8315070986946350262}
+  - component: {fileID: 736990880547716438}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Fly_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,23 +99,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.19939843}
   m_Radius: 0.3966082
---- !u!114 &6967121792191880138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19747721087396163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0db5e664615444cb4a21c82593e452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  attackPower: 1
-  moveSpeed: 1
-  anim: {fileID: 8315070986946350262}
-  shardType: 1
 --- !u!95 &8315070986946350262
 Animator:
   serializedVersion: 7
@@ -126,7 +109,7 @@ Animator:
   m_GameObject: {fileID: 19747721087396163}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a4f5ee5efd9db489ba1dc886772829, type: 2}
+  m_Controller: {fileID: 9100000, guid: a2ccb3048a969a540b6cfd7322e5c235, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -138,6 +121,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &736990880547716438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19747721087396163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83b799b84a32a64c99c7fc9ead4e254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 5
+  attackPower: 1
+  moveSpeed: 5
+  anim: {fileID: 8315070986946350262}
+  sr: {fileID: 2105557037792253662}
+  shardType: 0
 --- !u!1 &8307655307739862324
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -262170089, guid: 2753484634830c743a58457a7c1c6faa, type: 3}
+  m_Sprite: {fileID: -1839576960, guid: 2753484634830c743a58457a7c1c6faa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

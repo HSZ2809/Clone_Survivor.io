@@ -5,13 +5,15 @@ namespace ZUN
     public abstract class Monster : MonoBehaviour
     {
         [Header("Status")]
-        [SerializeField] protected float hp = 0.0f;
-        [SerializeField] protected float attackPower = 0.0f;
-        [SerializeField] protected float moveSpeed = 0.0f;
-        protected float speed;
+        [SerializeField] protected float maxHp;
+        [SerializeField] protected float attackPower;
+        [SerializeField] protected float moveSpeed;
+        protected float hp;
 
         protected ChapterCtrl chapterCtrl;
         protected Transform characterTF;
+
+        protected CircleCollider2D cc2D;
 
         public ChapterCtrl _chapterCtrl 
         { 
@@ -35,12 +37,7 @@ namespace ZUN
         {
             tag = "Monster";
             gameObject.layer = LayerMask.NameToLayer(tag);
-        }
-
-        public float Hp
-        {
-            get { return hp; }
-            set { hp = value; }
+            cc2D = GetComponent<CircleCollider2D>();
         }
 
         public float AttackPower

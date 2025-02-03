@@ -10,15 +10,15 @@ namespace ZUN
         Character character;
 
         [Header("Monster")]
-        [SerializeField] Monster mon1;
-        Monster[] objPool;
+        [SerializeField] Monster monster;
+        [SerializeField] Monster[] objPool;
 
         [Header("Amount of monsters")]
-        [SerializeField] int level;
-        [SerializeField] int[] addAmount;
+        [SerializeField] int amount;
 
-        float minDistance = 16f;
-        float maxDistance = 18f;
+        [Header("Range")]
+        [SerializeField] float minDistance = 16f;
+        [SerializeField] float maxDistance = 18f;
         
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
@@ -34,48 +34,28 @@ namespace ZUN
             enumerator = SummonMonster();
         }
 
-        public void InitSet()
-        {
-            Array.Resize(ref objPool, addAmount[0]);
-
-            for (int i = 0; i < objPool.Length; i++)
-            {
-                Monster mon = Instantiate(mon1, transform.position, transform.rotation);
-                mon._chapterCtrl = chapterCtrl;
-                mon.CharacterTF = character.gameObject.transform;
-                objPool[i] = mon;
-            }
-
-            level += 1;
-
-            StartCoroutine(enumerator);
-        }
-
-        public void Setting()
+        public void SetAmount(int _amount)
         {
             StopCoroutine(enumerator);
 
-            if(level >= addAmount.Length)
+            if (objPool.Length < _amount)
             {
-                Debug.LogWarning("MonsterSpawn : invalid level");
-                return;
+                int before = objPool.Length;
+                int after = _amount;
+
+                Array.Resize(ref objPool, after);
+
+                for(int i = before; i < after; i++)
+                {
+                    Monster mon = Instantiate(monster, transform.position, transform.rotation);
+                    mon._chapterCtrl = chapterCtrl;
+                    mon.CharacterTF = character.gameObject.transform;
+                    objPool[i] = mon;
+                }
             }
 
-            int lengthBefore = objPool.Length;
-            int lengthAfter = objPool.Length + addAmount[level];
-
-            Array.Resize(ref objPool, lengthAfter);
-
-            for(int i = lengthBefore; i < lengthAfter; i++)
-            {
-                Monster mon = Instantiate(mon1, transform.position, transform.rotation);
-                mon._chapterCtrl = chapterCtrl;
-                mon.CharacterTF = character.gameObject.transform;
-                objPool[i] = mon;
-            }
-
-            level += 1;
-
+            amount = _amount;
+            
             StartCoroutine(enumerator);
         }
 
@@ -87,24 +67,24 @@ namespace ZUN
             float x;
             float y;
 
+            randomVec3.z = 0.0f;
+
             while (true)
             {
-                for (int i = 0; i < objPool.Length; i++)
+                for (int i = 0; i < amount; i++)
                 {
-                    randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
-                    randomDistance = UnityEngine.Random.Range(minDistance, maxDistance);
-
-                    x = Mathf.Cos(randomAngle) * randomDistance;
-                    y = Mathf.Sin(randomAngle) * randomDistance;
-
-                    randomVec3.x = transform.position.x + x;
-                    randomVec3.y = transform.position.y + y;
-                    randomVec3.z = 0.0f;
-
                     if (!objPool[i].gameObject.activeSelf)
                     {
+                        randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
+                        randomDistance = UnityEngine.Random.Range(minDistance, maxDistance);
+
+                        x = Mathf.Cos(randomAngle) * randomDistance;
+                        y = Mathf.Sin(randomAngle) * randomDistance;
+
+                        randomVec3.x = transform.position.x + x;
+                        randomVec3.y = transform.position.y + y;
+
                         objPool[i].gameObject.transform.position = randomVec3;
-                        objPool[i].Hp = 100;
                         objPool[i].gameObject.SetActive(true);
                     }
                 }
@@ -112,14 +92,5 @@ namespace ZUN
                 yield return waitTime;
             }
         }
-
-        //private void OnDrawGizmos()
-        //{
-        //    Gizmos.color = Color.green;
-        //    Gizmos.DrawWireSphere(transform.position, minDistance);
-
-        //    Gizmos.color = Color.yellow;
-        //    Gizmos.DrawWireSphere(transform.position, maxDistance);
-        //}
     }
 }

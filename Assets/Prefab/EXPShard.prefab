@@ -141,7 +141,7 @@ MonoBehaviour:
   col: {fileID: 4844142452020541470}
   sr: {fileID: 4930910742060285565}
   exp: 0
-  initialSpeed: 10
+  initialSpeed: 15
   sprites:
   - {fileID: -6451518820673859229, guid: 7c848dc045bc8494bae1b1274b34d558, type: 3}
   - {fileID: -8122256234953540473, guid: d3de8985036542c42a754ed2759dbc83, type: 3}

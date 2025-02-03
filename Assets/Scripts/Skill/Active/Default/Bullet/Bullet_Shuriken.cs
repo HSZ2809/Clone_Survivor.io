@@ -25,6 +25,7 @@ namespace ZUN
             {
                 Monster monster = coll.gameObject.GetComponent<Monster>();
                 monster.Hit(damage);
+                gameObject.SetActive(false);
             }
         }
 

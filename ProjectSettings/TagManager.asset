@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Manager
   - ChapterCtrl
+  - MonsterBullet
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Bullet
   - Exp
   - Wall
-  - 
+  - MonsterBullet
   - 
   - 
   - 

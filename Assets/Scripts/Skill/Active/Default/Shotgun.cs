@@ -26,7 +26,7 @@ namespace ZUN
 
         private void Start() 
         {
-            shootDir = character.GetShootDir();
+            shootDir = character.GetMoveDir();
             enumerator = Shoot();
             character.SetActiveSkill(this);
         }
