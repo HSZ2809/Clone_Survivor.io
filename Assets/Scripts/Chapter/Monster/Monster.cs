@@ -33,17 +33,12 @@ namespace ZUN
             }
         }
 
-        private void Awake()
-        {
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
-            cc2D = GetComponent<CircleCollider2D>();
-        }
-
         public float AttackPower
         {
             get { return attackPower; }
         }
+
+        public float MaxHp { get { return maxHp; } set { maxHp = value; } }
 
         public virtual void Hit(float damage)
         {

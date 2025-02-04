@@ -15,6 +15,13 @@ namespace ZUN
 
         Vector2 moveDirection;
 
+        private void Awake()
+        {
+            tag = "Monster";
+            gameObject.layer = LayerMask.NameToLayer(tag);
+            cc2D = GetComponent<CircleCollider2D>();
+        }
+
         private void OnEnable()
         {
             hp = maxHp;

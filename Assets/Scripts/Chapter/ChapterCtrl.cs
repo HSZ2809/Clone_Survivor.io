@@ -13,13 +13,16 @@ namespace ZUN
         Character character;
 
         [Header("UI")]
-        [SerializeField] Canvas selectWindow = null;
-        [SerializeField] Btn_SelectSkill[] Options = null;
+        [SerializeField] Image selectWindow;
+        [SerializeField] Btn_SelectSkill[] options;
+        [SerializeField] Btn_GetMeat getMeat;
         [SerializeField] TextMeshProUGUI txt_goldCount;
         [SerializeField] TextMeshProUGUI txt_killCount;
         [SerializeField] Image[] img_ownedActive;
         [SerializeField] Image[] img_ownedPassive;
-
+        [SerializeField] Image pnl_lottery;
+        [SerializeField] LotteryResult[] lotteryResults;
+        [SerializeField] Button closeLottery;
         int gold;
         int kill;
 
@@ -74,7 +77,7 @@ namespace ZUN
 
             SetSkillDisplay();
 
-            List<Skill> shuffleBox = new List<Skill>();
+            List<Skill> shuffleBox = new();
 
             /* insert ActiveSkill*/
             if(character.AmountOfActive > 5)
@@ -114,10 +117,16 @@ namespace ZUN
                 {
                     bool check = false;
 
-                    for(int i = 0; i < shuffleBox.Count; i++)
+                    for(int i = 0; i < charActives.Length; i++)
                     {
-                        if(shuffleBox[i].ID == skill.ID)
+                        if (charActives[i] == null)
+                            break;
+
+                        if (charActives[i].ID == skill.ID)
+                        {
                             check = true;
+                            break;
+                        }
                     }
 
                     if(!check)
@@ -149,10 +158,16 @@ namespace ZUN
                 {
                     bool check = false;
 
-                    for (int i = 0; i < shuffleBox.Count; i++)
+                    for (int i = 0; i < charPassives.Length; i++)
                     {
-                        if (shuffleBox[i].ID == skill.ID)
+                        if (charPassives[i] == null)
+                            break;
+
+                        if (charPassives[i].ID == skill.ID)
+                        {
                             check = true;
+                            break;
+                        }
                     }
 
                     if (!check)
@@ -160,23 +175,24 @@ namespace ZUN
                 }
             }
 
+            /* 스킬 선정 */
             if(shuffleBox.Count < 1)
             {
-                foreach (var option in Options)
+                foreach (var option in options)
                     option.gameObject.SetActive(false);
 
-                /* 고기 제공 */
+                getMeat.gameObject.SetActive(true);
 
                 selectWindow.gameObject.SetActive(true);
                 return;
             }
 
-            for (int i = 0; i < Options.Length; i++)
+            for (int i = 0; i < options.Length; i++)
             {
                 if (shuffleBox.Count < 1)
                 {
-                    for ( ; i < Options.Length; i++)
-                        Options[i].gameObject.SetActive(false);
+                    for ( ; i < options.Length; i++)
+                        options[i].gameObject.SetActive(false);
 
                     selectWindow.gameObject.SetActive(true);
 
@@ -186,11 +202,77 @@ namespace ZUN
                 Skill skill = GetRandomSkill(ref shuffleBox);
                 shuffleBox.Remove(skill);
 
-                Options[i].skill = skill;
-                Options[i].gameObject.SetActive(true);
+                options[i].skill = skill;
+                options[i].gameObject.SetActive(true);
             }
 
             selectWindow.gameObject.SetActive(true);
+        }
+
+        public void StartLottery(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
+        {
+            Time.timeScale = 0;
+
+            List<Skill> shuffleBox = new();
+
+            for (int i = 0; i < charActives.Length; i++)
+            {
+                if (charActives[i] == null)
+                    break;
+
+                if (charActives[i].Level < 5)
+                    shuffleBox.Add(charActives[i]);
+                else if (charActives[i].Level == 5)
+                {
+                    string synergyID = charActives[i].SynergyID;
+
+                    if (Array.FindIndex(charPassives, element => element != null && element.ID == synergyID) > -1)
+                        shuffleBox.Add(charActives[i]);
+                }
+            }
+
+            for (int i = 0; i < charPassives.Length; i++)
+            {
+                if (charPassives[i] == null)
+                    break;
+
+                if (charPassives[i].Level < 5)
+                    shuffleBox.Add(charPassives[i]);
+            }
+
+            int randomInt = UnityEngine.Random.Range(1, 100);
+            int amount;
+
+            if (randomInt <= 1)
+                amount = 5;
+            else if (randomInt <= 20)
+                amount = 3;
+            else
+                amount = 1;
+
+            for (int i = 0; i < amount; i++)
+            {
+                if (shuffleBox.Count < 1)
+                {
+                    // 햄 패널 생성, 햄 제공 로직
+                    // 패널 위치로 이동
+                    // lotteryResults[i].gameObject.SetActive(true);
+                    continue;
+                }
+
+                Skill skill = GetRandomSkill(ref shuffleBox);
+
+                skill.Upgrade();
+                lotteryResults[i].SetData(skill);
+                if (skill.Level == 6)
+                    shuffleBox.Remove(skill);
+                // 패널 위치로 이동
+                lotteryResults[i].gameObject.SetActive(true);
+            }
+
+            closeLottery.gameObject.SetActive(true);
+
+            pnl_lottery.gameObject.SetActive(true);
         }
 
         private Skill GetRandomSkill(ref List<Skill> shuffleBox)
@@ -229,7 +311,20 @@ namespace ZUN
             else
                 InitSkill(skill);
 
+            foreach (Btn_SelectSkill option in options)
+                option.gameObject.SetActive(false);
+
             selectWindow.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
+
+        public void CloseLottery()
+        {
+            foreach (LotteryResult lr in lotteryResults)
+                lr.gameObject.SetActive(false);
+
+            closeLottery.gameObject.SetActive(false);
+            pnl_lottery.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
 

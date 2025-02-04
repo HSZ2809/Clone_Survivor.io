@@ -12,6 +12,7 @@ TagManager:
   - Manager
   - ChapterCtrl
   - MonsterBullet
+  - TreasureBox
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Monster
   - Bullet
-  - Exp
+  - DropedItem
   - Wall
   - MonsterBullet
   - 

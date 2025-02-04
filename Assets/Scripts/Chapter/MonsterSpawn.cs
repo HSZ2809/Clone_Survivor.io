@@ -61,13 +61,11 @@ namespace ZUN
 
         IEnumerator SummonMonster()
         {
-            Vector3 randomVec3;
+            Vector2 randomVec2;
             float randomAngle;
             float randomDistance;
             float x;
             float y;
-
-            randomVec3.z = 0.0f;
 
             while (true)
             {
@@ -81,10 +79,10 @@ namespace ZUN
                         x = Mathf.Cos(randomAngle) * randomDistance;
                         y = Mathf.Sin(randomAngle) * randomDistance;
 
-                        randomVec3.x = transform.position.x + x;
-                        randomVec3.y = transform.position.y + y;
+                        randomVec2.x = transform.position.x + x;
+                        randomVec2.y = transform.position.y + y;
 
-                        objPool[i].gameObject.transform.position = randomVec3;
+                        objPool[i].gameObject.transform.position = randomVec2;
                         objPool[i].gameObject.SetActive(true);
                     }
                 }

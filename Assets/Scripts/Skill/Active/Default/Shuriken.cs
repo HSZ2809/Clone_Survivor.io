@@ -85,6 +85,7 @@ namespace ZUN
                     yield return waitForFixedUpdate;
                     reloadBar.fillAmount = waitTime / Cooldown;
                 }
+                reloadBar.fillAmount = 0.0f;
             }
         }
 
@@ -157,12 +158,6 @@ namespace ZUN
             }
 
             StartCoroutine(enumerator);
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, findRange);
         }
     }
 }

@@ -13,6 +13,13 @@ namespace ZUN
         [Header("EXP Type")]
         [SerializeField] private EXPShard.Type shardType;
 
+        private void Awake()
+        {
+            tag = "Monster";
+            gameObject.layer = LayerMask.NameToLayer(tag);
+            cc2D = GetComponent<CircleCollider2D>();
+        }
+
         private void OnEnable()
         {
             hp = maxHp;

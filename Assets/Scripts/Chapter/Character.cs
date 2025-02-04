@@ -120,6 +120,10 @@ namespace ZUN
             {
                 other.GetComponent<EXPShard>().GetEXP(this);
             }
+            else if (other.CompareTag("TreasureBox"))
+            {
+                other.GetComponent<TreasureBox>().GetTreasureBox(this);
+            }
         }
 
         public void SetActiveSkill(ActiveSkill newActive)
@@ -160,6 +164,11 @@ namespace ZUN
             }
 
             expBar.fillAmount = exp / maxExp;
+        }
+
+        public void GetTreasureBox()
+        {
+            chapterCtrl.StartLottery(ref actives, ref passives);
         }
 
         public void Hit(float damage)

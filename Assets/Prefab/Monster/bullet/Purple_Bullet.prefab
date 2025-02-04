@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7830352110183134723}
   - component: {fileID: 363147190000202553}
   - component: {fileID: 5065159435404524367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Purple_Bullet
-  m_TagString: Untagged
+  m_TagString: MonsterBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

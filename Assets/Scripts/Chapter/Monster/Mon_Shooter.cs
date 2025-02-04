@@ -20,6 +20,13 @@ namespace ZUN
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (10.0f);
 
+        private void Awake()
+        {
+            tag = "Monster";
+            gameObject.layer = LayerMask.NameToLayer(tag);
+            cc2D = GetComponent<CircleCollider2D>();
+        }
+
         private void Start()
         {
             EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<EXPObjPool>();
