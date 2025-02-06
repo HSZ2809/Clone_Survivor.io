@@ -15,15 +15,6 @@ namespace ZUN
             level = 1;
         }
 
-        public virtual void ActiveSkillOn() 
-        {
-            Debug.LogWarning("ActiveSkill : ActivateWeapon Mathod Not Set");
-            return; 
-        }
-
-        public override void Upgrade()
-        {
-            Debug.LogWarning("ActiveSkill : Upgrade Mathod Not Set");
-        }
+        public abstract void ActiveSkillOn();
     }
 }

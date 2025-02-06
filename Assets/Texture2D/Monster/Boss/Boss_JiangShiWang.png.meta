@@ -1,0 +1,1030 @@
+fileFormatVersion: 2
+guid: 22081897b06eb5c47b9474dedd0af86d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2800371863321785359
+    second: Boss_JiangShiWang_0
+  - first:
+      213: 5684613858422000624
+    second: Boss_JiangShiWang_1
+  - first:
+      213: -6640780732895039390
+    second: Boss_JiangShiWang_2
+  - first:
+      213: 6969810785606801356
+    second: Boss_JiangShiWang_3
+  - first:
+      213: 6128282199971471260
+    second: Boss_JiangShiWang_4
+  - first:
+      213: 5371227101654146810
+    second: Boss_JiangShiWang_5
+  - first:
+      213: -5386571946026269386
+    second: Boss_JiangShiWang_6
+  - first:
+      213: 3688743350156698831
+    second: Boss_JiangShiWang_7
+  - first:
+      213: -6596952818987348702
+    second: Boss_JiangShiWang_8
+  - first:
+      213: -4146592435564109197
+    second: Boss_JiangShiWang_9
+  - first:
+      213: 6130814058659896001
+    second: Boss_JiangShiWang_10
+  - first:
+      213: 3087420602753932060
+    second: Boss_JiangShiWang_11
+  - first:
+      213: 1884971924478297201
+    second: Boss_JiangShiWang_12
+  - first:
+      213: -1563309335041471727
+    second: Boss_JiangShiWang_13
+  - first:
+      213: -5895062490204796684
+    second: Boss_JiangShiWang_14
+  - first:
+      213: -4847336683381944944
+    second: Boss_JiangShiWang_15
+  - first:
+      213: -4472197663000129775
+    second: Boss_JiangShiWang_16
+  - first:
+      213: -5843656814042874901
+    second: Boss_JiangShiWang_17
+  - first:
+      213: -1785397869686079887
+    second: Boss_JiangShiWang_18
+  - first:
+      213: -8474036049332262030
+    second: Boss_JiangShiWang_19
+  - first:
+      213: -8889353035387231408
+    second: Boss_JiangShiWang_20
+  - first:
+      213: -5609168586383007435
+    second: Boss_JiangShiWang_21
+  - first:
+      213: 1491196642995005102
+    second: Boss_JiangShiWang_22
+  - first:
+      213: 5772842510019276803
+    second: Boss_JiangShiWang_23
+  - first:
+      213: 1923765582911052003
+    second: Boss_JiangShiWang_24
+  - first:
+      213: 4564178620686370695
+    second: Boss_JiangShiWang_25
+  - first:
+      213: -2679230041497511667
+    second: Boss_JiangShiWang_26
+  - first:
+      213: -8077960786533442890
+    second: Boss_JiangShiWang_27
+  - first:
+      213: 3117648309285897896
+    second: Boss_JiangShiWang_28
+  - first:
+      213: 394099032478880754
+    second: Boss_JiangShiWang_29
+  - first:
+      213: -2713491829617750888
+    second: Boss_JiangShiWang_30
+  - first:
+      213: 4475275581477590871
+    second: Boss_JiangShiWang_31
+  - first:
+      213: 3439973448352370078
+    second: Boss_JiangShiWang_32
+  - first:
+      213: 3717868108695376135
+    second: Boss_JiangShiWang_33
+  - first:
+      213: 1970217676772365453
+    second: Boss_JiangShiWang_34
+  - first:
+      213: 1521036572732791642
+    second: Boss_JiangShiWang_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 77
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbc4b790a41329d0800000000000000
+      internalID: -2800371863321785359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 448
+        width: 64
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb81849f2ec3ee40800000000000000
+      internalID: 5684613858422000624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 460
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26078889b1537d3a0800000000000000
+      internalID: -6640780732895039390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 503
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc797cb5bfdb9b060800000000000000
+      internalID: 6969810785606801356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 459
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f16ac11380c0550800000000000000
+      internalID: 6128282199971471260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 459
+        width: 113
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afedb0a479e6a8a40800000000000000
+      internalID: 5371227101654146810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 459
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6350508ba5d0f35b0800000000000000
+      internalID: -5386571946026269386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 406
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4acad788c013330800000000000000
+      internalID: 3688743350156698831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_8
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 459
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d4f300d5ae274a0800000000000000
+      internalID: -6596952818987348702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_9
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 414
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37221e146285476c0800000000000000
+      internalID: -4146592435564109197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 359
+        width: 81
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cad46667e6051550800000000000000
+      internalID: 6130814058659896001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 418
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bde5b2ea8b8da20800000000000000
+      internalID: 3087420602753932060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 418
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1740d127af3c82a10800000000000000
+      internalID: 1884971924478297201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_13
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 423
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b0dca41720e4ae0800000000000000
+      internalID: -1563309335041471727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_14
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 450
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f80d9606e7803ea0800000000000000
+      internalID: -5895062490204796684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_15
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 453
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d8c4008fccabcb0800000000000000
+      internalID: -4847336683381944944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 271
+        width: 138
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f8b839bef8fe1c0800000000000000
+      internalID: -4472197663000129775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 273
+        width: 72
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebfea1b61927eea0800000000000000
+      internalID: -5843656814042874901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 365
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e3f92d81ef837e0800000000000000
+      internalID: -1785397869686079887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_19
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 365
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b22b94c1d266a80800000000000000
+      internalID: -8474036049332262030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 365
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05324ba138ca2a480800000000000000
+      internalID: -8889353035387231408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_21
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 375
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5316c5ba3ea3822b0800000000000000
+      internalID: -5609168586383007435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_22
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 375
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6e8f3327bc1b410800000000000000
+      internalID: 1491196642995005102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_23
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 286
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30039f15da14d1050800000000000000
+      internalID: 5772842510019276803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_24
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 238
+        width: 96
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e81988ea9692ba10800000000000000
+      internalID: 1923765582911052003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_25
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 315
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78781710648375f30800000000000000
+      internalID: 4564178620686370695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 216
+        width: 150
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d095cf0f87671dad0800000000000000
+      internalID: -2679230041497511667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_27
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 315
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba9329a67155ef80800000000000000
+      internalID: -8077960786533442890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_28
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 329
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a645998e9c144b20800000000000000
+      internalID: 3117648309285897896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 209
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f39a356bfe187500800000000000000
+      internalID: 394099032478880754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_30
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 100
+        width: 93
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c85b2ce8db75ad0800000000000000
+      internalID: -2713491829617750888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_31
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1
+        width: 206
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75793f92e6f5b1e30800000000000000
+      internalID: 4475275581477590871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_32
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 236
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d81d120ad3dbf20800000000000000
+      internalID: 3439973448352370078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_33
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 166
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7019a84c855889330800000000000000
+      internalID: 3717868108695376135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_34
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1
+        width: 137
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d845632d98e975b10800000000000000
+      internalID: 1970217676772365453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_JiangShiWang_35
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b9d1044becb1510800000000000000
+      internalID: 1521036572732791642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

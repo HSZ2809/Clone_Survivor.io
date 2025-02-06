@@ -10,7 +10,7 @@ namespace ZUN
         [SerializeField] protected SkillType type;
         [SerializeField] protected Sprite sprite;
         [SerializeField] protected string[] upgradeInfos;
-        [SerializeField] protected int level = 1;
+        [SerializeField] protected int level;
 
         public string ID { get { return id; } }
         public string SkillName { get { return skillName; } }
@@ -19,10 +19,7 @@ namespace ZUN
         public string[] UpgradeInfos { get { return upgradeInfos; } }
         public int Level { get { return level; } }
 
-        public virtual void Upgrade() 
-        {
-            Debug.LogWarning("Skill : Upgrade Mathod Not Set");
-        }
+        public abstract void Upgrade();
 
         public enum SkillType { ACTIVE = 0, PASSIVE  = 1 };
     }

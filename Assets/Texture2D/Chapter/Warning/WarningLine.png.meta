@@ -1,0 +1,6630 @@
+fileFormatVersion: 2
+guid: 5c0c3357cbee93540b658a86ee148378
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3128472373431304840
+    second: WarningLine2_0
+  - first:
+      213: 3558474972839052589
+    second: WarningLine2_1
+  - first:
+      213: -680984893445154207
+    second: WarningLine2_2
+  - first:
+      213: -2439788172103460906
+    second: WarningLine2_3
+  - first:
+      213: -6484541595182285894
+    second: WarningLine2_4
+  - first:
+      213: -6274920728129379937
+    second: WarningLine2_5
+  - first:
+      213: 7014683125431052967
+    second: WarningLine2_6
+  - first:
+      213: 6307506218190501779
+    second: WarningLine2_7
+  - first:
+      213: 8528298728959378482
+    second: WarningLine2_8
+  - first:
+      213: 4357477990903853012
+    second: WarningLine2_9
+  - first:
+      213: 4434269496028363904
+    second: WarningLine2_10
+  - first:
+      213: 8168211088363321229
+    second: WarningLine2_11
+  - first:
+      213: 3679962148698669532
+    second: WarningLine2_12
+  - first:
+      213: -255380903313545416
+    second: WarningLine2_13
+  - first:
+      213: 7728401120551819858
+    second: WarningLine2_14
+  - first:
+      213: 268234875938879681
+    second: WarningLine2_15
+  - first:
+      213: -4789357383628390273
+    second: WarningLine2_16
+  - first:
+      213: 2500200179455141517
+    second: WarningLine2_17
+  - first:
+      213: 4525528059177818897
+    second: WarningLine2_18
+  - first:
+      213: -1224385199785251667
+    second: WarningLine2_19
+  - first:
+      213: 2325093702723638551
+    second: WarningLine2_20
+  - first:
+      213: -9018929718802629711
+    second: WarningLine2_21
+  - first:
+      213: -6558642500052646450
+    second: WarningLine2_22
+  - first:
+      213: 8382694674821260102
+    second: WarningLine2_23
+  - first:
+      213: -4114848752955518270
+    second: WarningLine2_24
+  - first:
+      213: -274975890817479643
+    second: WarningLine2_25
+  - first:
+      213: 1631019029492512605
+    second: WarningLine2_26
+  - first:
+      213: 532455947556629186
+    second: WarningLine2_27
+  - first:
+      213: 8434140486078045841
+    second: WarningLine2_28
+  - first:
+      213: 7659900213499175620
+    second: WarningLine2_29
+  - first:
+      213: 8404901438380169490
+    second: WarningLine2_30
+  - first:
+      213: -5170639355343216938
+    second: WarningLine2_31
+  - first:
+      213: -8464472018237579728
+    second: WarningLine2_32
+  - first:
+      213: -6099308786173759317
+    second: WarningLine2_33
+  - first:
+      213: -6500874929397294425
+    second: WarningLine2_34
+  - first:
+      213: 1916561475760417336
+    second: WarningLine2_35
+  - first:
+      213: 162555324799086054
+    second: WarningLine2_36
+  - first:
+      213: -4935746665934904800
+    second: WarningLine2_37
+  - first:
+      213: 1779309518816192935
+    second: WarningLine2_38
+  - first:
+      213: -1869881648816825685
+    second: WarningLine2_39
+  - first:
+      213: 7576182499770579314
+    second: WarningLine2_40
+  - first:
+      213: -2417433505717735657
+    second: WarningLine2_41
+  - first:
+      213: -3687325727310333551
+    second: WarningLine2_42
+  - first:
+      213: 5728380930476291682
+    second: WarningLine2_43
+  - first:
+      213: -6002390062908584421
+    second: WarningLine2_44
+  - first:
+      213: -7680513169489910685
+    second: WarningLine2_45
+  - first:
+      213: -532433563898865982
+    second: WarningLine2_46
+  - first:
+      213: -148567766022244616
+    second: WarningLine2_47
+  - first:
+      213: 5001733075146666417
+    second: WarningLine2_48
+  - first:
+      213: 588345868969196511
+    second: WarningLine2_49
+  - first:
+      213: -7675245860982327117
+    second: WarningLine2_50
+  - first:
+      213: -6549870410323055685
+    second: WarningLine2_51
+  - first:
+      213: 5335724402599665831
+    second: WarningLine2_52
+  - first:
+      213: -2028552717370430005
+    second: WarningLine2_53
+  - first:
+      213: 3306830986485177084
+    second: WarningLine2_54
+  - first:
+      213: -4999599355192892858
+    second: WarningLine2_55
+  - first:
+      213: 5478581229680196921
+    second: WarningLine2_56
+  - first:
+      213: 6667820545014215590
+    second: WarningLine2_57
+  - first:
+      213: 7002493175006031695
+    second: WarningLine2_58
+  - first:
+      213: -7200775173260524919
+    second: WarningLine2_59
+  - first:
+      213: -3960825847065767690
+    second: WarningLine2_60
+  - first:
+      213: -294135326150950572
+    second: WarningLine2_61
+  - first:
+      213: -1682949482082389353
+    second: WarningLine2_62
+  - first:
+      213: -4478686209819424326
+    second: WarningLine2_63
+  - first:
+      213: 2845647240600780498
+    second: WarningLine2_64
+  - first:
+      213: 2113686673708165999
+    second: WarningLine2_65
+  - first:
+      213: -7528545271578634217
+    second: WarningLine2_66
+  - first:
+      213: 5609972563430356892
+    second: WarningLine2_67
+  - first:
+      213: 59550907301538884
+    second: WarningLine2_68
+  - first:
+      213: -5984503619984519423
+    second: WarningLine2_69
+  - first:
+      213: 3422565189079161950
+    second: WarningLine2_70
+  - first:
+      213: 7159431787808785926
+    second: WarningLine2_71
+  - first:
+      213: -6680649144544823117
+    second: WarningLine2_72
+  - first:
+      213: -6716445944487361203
+    second: WarningLine2_73
+  - first:
+      213: -6547808666731936008
+    second: WarningLine2_74
+  - first:
+      213: -8600100943292799150
+    second: WarningLine2_75
+  - first:
+      213: -3504070473753859037
+    second: WarningLine2_76
+  - first:
+      213: 4824525958966677730
+    second: WarningLine2_77
+  - first:
+      213: 387748483337378287
+    second: WarningLine2_78
+  - first:
+      213: 4272722702823880780
+    second: WarningLine2_79
+  - first:
+      213: -7910491897593765883
+    second: WarningLine2_80
+  - first:
+      213: 1182403246219792667
+    second: WarningLine2_81
+  - first:
+      213: -4006353604745023758
+    second: WarningLine2_82
+  - first:
+      213: 1367855022092156570
+    second: WarningLine2_83
+  - first:
+      213: 4524669620301880714
+    second: WarningLine2_84
+  - first:
+      213: 8644138770233170473
+    second: WarningLine2_85
+  - first:
+      213: -4931950106264259315
+    second: WarningLine2_86
+  - first:
+      213: 8294370084063322914
+    second: WarningLine2_87
+  - first:
+      213: -545713559162444798
+    second: WarningLine2_88
+  - first:
+      213: 573473566467174048
+    second: WarningLine2_89
+  - first:
+      213: 8234726397409778476
+    second: WarningLine2_90
+  - first:
+      213: -8643075077401326820
+    second: WarningLine2_91
+  - first:
+      213: -3747127586273019852
+    second: WarningLine2_92
+  - first:
+      213: -2031979012954129057
+    second: WarningLine2_93
+  - first:
+      213: -6312345303605268524
+    second: WarningLine2_94
+  - first:
+      213: 6564666629466008608
+    second: WarningLine2_95
+  - first:
+      213: -3017584791766975156
+    second: WarningLine2_96
+  - first:
+      213: 798049016850372923
+    second: WarningLine2_97
+  - first:
+      213: 597260950580097404
+    second: WarningLine2_98
+  - first:
+      213: -7800481137533282482
+    second: WarningLine2_99
+  - first:
+      213: 9064791170195944035
+    second: WarningLine2_100
+  - first:
+      213: 5743554879507754465
+    second: WarningLine2_101
+  - first:
+      213: 3646811108835112579
+    second: WarningLine2_102
+  - first:
+      213: -4309399068546578737
+    second: WarningLine2_103
+  - first:
+      213: -4720338130721380437
+    second: WarningLine2_104
+  - first:
+      213: -7711957185253623010
+    second: WarningLine2_105
+  - first:
+      213: 3184391764593530821
+    second: WarningLine2_106
+  - first:
+      213: -3484281284610263199
+    second: WarningLine2_107
+  - first:
+      213: 6367106767326644670
+    second: WarningLine2_108
+  - first:
+      213: -428223922351592164
+    second: WarningLine2_109
+  - first:
+      213: 271960770081933064
+    second: WarningLine2_110
+  - first:
+      213: -7038301056443402705
+    second: WarningLine2_111
+  - first:
+      213: 5981291279095133821
+    second: WarningLine2_112
+  - first:
+      213: 6144933876852919985
+    second: WarningLine2_113
+  - first:
+      213: 7997801843834567813
+    second: WarningLine2_114
+  - first:
+      213: 4299988618505188171
+    second: WarningLine2_115
+  - first:
+      213: 1385099777853012555
+    second: WarningLine2_116
+  - first:
+      213: 9142315351520487903
+    second: WarningLine2_117
+  - first:
+      213: 6267917573703046879
+    second: WarningLine2_118
+  - first:
+      213: 2325853046909401593
+    second: WarningLine2_119
+  - first:
+      213: 8484332076370765645
+    second: WarningLine2_120
+  - first:
+      213: 1589080792631655725
+    second: WarningLine2_121
+  - first:
+      213: -262656344776240085
+    second: WarningLine2_122
+  - first:
+      213: 6894204489762350648
+    second: WarningLine2_123
+  - first:
+      213: -3329972932981465707
+    second: WarningLine2_124
+  - first:
+      213: 2175128935761201131
+    second: WarningLine2_125
+  - first:
+      213: 2292549887235391556
+    second: WarningLine2_126
+  - first:
+      213: -5889895845543535460
+    second: WarningLine2_127
+  - first:
+      213: -867212085699905062
+    second: WarningLine2_128
+  - first:
+      213: -8983571436560535985
+    second: WarningLine2_129
+  - first:
+      213: 176469990931863646
+    second: WarningLine2_130
+  - first:
+      213: 8418085407934855455
+    second: WarningLine2_131
+  - first:
+      213: 8528110323976835419
+    second: WarningLine2_132
+  - first:
+      213: 2067011892762354635
+    second: WarningLine2_133
+  - first:
+      213: -3549602885195177452
+    second: WarningLine2_134
+  - first:
+      213: 2063160080505073585
+    second: WarningLine2_135
+  - first:
+      213: 6350390526660934597
+    second: WarningLine2_136
+  - first:
+      213: -3164609820744985817
+    second: WarningLine2_137
+  - first:
+      213: -2071973935708724455
+    second: WarningLine2_138
+  - first:
+      213: -3450685466762455230
+    second: WarningLine2_139
+  - first:
+      213: -2696769086728663593
+    second: WarningLine2_140
+  - first:
+      213: 9109629378809488948
+    second: WarningLine2_141
+  - first:
+      213: 1518789788183463360
+    second: WarningLine2_142
+  - first:
+      213: 73603119236661975
+    second: WarningLine2_143
+  - first:
+      213: -2970536382936571890
+    second: WarningLine2_144
+  - first:
+      213: -6266121333913650948
+    second: WarningLine2_145
+  - first:
+      213: -9026694293266443416
+    second: WarningLine2_146
+  - first:
+      213: 1848461290483728428
+    second: WarningLine2_147
+  - first:
+      213: -4290302921842082388
+    second: WarningLine2_148
+  - first:
+      213: 3157091311223614840
+    second: WarningLine2_149
+  - first:
+      213: -6434277512563042585
+    second: WarningLine2_150
+  - first:
+      213: 6898626327282285194
+    second: WarningLine2_151
+  - first:
+      213: -2533623791288836436
+    second: WarningLine2_152
+  - first:
+      213: 8058322974175352162
+    second: WarningLine2_153
+  - first:
+      213: 7809097029227687074
+    second: WarningLine2_154
+  - first:
+      213: -6389040188375209402
+    second: WarningLine2_155
+  - first:
+      213: -7014460644579239243
+    second: WarningLine2_156
+  - first:
+      213: -3957306550734962035
+    second: WarningLine2_157
+  - first:
+      213: 8470928412179730149
+    second: WarningLine2_158
+  - first:
+      213: -3976187274290704133
+    second: WarningLine2_159
+  - first:
+      213: -2357466176919132061
+    second: WarningLine2_160
+  - first:
+      213: -4297681566167804076
+    second: WarningLine2_161
+  - first:
+      213: 7947681080241046744
+    second: WarningLine2_162
+  - first:
+      213: 220500963004984001
+    second: WarningLine2_163
+  - first:
+      213: -502496399803508799
+    second: WarningLine2_164
+  - first:
+      213: -8308812331611164220
+    second: WarningLine2_165
+  - first:
+      213: -4430596711120383948
+    second: WarningLine2_166
+  - first:
+      213: 4863622548128989881
+    second: WarningLine2_167
+  - first:
+      213: 9149657526449211799
+    second: WarningLine2_168
+  - first:
+      213: 4900327857427864504
+    second: WarningLine2_169
+  - first:
+      213: 5704910584648663537
+    second: WarningLine2_170
+  - first:
+      213: -8119497365288045475
+    second: WarningLine2_171
+  - first:
+      213: -7031284904537579602
+    second: WarningLine2_172
+  - first:
+      213: 6621032959169558184
+    second: WarningLine2_173
+  - first:
+      213: -5156405830389492875
+    second: WarningLine2_174
+  - first:
+      213: 1392608129506611993
+    second: WarningLine2_175
+  - first:
+      213: 4827728817586203542
+    second: WarningLine2_176
+  - first:
+      213: -565321588273448770
+    second: WarningLine2_177
+  - first:
+      213: 5140415899105924419
+    second: WarningLine2_178
+  - first:
+      213: -6690059519338727121
+    second: WarningLine2_179
+  - first:
+      213: 9214643937503965742
+    second: WarningLine2_180
+  - first:
+      213: 7234121329531999162
+    second: WarningLine2_181
+  - first:
+      213: -3772606752484685101
+    second: WarningLine2_182
+  - first:
+      213: 95207006026579856
+    second: WarningLine2_183
+  - first:
+      213: -7747438151899000114
+    second: WarningLine2_184
+  - first:
+      213: 7744779106796286747
+    second: WarningLine2_185
+  - first:
+      213: -2409270890042462744
+    second: WarningLine2_186
+  - first:
+      213: 4337552651524562512
+    second: WarningLine2_187
+  - first:
+      213: 2071919719136370054
+    second: WarningLine2_188
+  - first:
+      213: 1409635383409474613
+    second: WarningLine2_189
+  - first:
+      213: 6736379144117395707
+    second: WarningLine2_190
+  - first:
+      213: 6826447740029348001
+    second: WarningLine2_191
+  - first:
+      213: -6710623005727884492
+    second: WarningLine2_192
+  - first:
+      213: -1330966447293282934
+    second: WarningLine2_193
+  - first:
+      213: -2957619205559010002
+    second: WarningLine2_194
+  - first:
+      213: -1897316205952634074
+    second: WarningLine2_195
+  - first:
+      213: -1347785571231934883
+    second: WarningLine2_196
+  - first:
+      213: -1998624834824011084
+    second: WarningLine2_197
+  - first:
+      213: -4161610544881411097
+    second: WarningLine2_198
+  - first:
+      213: -8360945794362007351
+    second: WarningLine2_199
+  - first:
+      213: -2341402845055844938
+    second: WarningLine2_200
+  - first:
+      213: 3078361378190550422
+    second: WarningLine2_201
+  - first:
+      213: 1002907658445388806
+    second: WarningLine2_202
+  - first:
+      213: 5771213790982757152
+    second: WarningLine2_203
+  - first:
+      213: -4830491414921124659
+    second: WarningLine2_204
+  - first:
+      213: 63225228181597137
+    second: WarningLine2_205
+  - first:
+      213: 2004799483530526557
+    second: WarningLine2_206
+  - first:
+      213: 2259587851738007118
+    second: WarningLine2_207
+  - first:
+      213: -3453212299708250883
+    second: WarningLine2_208
+  - first:
+      213: -6595125040998211980
+    second: WarningLine2_209
+  - first:
+      213: 297369899213795114
+    second: WarningLine2_210
+  - first:
+      213: 2306406235193863130
+    second: WarningLine2_211
+  - first:
+      213: -8075403271011082063
+    second: WarningLine2_212
+  - first:
+      213: 8808284894976120216
+    second: WarningLine2_213
+  - first:
+      213: 274833400762498391
+    second: WarningLine2_214
+  - first:
+      213: 918002247392340850
+    second: WarningLine2_215
+  - first:
+      213: 4058103097211526474
+    second: WarningLine2_216
+  - first:
+      213: -679330582676548952
+    second: WarningLine2_217
+  - first:
+      213: -3070082765390178065
+    second: WarningLine2_218
+  - first:
+      213: 1561813666511419185
+    second: WarningLine2_219
+  - first:
+      213: 8827940995281221919
+    second: WarningLine2_220
+  - first:
+      213: -4842129391193873225
+    second: WarningLine2_221
+  - first:
+      213: -1632252986112493706
+    second: WarningLine2_222
+  - first:
+      213: 4068421103331599122
+    second: WarningLine2_223
+  - first:
+      213: 6295270656044115887
+    second: WarningLine2_224
+  - first:
+      213: 7959975240757580684
+    second: WarningLine2_225
+  - first:
+      213: -1331339689168267708
+    second: WarningLine2_226
+  - first:
+      213: -4355240478168782244
+    second: WarningLine2_227
+  - first:
+      213: 5157758230561101049
+    second: WarningLine2_228
+  - first:
+      213: -7686721459978898885
+    second: WarningLine2_229
+  - first:
+      213: 7542913469299980152
+    second: WarningLine2_230
+  - first:
+      213: -5833036461916641391
+    second: WarningLine2_231
+  - first:
+      213: -2408263834525914003
+    second: WarningLine2_232
+  - first:
+      213: -749797952120864005
+    second: WarningLine2_233
+  - first:
+      213: 960624636089056106
+    second: WarningLine2_234
+  - first:
+      213: -2780333518498267979
+    second: WarningLine2_235
+  - first:
+      213: -2451126973237802606
+    second: WarningLine2_236
+  - first:
+      213: 707059083343874666
+    second: WarningLine2_237
+  - first:
+      213: -6049906094034942862
+    second: WarningLine2_238
+  - first:
+      213: -1254612911941714927
+    second: WarningLine2_239
+  - first:
+      213: -3434158218306202050
+    second: WarningLine2_240
+  - first:
+      213: 8996256717198660103
+    second: WarningLine2_241
+  - first:
+      213: 1038148791836687942
+    second: WarningLine2_242
+  - first:
+      213: -1027994213967798019
+    second: WarningLine2_243
+  - first:
+      213: 1784113857414949208
+    second: WarningLine2_244
+  - first:
+      213: -8572328630778287138
+    second: WarningLine2_245
+  - first:
+      213: -4394039920462014590
+    second: WarningLine2_246
+  - first:
+      213: 1850019568317064174
+    second: WarningLine2_247
+  - first:
+      213: 1063160220366666009
+    second: WarningLine2_248
+  - first:
+      213: -4861960427284742891
+    second: WarningLine2_249
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WarningLine2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8820ffb5c019a6b20800000000000000
+      internalID: 3128472373431304840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25803a522e326130800000000000000
+      internalID: 3558474972839052589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 133
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a5bc0f8d7ac86f0800000000000000
+      internalID: -680984893445154207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 133
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7d2928591242ed0800000000000000
+      internalID: -2439788172103460906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb3ae796c74206a0800000000000000
+      internalID: -6484541595182285894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 132
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91ec1ef7d00be8a0800000000000000
+      internalID: -6274920728129379937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaae3f1329295160800000000000000
+      internalID: 7014683125431052967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_7
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 129
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397ffc1ac73c88750800000000000000
+      internalID: 6307506218190501779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_8
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 129
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2340a06528a9a5670800000000000000
+      internalID: 8528298728959378482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 128
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df2864552fd87c30800000000000000
+      internalID: 4357477990903853012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_10
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 129
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cfe15ec90b98d30800000000000000
+      internalID: 4434269496028363904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 129
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d877d4435b05b5170800000000000000
+      internalID: 8168211088363321229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_12
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 129
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd14114b31ad11330800000000000000
+      internalID: 3679962148698669532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_13
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 381
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837e397eb64b47cf0800000000000000
+      internalID: -255380903313545416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_14
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 129
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ad8305fdbc04b60800000000000000
+      internalID: 7728401120551819858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_15
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 129
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c835b0d236f8b300800000000000000
+      internalID: 268234875938879681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_16
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 127
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f708f6ea5d8c88db0800000000000000
+      internalID: -4789357383628390273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_17
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 126
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86aacb01de72b220800000000000000
+      internalID: 2500200179455141517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_18
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 131
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b5b54eac7edce30800000000000000
+      internalID: 4525528059177818897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_19
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 129
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daced8ad52c120fe0800000000000000
+      internalID: -1224385199785251667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_20
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715175c5764644020800000000000000
+      internalID: 2325093702723638551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_21
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 132
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb3e80843356d280800000000000000
+      internalID: -9018929718802629711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_22
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5059735650bf4a0800000000000000
+      internalID: -6558642500052646450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_23
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 132
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643a741b460555470800000000000000
+      internalID: 8382694674821260102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_24
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 133
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c290af4cde15e6c0800000000000000
+      internalID: -4114848752955518270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_25
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 133
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c070a52e61f2cf0800000000000000
+      internalID: -274975890817479643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_26
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 133
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57bdc27a2b82a610800000000000000
+      internalID: 1631019029492512605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca28acfcd9a36700800000000000000
+      internalID: 532455947556629186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 116
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e1c6a06161c0570800000000000000
+      internalID: 8434140486078045841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_29
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 117
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2ae8809ae6d4a60800000000000000
+      internalID: 7659900213499175620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_30
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 117
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219d1deb35534a470800000000000000
+      internalID: 8404901438380169490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_31
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 116
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dedc1bc6e23e38b0800000000000000
+      internalID: -5170639355343216938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_32
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 116
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e17bdcb87288a80800000000000000
+      internalID: -8464472018237579728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_33
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 116
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0b1b879f6ea5ba0800000000000000
+      internalID: -6099308786173759317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_34
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 113
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa1800e1b048c5a0800000000000000
+      internalID: -6500874929397294425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_35
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 113
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ae5e0028ef89a10800000000000000
+      internalID: 1916561475760417336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_36
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 112
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed6ff6e433814200800000000000000
+      internalID: 162555324799086054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_37
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 113
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022a1abde84b08bb0800000000000000
+      internalID: -4935746665934904800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_38
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 111
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9a286849061b810800000000000000
+      internalID: 1779309518816192935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_39
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 112
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa50462c88dc06e0800000000000000
+      internalID: -1869881648816825685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_40
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 113
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2793b5cd7d1042960800000000000000
+      internalID: 7576182499770579314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_41
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 113
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f219fd80d837ed0800000000000000
+      internalID: -2417433505717735657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_42
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 112
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199328c89ccf3dcc0800000000000000
+      internalID: -3687325727310333551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_43
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 112
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26639232b1c4f7f40800000000000000
+      internalID: 5728380930476291682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_44
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 111
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ecff03a0a33bca0800000000000000
+      internalID: -6002390062908584421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_45
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 114
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36428d727f5596590800000000000000
+      internalID: -7680513169489910685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_46
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 112
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6105d9e7a6c98f0800000000000000
+      internalID: -532433563898865982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_47
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 113
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6bb29676e20fdf0800000000000000
+      internalID: -148567766022244616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_48
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 116
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b170754bb9b96540800000000000000
+      internalID: 5001733075146666417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_49
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 116
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb3afc53793a2800800000000000000
+      internalID: 588345868969196511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_50
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 116
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b87c5cfd8c0c7590800000000000000
+      internalID: -7675245860982327117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_51
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 117
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb2ad3809f2a15a0800000000000000
+      internalID: -6549870410323055685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_52
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 117
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a02654031d4c0a40800000000000000
+      internalID: 5335724402599665831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_53
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 117
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd6bf02d0229d3e0800000000000000
+      internalID: -2028552717370430005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_54
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 118
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa14b9034934ed20800000000000000
+      internalID: 3306830986485177084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642a47e10eadd9ab0800000000000000
+      internalID: -4999599355192892858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_56
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 101
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93df5340a94d70c40800000000000000
+      internalID: 5478581229680196921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_57
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 101
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3bf93457bd88c50800000000000000
+      internalID: 6667820545014215590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_58
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 100
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fe45e117add2160800000000000000
+      internalID: 7002493175006031695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_59
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 100
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982ca5a9125b11c90800000000000000
+      internalID: -7200775173260524919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_60
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f09570a0e15809c0800000000000000
+      internalID: -3960825847065767690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_61
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 96
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45101e0ba750bebf0800000000000000
+      internalID: -294135326150950572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_62
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 99
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7923d89dc56f4a8e0800000000000000
+      internalID: -1682949482082389353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_63
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 97
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9c54b0f9288d1c0800000000000000
+      internalID: -4478686209819424326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_64
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 98
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de7414a615cd7720800000000000000
+      internalID: 2845647240600780498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_65
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 98
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b2ad8b4d2555d10800000000000000
+      internalID: 2113686673708165999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_66
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 98
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718db14a6fb358790800000000000000
+      internalID: -7528545271578634217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_67
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 80
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9734f2d250aadd40800000000000000
+      internalID: 5609972563430356892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_68
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ca2c31c3193d000800000000000000
+      internalID: 59550907301538884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_69
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 96
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f88c53aa5c2fca0800000000000000
+      internalID: -5984503619984519423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_70
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 96
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c5eabe7e46f7f20800000000000000
+      internalID: 3422565189079161950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_71
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6068bf957496b5360800000000000000
+      internalID: 7159431787808785926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_72
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 97
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b87366aff09943a0800000000000000
+      internalID: -6680649144544823117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_73
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 98
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45c7bdaff36ac2a0800000000000000
+      internalID: -6716445944487361203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_74
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 96
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6083a95b28125a0800000000000000
+      internalID: -6547808666731936008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_75
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 97
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257e782e1cd46a880800000000000000
+      internalID: -8600100943292799150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_76
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 96
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c67ff287a0f5fc0800000000000000
+      internalID: -3504070473753859037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_77
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 100
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e01cd95cc824f240800000000000000
+      internalID: 4824525958966677730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_78
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 100
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe95583f03f816500800000000000000
+      internalID: 387748483337378287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_79
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 100
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48709d09a2cb4b30800000000000000
+      internalID: 4272722702823880780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_80
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 101
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500615dd789483290800000000000000
+      internalID: -7910491897593765883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_81
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 101
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b111330ec7db86010800000000000000
+      internalID: 1182403246219792667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_82
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 100
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe21908f929668c0800000000000000
+      internalID: -4006353604745023758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e790835e89bf210800000000000000
+      internalID: 1367855022092156570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_84
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 85
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d58140c0bdace30800000000000000
+      internalID: 4524669620301880714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_85
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 84
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a1ee4b96626f770800000000000000
+      internalID: 8644138770233170473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_86
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 84
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d053b2a42813e8bb0800000000000000
+      internalID: -4931950106264259315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_87
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 84
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223a83065a58b1370800000000000000
+      internalID: 8294370084063322914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_88
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 84
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2042205c86c3d68f0800000000000000
+      internalID: -545713559162444798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_89
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 83
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae2a599b2365f700800000000000000
+      internalID: 573473566467174048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_90
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 79
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b542c6700a74270800000000000000
+      internalID: 8234726397409778476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_91
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b46749201ad0880800000000000000
+      internalID: -8643075077401326820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_92
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 81
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438312c30578ffbc0800000000000000
+      internalID: -3747127586273019852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_93
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 82
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5df1d58ad5fcc3e0800000000000000
+      internalID: -2031979012954129057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_94
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 82
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfa00ff36b0668a0800000000000000
+      internalID: -6312345303605268524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_95
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 80
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cae26b4816a1b50800000000000000
+      internalID: 6564666629466008608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_96
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 80
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4dbb17ae926f16d0800000000000000
+      internalID: -3017584791766975156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_97
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 81
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3957b24a5d331b00800000000000000
+      internalID: 798049016850372923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_98
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 82
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71f98d8ba5e94800800000000000000
+      internalID: 597260950580097404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_99
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 81
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e479130fbbf1fb390800000000000000
+      internalID: -7800481137533282482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_100
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 81
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36270aeba8b9ccd70800000000000000
+      internalID: 9064791170195944035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_101
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 83
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed65057bb435bf40800000000000000
+      internalID: 5743554879507754465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_102
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 80
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386b011c1631c9230800000000000000
+      internalID: 3646811108835112579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_103
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 83
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6c1eb1160f134c0800000000000000
+      internalID: -4309399068546578737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_104
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 84
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7ee92ca7dfd7eb0800000000000000
+      internalID: -4720338130721380437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_105
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 84
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bbfe9bccf99f490800000000000000
+      internalID: -7711957185253623010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_106
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 84
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7d642307b313c20800000000000000
+      internalID: 3184391764593530821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_107
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 84
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1677345d1a855afc0800000000000000
+      internalID: -3484281284610263199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_108
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 85
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb98d79ded18c5850800000000000000
+      internalID: 6367106767326644670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_109
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 85
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1da8e78c94ae0af0800000000000000
+      internalID: -428223922351592164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807439521e236c300800000000000000
+      internalID: 271960770081933064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_111
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 69
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f263f6cca7ee25e90800000000000000
+      internalID: -7038301056443402705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_112
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 69
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d767b946ab0d10350800000000000000
+      internalID: 5981291279095133821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_113
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 68
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be0512cdc0374550800000000000000
+      internalID: 6144933876852919985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_114
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 68
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c39bd1766edfe60800000000000000
+      internalID: 7997801843834567813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_115
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 68
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b437930cdd0acab30800000000000000
+      internalID: 4299988618505188171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_116
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 65
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ab66dc8ecd83310800000000000000
+      internalID: 1385099777853012555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_117
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 65
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9aaf7cf5700ee70800000000000000
+      internalID: 9142315351520487903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_118
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 64
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd69ffd03dd1cf650800000000000000
+      internalID: 6267917573703046879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_119
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 62
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f97bc4f507174020800000000000000
+      internalID: 2325853046909401593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_120
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 64
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47288052176eb570800000000000000
+      internalID: 8484332076370765645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_121
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 65
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2db434cf8c8d0610800000000000000
+      internalID: 1589080792631655725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_122
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 65
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b241c9f227bda5cf0800000000000000
+      internalID: -262656344776240085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_123
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 33
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8362035d4722daf50800000000000000
+      internalID: 6894204489762350648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_124
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 63
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d59f9a24f89c1d0800000000000000
+      internalID: -3329972932981465707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_125
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 66
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be748b42e3c9f2e10800000000000000
+      internalID: 2175128935761201131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_126
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 65
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440078ad9f5c0df10800000000000000
+      internalID: 2292549887235391556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_127
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 65
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c145a3fe2e24ea0800000000000000
+      internalID: -5889895845543535460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_128
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 64
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad97ee6e33b07f3f0800000000000000
+      internalID: -867212085699905062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_129
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 65
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ea67d1061f35380800000000000000
+      internalID: -8983571436560535985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_130
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 65
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5892039582f27200800000000000000
+      internalID: 176469990931863646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_131
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 68
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f193bdcd31c03d470800000000000000
+      internalID: 8418085407934855455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_132
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 68
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b511bf1e72fe95670800000000000000
+      internalID: 8528110323976835419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_133
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 68
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3ab9e6d508fac10800000000000000
+      internalID: 2067011892762354635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_134
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4126d368bf64dbec0800000000000000
+      internalID: -3549602885195177452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_135
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 69
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf65418921d1ac10800000000000000
+      internalID: 2063160080505073585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_136
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 68
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb71a6c98e112850800000000000000
+      internalID: 6350390526660934597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_137
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72358c5822c0514d0800000000000000
+      internalID: -3164609820744985817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_138
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 52
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913a63aeeaede33e0800000000000000
+      internalID: -2071973935708724455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_139
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 53
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247550ab9d3bc10d0800000000000000
+      internalID: -3450685466762455230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_140
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 52
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd8840cdc6239ad0800000000000000
+      internalID: -2696769086728663593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_141
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 52
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436e667b7a7eb6e70800000000000000
+      internalID: 9109629378809488948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_142
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 50
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c58a25f343d31510800000000000000
+      internalID: 1518789788183463360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_143
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 51
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d24670a5ad750100800000000000000
+      internalID: 73603119236661975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_144
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 50
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0021b6f5e886c6d0800000000000000
+      internalID: -2970536382936571890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_145
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 48
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8749c98d34a09a0800000000000000
+      internalID: -6266121333913650948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_146
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 50
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863dec1ad5dbab280800000000000000
+      internalID: -9026694293266443416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_147
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20c75800cd07a910800000000000000
+      internalID: 1848461290483728428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_148
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 60
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad38cc3938c574c0800000000000000
+      internalID: -4290302921842082388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_149
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 49
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87da4f012dd30db20800000000000000
+      internalID: 3157091311223614840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_150
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 49
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6556d41bad4b6a0800000000000000
+      internalID: -6434277512563042585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_151
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 49
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a71db1818dcbf50800000000000000
+      internalID: 6898626327282285194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_152
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 49
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae10c5e592c6dcd0800000000000000
+      internalID: -2533623791288836436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_153
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 49
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2655719dc0ae4df60800000000000000
+      internalID: 8058322974175352162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_154
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 47
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acacabaf5c7f5c60800000000000000
+      internalID: 7809097029227687074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_155
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 48
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a633c9cc19557a0800000000000000
+      internalID: -6389040188375209402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_156
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 49
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba95ec3531a7ae90800000000000000
+      internalID: -7014460644579239243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_157
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82cd18a8a2d419c0800000000000000
+      internalID: -3957306550734962035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_158
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 49
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee8cbd8288ce8570800000000000000
+      internalID: 8470928412179730149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_159
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 51
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf05973adbeb1d8c0800000000000000
+      internalID: -3976187274290704133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_160
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 51
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368acb2a009984fd0800000000000000
+      internalID: -2357466176919132061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_161
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 52
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457d2dab2619b54c0800000000000000
+      internalID: -4297681566167804076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_162
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 52
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d44cd775d5db4e60800000000000000
+      internalID: 7947681080241046744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_163
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 52
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca2b8425706f0300800000000000000
+      internalID: 220500963004984001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_164
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 53
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c79ccccf26c609f0800000000000000
+      internalID: -502496399803508799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_165
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 53
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c17ee4d43b21bc80800000000000000
+      internalID: -8308812331611164220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_166
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430d7aaf3cb5382c0800000000000000
+      internalID: -4430596711120383948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_167
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 36
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b20fce50fe0f7340800000000000000
+      internalID: 4863622548128989881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_168
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 37
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7990c781b0d1afe70800000000000000
+      internalID: 9149657526449211799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_169
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 37
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb50f82936710440800000000000000
+      internalID: 4900327857427864504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_170
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 36
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1895963f9eb2f40800000000000000
+      internalID: 5704910584648663537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_171
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 36
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54394b4a20c15f80800000000000000
+      internalID: -8119497365288045475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_172
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 36
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf9876f1abdb6e90800000000000000
+      internalID: -7031284904537579602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_173
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 33
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a674798562a2eb50800000000000000
+      internalID: 6621032959169558184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_174
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 33
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57391e19734c078b0800000000000000
+      internalID: -5156405830389492875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_175
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 32
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913109627b9835310800000000000000
+      internalID: 1392608129506611993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_176
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 33
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b642cf7c98ff240800000000000000
+      internalID: 4827728817586203542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_177
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 33
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8f91bb2039728f0800000000000000
+      internalID: -565321588273448770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_178
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 34
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3459aff660d665740800000000000000
+      internalID: 5140415899105924419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_179
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 33
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29389700522823a0800000000000000
+      internalID: -6690059519338727121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_180
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 33
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2271a207ddf0ef70800000000000000
+      internalID: 9214643937503965742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_181
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 33
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3d4dc6503c46460800000000000000
+      internalID: 7234121329531999162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_182
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 34
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da09e0952205abc0800000000000000
+      internalID: -3772606752484685101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_183
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 31
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fb75e744e325100800000000000000
+      internalID: 95207006026579856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_184
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 30
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec250cc6c029b7490800000000000000
+      internalID: -7747438151899000114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_185
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 35
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13b574609bfa7b60800000000000000
+      internalID: 7744779106796286747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_186
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 33
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed645fe3ec809ed0800000000000000
+      internalID: -2409270890042462744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_187
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 36
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05edcacb725123c30800000000000000
+      internalID: 4337552651524562512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_188
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 36
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d104ec100f0cc10800000000000000
+      internalID: 2071919719136370054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_189
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 36
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c71f2a9e7009310800000000000000
+      internalID: 1409635383409474613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_190
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 36
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0a775042d6c7d50800000000000000
+      internalID: 6736379144117395707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_191
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 37
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a8a73e2d0a6cbe50800000000000000
+      internalID: 6826447740029348001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_192
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 37
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b76024ee31fd2a0800000000000000
+      internalID: -6710623005727884492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_193
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 37
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85ce156115778de0800000000000000
+      internalID: -1330966447293282934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_194
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d38cfa00d64f6d0800000000000000
+      internalID: -2957619205559010002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_195
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623f99d86f06ba5e0800000000000000
+      internalID: -1897316205952634074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_196
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 21
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56d251f924bb4de0800000000000000
+      internalID: -1347785571231934883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_197
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 21
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b28a094d457344e0800000000000000
+      internalID: -1998624834824011084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_198
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 20
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebd2d2324dfe36c0800000000000000
+      internalID: -4161610544881411097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_199
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0a1c42914f7fb80800000000000000
+      internalID: -8360945794362007351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_200
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd7b58848aa18fd0800000000000000
+      internalID: -2341402845055844938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_201
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 17
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69564551d5988ba20800000000000000
+      internalID: 3078361378190550422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_202
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 17
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cf724a33b0bed00800000000000000
+      internalID: 1002907658445388806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_203
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 16
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bdc5e9d58771050800000000000000
+      internalID: 5771213790982757152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_204
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 17
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc46d03b6a5a6fcb0800000000000000
+      internalID: -4830491414921124659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_205
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 15
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db6b92920f90e000800000000000000
+      internalID: 63225228181597137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_206
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 16
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f39b5228a72db10800000000000000
+      internalID: 2004799483530526557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_207
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 17
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46c1a9ed2bab5f10800000000000000
+      internalID: 2259587851738007118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_208
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df441e595b9b310d0800000000000000
+      internalID: -3453212299708250883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_209
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 16
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e940ab7b86974a0800000000000000
+      internalID: -6595125040998211980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_210
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 16
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f28890958702400800000000000000
+      internalID: 297369899213795114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_211
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 15
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbe9744040020020800000000000000
+      internalID: 2306406235193863130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_212
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 18
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b06b55a2876eef80800000000000000
+      internalID: -8075403271011082063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_213
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 16
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8959d7591705d3a70800000000000000
+      internalID: 8808284894976120216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_214
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 17
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d7cd8958760d300800000000000000
+      internalID: 274833400762498391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_215
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ba4d22e266dbc00800000000000000
+      internalID: 918002247392340850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_216
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d94332447415830800000000000000
+      internalID: 4058103097211526474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_217
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 20
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2518e2f688296f0800000000000000
+      internalID: -679330582676548952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_218
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 21
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe89ed9adffd465d0800000000000000
+      internalID: -3070082765390178065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_219
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 21
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13773cd314daca510800000000000000
+      internalID: 1561813666511419185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_220
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 21
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1978d11095238a70800000000000000
+      internalID: 8827940995281221919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_221
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 22
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4296139fc4dccb0800000000000000
+      internalID: -4842129391193873225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_222
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677b133ae821959e0800000000000000
+      internalID: -1632252986112493706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_223
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21368c4207fe57830800000000000000
+      internalID: 4068421103331599122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_224
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa72372de4b4d5750800000000000000
+      internalID: 6295270656044115887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_225
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c839246ce43877e60800000000000000
+      internalID: 7959975240757580684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_226
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 4
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4461fbf3b91268de0800000000000000
+      internalID: -1331339689168267708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_227
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ae8533cd31f83c0800000000000000
+      internalID: -4355240478168782244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_228
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f411f1a8c9049740800000000000000
+      internalID: 5157758230561101049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_229
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32f592ee87435590800000000000000
+      internalID: -7686721459978898885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_230
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877722516dfcda860800000000000000
+      internalID: 7542913469299980152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_231
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197ae8d1e34ec0fa0800000000000000
+      internalID: -5833036461916641391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_232
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ca9a15dc0249ed0800000000000000
+      internalID: -2408263834525914003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_233
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf245823cbe2895f0800000000000000
+      internalID: -749797952120864005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_234
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bb3945403d45d00800000000000000
+      internalID: 960624636089056106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_235
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc7cc055654a69d0800000000000000
+      internalID: -2780333518498267979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_236
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29948c42109dbfdd0800000000000000
+      internalID: -2451126973237802606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_237
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 0
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6acce97d7affc900800000000000000
+      internalID: 707059083343874666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_238
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2748394167a6a0ca0800000000000000
+      internalID: -6049906094034942862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_239
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c781d2438b69ee0800000000000000
+      internalID: -1254612911941714927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_240
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 0
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36de5f9b4b6750d0800000000000000
+      internalID: -3434158218306202050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_241
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 0
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70219d0f1df19dc70800000000000000
+      internalID: 8996256717198660103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_242
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e3d6963de386e00800000000000000
+      internalID: 1038148791836687942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_243
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 0
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0ea4d75b4dbb1f0800000000000000
+      internalID: -1027994213967798019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_244
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 4
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859e116c91272c810800000000000000
+      internalID: 1784113857414949208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_245
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 4
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edbac884788f80980800000000000000
+      internalID: -8572328630778287138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_246
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 4
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287d9f319fb3503c0800000000000000
+      internalID: -4394039920462014590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_247
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee36f0ddef69ca910800000000000000
+      internalID: 1850019568317064174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_248
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 5
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919f74a669a11ce00800000000000000
+      internalID: 1063160220366666009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WarningLine2_249
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 4
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dbfab40c8d68cb0800000000000000
+      internalID: -4861960427284742891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WarningLine2_0: 3128472373431304840
+      WarningLine2_1: 3558474972839052589
+      WarningLine2_10: 4434269496028363904
+      WarningLine2_100: 9064791170195944035
+      WarningLine2_101: 5743554879507754465
+      WarningLine2_102: 3646811108835112579
+      WarningLine2_103: -4309399068546578737
+      WarningLine2_104: -4720338130721380437
+      WarningLine2_105: -7711957185253623010
+      WarningLine2_106: 3184391764593530821
+      WarningLine2_107: -3484281284610263199
+      WarningLine2_108: 6367106767326644670
+      WarningLine2_109: -428223922351592164
+      WarningLine2_11: 8168211088363321229
+      WarningLine2_110: 271960770081933064
+      WarningLine2_111: -7038301056443402705
+      WarningLine2_112: 5981291279095133821
+      WarningLine2_113: 6144933876852919985
+      WarningLine2_114: 7997801843834567813
+      WarningLine2_115: 4299988618505188171
+      WarningLine2_116: 1385099777853012555
+      WarningLine2_117: 9142315351520487903
+      WarningLine2_118: 6267917573703046879
+      WarningLine2_119: 2325853046909401593
+      WarningLine2_12: 3679962148698669532
+      WarningLine2_120: 8484332076370765645
+      WarningLine2_121: 1589080792631655725
+      WarningLine2_122: -262656344776240085
+      WarningLine2_123: 6894204489762350648
+      WarningLine2_124: -3329972932981465707
+      WarningLine2_125: 2175128935761201131
+      WarningLine2_126: 2292549887235391556
+      WarningLine2_127: -5889895845543535460
+      WarningLine2_128: -867212085699905062
+      WarningLine2_129: -8983571436560535985
+      WarningLine2_13: -255380903313545416
+      WarningLine2_130: 176469990931863646
+      WarningLine2_131: 8418085407934855455
+      WarningLine2_132: 8528110323976835419
+      WarningLine2_133: 2067011892762354635
+      WarningLine2_134: -3549602885195177452
+      WarningLine2_135: 2063160080505073585
+      WarningLine2_136: 6350390526660934597
+      WarningLine2_137: -3164609820744985817
+      WarningLine2_138: -2071973935708724455
+      WarningLine2_139: -3450685466762455230
+      WarningLine2_14: 7728401120551819858
+      WarningLine2_140: -2696769086728663593
+      WarningLine2_141: 9109629378809488948
+      WarningLine2_142: 1518789788183463360
+      WarningLine2_143: 73603119236661975
+      WarningLine2_144: -2970536382936571890
+      WarningLine2_145: -6266121333913650948
+      WarningLine2_146: -9026694293266443416
+      WarningLine2_147: 1848461290483728428
+      WarningLine2_148: -4290302921842082388
+      WarningLine2_149: 3157091311223614840
+      WarningLine2_15: 268234875938879681
+      WarningLine2_150: -6434277512563042585
+      WarningLine2_151: 6898626327282285194
+      WarningLine2_152: -2533623791288836436
+      WarningLine2_153: 8058322974175352162
+      WarningLine2_154: 7809097029227687074
+      WarningLine2_155: -6389040188375209402
+      WarningLine2_156: -7014460644579239243
+      WarningLine2_157: -3957306550734962035
+      WarningLine2_158: 8470928412179730149
+      WarningLine2_159: -3976187274290704133
+      WarningLine2_16: -4789357383628390273
+      WarningLine2_160: -2357466176919132061
+      WarningLine2_161: -4297681566167804076
+      WarningLine2_162: 7947681080241046744
+      WarningLine2_163: 220500963004984001
+      WarningLine2_164: -502496399803508799
+      WarningLine2_165: -8308812331611164220
+      WarningLine2_166: -4430596711120383948
+      WarningLine2_167: 4863622548128989881
+      WarningLine2_168: 9149657526449211799
+      WarningLine2_169: 4900327857427864504
+      WarningLine2_17: 2500200179455141517
+      WarningLine2_170: 5704910584648663537
+      WarningLine2_171: -8119497365288045475
+      WarningLine2_172: -7031284904537579602
+      WarningLine2_173: 6621032959169558184
+      WarningLine2_174: -5156405830389492875
+      WarningLine2_175: 1392608129506611993
+      WarningLine2_176: 4827728817586203542
+      WarningLine2_177: -565321588273448770
+      WarningLine2_178: 5140415899105924419
+      WarningLine2_179: -6690059519338727121
+      WarningLine2_18: 4525528059177818897
+      WarningLine2_180: 9214643937503965742
+      WarningLine2_181: 7234121329531999162
+      WarningLine2_182: -3772606752484685101
+      WarningLine2_183: 95207006026579856
+      WarningLine2_184: -7747438151899000114
+      WarningLine2_185: 7744779106796286747
+      WarningLine2_186: -2409270890042462744
+      WarningLine2_187: 4337552651524562512
+      WarningLine2_188: 2071919719136370054
+      WarningLine2_189: 1409635383409474613
+      WarningLine2_19: -1224385199785251667
+      WarningLine2_190: 6736379144117395707
+      WarningLine2_191: 6826447740029348001
+      WarningLine2_192: -6710623005727884492
+      WarningLine2_193: -1330966447293282934
+      WarningLine2_194: -2957619205559010002
+      WarningLine2_195: -1897316205952634074
+      WarningLine2_196: -1347785571231934883
+      WarningLine2_197: -1998624834824011084
+      WarningLine2_198: -4161610544881411097
+      WarningLine2_199: -8360945794362007351
+      WarningLine2_2: -680984893445154207
+      WarningLine2_20: 2325093702723638551
+      WarningLine2_200: -2341402845055844938
+      WarningLine2_201: 3078361378190550422
+      WarningLine2_202: 1002907658445388806
+      WarningLine2_203: 5771213790982757152
+      WarningLine2_204: -4830491414921124659
+      WarningLine2_205: 63225228181597137
+      WarningLine2_206: 2004799483530526557
+      WarningLine2_207: 2259587851738007118
+      WarningLine2_208: -3453212299708250883
+      WarningLine2_209: -6595125040998211980
+      WarningLine2_21: -9018929718802629711
+      WarningLine2_210: 297369899213795114
+      WarningLine2_211: 2306406235193863130
+      WarningLine2_212: -8075403271011082063
+      WarningLine2_213: 8808284894976120216
+      WarningLine2_214: 274833400762498391
+      WarningLine2_215: 918002247392340850
+      WarningLine2_216: 4058103097211526474
+      WarningLine2_217: -679330582676548952
+      WarningLine2_218: -3070082765390178065
+      WarningLine2_219: 1561813666511419185
+      WarningLine2_22: -6558642500052646450
+      WarningLine2_220: 8827940995281221919
+      WarningLine2_221: -4842129391193873225
+      WarningLine2_222: -1632252986112493706
+      WarningLine2_223: 4068421103331599122
+      WarningLine2_224: 6295270656044115887
+      WarningLine2_225: 7959975240757580684
+      WarningLine2_226: -1331339689168267708
+      WarningLine2_227: -4355240478168782244
+      WarningLine2_228: 5157758230561101049
+      WarningLine2_229: -7686721459978898885
+      WarningLine2_23: 8382694674821260102
+      WarningLine2_230: 7542913469299980152
+      WarningLine2_231: -5833036461916641391
+      WarningLine2_232: -2408263834525914003
+      WarningLine2_233: -749797952120864005
+      WarningLine2_234: 960624636089056106
+      WarningLine2_235: -2780333518498267979
+      WarningLine2_236: -2451126973237802606
+      WarningLine2_237: 707059083343874666
+      WarningLine2_238: -6049906094034942862
+      WarningLine2_239: -1254612911941714927
+      WarningLine2_24: -4114848752955518270
+      WarningLine2_240: -3434158218306202050
+      WarningLine2_241: 8996256717198660103
+      WarningLine2_242: 1038148791836687942
+      WarningLine2_243: -1027994213967798019
+      WarningLine2_244: 1784113857414949208
+      WarningLine2_245: -8572328630778287138
+      WarningLine2_246: -4394039920462014590
+      WarningLine2_247: 1850019568317064174
+      WarningLine2_248: 1063160220366666009
+      WarningLine2_249: -4861960427284742891
+      WarningLine2_25: -274975890817479643
+      WarningLine2_26: 1631019029492512605
+      WarningLine2_27: 532455947556629186
+      WarningLine2_28: 8434140486078045841
+      WarningLine2_29: 7659900213499175620
+      WarningLine2_3: -2439788172103460906
+      WarningLine2_30: 8404901438380169490
+      WarningLine2_31: -5170639355343216938
+      WarningLine2_32: -8464472018237579728
+      WarningLine2_33: -6099308786173759317
+      WarningLine2_34: -6500874929397294425
+      WarningLine2_35: 1916561475760417336
+      WarningLine2_36: 162555324799086054
+      WarningLine2_37: -4935746665934904800
+      WarningLine2_38: 1779309518816192935
+      WarningLine2_39: -1869881648816825685
+      WarningLine2_4: -6484541595182285894
+      WarningLine2_40: 7576182499770579314
+      WarningLine2_41: -2417433505717735657
+      WarningLine2_42: -3687325727310333551
+      WarningLine2_43: 5728380930476291682
+      WarningLine2_44: -6002390062908584421
+      WarningLine2_45: -7680513169489910685
+      WarningLine2_46: -532433563898865982
+      WarningLine2_47: -148567766022244616
+      WarningLine2_48: 5001733075146666417
+      WarningLine2_49: 588345868969196511
+      WarningLine2_5: -6274920728129379937
+      WarningLine2_50: -7675245860982327117
+      WarningLine2_51: -6549870410323055685
+      WarningLine2_52: 5335724402599665831
+      WarningLine2_53: -2028552717370430005
+      WarningLine2_54: 3306830986485177084
+      WarningLine2_55: -4999599355192892858
+      WarningLine2_56: 5478581229680196921
+      WarningLine2_57: 6667820545014215590
+      WarningLine2_58: 7002493175006031695
+      WarningLine2_59: -7200775173260524919
+      WarningLine2_6: 7014683125431052967
+      WarningLine2_60: -3960825847065767690
+      WarningLine2_61: -294135326150950572
+      WarningLine2_62: -1682949482082389353
+      WarningLine2_63: -4478686209819424326
+      WarningLine2_64: 2845647240600780498
+      WarningLine2_65: 2113686673708165999
+      WarningLine2_66: -7528545271578634217
+      WarningLine2_67: 5609972563430356892
+      WarningLine2_68: 59550907301538884
+      WarningLine2_69: -5984503619984519423
+      WarningLine2_7: 6307506218190501779
+      WarningLine2_70: 3422565189079161950
+      WarningLine2_71: 7159431787808785926
+      WarningLine2_72: -6680649144544823117
+      WarningLine2_73: -6716445944487361203
+      WarningLine2_74: -6547808666731936008
+      WarningLine2_75: -8600100943292799150
+      WarningLine2_76: -3504070473753859037
+      WarningLine2_77: 4824525958966677730
+      WarningLine2_78: 387748483337378287
+      WarningLine2_79: 4272722702823880780
+      WarningLine2_8: 8528298728959378482
+      WarningLine2_80: -7910491897593765883
+      WarningLine2_81: 1182403246219792667
+      WarningLine2_82: -4006353604745023758
+      WarningLine2_83: 1367855022092156570
+      WarningLine2_84: 4524669620301880714
+      WarningLine2_85: 8644138770233170473
+      WarningLine2_86: -4931950106264259315
+      WarningLine2_87: 8294370084063322914
+      WarningLine2_88: -545713559162444798
+      WarningLine2_89: 573473566467174048
+      WarningLine2_9: 4357477990903853012
+      WarningLine2_90: 8234726397409778476
+      WarningLine2_91: -8643075077401326820
+      WarningLine2_92: -3747127586273019852
+      WarningLine2_93: -2031979012954129057
+      WarningLine2_94: -6312345303605268524
+      WarningLine2_95: 6564666629466008608
+      WarningLine2_96: -3017584791766975156
+      WarningLine2_97: 798049016850372923
+      WarningLine2_98: 597260950580097404
+      WarningLine2_99: -7800481137533282482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

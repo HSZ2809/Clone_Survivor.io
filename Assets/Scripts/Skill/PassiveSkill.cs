@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class PassiveSkill : Skill
+    public abstract class PassiveSkill : Skill
     {
         protected Character character = null;
 

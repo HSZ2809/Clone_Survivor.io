@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 namespace ZUN
 {
     public class MidBossSpawn : MonoBehaviour
     {
+        Character character;
+
         [Header("Mid Boss")]
         [SerializeField] Monster midBoss;
         [SerializeField] float hp;
@@ -11,6 +14,11 @@ namespace ZUN
         [Header("Range")]
         [SerializeField] float minDistance = 16f;
         [SerializeField] float maxDistance = 18f;
+
+        private void Awake()
+        {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+        }
 
         public void SetMidBoss()
         {
@@ -29,7 +37,7 @@ namespace ZUN
             randomVec2.x = transform.position.x + x;
             randomVec2.y = transform.position.y + y;
 
-            Monster mon = Instantiate(midBoss, randomVec2, transform.rotation);
+            Monster mon = Instantiate(midBoss, randomVec2, character.transform.rotation);
             mon.MaxHp = hp;
             mon.gameObject.SetActive(true);
         }

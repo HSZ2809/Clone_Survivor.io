@@ -17,8 +17,8 @@ namespace ZUN
         [SerializeField] int amount;
 
         [Header("Range")]
-        [SerializeField] float minDistance = 16f;
-        [SerializeField] float maxDistance = 18f;
+        [SerializeField] float minDistance = 17f;
+        [SerializeField] float maxDistance = 21f;
         
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
@@ -79,8 +79,8 @@ namespace ZUN
                         x = Mathf.Cos(randomAngle) * randomDistance;
                         y = Mathf.Sin(randomAngle) * randomDistance;
 
-                        randomVec2.x = transform.position.x + x;
-                        randomVec2.y = transform.position.y + y;
+                        randomVec2.x = character.transform.position.x + x;
+                        randomVec2.y = character.transform.position.y + y;
 
                         objPool[i].gameObject.transform.position = randomVec2;
                         objPool[i].gameObject.SetActive(true);

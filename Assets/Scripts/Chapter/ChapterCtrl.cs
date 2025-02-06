@@ -240,10 +240,10 @@ namespace ZUN
                     shuffleBox.Add(charPassives[i]);
             }
 
-            int randomInt = UnityEngine.Random.Range(1, 100);
+            int randomInt = UnityEngine.Random.Range(0, 100);
             int amount;
 
-            if (randomInt <= 1)
+            if (randomInt <= 2)
                 amount = 5;
             else if (randomInt <= 20)
                 amount = 3;

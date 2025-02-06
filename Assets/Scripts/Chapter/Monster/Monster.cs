@@ -40,9 +40,6 @@ namespace ZUN
 
         public float MaxHp { get { return maxHp; } set { maxHp = value; } }
 
-        public virtual void Hit(float damage)
-        {
-            Debug.LogWarning("Monster : Hit() is not Set");
-        }
+        public abstract void Hit(float damage);
     }
 }
