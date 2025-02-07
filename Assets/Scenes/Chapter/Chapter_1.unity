@@ -3620,6 +3620,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303895854220446474, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: hp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 303895854220446474, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196220073561433715, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676045988225017284, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744419719425766724, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237163578398706495, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: hp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237163578398706495, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: events.Array.size
       value: 11
@@ -3659,6 +3687,22 @@ PrefabInstance:
     - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: events.Array.data[11].onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306074748247960359, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: hp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306074748247960359, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414472803749396155, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: hp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414472803749396155, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: attackPower
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8126360429236251973, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: m_Name

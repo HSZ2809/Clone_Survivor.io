@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 namespace ZUN
 {
@@ -10,6 +9,7 @@ namespace ZUN
         [Header("Mid Boss")]
         [SerializeField] Monster midBoss;
         [SerializeField] float hp;
+        [SerializeField] float attackPower;
 
         [Header("Range")]
         [SerializeField] float minDistance = 16f;
@@ -38,7 +38,7 @@ namespace ZUN
             randomVec2.y = transform.position.y + y;
 
             Monster mon = Instantiate(midBoss, randomVec2, character.transform.rotation);
-            mon.MaxHp = hp;
+            mon.SetMonsterSpec(hp, attackPower);
             mon.gameObject.SetActive(true);
         }
     }

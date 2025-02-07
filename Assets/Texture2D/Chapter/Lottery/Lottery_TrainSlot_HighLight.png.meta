@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lottery_TrainSlot_HighLight_0: 6317777281302878981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

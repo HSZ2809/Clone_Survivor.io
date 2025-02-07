@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      donglixie_0: 5033872504566220842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4f15d48c922474e9946e0237e0070f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  hp: 1000
   attackPower: 10
   moveSpeed: 2
   anim: {fileID: 7472521042064907343}

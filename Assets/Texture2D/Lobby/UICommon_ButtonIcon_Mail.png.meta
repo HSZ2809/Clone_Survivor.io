@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UICommon_ButtonIcon_Mail_0: 5236540105517884035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

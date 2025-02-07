@@ -11,6 +11,8 @@ namespace ZUN
 
         [Header("Monster")]
         [SerializeField] Monster monster;
+        [SerializeField] float hp;
+        [SerializeField] float attackPower;
         [SerializeField] Monster[] objPool;
 
         [Header("Amount of monsters")]
@@ -48,8 +50,7 @@ namespace ZUN
                 for (int i = before; i < after; i++)
                 {
                     Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon._chapterCtrl = chapterCtrl;
-                    mon.CharacterTF = character.gameObject.transform;
+                    mon.SetMonsterSpec(hp, attackPower);
                     objPool[i] = mon;
                 }
             }
@@ -91,8 +92,8 @@ namespace ZUN
                 }
 
                 randomVec2 = randomVec2.normalized;
-                randomVec2.x = transform.position.x + randomVec2.x * distance;
-                randomVec2.y = transform.position.y + randomVec2.y * distance;
+                randomVec2.x = character.transform.position.x + randomVec2.x * distance;
+                randomVec2.y = character.transform.position.y + randomVec2.y * distance;
 
                 for (int i = 0; i < amount; i++)
                 {

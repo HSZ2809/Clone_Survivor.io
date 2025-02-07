@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainUI_ChatperBox_Unreach_0: -7703432264809941923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

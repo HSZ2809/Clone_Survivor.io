@@ -6,6 +6,7 @@ namespace ZUN
 {
     public class Character : MonoBehaviour
     {
+        #region Inspector
         [Header("Components")]
         [SerializeField] Transform moveDirection = null;
         [SerializeField] SpriteRenderer dirArrow;
@@ -17,8 +18,6 @@ namespace ZUN
         [SerializeField] ActiveSkill[] actives = new ActiveSkill[6];
         [SerializeField] PassiveSkill[] passives = new PassiveSkill[6];
 
-        ChapterCtrl chapterCtrl;
-        Manager_Inventory inventory;
 
         [Header("Connected Joystick")]
         [SerializeField] Joystick joystick;
@@ -40,6 +39,10 @@ namespace ZUN
         [SerializeField] float regeneration;
         [SerializeField] float duration;
         [SerializeField] float itemRange;
+        #endregion
+
+        ChapterCtrl chapterCtrl;
+        Manager_Inventory inventory;
 
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }
@@ -102,15 +105,6 @@ namespace ZUN
                 float damage = collision.gameObject.GetComponent<MonsterBullet>().Damage;
                 Hit(damage);
                 collision.gameObject.GetComponent<MonsterBullet>().SetFalse();
-            }
-        }
-
-        private void OnCollisionStay2D(Collision2D other)
-        {
-            if (other.gameObject.CompareTag("Monster"))
-            {
-                float damage = other.gameObject.GetComponent<Monster>().AttackPower;
-                Hit(damage);
             }
         }
 

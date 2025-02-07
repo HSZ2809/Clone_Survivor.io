@@ -2,12 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-using System;
 
 namespace ZUN
 {
-    
-
     public class WarningSign : MonoBehaviour
     {
         [Header("Component")]

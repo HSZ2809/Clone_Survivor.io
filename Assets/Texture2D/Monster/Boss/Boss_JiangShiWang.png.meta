@@ -1022,7 +1022,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss_JiangShiWang_0: -2800371863321785359
+      Boss_JiangShiWang_1: 5684613858422000624
+      Boss_JiangShiWang_10: 6130814058659896001
+      Boss_JiangShiWang_11: 3087420602753932060
+      Boss_JiangShiWang_12: 1884971924478297201
+      Boss_JiangShiWang_13: -1563309335041471727
+      Boss_JiangShiWang_14: -5895062490204796684
+      Boss_JiangShiWang_15: -4847336683381944944
+      Boss_JiangShiWang_16: -4472197663000129775
+      Boss_JiangShiWang_17: -5843656814042874901
+      Boss_JiangShiWang_18: -1785397869686079887
+      Boss_JiangShiWang_19: -8474036049332262030
+      Boss_JiangShiWang_2: -6640780732895039390
+      Boss_JiangShiWang_20: -8889353035387231408
+      Boss_JiangShiWang_21: -5609168586383007435
+      Boss_JiangShiWang_22: 1491196642995005102
+      Boss_JiangShiWang_23: 5772842510019276803
+      Boss_JiangShiWang_24: 1923765582911052003
+      Boss_JiangShiWang_25: 4564178620686370695
+      Boss_JiangShiWang_26: -2679230041497511667
+      Boss_JiangShiWang_27: -8077960786533442890
+      Boss_JiangShiWang_28: 3117648309285897896
+      Boss_JiangShiWang_29: 394099032478880754
+      Boss_JiangShiWang_3: 6969810785606801356
+      Boss_JiangShiWang_30: -2713491829617750888
+      Boss_JiangShiWang_31: 4475275581477590871
+      Boss_JiangShiWang_32: 3439973448352370078
+      Boss_JiangShiWang_33: 3717868108695376135
+      Boss_JiangShiWang_34: 1970217676772365453
+      Boss_JiangShiWang_35: 1521036572732791642
+      Boss_JiangShiWang_4: 6128282199971471260
+      Boss_JiangShiWang_5: 5371227101654146810
+      Boss_JiangShiWang_6: -5386571946026269386
+      Boss_JiangShiWang_7: 3688743350156698831
+      Boss_JiangShiWang_8: -6596952818987348702
+      Boss_JiangShiWang_9: -4146592435564109197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

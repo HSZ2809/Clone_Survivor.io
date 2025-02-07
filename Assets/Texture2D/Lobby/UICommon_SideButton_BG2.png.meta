@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UICommon_SideButton_BG2_0: 8692107061495870448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

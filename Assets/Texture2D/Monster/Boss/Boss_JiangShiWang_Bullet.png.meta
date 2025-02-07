@@ -397,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss_JiangShiWang_Bullet_0: 5535097399902837039
+      Boss_JiangShiWang_Bullet_1: -1345596824231953348
+      Boss_JiangShiWang_Bullet_10: -6575166911073990316
+      Boss_JiangShiWang_Bullet_2: -4477580525780517420
+      Boss_JiangShiWang_Bullet_3: 1469588972761259125
+      Boss_JiangShiWang_Bullet_4: -5504051219104720697
+      Boss_JiangShiWang_Bullet_5: -1063298195239789386
+      Boss_JiangShiWang_Bullet_6: 7518494925107524192
+      Boss_JiangShiWang_Bullet_7: 8155880776843756073
+      Boss_JiangShiWang_Bullet_8: 4599810951285646419
+      Boss_JiangShiWang_Bullet_9: 6075778234436863147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

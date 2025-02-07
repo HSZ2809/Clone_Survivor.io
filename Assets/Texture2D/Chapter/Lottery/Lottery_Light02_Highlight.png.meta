@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lottery_Light02_Highlight_0: 5506635464342407946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

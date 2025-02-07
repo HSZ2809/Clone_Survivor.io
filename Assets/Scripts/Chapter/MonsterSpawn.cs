@@ -6,11 +6,12 @@ namespace ZUN
 {
     public class MonsterSpawn : MonoBehaviour
     {
-        ChapterCtrl chapterCtrl;
         Character character;
 
         [Header("Monster")]
         [SerializeField] Monster monster;
+        [SerializeField] float hp;
+        [SerializeField] float attackPower;
         [SerializeField] Monster[] objPool;
 
         [Header("Amount of monsters")]
@@ -25,7 +26,6 @@ namespace ZUN
 
         private void Awake()
         {
-            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
         }
 
@@ -48,8 +48,7 @@ namespace ZUN
                 for(int i = before; i < after; i++)
                 {
                     Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon._chapterCtrl = chapterCtrl;
-                    mon.CharacterTF = character.gameObject.transform;
+                    mon.SetMonsterSpec(hp, attackPower);
                     objPool[i] = mon;
                 }
             }
