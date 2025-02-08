@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
+using UnityEngine.U2D.IK;
 
 namespace ZUN
 {
-    public class CarionCrawler : Monster
+    public class Boss_Steelgnasher : Monster
     {
         #region Inspector
         [SerializeField] float moveSpeed;
@@ -20,8 +22,8 @@ namespace ZUN
         [SerializeField] MonsterBullet bullet;
         #endregion
 
-        readonly Vector2 originX = new (1, 1);
-        readonly Vector2 flipX = new (-1, 1);
+        readonly Vector2 originX = new(1, 1);
+        readonly Vector2 flipX = new(-1, 1);
 
         bool isIdle = true;
 
@@ -33,7 +35,6 @@ namespace ZUN
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
         }
-
 
         private void Update()
         {
@@ -80,11 +81,7 @@ namespace ZUN
 
         private void ShootBullet()
         {
-            MonsterBullet _bullet = Instantiate(bullet);
-            Vector3 aim = (shootPos.position - character.transform.position).normalized;
-            float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-            _bullet.transform.SetPositionAndRotation(shootPos.position, Quaternion.Euler(0, 0, angle + 90));
-            _bullet.gameObject.SetActive(true);
+            
         }
 
         private void DropTreasureBox()

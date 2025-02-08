@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: da774379b801c914bb87c599d6627d97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1323945832075066453
+    second: Boss_Steelgnasher_Bullet_0
+  - first:
+      213: 1197360751807665745
+    second: Boss_Steelgnasher_Bullet_1
+  - first:
+      213: 546732061902760554
+    second: Boss_Steelgnasher_Bullet_2
+  - first:
+      213: -5326440026421875328
+    second: Boss_Steelgnasher_Bullet_3
+  - first:
+      213: 8906579332844988392
+    second: Boss_Steelgnasher_Bullet_4
+  - first:
+      213: -4850473867107967679
+    second: Boss_Steelgnasher_Bullet_5
+  - first:
+      213: -3721253135531707426
+    second: Boss_Steelgnasher_Bullet_6
+  - first:
+      213: 7373833487845316390
+    second: Boss_Steelgnasher_Bullet_7
+  - first:
+      213: 5314730363315410806
+    second: Boss_Steelgnasher_Bullet_8
+  - first:
+      213: 1756976494664984856
+    second: Boss_Steelgnasher_Bullet_9
+  - first:
+      213: -6843514795953821665
+    second: Boss_Steelgnasher_Bullet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 215
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba38e41c74660ade0800000000000000
+      internalID: -1323945832075066453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 107
+        width: 136
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1569d778241ed9010800000000000000
+      internalID: 1197360751807665745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 179
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ae701e9e1669700800000000000000
+      internalID: 546732061902760554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_3
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 109
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08da3b3440fa416b0800000000000000
+      internalID: -5326440026421875328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 109
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7af02d6b68a9b70800000000000000
+      internalID: 8906579332844988392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 164
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dd6be77b7afacb0800000000000000
+      internalID: -4850473867107967679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 147
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3f2514df37b5cc0800000000000000
+      internalID: -3721253135531707426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 59
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62756eb2d7e155660800000000000000
+      internalID: 7373833487845316390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677d5665b17b1c940800000000000000
+      internalID: 5314730363315410806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 53
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819a73320d8026810800000000000000
+      internalID: 1756976494664984856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Steelgnasher_Bullet_10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18ea043d83f601a0800000000000000
+      internalID: -6843514795953821665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss_Steelgnasher_Bullet_0: -1323945832075066453
+      Boss_Steelgnasher_Bullet_1: 1197360751807665745
+      Boss_Steelgnasher_Bullet_10: -6843514795953821665
+      Boss_Steelgnasher_Bullet_2: 546732061902760554
+      Boss_Steelgnasher_Bullet_3: -5326440026421875328
+      Boss_Steelgnasher_Bullet_4: 8906579332844988392
+      Boss_Steelgnasher_Bullet_5: -4850473867107967679
+      Boss_Steelgnasher_Bullet_6: -3721253135531707426
+      Boss_Steelgnasher_Bullet_7: 7373833487845316390
+      Boss_Steelgnasher_Bullet_8: 5314730363315410806
+      Boss_Steelgnasher_Bullet_9: 1756976494664984856
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
