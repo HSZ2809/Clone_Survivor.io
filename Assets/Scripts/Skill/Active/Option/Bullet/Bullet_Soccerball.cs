@@ -41,8 +41,7 @@ namespace ZUN
                 Vector2 normal = other.contacts[0].normal;
                 direction = Vector2.Reflect(direction, normal);
 
-                Monster monster = other.gameObject.GetComponent<Monster>();
-                monster.Hit(damage);
+                other.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
 
                 audioSource.PlayOneShot(clip);
             }

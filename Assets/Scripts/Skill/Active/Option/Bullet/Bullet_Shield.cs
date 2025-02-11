@@ -32,7 +32,7 @@ namespace ZUN
 
                 foreach(Collider2D col in monsterCol)
                 {
-                    col.gameObject.GetComponent<Monster>().Hit(damage);
+                    col.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
                 }
             }
         }

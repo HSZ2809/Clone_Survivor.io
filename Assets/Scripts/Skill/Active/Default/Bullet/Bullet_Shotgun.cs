@@ -22,8 +22,8 @@ namespace ZUN
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
-                Monster monster = coll.gameObject.GetComponent<Monster>();
-                monster.Hit(damage);
+                coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
+                gameObject.SetActive(false);
             }
         }
 

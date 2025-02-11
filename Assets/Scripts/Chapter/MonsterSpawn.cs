@@ -11,7 +11,7 @@ namespace ZUN
         [Header("Monster")]
         [SerializeField] Monster monster;
         [SerializeField] float hp;
-        [SerializeField] float attackPower;
+        [SerializeField] float ap;
         [SerializeField] Monster[] objPool;
 
         [Header("Amount of monsters")]
@@ -48,7 +48,7 @@ namespace ZUN
                 for(int i = before; i < after; i++)
                 {
                     Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon.SetMonsterSpec(hp, attackPower);
+                    mon.SetMonsterSpec(hp, ap);
                     objPool[i] = mon;
                 }
             }

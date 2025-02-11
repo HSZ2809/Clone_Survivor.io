@@ -3,9 +3,12 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bouncebloom : Monster
+    public class Bouncebloom : Monster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet
     {
-        [SerializeField] Animator anim;
+        #region Inspector
+        [Header("Status")]
+        [SerializeField] float hp;
+        [SerializeField] float ap;
 
         [Header("Sprite Renderer")]
         [SerializeField] SpriteRenderer sr;
@@ -15,7 +18,13 @@ namespace ZUN
 
         [Header("Boss Pattern")]
         [SerializeField] MonsterBullet bullet;
+        #endregion
+
+        [SerializeField] Animator anim;
         readonly WaitForSeconds waitTime = new(5);
+
+        public float MaxHp { get; set; }
+        public float Ap { get => ap; set => ap = value; }
 
         private void Awake()
         {
@@ -39,6 +48,17 @@ namespace ZUN
                 sr.flipX = true;
         }
 
+        public override void SetMonsterSpec(float _maxHp, float _ap)
+        {
+            MaxHp = _maxHp;
+            ap = _ap;
+        }
+
+        public void Fire()
+        {
+            // 발사체 발사 로직
+        }
+
         IEnumerator Pattern_Shoot()
         {
             yield return waitTime;
@@ -53,13 +73,14 @@ namespace ZUN
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(attackPower);
+                character.Hit(ap);
             }
         }
 
-        public override void Hit(float damage)
+        public void TakeDamage(float damage)
         {
             hp -= damage;
+            ShowDamage(damage);
 
             if (hp <= 0)
             {
@@ -67,6 +88,11 @@ namespace ZUN
                 StopCoroutine(Pattern_Shoot());
                 anim.SetTrigger("Die");
             }
+        }
+
+        public void ShowDamage(float damage)
+        {
+            // 데미지 표시 로직
         }
 
         public void DropTreasureBox()

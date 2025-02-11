@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Shooter : Monster
+    public class Mon_Shooter : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet
     {
         #region Inspector
-        [SerializeField] float currentHp;
+        [Header("Status")]
+        [SerializeField] float hp;
+        [SerializeField] float ap;
         [SerializeField] float moveSpeed;
-
-        [SerializeField] Animator anim;
 
         [Header("Bullet")]
         [SerializeField] MonsterBullet bullet;
@@ -22,8 +22,13 @@ namespace ZUN
         #endregion
 
         EXPObjPool EXPPool;
+        Animator anim;
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (10.0f);
+
+        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float MaxHp { get; set; }
+        public float Ap { get => ap; set => ap = value; }
 
         private void Awake()
         {
@@ -33,6 +38,7 @@ namespace ZUN
             tag = "Monster";
             gameObject.layer = LayerMask.NameToLayer(tag);
             cc2D = GetComponent<CircleCollider2D>();
+            anim = GetComponent<Animator>();
         }
 
         private void Start()
@@ -43,7 +49,7 @@ namespace ZUN
         private void OnEnable()
         {
             enumerator = ShootBullet();
-            currentHp = hp;
+            hp = MaxHp;
             cc2D.enabled = true;
             StartCoroutine(enumerator);
         }
@@ -55,16 +61,32 @@ namespace ZUN
             else
                 sr.flipX = true;
 
-            if (currentHp > 0)
-                transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+            if (hp > 0)
+                Move();
         }
 
         private void OnCollisionStay2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(attackPower);
+                character.Hit(ap);
             }
+        }
+
+        public override void SetMonsterSpec(float _maxHp, float _ap)
+        {
+            MaxHp = _maxHp;
+            ap = _ap;
+        }
+
+        public void Move()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+        }
+
+        public void Fire()
+        {
+            // 발사체 발사 로직
         }
 
         IEnumerator ShootBullet()
@@ -77,16 +99,22 @@ namespace ZUN
             bullet.gameObject.SetActive(true);
         }
 
-        public override void Hit(float damage)
+        public void TakeDamage(float damage)
         {
-            currentHp -= damage;
+            hp -= damage;
+            ShowDamage(damage);
 
-            if (currentHp <= 0)
+            if (hp <= 0)
             {
                 cc2D.enabled = false;
                 StopCoroutine(enumerator);
                 anim.SetTrigger("Die");
             }
+        }
+
+        public void ShowDamage(float damage)
+        {
+            // 데미지 표시 로직
         }
 
         public void DropShard()

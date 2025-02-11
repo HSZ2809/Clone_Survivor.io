@@ -4,8 +4,12 @@ using UnityEngine.U2D.IK;
 
 namespace ZUN
 {
-    public class Mon_MidBoss : Monster
+    public class Mon_MidBoss : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
     {
+        #region Inspector
+        [Header("Status")]
+        [SerializeField] float hp;
+        [SerializeField] float ap;
         [SerializeField] float moveSpeed;
 
         [SerializeField] Animator anim;
@@ -15,6 +19,11 @@ namespace ZUN
 
         [Header("Treasure Box")]
         [SerializeField] private TreasureBox treasureBox;
+        #endregion
+
+        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float MaxHp { get; set; }
+        public float Ap { get => ap; set => ap = value; }
 
         private void Awake()
         {
@@ -33,18 +42,34 @@ namespace ZUN
                 sr.flipX = true;
 
             if (hp > 0)
-                transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+                Move();
         }
 
-        public override void Hit(float damage)
+        public override void SetMonsterSpec(float _maxHp, float _ap)
+        {
+            MaxHp = _maxHp;
+            ap = _ap;
+        }
+        public void Move()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+        }
+
+        public void TakeDamage(float damage)
         {
             hp -= damage;
+            ShowDamage(damage);
 
             if (hp <= 0)
             {
                 cc2D.enabled = false;
                 anim.SetTrigger("Die");
             }
+        }
+
+        public void ShowDamage(float damage)
+        {
+            // 데미지 표시 로직
         }
 
         public void DropTreasureBox()

@@ -2,9 +2,11 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class CarionCrawler : Monster
+    public class CarionCrawler : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
     {
         #region Inspector
+        [SerializeField] float hp;
+        [SerializeField] float ap;
         [SerializeField] float moveSpeed;
 
         [SerializeField] Animator anim;
@@ -22,6 +24,10 @@ namespace ZUN
 
         readonly Vector2 originX = new (1, 1);
         readonly Vector2 flipX = new (-1, 1);
+
+        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float MaxHp { get; set; }
+        public float Ap { get => ap; set => ap = value; }
 
         bool isIdle = true;
 
@@ -45,7 +51,7 @@ namespace ZUN
                     sprites.transform.localScale = originX;
 
                 if (hp > 0)
-                    transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+                    Move();
             }
         }
 
@@ -53,7 +59,7 @@ namespace ZUN
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(attackPower);
+                character.Hit(ap);
             }
         }
 
@@ -67,15 +73,32 @@ namespace ZUN
             isIdle = true;
         }
 
-        public override void Hit(float damage)
+        public override void SetMonsterSpec(float _maxHp, float _ap)
+        {
+            MaxHp = _maxHp;
+            ap = _ap;
+        }
+
+        public void Move()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+        }
+
+        public void TakeDamage(float damage)
         {
             hp -= damage;
+            ShowDamage(damage);
 
             if (hp <= 0)
             {
                 cc2D.enabled = false;
                 anim.SetTrigger("Die");
             }
+        }
+
+        public void ShowDamage(float damage)
+        {
+            // 데미지 표시 로직
         }
 
         private void ShootBullet()
@@ -93,7 +116,7 @@ namespace ZUN
             chapterCtrl.AddKillCount();
         }
 
-        private void Die()
+        public void Die()
         {
             Destroy(gameObject);
         }

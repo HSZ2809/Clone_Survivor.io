@@ -2,10 +2,11 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Straight : Monster
+    public class Mon_Straight : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
     {
         #region Inspector
-        [SerializeField] float currentHp;
+        [SerializeField] float hp;
+        [SerializeField] float ap;
         [SerializeField] float moveSpeed;
 
         [SerializeField] Animator anim;
@@ -20,6 +21,10 @@ namespace ZUN
         EXPObjPool EXPPool;
         Vector2 moveDirection;
 
+        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float MaxHp { get; set; }
+        public float Ap { get => ap; set => ap = value; }
+
         private void Awake()
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
@@ -32,7 +37,7 @@ namespace ZUN
 
         private void OnEnable()
         {
-            currentHp = hp;
+            hp = MaxHp;
             cc2D.enabled = true;
             moveDirection = (character.transform.position - transform.position).normalized;
 
@@ -44,27 +49,44 @@ namespace ZUN
 
         private void Update()
         {
-            if (currentHp > 0)
-                transform.Translate(moveSpeed * Time.deltaTime * moveDirection);
+            if (hp > 0)
+                Move();
         }
 
         private void OnCollisionStay2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(attackPower);
+                character.Hit(ap);
             }
         }
 
-        public override void Hit(float damage)
+        public override void SetMonsterSpec(float _maxHp, float _ap)
         {
-            currentHp -= damage;
+            MaxHp = _maxHp;
+            ap = _ap;
+        }
 
-            if (currentHp <= 0)
+        public void Move()
+        {
+            transform.Translate(moveSpeed * Time.deltaTime * moveDirection);
+        }
+
+        public void TakeDamage(float damage)
+        {
+            hp -= damage;
+            ShowDamage(damage);
+
+            if (hp <= 0)
             {
                 cc2D.enabled = false;
                 anim.SetTrigger("Die");
             }
+        }
+
+        public void ShowDamage(float damage)
+        {
+            // 데미지 표시 로직
         }
 
         public void DropShard()
