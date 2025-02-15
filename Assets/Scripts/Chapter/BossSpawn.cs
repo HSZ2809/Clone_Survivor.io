@@ -17,19 +17,32 @@ namespace ZUN
         [SerializeField] float attackPower;
 
         [Header("Range")]
-        [SerializeField] float disistance = 10f;
+        [SerializeField] float disistance = 16.45f;
+
+        Animator animator;
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            animator = GetComponent<Animator>();
+        }
+        
+        public void SetReady()
+        {
+            animator.SetTrigger("ready");
         }
 
-        public void SetBoss()
+        private void SetBoss()
         {
             Vector2 setLoc = character.transform.position + new Vector3(0, disistance);
-            Monster mon = Instantiate(boss, setLoc, character.transform.rotation);
+            Monster mon = Instantiate(boss, setLoc, transform.rotation);
             mon.SetMonsterSpec(hp, attackPower);
             mon.gameObject.SetActive(true);
+        }
+
+        private void DestroyObject()
+        {
+            Destroy(this);
         }
     }
 }

@@ -69,7 +69,7 @@ namespace ZUN
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(ap);
+                character.TakeDamage(ap);
             }
         }
 

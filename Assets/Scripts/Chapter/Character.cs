@@ -103,7 +103,7 @@ namespace ZUN
             if (collision.gameObject.CompareTag("MonsterBullet"))
             {
                 float damage = collision.gameObject.GetComponent<MonsterBullet>().Damage;
-                Hit(damage);
+                TakeDamage(damage);
                 collision.gameObject.GetComponent<MonsterBullet>().SetFalse();
             }
         }
@@ -165,7 +165,7 @@ namespace ZUN
             chapterCtrl.StartLottery(ref actives, ref passives);
         }
 
-        public void Hit(float damage)
+        public void TakeDamage(float damage)
         {
             hp -= damage;
             hpBar.fillAmount = hp / maxHp;

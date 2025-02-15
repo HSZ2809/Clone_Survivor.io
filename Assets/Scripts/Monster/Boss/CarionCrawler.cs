@@ -40,7 +40,6 @@ namespace ZUN
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
         }
 
-
         private void Update()
         {
             if (isIdle)
@@ -59,7 +58,7 @@ namespace ZUN
         {
             if (other.gameObject.CompareTag("Character"))
             {
-                character.Hit(ap);
+                character.TakeDamage(ap);
             }
         }
 
@@ -76,7 +75,10 @@ namespace ZUN
         public override void SetMonsterSpec(float _maxHp, float _ap)
         {
             MaxHp = _maxHp;
-            ap = _ap;
+            Ap = _ap;
+
+            hp = MaxHp;
+            ap = Ap;
         }
 
         public void Move()

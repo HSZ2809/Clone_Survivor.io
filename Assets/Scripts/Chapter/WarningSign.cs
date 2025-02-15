@@ -29,20 +29,20 @@ namespace ZUN
 
         public void ZombieWarning()
         {
+            // WarningType 별로 경고 문구, 시퀀스 시간 변경
             warningText.text = zombieString;
             StartWarning(zombieTransitionTime);
         }
 
         public void BossWarning()
         {
+            // WarningType 별로 경고 문구, 시퀀스 시간 변경
             warningText.text = bossString;
             StartWarning(bossTransitionTime);
         }
 
         private void StartWarning(int totalTime)
         {
-            // WarningType 별로 경고 문구, 시퀀스 시간 변경
-
             //int totalTime;
             //switch(type)
             //{

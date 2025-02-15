@@ -654,6 +654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 736990880547716438, guid: 2df419c917b64e0408be376367505466, type: 3}
+  hp: 1
+  attackPower: 2
   objPool: []
   amount: 0
   swarmSize: 0
@@ -9124,6 +9126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midBoss: {fileID: 7621757744511301412, guid: 2cfd918ecb48cb9499271bf65b1b8c69, type: 3}
   hp: 2000
+  attackPower: 15
   minDistance: 16
   maxDistance: 18
 --- !u!1 &3574500098481340689
@@ -9383,6 +9386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midBoss: {fileID: 7621757744511301412, guid: b06e304dad33caf4ba74d8be1e9edd8e, type: 3}
   hp: 3000
+  attackPower: 20
   minDistance: 16
   maxDistance: 18
 --- !u!1 &3621886232305446747
@@ -10944,6 +10948,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 9055629590452625329, guid: 278b2704dc2d8c2499de940c83253e13, type: 3}
+  hp: 10
+  ap: 0
   objPool: []
   amount: 0
   minDistance: 16
@@ -13247,6 +13253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midBoss: {fileID: 7621757744511301412, guid: b06e304dad33caf4ba74d8be1e9edd8e, type: 3}
   hp: 1000
+  attackPower: 10
   minDistance: 16
   maxDistance: 18
 --- !u!1 &5507155727909590305
@@ -19008,6 +19015,7 @@ GameObject:
   - component: {fileID: 8411991871908709684}
   - component: {fileID: 3970760962419468653}
   - component: {fileID: 3644150880101601961}
+  - component: {fileID: 3199839758206197526}
   m_Layer: 0
   m_Name: ChapterCtrl
   m_TagString: ChapterCtrl
@@ -19377,6 +19385,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shardPerfab: {fileID: 9196344863446389852, guid: 97aa0e91649424d42b6b14d23ddf8e4e, type: 3}
+--- !u!114 &3199839758206197526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126360429236251973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbdab00ec07da74484edea4e5d06308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8187445639962142932
 GameObject:
   m_ObjectHideFlags: 0
@@ -19422,6 +19442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 2196970772980682461, guid: 15d289245c16c7d4fa693d00cf34e0e1, type: 3}
+  hp: 10
+  ap: 0
   objPool: []
   amount: 0
   minDistance: 16
@@ -20820,6 +20842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 6967121792191880138, guid: cd910bce5c83df4418494583b3a479fc, type: 3}
+  hp: 20
+  ap: 0
   objPool: []
   amount: 0
   minDistance: 16
