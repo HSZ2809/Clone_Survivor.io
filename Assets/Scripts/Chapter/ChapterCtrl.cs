@@ -25,6 +25,7 @@ namespace ZUN
         [SerializeField] Button closeLottery;
         int gold;
         int kill;
+        public bool PauseTimer { get; set; }
 
         [Header("PlayTime")]
         [SerializeField] float playTime;
@@ -52,6 +53,8 @@ namespace ZUN
 
         private void Start()
         {
+            transform.parent = character.transform;
+
             /* 인벤토리의 기본 아이템 적용 */
             actives[0] = inventory.Active;
             InitSkill(inventory.Active);
@@ -59,15 +62,24 @@ namespace ZUN
 
         private void FixedUpdate()
         {
-            playTime += Time.deltaTime;
-
-            foreach(var timedEvent in events)
+            if(!PauseTimer)
             {
-                if(playTime >= timedEvent.triggerTime && timedEvent.onEvent != null)
+                playTime += Time.deltaTime;
+
+                foreach (var timedEvent in events)
                 {
-                    timedEvent.onEvent.Invoke();
-                    timedEvent.onEvent = null;
+                    if (playTime >= timedEvent.triggerTime && timedEvent.onEvent != null)
+                    {
+                        timedEvent.onEvent.Invoke();
+                        timedEvent.onEvent = null;
+                    }
                 }
+            }
+
+            // 임시 코드
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Time.timeScale = 3.0f;
             }
         }
 

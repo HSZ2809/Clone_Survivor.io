@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7, y: 2.7, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3114999181405542602}
@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5182477415485231871}
   - component: {fileID: 7472521042064907343}
   - component: {fileID: -1438298476729955681}
+  - component: {fileID: 8230042992120969927}
   m_Layer: 0
   m_Name: Boss_Bouncebloom
   m_TagString: Untagged
@@ -184,8 +185,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.5}
-  m_Radius: 0.88
+  m_Offset: {x: 0.5626445, y: -1.2186732}
+  m_Radius: 1.6695974
 --- !u!95 &7472521042064907343
 Animator:
   serializedVersion: 7
@@ -226,3 +227,15 @@ MonoBehaviour:
   treasureBox: {fileID: 305376096704458547, guid: dbeee97ea7da18043b8cdffe846febc0, type: 3}
   bullet: {fileID: 5065159435404524367, guid: 3a689e644195510459108a20014fa221, type: 3}
   anim: {fileID: 7472521042064907343}
+--- !u!114 &8230042992120969927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466509204585216297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b489b2e0d3648c469f398ce18be3740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

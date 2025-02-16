@@ -35,9 +35,9 @@ namespace ZUN
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
-            StartCoroutine(Pattern_Shoot());
+            Fire();
         }
 
         private void Update()
@@ -51,12 +51,15 @@ namespace ZUN
         public override void SetMonsterSpec(float _maxHp, float _ap)
         {
             MaxHp = _maxHp;
-            ap = _ap;
+            Ap = _ap;
+
+            hp = MaxHp;
+            ap = Ap;
         }
 
         public void Fire()
         {
-            // 발사체 발사 로직
+            StartCoroutine(Pattern_Shoot());
         }
 
         IEnumerator Pattern_Shoot()
@@ -65,8 +68,9 @@ namespace ZUN
 
             Vector3 aim = (transform.position - character.transform.position).normalized;
             float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-            bullet.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
-            bullet.gameObject.SetActive(true);
+            MonsterBullet mb = Instantiate(bullet);
+            mb.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
+            mb.gameObject.SetActive(true);
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -103,6 +107,7 @@ namespace ZUN
 
         public void Die()
         {
+            chapterCtrl.PauseTimer = false;
             Destroy(gameObject);
         }
     }

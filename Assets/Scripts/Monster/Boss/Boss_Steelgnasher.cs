@@ -75,7 +75,10 @@ namespace ZUN
         public override void SetMonsterSpec(float _maxHp, float _ap)
         {
             MaxHp = _maxHp;
-            ap = _ap;
+            Ap = _ap;
+
+            hp = MaxHp;
+            ap = Ap;
         }
 
         public void Move()
@@ -113,6 +116,7 @@ namespace ZUN
 
         public void Die()
         {
+            chapterCtrl.PauseTimer = false;
             Destroy(gameObject);
         }
     }

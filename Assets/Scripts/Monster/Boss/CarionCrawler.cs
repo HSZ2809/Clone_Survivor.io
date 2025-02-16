@@ -120,6 +120,7 @@ namespace ZUN
 
         public void Die()
         {
+            chapterCtrl.PauseTimer = false;
             Destroy(gameObject);
         }
     }

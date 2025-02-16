@@ -658,8 +658,8 @@ MonoBehaviour:
   attackPower: 2
   objPool: []
   amount: 0
-  swarmSize: 0
-  distance: 20
+  swarmSize: 15
+  distance: 25
 --- !u!1 &206247988445492022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,12 +2001,19 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8980797107760843518}
+  - {fileID: 4650267234632664400}
   - {fileID: 1936380739728113167}
+  - {fileID: 8732099735391058391}
+  - {fileID: 8703837901539872145}
   - {fileID: 8207384824550590539}
   - {fileID: 980233973485468084}
+  - {fileID: 2622857188238157239}
   - {fileID: 640234966485884959}
   - {fileID: 6807973424416658368}
   - {fileID: 8881296421697550131}
+  - {fileID: 8873729598909189430}
+  - {fileID: 739544506086508470}
+  - {fileID: 7867497948881839012}
   m_Father: {fileID: 8411991871908709684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &981885987846862188
@@ -5127,6 +5134,57 @@ MonoBehaviour:
   - {fileID: 1124078080571789829}
   - {fileID: 7122663476432269599}
   - {fileID: 1573976525368669125}
+--- !u!1 &1822180021243554127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8703837901539872145}
+  - component: {fileID: 844583598865617703}
+  m_Layer: 3
+  m_Name: Spawner_Ladybug_Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8703837901539872145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822180021243554127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433517689769273182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844583598865617703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822180021243554127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911f388f9e1a01c4bb7492673f849a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 6967121792191880138, guid: da29311894769e14d9025558aa706994, type: 3}
+  hp: 150
+  ap: 5
+  objPool: []
+  amount: 0
+  minDistance: 25
+  maxDistance: 28
 --- !u!1 &1829648895408929171
 GameObject:
   m_ObjectHideFlags: 0
@@ -10374,6 +10432,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3983233901145521476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8732099735391058391}
+  - component: {fileID: 6548083623708580126}
+  m_Layer: 3
+  m_Name: Spawner_Ladybug_Orange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8732099735391058391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983233901145521476}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433517689769273182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6548083623708580126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983233901145521476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911f388f9e1a01c4bb7492673f849a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 6967121792191880138, guid: 6da8779cecd8d0040ad41a759faaac52, type: 3}
+  hp: 100
+  ap: 3
+  objPool: []
+  amount: 0
+  minDistance: 25
+  maxDistance: 28
 --- !u!1 &4004846475437794380
 GameObject:
   m_ObjectHideFlags: 0
@@ -10949,7 +11058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 9055629590452625329, guid: 278b2704dc2d8c2499de940c83253e13, type: 3}
   hp: 10
-  ap: 0
+  ap: 3
   objPool: []
   amount: 0
   minDistance: 16
@@ -15240,6 +15349,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6381929417019721083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2622857188238157239}
+  - component: {fileID: 582348329969225372}
+  m_Layer: 3
+  m_Name: Spawner_Fly_Green
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2622857188238157239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381929417019721083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433517689769273182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582348329969225372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381929417019721083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e29870398e5648a533cab6997222b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 736990880547716438, guid: 2288eff257c7c3444a111dd973fa2c07, type: 3}
+  hp: 5
+  attackPower: 5
+  objPool: []
+  amount: 0
+  swarmSize: 15
+  distance: 25
 --- !u!1 &6421519353016193467
 GameObject:
   m_ObjectHideFlags: 0
@@ -16908,6 +17068,51 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7176066052387965117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7010061340549906239}
+  - component: {fileID: 3386017516723793791}
+  m_Layer: 0
+  m_Name: Spawner_Fence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7010061340549906239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176066052387965117}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8411991871908709684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3386017516723793791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176066052387965117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988089638c5e43e4281e7b75f0c97eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareWarning: {fileID: 8224536219493809456, guid: ce4826f90d1e5104fbb3f0e129e7d181, type: 3}
 --- !u!1 &7201137198206136080
 GameObject:
   m_ObjectHideFlags: 0
@@ -19040,6 +19245,7 @@ Transform:
   - {fileID: 6115363991971982507}
   - {fileID: 1673766911539869705}
   - {fileID: 433517689769273182}
+  - {fileID: 7010061340549906239}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3970760962419468653
@@ -19342,6 +19548,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 303895854220446474}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7414472803749396155}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - triggerTime: 240
     onEvent:
       m_PersistentCalls:
@@ -19357,6 +19587,642 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 270
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6306074748247960359}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 303895854220446474}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 295
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2739401278880945661}
+          m_TargetAssemblyTypeName: ZUN.WarningSign, Assembly-CSharp
+          m_MethodName: BossWarning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 303895854220446474}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 300
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3207445531641173000}
+          m_TargetAssemblyTypeName: ZUN.BossSpawn, Assembly-CSharp
+          m_MethodName: SetReady
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3386017516723793791}
+          m_TargetAssemblyTypeName: ZUN.FenceSpawn, Assembly-CSharp
+          m_MethodName: SetSquareFence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3970760962419468653}
+          m_TargetAssemblyTypeName: ZUN.ChapterCtrl, Assembly-CSharp
+          m_MethodName: set_PauseTimer
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - triggerTime: 301
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 360
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 303895854220446474}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3237163578398706495}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 45
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 390
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 303895854220446474}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3237163578398706495}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 420
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 30
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7414472803749396155}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 20
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 475
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2739401278880945661}
+          m_TargetAssemblyTypeName: ZUN.WarningSign, Assembly-CSharp
+          m_MethodName: ZombieWarning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 496853314740414997}
+          m_TargetAssemblyTypeName: ZUN.ProjectionSizeUp, Assembly-CSharp
+          m_MethodName: CamProjectionSizeUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 480
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7414472803749396155}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6306074748247960359}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 200
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2744419719425766724}
+          m_TargetAssemblyTypeName: ZUN.MidBossSpawn, Assembly-CSharp
+          m_MethodName: SetMidBoss
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 540
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7414472803749396155}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6306074748247960359}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 600
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6765976153948167816}
+          m_TargetAssemblyTypeName: ZUN.BossSpawn, Assembly-CSharp
+          m_MethodName: SetReady
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3970760962419468653}
+          m_TargetAssemblyTypeName: ZUN.ChapterCtrl, Assembly-CSharp
+          m_MethodName: set_PauseTimer
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 3386017516723793791}
+          m_TargetAssemblyTypeName: ZUN.FenceSpawn, Assembly-CSharp
+          m_MethodName: SetSquareFence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - triggerTime: 601
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6548083623708580126}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 660
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6548083623708580126}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 150
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3237163578398706495}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 120
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1676045988225017284}
+          m_TargetAssemblyTypeName: ZUN.MidBossSpawn, Assembly-CSharp
+          m_MethodName: SetMidBoss
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 120
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 690
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6548083623708580126}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3237163578398706495}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 780
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3691612658936149403}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 844583598865617703}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 200
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 582348329969225372}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 840
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 844583598865617703}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6306074748247960359}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 582348329969225372}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn_SetPos, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 895
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 844583598865617703}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6306074748247960359}
+          m_TargetAssemblyTypeName: ZUN.MonsterSpawn, Assembly-CSharp
+          m_MethodName: SetAmount
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2739401278880945661}
+          m_TargetAssemblyTypeName: ZUN.WarningSign, Assembly-CSharp
+          m_MethodName: BossWarning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - triggerTime: 900
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4217628794322664090}
+          m_TargetAssemblyTypeName: ZUN.BossSpawn, Assembly-CSharp
+          m_MethodName: SetReady
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3386017516723793791}
+          m_TargetAssemblyTypeName: ZUN.FenceSpawn, Assembly-CSharp
+          m_MethodName: SetSquareFence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 3970760962419468653}
+          m_TargetAssemblyTypeName: ZUN.ChapterCtrl, Assembly-CSharp
+          m_MethodName: set_PauseTimer
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
   actives:
   - {fileID: 0}
@@ -19443,7 +20309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 2196970772980682461, guid: 15d289245c16c7d4fa693d00cf34e0e1, type: 3}
   hp: 10
-  ap: 0
+  ap: 2
   objPool: []
   amount: 0
   minDistance: 16
@@ -20843,7 +21709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 6967121792191880138, guid: cd910bce5c83df4418494583b3a479fc, type: 3}
   hp: 20
-  ap: 0
+  ap: 1
   objPool: []
   amount: 0
   minDistance: 16
@@ -21716,6 +22582,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9085293271593305127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4650267234632664400}
+  - component: {fileID: 3691612658936149403}
+  m_Layer: 0
+  m_Name: Spawner_Zombie_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4650267234632664400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085293271593305127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433517689769273182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3691612658936149403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085293271593305127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911f388f9e1a01c4bb7492673f849a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 6967121792191880138, guid: 126f24d664ed48547969909a098c9346, type: 3}
+  hp: 100
+  ap: 2
+  objPool: []
+  amount: 0
+  minDistance: 19
+  maxDistance: 22
 --- !u!1 &9093096136903102709
 GameObject:
   m_ObjectHideFlags: 0
@@ -22175,3 +23092,318 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &3214872129962947409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 433517689769273182}
+    m_Modifications:
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444617291400034897, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Name
+      value: BossSpawn_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17364816
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: hp
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 5247058017918715569, guid: dc780c8f0d0da5a4ebd2189524348ef1, type: 3}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: attackPower
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+--- !u!4 &739544506086508470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 3214872129962947409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6765976153948167816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 3214872129962947409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &5471892614601578307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 433517689769273182}
+    m_Modifications:
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444617291400034897, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Name
+      value: BossSpawn_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17364816
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: hp
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 3005147358795117211, guid: cbe7834f23fe29f4faba1906d0f51ddd, type: 3}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: attackPower
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+--- !u!114 &4217628794322664090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 5471892614601578307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7867497948881839012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 5471892614601578307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6772064644501895633
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 433517689769273182}
+    m_Modifications:
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444617291400034897, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_Name
+      value: BossSpawn_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298105189207061407, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17364816
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173860744614282395, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: hp
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: -1438298476729955681, guid: 4232db596ae799147962fcea77c7b92a, type: 3}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+--- !u!114 &3207445531641173000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 6772064644501895633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8873729598909189430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2800929885539693799, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+  m_PrefabInstance: {fileID: 6772064644501895633}
+  m_PrefabAsset: {fileID: 0}

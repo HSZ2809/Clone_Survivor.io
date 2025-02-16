@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace ZUN
@@ -12,10 +13,10 @@ namespace ZUN
         [SerializeField] private EXPShard.Type shardType;
         #endregion
 
+        SpriteRenderer sr;
         CircleCollider2D cc2D;
         Character character;
         EXPObjPool EXPPool;
-        Animator anim;
 
         public float Ap { get => ap; set => ap = value; }
 
@@ -26,7 +27,7 @@ namespace ZUN
             tag = "Fence";
             gameObject.layer = LayerMask.NameToLayer("Wall");
             cc2D = GetComponent<CircleCollider2D>();
-            anim = GetComponent<Animator>();
+            sr = GetComponent<SpriteRenderer>();
         }
 
         private void Start()
@@ -55,7 +56,16 @@ namespace ZUN
 
         public void Die()
         {
-            
+            EXPPool.SetShard(shardType, transform.position);
+
+            Sequence fadeSequence = DOTween.Sequence();
+            fadeSequence.Append(sr.DOFade(0.0f, 1.0f));
+            fadeSequence.OnComplete(() =>
+            {
+                Destroy(gameObject);
+            });
+
+            fadeSequence.Play();
         }
     }
 }
