@@ -20,9 +20,11 @@ namespace ZUN
         private void Start()
         {
             character.SetActiveSkill(this);
+
+            ActiveSkillOn();
         }
 
-        public override void ActiveSkillOn()
+        public void ActiveSkillOn()
         {
             Bullet_Shield bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
             bulletInstance.Damage = BulletDamage;

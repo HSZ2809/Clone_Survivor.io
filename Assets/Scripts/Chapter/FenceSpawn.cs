@@ -31,7 +31,7 @@ namespace ZUN
 
             Instantiate(squareWarning, spawnPos, character.transform.rotation);
             
-            //sr.sprite = squareGlow;
+            //sr.sr = squareGlow;
             //Vector2 spawnPos = character.transform.position + new Vector3(0, 16.45f);
 
             //Sequence blinkSequence = DOTween.Sequence();

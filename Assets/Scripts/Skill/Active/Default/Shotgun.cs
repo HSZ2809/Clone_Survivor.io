@@ -29,10 +29,7 @@ namespace ZUN
             shootDir = character.GetMoveDir();
             enumerator = Shoot();
             character.SetActiveSkill(this);
-        }
 
-        public override void ActiveSkillOn()
-        {
             SetMag();
         }
 

@@ -39,10 +39,7 @@ namespace ZUN
             reloadBar = character.ReloadBar();
             enumerator = Shoot();
             character.SetActiveSkill(this);
-        }
 
-        public override void ActiveSkillOn()
-        {
             StartCoroutine(enumerator);
         }
 

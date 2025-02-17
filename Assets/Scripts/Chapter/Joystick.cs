@@ -5,8 +5,8 @@ namespace ZUN
 {
     public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
-        [SerializeField] private RectTransform lever = new RectTransform();
-        [SerializeField] private RectTransform stickBase = new RectTransform();
+        [SerializeField] private RectTransform lever = new();
+        [SerializeField] private RectTransform stickBase = new();
         private Vector3 baseOriginalLocation;
         private Vector3 leverCenter;
         private float radius;

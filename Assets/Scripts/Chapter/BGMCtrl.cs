@@ -1,16 +1,41 @@
+using DG.Tweening;
 using UnityEngine;
 
-public class BGMCtrl : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class BGMCtrl : MonoBehaviour
     {
-        
-    }
+        [SerializeField] AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] AudioClip defaultClip;
+        [SerializeField] AudioClip bossClip;
+
+        private void Start()
+        {
+            audioSource.clip = defaultClip;
+            audioSource.Play();
+        }
+
+        public void SetBossClip()
+        {
+            audioSource.DOFade(0f, 1f).OnComplete(() =>
+            {
+                audioSource.clip = bossClip;
+                audioSource.Play();
+
+                audioSource.DOFade(1f, 1f);
+            });
+        }
+
+        public void SetDefaultClip()
+        {
+            audioSource.DOFade(0f, 1f).OnComplete(() =>
+            {
+                audioSource.clip = defaultClip;
+                audioSource.Play();
+
+                audioSource.DOFade(1f, 1f);
+            });
+        }
     }
 }

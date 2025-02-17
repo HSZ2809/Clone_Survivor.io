@@ -24,10 +24,7 @@ namespace ZUN
         {
             enumerator = Shoot();
             character.SetActiveSkill(this);
-        }
 
-        public override void ActiveSkillOn()
-        {
             StartCoroutine(enumerator);
         }
 

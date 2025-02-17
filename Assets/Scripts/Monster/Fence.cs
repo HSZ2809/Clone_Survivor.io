@@ -14,7 +14,7 @@ namespace ZUN
         #endregion
 
         SpriteRenderer sr;
-        CircleCollider2D cc2D;
+        // CircleCollider2D cc2D;
         Character character;
         EXPObjPool EXPPool;
 
@@ -26,7 +26,7 @@ namespace ZUN
             EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<EXPObjPool>();
             tag = "Fence";
             gameObject.layer = LayerMask.NameToLayer("Wall");
-            cc2D = GetComponent<CircleCollider2D>();
+            // cc2D = GetComponent<CircleCollider2D>();
             sr = GetComponent<SpriteRenderer>();
         }
 
@@ -58,14 +58,14 @@ namespace ZUN
         {
             EXPPool.SetShard(shardType, transform.position);
 
-            Sequence fadeSequence = DOTween.Sequence();
-            fadeSequence.Append(sr.DOFade(0.0f, 1.0f));
-            fadeSequence.OnComplete(() =>
+            Sequence fadeoutSequence = DOTween.Sequence();
+            fadeoutSequence.Append(sr.DOFade(0.0f, 1.0f));
+            fadeoutSequence.OnComplete(() =>
             {
                 Destroy(gameObject);
             });
 
-            fadeSequence.Play();
+            fadeoutSequence.Play();
         }
     }
 }

@@ -32,10 +32,7 @@ namespace ZUN
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
             enumerator = Shoot();
             character.SetActiveSkill(this);
-        }
 
-        public override void ActiveSkillOn()
-        {
             StartCoroutine(enumerator);
         }
 

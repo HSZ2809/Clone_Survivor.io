@@ -31,31 +31,30 @@ namespace ZUN
         {
             enumerator = Shoot();
             character.SetActiveSkill(this);
+
+            SetAngle();
         }
 
         private void Update()
         {
             pivot.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
-        
-        public override void ActiveSkillOn()
-        {
-            SetAngle();
-        }
 
         IEnumerator Shoot()
         {
-            while(true)
+            while (true)
             {
+                yield return null;
+
                 foreach (var obj in objPool)
-                    obj.gameObject.SetActive(true);
+                    obj.BulletEnable();
 
                 audioSource.PlayOneShot(clip);
 
                 yield return new WaitForSeconds(duration);
 
                 foreach (var obj in objPool)
-                    obj.gameObject.SetActive(false);
+                    obj.BulletDisable();
 
                 yield return new WaitForSeconds(cooldown * character.AtkSpeed);
             }
@@ -65,10 +64,7 @@ namespace ZUN
         {
             StopCoroutine(enumerator);
 
-            foreach(var obj in objPool)
-                obj.gameObject.SetActive(false);
-
-            while(magazineSize > objPool.Count)
+            while (magazineSize > objPool.Count)
             {
                 Bullet_Guardian bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
                 bulletInstance.transform.parent = pivot.transform;

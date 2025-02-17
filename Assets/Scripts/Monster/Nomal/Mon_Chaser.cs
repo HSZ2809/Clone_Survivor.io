@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace ZUN
@@ -50,6 +51,12 @@ namespace ZUN
 
             if(hp > 0)
                 Move();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            // Bullet이 닿았을 시 발동
+            // sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 10);
         }
 
         private void OnCollisionStay2D(Collision2D other)

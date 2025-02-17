@@ -14,7 +14,5 @@ namespace ZUN
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             level = 1;
         }
-
-        public abstract void ActiveSkillOn();
     }
 }

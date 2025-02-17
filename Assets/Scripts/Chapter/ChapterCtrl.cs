@@ -76,11 +76,13 @@ namespace ZUN
                 }
             }
 
-            // 임시 코드
+            // 디버그용 시간 가속 함수
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Time.timeScale = 3.0f;
+                Time.timeScale = 5;
             }
+            #endif
         }
 
         public void LevelUp(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)

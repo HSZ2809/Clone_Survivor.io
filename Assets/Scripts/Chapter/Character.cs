@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -88,13 +87,8 @@ namespace ZUN
 
             if (h != 0.0f || v != 0.0f)
             {
-                dirArrow.gameObject.SetActive(true);
                 float angle = Mathf.Atan2(v, h) * Mathf.Rad2Deg;
                 moveDirection.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
-            }
-            else
-            {
-                dirArrow.gameObject.SetActive(false);
             }
         }
 
@@ -125,7 +119,6 @@ namespace ZUN
             if (AmountOfActive < actives.Length)
             {
                 actives[AmountOfActive] = newActive;
-                actives[AmountOfActive].ActiveSkillOn();
                 AmountOfActive += 1;
                 return;
             }
