@@ -14,6 +14,7 @@ TagManager:
   - MonsterBullet
   - TreasureBox
   - Fence
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - DropedItem
   - Wall
   - MonsterBullet
-  - 
+  - Character_Trigger
   - 
   - 
   - 

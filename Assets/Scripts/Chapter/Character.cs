@@ -92,16 +92,6 @@ namespace ZUN
             }
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.CompareTag("MonsterBullet"))
-            {
-                float damage = collision.gameObject.GetComponent<MonsterBullet>().Damage;
-                TakeDamage(damage);
-                collision.gameObject.GetComponent<MonsterBullet>().SetFalse();
-            }
-        }
-
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Exp"))

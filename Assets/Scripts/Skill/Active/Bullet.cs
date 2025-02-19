@@ -8,7 +8,8 @@ namespace ZUN
 
         private void Awake()
         {
-            gameObject.layer = LayerMask.NameToLayer("Bullet");
+            tag = "Bullet";
+            gameObject.layer = LayerMask.NameToLayer(tag);
         }
 
         public float Damage

@@ -55,8 +55,9 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            // Bullet이 닿았을 시 발동
-            // sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 10);
+            if (collision.CompareTag("Bullet"))
+                if (!DOTween.IsTweening(sr.gameObject.transform))
+                    sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0);
         }
 
         private void OnCollisionStay2D(Collision2D other)

@@ -28,7 +28,7 @@ namespace ZUN
             StartCoroutine(DisableBullet());
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             CamBoundCheck();
             transform.Translate(moveSpeed * Time.deltaTime * direction);

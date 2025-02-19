@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 namespace ZUN
@@ -43,12 +44,12 @@ namespace ZUN
 
         private void Start()
         {
-            bullet = Instantiate(bullet);
+            enumerator = ShootBullet();
         }
 
         private void OnEnable()
         {
-            enumerator = ShootBullet();
+            bullet = Instantiate(bullet);
             hp = MaxHp;
             cc2D.enabled = true;
             StartCoroutine(enumerator);
@@ -63,6 +64,13 @@ namespace ZUN
 
             if (hp > 0)
                 Move();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet"))
+                if (!DOTween.IsTweening(sr.gameObject.transform))
+                    sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0);
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -96,6 +104,7 @@ namespace ZUN
             Vector3 aim = (transform.position - character.transform.position).normalized;
             float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
             bullet.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
+            bullet.Damage = Ap;
             bullet.gameObject.SetActive(true);
         }
 
@@ -125,6 +134,7 @@ namespace ZUN
 
         public void Die()
         {
+            StopCoroutine(enumerator);
             gameObject.SetActive(false);
         }
     }
