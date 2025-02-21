@@ -17,11 +17,11 @@ namespace ZUN
         [SerializeField] TreasureBox treasureBox;
 
         [Header("Boss Pattern")]
-        [SerializeField] MonsterBullet bullet;
+        [SerializeField] Boss_Bouncebloom_Bullet bullet;
         #endregion
 
         [SerializeField] Animator anim;
-        readonly WaitForSeconds waitTime = new(5);
+        readonly WaitForSeconds waitTime = new(3);
 
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
@@ -37,7 +37,7 @@ namespace ZUN
 
         private void OnEnable()
         {
-            Fire();
+            ShootBullet();
         }
 
         private void Update()
@@ -57,20 +57,57 @@ namespace ZUN
             ap = Ap;
         }
 
-        public void Fire()
+        public void ShootBullet()
         {
-            StartCoroutine(Pattern_Shoot());
+            StartCoroutine(SetIdle());
         }
 
-        IEnumerator Pattern_Shoot()
+        IEnumerator SetIdle()
         {
             yield return waitTime;
 
-            Vector3 aim = (transform.position - character.transform.position).normalized;
-            float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-            MonsterBullet mb = Instantiate(bullet);
-            mb.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
-            mb.gameObject.SetActive(true);
+            int randomPattern;
+            randomPattern = Random.Range(1, 3);
+
+            switch(randomPattern)
+            {
+                case 1:
+                    StartCoroutine(Pattern_1());
+                    break;
+
+                case 2:
+                    StartCoroutine(Pattern_2());
+                    break;
+            }
+        }
+
+        IEnumerator Pattern_1()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                Boss_Bouncebloom_Bullet mb = Instantiate(bullet);
+                mb.transform.position = transform.position;
+                mb.Direction = (character.transform.position - transform.position).normalized;
+                mb.gameObject.SetActive(true);
+
+                yield return new WaitForSeconds(0.5f);
+            }
+
+            StartCoroutine(SetIdle());
+        }
+
+        IEnumerator Pattern_2()
+        {
+            for (int i = -1; i < 2; i++)
+            {
+                Boss_Bouncebloom_Bullet mb = Instantiate(bullet);
+                mb.transform.position = transform.position;
+                mb.Direction = Quaternion.Euler(0, 0, i * 15) * (character.transform.position - transform.position).normalized;
+                mb.gameObject.SetActive(true);
+            }
+
+            StartCoroutine(SetIdle());
+            yield return null;
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -89,7 +126,7 @@ namespace ZUN
             if (hp <= 0)
             {
                 cc2D.enabled = false;
-                StopCoroutine(Pattern_Shoot());
+                StopCoroutine(SetIdle());
                 anim.SetTrigger("Die");
             }
         }
@@ -101,6 +138,7 @@ namespace ZUN
 
         public void DropTreasureBox()
         {
+            StopAllCoroutines();
             Instantiate(treasureBox, transform.position, transform.rotation);
             chapterCtrl.AddKillCount();
         }

@@ -7,13 +7,15 @@ namespace ZUN
     {
         [SerializeField] private float moveSpeed = 1.5f;
         [SerializeField] private float disableTime = 5.0f;
-        
-        private Vector2 direction;
+
+        Character character;
+        public Vector2 Direction { get; set; }
 
         public float Damage { get; set; }
 
         private void Awake()
         {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             tag = "MonsterBullet";
             gameObject.layer = LayerMask.NameToLayer(tag);
         }
@@ -23,23 +25,32 @@ namespace ZUN
             StartCoroutine(DisableBullet());
         }
 
+        private void OnEnable()
+        {
+            Direction = (character.transform.position - transform.position).normalized;
+        }
+
         private void FixedUpdate()
         {
-            transform.Translate(moveSpeed * Time.deltaTime * direction);
+            transform.Translate(moveSpeed * Time.deltaTime * Direction);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag("Character"))
-            {
-                collision.gameObject.GetComponent<Character>().TakeDamage(Damage);
-            }
-
             if (collision.gameObject.CompareTag("Fence"))
             {
-                //Vector2 collisionPoint = collision.ClosestPoint(transform.position);
-                //Vector2 collisionNormal = (transform.position - (Vector3)collisionPoint).normalized;
-                //direction = Vector2.Reflect(direction, collisionNormal);
+                Vector2 collisionPoint = collision.ClosestPoint(transform.position);
+                Vector2 collisionNormal = (transform.position - (Vector3)collisionPoint).normalized;
+                Direction = Vector2.Reflect(Direction, collisionNormal);
+                return;
+            }
+
+            GameObject parentObject = collision.gameObject.transform.parent?.gameObject;
+
+            if (parentObject != null && parentObject.CompareTag("Character"))
+            {
+                character.TakeDamage(Damage);
+                return;
             }
         }
 

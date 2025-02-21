@@ -32,13 +32,13 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            //GameObject parentObject = collision.gameObject.transform.parent?.gameObject;
+            GameObject parentObject = collision.gameObject.transform.parent?.gameObject;
 
-            //if (parentObject != null && parentObject.CompareTag("Character"))
-            //{
+            if (parentObject != null && parentObject.CompareTag("Character"))
+            {
                 character.TakeDamage(Damage);
                 gameObject.SetActive(false);
-            //}
+            }
         }
 
         // 일정 시간 후 비활성화

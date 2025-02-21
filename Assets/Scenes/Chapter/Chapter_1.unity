@@ -4124,6 +4124,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[13].triggerTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8126360429236251973, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: m_Name
       value: ChapterCtrl

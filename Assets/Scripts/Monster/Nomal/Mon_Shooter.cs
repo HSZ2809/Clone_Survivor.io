@@ -44,7 +44,7 @@ namespace ZUN
 
         private void Start()
         {
-            enumerator = ShootBullet();
+            enumerator = Shoot();
         }
 
         private void OnEnable()
@@ -92,12 +92,12 @@ namespace ZUN
             transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
         }
 
-        public void Fire()
+        public void ShootBullet()
         {
             // 발사체 발사 로직
         }
 
-        IEnumerator ShootBullet()
+        IEnumerator Shoot()
         {
             yield return waitTime;
 

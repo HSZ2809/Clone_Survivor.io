@@ -225,7 +225,7 @@ MonoBehaviour:
   ap: 0
   sr: {fileID: 5740197919471862004}
   treasureBox: {fileID: 305376096704458547, guid: dbeee97ea7da18043b8cdffe846febc0, type: 3}
-  bullet: {fileID: 5065159435404524367, guid: 3a689e644195510459108a20014fa221, type: 3}
+  bullet: {fileID: 374903408088789622, guid: 3861c6fbb80844048bf47a97dad25a71, type: 3}
   anim: {fileID: 7472521042064907343}
 --- !u!114 &8230042992120969927
 MonoBehaviour:
