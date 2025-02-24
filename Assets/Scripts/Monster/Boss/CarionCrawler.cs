@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace ZUN
@@ -29,7 +30,7 @@ namespace ZUN
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
 
-        bool isIdle = true;
+        bool state_Move = true;
 
         private void Awake()
         {
@@ -42,7 +43,7 @@ namespace ZUN
 
         private void Update()
         {
-            if (isIdle)
+            if (state_Move)
             {
                 if (character.transform.position.x > transform.position.x)
                     sprites.transform.localScale = flipX;
@@ -60,16 +61,6 @@ namespace ZUN
             {
                 character.TakeDamage(ap);
             }
-        }
-
-        private void SetIsIdleFalse()
-        {
-            isIdle = false;
-        }
-
-        private void SetIsIdleTrue()
-        {
-            isIdle = true;
         }
 
         public override void SetMonsterSpec(float _maxHp, float _ap)
@@ -103,7 +94,26 @@ namespace ZUN
             // 데미지 표시 로직
         }
 
-        private void ShootBullet()
+        void StartPattern_Rush()
+        {
+            StartCoroutine(Rush());
+        }
+
+        IEnumerator Rush()
+        {
+            Vector2 diraction = (character.transform.position - transform.position).normalized;
+            float rushTime = 0.0f;
+
+            while (rushTime < 1.5f)
+            {
+                transform.Translate(8 * moveSpeed * Time.deltaTime * diraction);
+
+                rushTime += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        void ShootBullet()
         {
             MonsterBullet _bullet = Instantiate(bullet);
             Vector3 aim = (shootPos.position - character.transform.position).normalized;
@@ -112,10 +122,46 @@ namespace ZUN
             _bullet.gameObject.SetActive(true);
         }
 
-        private void DropTreasureBox()
+        void DropTreasureBox()
         {
+            StopAllCoroutines();
             Instantiate(treasureBox, transform.position, transform.rotation);
             chapterCtrl.AddKillCount();
+        }
+
+        void SetMoveTure()
+        {
+            state_Move = true;
+        }
+
+        void SetMoveFalse()
+        {
+            state_Move = false;
+        }
+
+        void SelectPattern()
+        {
+            int random = Random.Range(1, 3);
+
+            switch(random)
+            {
+                case 1:
+                    Toggle_Shoot();
+                    break;
+                case 2:
+                    Toggle_Rush();
+                    break;
+            }
+        }
+
+        void Toggle_Shoot()
+        {
+            anim.SetBool("Shoot", !anim.GetBool("Shoot"));
+        }
+
+        void Toggle_Rush()
+        {
+            anim.SetBool("Rush", !anim.GetBool("Rush"));
         }
 
         public void Die()

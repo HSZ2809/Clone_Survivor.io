@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace ZUN
@@ -29,7 +30,7 @@ namespace ZUN
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
 
-        bool isIdle = true;
+        bool state_Move = true;
 
         private void Awake()
         {
@@ -42,7 +43,7 @@ namespace ZUN
 
         private void Update()
         {
-            if (isIdle)
+            if (state_Move)
             {
                 if (character.transform.position.x > transform.position.x)
                     sprites.transform.localScale = flipX;
@@ -62,14 +63,48 @@ namespace ZUN
             }
         }
 
-        private void SetIsIdleFalse()
+        void StartPattern_Rush()
         {
-            isIdle = false;
+            StartCoroutine(Rush());
         }
 
-        private void SetIsIdleTrue()
+        IEnumerator Rush()
         {
-            isIdle = true;
+            float rushTime = 0.0f;
+
+            while (rushTime < 1.0f)
+            {
+                // 화살표 표시
+
+                if (character.transform.position.x > transform.position.x)
+                    sprites.transform.localScale = flipX;
+                else
+                    sprites.transform.localScale = originX;
+
+                rushTime += Time.deltaTime;
+                yield return null;
+            }
+
+            Vector2 diraction = (character.transform.position - transform.position).normalized;
+
+            rushTime = 0.0f;
+            while (rushTime < 1.5f)
+            {
+                transform.Translate(8 * moveSpeed * Time.deltaTime * diraction);
+
+                rushTime += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        void SetMoveTure()
+        {
+            state_Move = true;
+        }
+
+        void SetMoveFalse()
+        {
+            state_Move = false;
         }
 
         public override void SetMonsterSpec(float _maxHp, float _ap)
@@ -110,6 +145,7 @@ namespace ZUN
 
         private void DropTreasureBox()
         {
+            StopAllCoroutines();
             Instantiate(treasureBox, transform.position, transform.rotation);
             chapterCtrl.AddKillCount();
         }
