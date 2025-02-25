@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,9 +34,30 @@ namespace ZUN
             #endif
 
             async = SceneManager.UnloadSceneAsync(origin);
+
+            while (!async.isDone)
+            {
+                yield return null;
+            }
+
             async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-            yield return new WaitUntil(() => async.isDone); 
+            //async.allowSceneActivation = false;
+
+            //while (async.progress < 0.9f)
+            //{
+            //    yield return null;
+            //}
+
+            //async.allowSceneActivation = true;
+
+            while (!async.isDone)
+            {
+                yield return null;
+            }
+
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+
             isSceneChangeable = true;
         }
     }

@@ -15,7 +15,7 @@ namespace ZUN
 
         private void Start()
         {
-            Debug.Log("Manager_Inventory : create");
+            
         }
     }
 }

@@ -23,8 +23,10 @@ namespace ZUN
         [SerializeField] Image pnl_lottery;
         [SerializeField] LotteryResult[] lotteryResults;
         [SerializeField] Button closeLottery;
+        [SerializeField] ShowResult showResult;
+
         int gold;
-        int kill;
+        public int KillCount { get; private set; }
         public bool PauseTimer { get; set; }
 
         [Header("PlayTime")]
@@ -318,6 +320,11 @@ namespace ZUN
             }
         }
 
+        public void ShowResult()
+        {
+            showResult.gameObject.SetActive(true);
+        }
+
         public void SelectSkill(Skill skill)
         {
             if (skill.Level > 0)
@@ -354,8 +361,8 @@ namespace ZUN
 
         public void AddKillCount()
         {
-            kill += 1;
-            txt_killCount.text = kill.ToString();
+            KillCount += 1;
+            txt_killCount.text = KillCount.ToString();
         }
 
         /* 임시 메소드. 수정이 필요합니다. */

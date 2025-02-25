@@ -10,7 +10,7 @@ namespace ZUN
 
         EXPShard[] shards = new EXPShard[500];
 
-        private void Start()
+        public void InitShard()
         {
             for(int i = 0; i < 10; i++)
             {
