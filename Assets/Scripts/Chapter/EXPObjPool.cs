@@ -1,21 +1,25 @@
 using System;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
     public class EXPObjPool : MonoBehaviour
     {
+        public IObjectPool<EXPShard> ShardPool { get; private set; }
         [SerializeField] EXPShard shardPerfab;
 
-        EXPShard[] shards = new EXPShard[500];
+        private void Awake()
+        {
+            ShardPool = new ObjectPool<EXPShard>(CreateShard, null, OnReleaseShard, OnDestroyShard, maxSize: 500);
+        }
 
         public void InitShard()
         {
             for(int i = 0; i < 10; i++)
             {
-                AddShard(i);
-                shards[i].SetType(EXPShard.Type.SMALL);
+                EXPShard shard = ShardPool.Get();
+                shard.SetType(EXPShard.Type.SMALL);
 
                 Vector3 randomVec3;
                 float randomAngle;
@@ -33,49 +37,37 @@ namespace ZUN
                 randomVec3.y = transform.position.y + y;
                 randomVec3.z = 0.0f;
 
-                shards[i].gameObject.transform.position = randomVec3;
-                shards[i].gameObject.SetActive(true);
+                shard.gameObject.transform.position = randomVec3;
+                shard.gameObject.SetActive(true);
             }
+        }
+
+        EXPShard CreateShard()
+        {
+            EXPShard shard = Instantiate(shardPerfab);
+            shard.SetShardPool(ShardPool);
+            return shard;
+        }
+
+        void OnReleaseShard(EXPShard shard)
+        {
+            shard.gameObject.SetActive(false);
+        }
+
+        void OnDestroyShard(EXPShard shard)
+        {
+            Destroy(shard.gameObject);
         }
 
         public void SetShard(EXPShard.Type type, Vector3 pos)
         {
-            int index = 0;
+            EXPShard shard = ShardPool.Get();
 
-            while (index < shards.Length)
-            {
-                if (shards[index] == null)
-                {
-                    AddShard(index);
-                    break;
-                }
-                
-                if(!shards[index].gameObject.activeSelf)
-                {
-                    if (shards[index].ShardType != type)
-                    break;
-                }
+            if (shard.ShardType != type)
+                shard.SetType(type);
 
-                index++;
-            }
-
-            if(index == shards.Length)
-            {
-                Array.Resize(ref shards, shards.Length * 2);
-                AddShard(index);
-            }
-
-            if(shards[index].ShardType != type)
-                shards[index].SetType(type);
-
-            shards[index].gameObject.transform.position = pos;
-            shards[index].gameObject.SetActive(true);
-        }
-
-        private void AddShard(int index)
-        {
-            EXPShard instant = Instantiate(shardPerfab);
-            shards[index] = instant;
+            shard.gameObject.transform.position = pos;
+            shard.gameObject.SetActive(true);
         }
     }
 }

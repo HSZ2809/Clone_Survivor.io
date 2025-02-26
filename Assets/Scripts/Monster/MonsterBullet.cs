@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -10,6 +10,7 @@ namespace ZUN
         [SerializeField] private float disableTime = 5.0f;
 
         Character character;
+        IObjectPool<MonsterBullet> bulletPool;
 
         public float Damage { get; set; }
 
@@ -37,7 +38,7 @@ namespace ZUN
             if (parentObject != null && parentObject.CompareTag("Character"))
             {
                 character.TakeDamage(Damage);
-                gameObject.SetActive(false);
+                ReleaseBullet();
             }
         }
 
@@ -45,7 +46,17 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            ReleaseBullet();
+        }
+
+        public void SetBulletPool(IObjectPool<MonsterBullet> pool)
+        {
+            bulletPool = pool;
+        }
+
+        public void ReleaseBullet()
+        {
+            bulletPool.Release(this);
         }
     }
 }

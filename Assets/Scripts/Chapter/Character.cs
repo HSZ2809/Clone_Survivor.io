@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace ZUN
         [SerializeField] Transform moveDirection = null;
         [SerializeField] SpriteRenderer dirArrow;
         [SerializeField] Image expBar;
+        [SerializeField] TextMeshProUGUI txt_level;
         [SerializeField] Image hpBar;
         [SerializeField] Image reloadBar;
 
@@ -137,6 +139,7 @@ namespace ZUN
                 exp -= maxExp;
                 maxExp *= 2;
                 level += 1;
+                txt_level.text = "Lv." + level.ToString();
                 chapterCtrl.LevelUp(ref actives, ref passives);
             }
 

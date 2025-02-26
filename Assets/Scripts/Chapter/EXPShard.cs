@@ -1,10 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
     public class EXPShard : MonoBehaviour
     {
+        IObjectPool<EXPShard> shardPool;
+
         public enum Type
         {
             SMALL = 0,
@@ -23,6 +26,11 @@ namespace ZUN
         [SerializeField] private Sprite[] sprites;
         [SerializeField] private int[] amount;
 
+        private void OnEnable()
+        {
+            col.enabled = true;
+        }
+
         public Type ShardType { get { return shardType; } }
 
         public void SetType(Type type)
@@ -40,6 +48,11 @@ namespace ZUN
         //        StartCoroutine(DraggedToChar(collision.transform));
         //    }
         //}
+
+        public void SetShardPool(IObjectPool<EXPShard> pool)
+        {
+            shardPool = pool;
+        }
 
         public void GetEXP(Character character)
         {
@@ -70,8 +83,7 @@ namespace ZUN
 
             transform.position = target.position;
             character.AddExp(exp);
-            gameObject.SetActive(false);
-            col.enabled = true;
+            shardPool.Release(this);
         }
     }
 }

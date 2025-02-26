@@ -1,6 +1,7 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -24,7 +25,7 @@ namespace ZUN
 
         EXPObjPool EXPPool;
         Animator anim;
-        IEnumerator enumerator;
+        IObjectPool<MonsterBullet> bulletPool;
         readonly WaitForSeconds waitTime = new (10.0f);
 
         public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
@@ -36,23 +37,18 @@ namespace ZUN
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<EXPObjPool>();
+            bulletPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<MonsterBulletManager>().BulletPool;
             tag = "Monster";
             gameObject.layer = LayerMask.NameToLayer(tag);
             cc2D = GetComponent<CircleCollider2D>();
             anim = GetComponent<Animator>();
         }
 
-        private void Start()
-        {
-            enumerator = Shoot();
-        }
-
         private void OnEnable()
         {
-            bullet = Instantiate(bullet);
             hp = MaxHp;
             cc2D.enabled = true;
-            StartCoroutine(enumerator);
+            StartCoroutine(Shoot());
         }
 
         private void Update()
@@ -99,13 +95,17 @@ namespace ZUN
 
         IEnumerator Shoot()
         {
-            yield return waitTime;
+            while (true)
+            {
+                yield return waitTime;
 
-            Vector3 aim = (transform.position - character.transform.position).normalized;
-            float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-            bullet.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
-            bullet.Damage = Ap;
-            bullet.gameObject.SetActive(true);
+                Vector3 aim = (transform.position - character.transform.position).normalized;
+                float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
+                MonsterBullet bullet = bulletPool.Get();
+                bullet.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle + 90));
+                bullet.Damage = Ap;
+                bullet.gameObject.SetActive(true);
+            }
         }
 
         public void TakeDamage(float damage)
@@ -116,7 +116,7 @@ namespace ZUN
             if (hp <= 0)
             {
                 cc2D.enabled = false;
-                StopCoroutine(enumerator);
+                StopCoroutine(Shoot());
                 anim.SetTrigger("Die");
             }
         }
@@ -134,7 +134,7 @@ namespace ZUN
 
         public void Die()
         {
-            StopCoroutine(enumerator);
+            StopCoroutine(Shoot());
             gameObject.SetActive(false);
         }
     }

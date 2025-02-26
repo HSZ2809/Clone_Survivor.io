@@ -7,6 +7,7 @@ namespace ZUN
     public class MonsterSpawn : MonoBehaviour
     {
         Character character;
+        ChapterCtrl chapterCtrl;
 
         [Header("Monster")]
         [SerializeField] Monster monster;
@@ -20,13 +21,17 @@ namespace ZUN
         [Header("Range")]
         [SerializeField] float minDistance = 17f;
         [SerializeField] float maxDistance = 21f;
-        
+
+        //[SerializeField]
+        //TimedEvent[] tests;
+
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
 
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
         }
 
         private void Start()
@@ -88,6 +93,12 @@ namespace ZUN
 
                 yield return waitTime;
             }
+        }
+
+        public void SetSpawnDistance(float expand)
+        {
+            minDistance += expand;
+            maxDistance += expand;
         }
     }
 }

@@ -55,6 +55,9 @@ TagManager:
   - name: Bullet_Floor
     uniqueID: 2989597611
     locked: 0
+  - name: Item
+    uniqueID: 1168299259
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

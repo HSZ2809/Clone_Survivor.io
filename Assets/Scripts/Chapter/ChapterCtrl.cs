@@ -24,6 +24,8 @@ namespace ZUN
         [SerializeField] LotteryResult[] lotteryResults;
         [SerializeField] Button closeLottery;
         [SerializeField] ShowResult showResult;
+        [SerializeField] Image BossHpBar;
+        [SerializeField] TextMeshProUGUI bossName;
 
         int gold;
         public int KillCount { get; private set; }
