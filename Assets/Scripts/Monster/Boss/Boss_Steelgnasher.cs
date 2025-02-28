@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Boss_Steelgnasher : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class Boss_Steelgnasher : BossMonster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
     {
         #region Inspector
         [SerializeField] float hp;
@@ -124,11 +124,13 @@ namespace ZUN
         public void TakeDamage(float damage)
         {
             hp -= damage;
+            bossHpBar.fillAmount = hp / MaxHp;
             ShowDamage(damage);
 
             if (hp <= 0)
             {
                 cc2D.enabled = false;
+                bossHpUI.SetActive(false);
                 anim.SetTrigger("Die");
             }
         }

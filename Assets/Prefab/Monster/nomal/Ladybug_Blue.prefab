@@ -133,12 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0db5e664615444cb4a21c82593e452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 20
-  attackPower: 1
+  hp: 0
+  ap: 0
   moveSpeed: 1
-  anim: {fileID: 8315070986946350262}
+  limitDistance: 40
   sr: {fileID: 2105557037792253662}
-  shardType: 1
+  shardType: 3
 --- !u!1 &8307655307739862324
 GameObject:
   m_ObjectHideFlags: 0

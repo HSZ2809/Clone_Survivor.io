@@ -136,8 +136,9 @@ MonoBehaviour:
   hp: 0
   ap: 0
   moveSpeed: 2
+  limitDistance: 40
   sr: {fileID: 2105557037792253662}
-  shardType: 1
+  shardType: 2
 --- !u!1 &8307655307739862324
 GameObject:
   m_ObjectHideFlags: 0

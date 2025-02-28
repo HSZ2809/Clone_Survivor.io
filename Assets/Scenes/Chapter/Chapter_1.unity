@@ -437,6 +437,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &214272171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3199839758206197526, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+  m_PrefabInstance: {fileID: 5570534981520263547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbdab00ec07da74484edea4e5d06308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235014817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,17 +1289,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &558932151 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3126137919431665920, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-  m_PrefabInstance: {fileID: 5570534981520263547}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &582156558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,17 +1907,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 123935931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190938797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3034982271448654057, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-  m_PrefabInstance: {fileID: 5570534981520263547}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1200986797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,20 +4274,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-      propertyPath: bossName
-      value: 
-      objectReference: {fileID: 558932151}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-      propertyPath: BossHpBar
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1190938797}
+      objectReference: {fileID: 214272171}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetDefaultClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ZUN.BGMCtrl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8126360429236251973, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: m_Name
       value: ChapterCtrl
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126360429236251973, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8411991871908709684, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4338,10 +4347,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8411991871908709684, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9119597072332885768, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,7 +7,6 @@ namespace ZUN
     public class MonsterSpawn : MonoBehaviour
     {
         Character character;
-        ChapterCtrl chapterCtrl;
 
         [Header("Monster")]
         [SerializeField] Monster monster;
@@ -31,7 +30,6 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
         }
 
         private void Start()

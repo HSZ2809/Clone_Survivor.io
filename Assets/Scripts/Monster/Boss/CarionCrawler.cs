@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class CarionCrawler : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class CarionCrawler : BossMonster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
     {
         #region Inspector
         [SerializeField] float hp;
@@ -23,6 +24,8 @@ namespace ZUN
         [SerializeField] MonsterBullet bullet;
         #endregion
 
+        IObjectPool<MonsterBullet> bulletPool;
+
         readonly Vector2 originX = new (1, 1);
         readonly Vector2 flipX = new (-1, 1);
 
@@ -39,6 +42,7 @@ namespace ZUN
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
+            bulletPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<MonsterBulletManager>().BulletPool;
         }
 
         private void Update()
@@ -80,11 +84,13 @@ namespace ZUN
         public void TakeDamage(float damage)
         {
             hp -= damage;
+            bossHpBar.fillAmount = hp / MaxHp;
             ShowDamage(damage);
 
             if (hp <= 0)
             {
                 cc2D.enabled = false;
+                bossHpUI.SetActive(false);
                 anim.SetTrigger("Die");
             }
         }
@@ -115,7 +121,7 @@ namespace ZUN
 
         void ShootBullet()
         {
-            MonsterBullet _bullet = Instantiate(bullet);
+            MonsterBullet _bullet = bulletPool.Get();
             Vector3 aim = (shootPos.position - character.transform.position).normalized;
             float angle = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
             _bullet.transform.SetPositionAndRotation(shootPos.position, Quaternion.Euler(0, 0, angle + 90));

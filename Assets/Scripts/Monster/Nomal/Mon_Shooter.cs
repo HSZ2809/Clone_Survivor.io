@@ -12,6 +12,7 @@ namespace ZUN
         [SerializeField] float hp;
         [SerializeField] float ap;
         [SerializeField] float moveSpeed;
+        [SerializeField] float limitDistance;
 
         [Header("Bullet")]
         [SerializeField] MonsterBullet bullet;
@@ -53,6 +54,9 @@ namespace ZUN
 
         private void Update()
         {
+            if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
+                gameObject.SetActive(false);
+
             if (character.transform.position.x > transform.position.x)
                 sr.flipX = false;
             else
@@ -135,6 +139,11 @@ namespace ZUN
         public void Die()
         {
             StopCoroutine(Shoot());
+            anim.SetTrigger("Die");
+        }
+
+        void Release()
+        {
             gameObject.SetActive(false);
         }
     }

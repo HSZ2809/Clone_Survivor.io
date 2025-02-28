@@ -959,6 +959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304d30f641ab92e4d9298d946b74e9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossName: "\uAC15\uCCA0 \uC774\uBE68"
+  bossHpBar: {fileID: 0}
   hp: 0
   ap: 0
   moveSpeed: 0

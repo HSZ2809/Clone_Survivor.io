@@ -220,10 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b60c01b4b6b4714dad546696645943e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 10
-  attackPower: 1
+  hp: 0
+  ap: 0
   moveSpeed: 1
-  anim: {fileID: 5782390407087910586}
+  limitDistance: 40
   bullet: {fileID: 5065159435404524367, guid: 3a689e644195510459108a20014fa221, type: 3}
   sr: {fileID: 7240929584340207501}
   shardType: 0

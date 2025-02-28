@@ -10,6 +10,7 @@ namespace ZUN
         [SerializeField] float hp;
         [SerializeField] float ap;
         [SerializeField] float moveSpeed;
+        [SerializeField] float limitDistance;
 
         [Header("Sprite Renderer")]
         [SerializeField] private SpriteRenderer sr;
@@ -44,6 +45,9 @@ namespace ZUN
 
         private void Update()
         {
+            if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
+                gameObject.SetActive(false);
+
             if(character.transform.position.x > transform.position.x)
                 sr.flipX = false;
             else
@@ -96,13 +100,18 @@ namespace ZUN
             // 데미지 표시 로직
         }
 
-        public void DropShard()
+        void DropShard()
         {
             EXPPool.SetShard(shardType, transform.position);
             chapterCtrl.AddKillCount();
         }
 
         public void Die()
+        {
+            anim.SetTrigger("Die");
+        }
+
+        void Release()
         {
             gameObject.SetActive(false);
         }

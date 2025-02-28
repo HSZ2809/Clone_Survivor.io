@@ -6,7 +6,6 @@ namespace ZUN
 {
     public class MonsterSpawn_SetPos : MonoBehaviour
     {
-        ChapterCtrl chapterCtrl;
         Character character;
 
         [Header("Monster")]
@@ -27,7 +26,6 @@ namespace ZUN
 
         private void Awake()
         {
-            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
         }
 

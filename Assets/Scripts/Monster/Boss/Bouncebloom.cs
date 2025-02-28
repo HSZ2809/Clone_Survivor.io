@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bouncebloom : Monster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet
+    public class Bouncebloom : BossMonster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet
     {
         #region Inspector
         [Header("Status")]
@@ -121,12 +121,14 @@ namespace ZUN
         public void TakeDamage(float damage)
         {
             hp -= damage;
+            bossHpBar.fillAmount = hp / MaxHp;
             ShowDamage(damage);
 
             if (hp <= 0)
             {
                 cc2D.enabled = false;
                 StopCoroutine(SetIdle());
+                bossHpUI.SetActive(false);
                 anim.SetTrigger("Die");
             }
         }

@@ -24,8 +24,6 @@ namespace ZUN
         [SerializeField] LotteryResult[] lotteryResults;
         [SerializeField] Button closeLottery;
         [SerializeField] ShowResult showResult;
-        [SerializeField] Image BossHpBar;
-        [SerializeField] TextMeshProUGUI bossName;
 
         int gold;
         public int KillCount { get; private set; }
@@ -80,11 +78,14 @@ namespace ZUN
                 }
             }
 
-            // 디버그용 시간 가속 함수
+            // 디버그용 시간 가속
             #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Time.timeScale = 5;
+                if(Time.timeScale <= 1f)
+                    Time.timeScale = 5f;
+                else
+                    Time.timeScale = 1f;
             }
             #endif
         }
@@ -324,6 +325,7 @@ namespace ZUN
 
         public void ShowResult()
         {
+            Time.timeScale = 0.0f;
             showResult.gameObject.SetActive(true);
         }
 

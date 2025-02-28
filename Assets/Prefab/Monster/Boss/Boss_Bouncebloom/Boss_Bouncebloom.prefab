@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0f2ab0c5b783148826d23622a00017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossName: "\uBC1C\uC0AC\uC758 \uAF43"
+  bossHpBar: {fileID: 0}
   hp: 0
   ap: 0
   sr: {fileID: 5740197919471862004}

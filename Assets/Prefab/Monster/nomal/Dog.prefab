@@ -136,6 +136,7 @@ MonoBehaviour:
   hp: 0
   ap: 0
   moveSpeed: 3
+  limitDistance: 40
   sr: {fileID: 6767736768256580085}
   shardType: 1
 --- !u!1 &3808440363199466766

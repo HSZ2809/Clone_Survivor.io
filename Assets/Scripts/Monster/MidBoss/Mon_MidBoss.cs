@@ -75,7 +75,7 @@ namespace ZUN
             // 데미지 표시 로직
         }
 
-        public void DropTreasureBox()
+        void DropTreasureBox()
         {
             Instantiate(treasureBox, transform.position, transform.rotation);
             chapterCtrl.AddKillCount();
@@ -83,7 +83,12 @@ namespace ZUN
 
         public void Die()
         {
-            Destroy(gameObject);
+            anim.SetTrigger("Die");
+        }
+
+        void Release()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

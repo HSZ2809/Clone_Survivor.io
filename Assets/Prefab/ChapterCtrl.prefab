@@ -21144,6 +21144,8 @@ MonoBehaviour:
   - {fileID: 3764271001429359247}
   closeLottery: {fileID: 1660594474420424335}
   showResult: {fileID: 779983828856733588}
+  BossHpBar: {fileID: 3034982271448654057}
+  bossName: {fileID: 3126137919431665920}
   playTime: 0
   events:
   - triggerTime: 0.1
@@ -25082,7 +25084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4323744882898630639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25425,6 +25427,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5247058017918715569, guid: dc780c8f0d0da5a4ebd2189524348ef1, type: 3}
     - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpUI
+      value: 
+      objectReference: {fileID: 9119597072332885768}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossName
+      value: 
+      objectReference: {fileID: 3126137919431665920}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpBar
+      value: 
+      objectReference: {fileID: 3034982271448654057}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
       propertyPath: attackPower
       value: 20
       objectReference: {fileID: 0}
@@ -25530,6 +25544,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3005147358795117211, guid: cbe7834f23fe29f4faba1906d0f51ddd, type: 3}
     - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpUI
+      value: 
+      objectReference: {fileID: 9119597072332885768}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossName
+      value: 
+      objectReference: {fileID: 3126137919431665920}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpBar
+      value: 
+      objectReference: {fileID: 3034982271448654057}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
       propertyPath: attackPower
       value: 30
       objectReference: {fileID: 0}
@@ -25634,6 +25660,18 @@ PrefabInstance:
       propertyPath: boss
       value: 
       objectReference: {fileID: -1438298476729955681, guid: 4232db596ae799147962fcea77c7b92a, type: 3}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpUI
+      value: 
+      objectReference: {fileID: 9119597072332885768}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossName
+      value: 
+      objectReference: {fileID: 3126137919431665920}
+    - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
+      propertyPath: bossHpBar
+      value: 
+      objectReference: {fileID: 3034982271448654057}
     - target: {fileID: 8176309714702216665, guid: a7e900dc625c9ad499b1ae6e16b922dd, type: 3}
       propertyPath: attackPower
       value: 10

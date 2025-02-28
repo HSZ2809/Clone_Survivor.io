@@ -9,6 +9,7 @@ namespace ZUN
         [SerializeField] float hp;
         [SerializeField] float ap;
         [SerializeField] float moveSpeed;
+        [SerializeField] float limitDistance;
 
         [SerializeField] Animator anim;
 
@@ -50,6 +51,9 @@ namespace ZUN
 
         private void Update()
         {
+            if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
+                gameObject.SetActive(false);
+
             if (hp > 0)
                 Move();
         }
@@ -104,6 +108,11 @@ namespace ZUN
         }
 
         public void Die()
+        {
+            anim.SetTrigger("Die");
+        }
+
+        void Release()
         {
             gameObject.SetActive(false);
         }
