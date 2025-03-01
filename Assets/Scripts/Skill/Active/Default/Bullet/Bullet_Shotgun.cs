@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -7,6 +8,8 @@ namespace ZUN
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
+
+        IObjectPool<Bullet_Shotgun> objPool;
 
         private void OnEnable() 
         {
@@ -23,7 +26,7 @@ namespace ZUN
             if (coll.gameObject.CompareTag("Monster"))
             {
                 coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-                gameObject.SetActive(false);
+                objPool.Release(this);
             }
         }
 
@@ -31,7 +34,12 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            objPool.Release(this);
+        }
+
+        public void SetBulletPool(IObjectPool<Bullet_Shotgun> pool)
+        {
+            objPool = pool;
         }
     }
 }

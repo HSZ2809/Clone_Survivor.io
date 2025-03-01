@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -10,8 +10,8 @@ namespace ZUN
         [Space]
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
-        [SerializeField] private SpriteRenderer handSprite = null;
-        [SerializeField] private Transform shootDir = null;
+        [SerializeField] private SpriteRenderer handSprite;
+        [SerializeField] private Transform shootDir;
         [SerializeField] private Image reloadBar;
 
         [Header("Spac")]
@@ -22,8 +22,8 @@ namespace ZUN
         LayerMask monsterLayer;
 
         [Header("Bullet")]
-        [SerializeField] private Bullet_Shuriken prefab_bullet = null;
-        [SerializeField] private List<Bullet_Shuriken> objPool = null;
+        [SerializeField] private Bullet_Shuriken bulletPrefab;
+        IObjectPool<Bullet_Shuriken> objPool;
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
@@ -34,6 +34,8 @@ namespace ZUN
 
         private void Start()
         {
+            objPool = new ObjectPool<Bullet_Shuriken>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 5);
+
             handSprite.sortingLayerName = "Weapon";
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
             reloadBar = character.ReloadBar();
@@ -51,28 +53,13 @@ namespace ZUN
                 {
                     yield return firerate;
 
-                    bool bulletFound = false;
                     SetAim();
 
-                    for (int k = 0; k < objPool.Count; k++)
-                    {
-                        if (!objPool[k].gameObject.activeSelf)
-                        {
-                            objPool[k].gameObject.transform.position = shootDir.position;
-                            objPool[k].gameObject.transform.localRotation = shootDir.rotation;
-                            objPool[k].Damage = BulletDamage;
-                            objPool[k].gameObject.SetActive(true);
-                            bulletFound = true;
-                            break;
-                        }
-                    }
-
-                    if (!bulletFound)
-                    {
-                        Bullet_Shuriken bulletInstance = Instantiate(prefab_bullet, shootDir.position, shootDir.rotation);
-                        bulletInstance.Damage = BulletDamage;
-                        objPool.Add(bulletInstance);
-                    }
+                    Bullet_Shuriken bullet = objPool.Get();
+                    bullet.gameObject.transform.position = shootDir.position;
+                    bullet.gameObject.transform.localRotation = shootDir.rotation;
+                    bullet.Damage = BulletDamage;
+                    bullet.gameObject.SetActive(true);
 
                     audioSource.PlayOneShot(clip);
                 }
@@ -155,6 +142,23 @@ namespace ZUN
             }
 
             StartCoroutine(enumerator);
+        }
+
+        Bullet_Shuriken CreateBullet()
+        {
+            Bullet_Shuriken bullet = Instantiate(bulletPrefab);
+            bullet.SetBulletPool(objPool);
+            return bullet;
+        }
+
+        void OnReleaseBullet(Bullet_Shuriken bullet)
+        {
+            bullet.gameObject.SetActive(false);
+        }
+
+        void OnDestroyBullet(Bullet_Shuriken bullet)
+        {
+            Destroy(bullet.gameObject);
         }
     }
 }

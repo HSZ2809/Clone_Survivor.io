@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -13,15 +13,17 @@ namespace ZUN
         [SerializeField] private float moveSpeed;
 
         [Header("Bullet")]
-        [SerializeField] private Bullet_Soccerball Bullet = null;
-        [SerializeField] private List<Bullet_Soccerball> magazine = null;
+        [SerializeField] private Bullet_Soccerball bulletPrefab = null;
+
+        IObjectPool<Bullet_Soccerball> objPool;
+        IEnumerator enumerator;
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        IEnumerator enumerator;
-
         private void Start()
         {
+            objPool = new ObjectPool<Bullet_Soccerball>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 5);
+
             enumerator = Shoot();
             character.SetActiveSkill(this);
 
@@ -34,30 +36,12 @@ namespace ZUN
             {
                 for (int i = 0; i < magazineSize; i++)
                 {
-                    bool bulletFound = false;
-
-                    for (int k = 0; k < magazine.Count; k++)
-                    {
-                        if (!magazine[k].gameObject.activeSelf)
-                        {
-                            magazine[k].gameObject.transform.position = transform.position;
-                            magazine[k].Damage = BulletDamage;
-                            magazine[k].MoveSpeed = moveSpeed;
-                            magazine[k].CharMoveSpeed = character.MoveSpeed;
-                            magazine[k].gameObject.SetActive(true);
-                            bulletFound = true;
-                            break;
-                        }
-                    }
-
-                    if (!bulletFound)
-                    {
-                        Bullet_Soccerball bulletInstance = Instantiate(Bullet, transform.position, transform.rotation);
-                        bulletInstance.Damage = BulletDamage;
-                        bulletInstance.MoveSpeed = moveSpeed;
-                        bulletInstance.CharMoveSpeed = character.MoveSpeed;
-                        magazine.Add(bulletInstance);
-                    }
+                    Bullet_Soccerball bullet = objPool.Get();
+                    bullet.gameObject.transform.position = transform.position;
+                    bullet.Damage = BulletDamage;
+                    bullet.MoveSpeed = moveSpeed;
+                    bullet.CharMoveSpeed = character.MoveSpeed;
+                    bullet.gameObject.SetActive(true);
                 }
 
                 yield return new WaitForSeconds(cooldown * character.AtkSpeed);
@@ -95,6 +79,23 @@ namespace ZUN
             }
 
             StartCoroutine(enumerator);
+        }
+
+        Bullet_Soccerball CreateBullet()
+        {
+            Bullet_Soccerball bullet = Instantiate(bulletPrefab);
+            bullet.SetBulletPool(objPool);
+            return bullet;
+        }
+
+        void OnReleaseBullet(Bullet_Soccerball bullet)
+        {
+            bullet.gameObject.SetActive(false);
+        }
+
+        void OnDestroyBullet(Bullet_Soccerball bullet)
+        {
+            Destroy(bullet.gameObject);
         }
     }
 }

@@ -60,8 +60,11 @@ namespace ZUN
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Bullet"))
-                if (!DOTween.IsTweening(sr.gameObject.transform))
-                    sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0);
+            // if (!DOTween.IsTweening(sr.gameObject.transform))
+            {
+                sr.gameObject.transform.DORewind();
+                sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0).Restart();
+            }
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -91,7 +94,7 @@ namespace ZUN
             if (hp <= 0)
             {
                 cc2D.enabled = false;
-                anim.SetTrigger("Die");
+                Die();
             }
         }
 
@@ -113,6 +116,8 @@ namespace ZUN
 
         void Release()
         {
+            sr.gameObject.transform.DOKill();
+            sr.gameObject.transform.DORewind();
             gameObject.SetActive(false);
         }
     }

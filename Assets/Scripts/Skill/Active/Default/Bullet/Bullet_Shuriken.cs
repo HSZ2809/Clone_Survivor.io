@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -8,6 +9,8 @@ namespace ZUN
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private float moveSpeed = 1.0f;
         [SerializeField] private float disableTime = 1.0f;
+
+        IObjectPool<Bullet_Shuriken> objPool;
 
         private void OnEnable()
         {
@@ -24,7 +27,7 @@ namespace ZUN
             if (coll.gameObject.CompareTag("Monster"))
             {
                 coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-                gameObject.SetActive(false);
+                objPool.Release(this);
             }
         }
 
@@ -32,7 +35,12 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            objPool.Release(this);
+        }
+
+        public void SetBulletPool(IObjectPool<Bullet_Shuriken> pool)
+        {
+            objPool = pool;
         }
     }
 }

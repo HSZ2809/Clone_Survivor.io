@@ -280,9 +280,8 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1d6fe01c1f4518a4fafc677a3840b24d, type: 3}
   handSprite: {fileID: 4231129112234039560}
   shootDir: {fileID: 4765015687711468970}
+  reloadBar: {fileID: 0}
   coefficient: 1.5
   cooldown: 3
   magazineSize: 1
-  firerate: 0.1
-  prefab_bullet: {fileID: 265619523679231999, guid: 44c3b09c808dbc24d9fc11ee2d65071f, type: 3}
-  objPool: []
+  bulletPrefab: {fileID: 265619523679231999, guid: 44c3b09c808dbc24d9fc11ee2d65071f, type: 3}

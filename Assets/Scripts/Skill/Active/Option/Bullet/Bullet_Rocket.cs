@@ -1,12 +1,16 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
     public class Bullet_Rocket : Bullet
     {
-        [SerializeField] private float moveSpeed = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float disableTime;
+        // [SerializeField] CapsuleCollider2D collider;
+
+        IObjectPool<Bullet_Rocket> objPool;
 
         private void OnEnable()
         {
@@ -23,15 +27,25 @@ namespace ZUN
             if (coll.gameObject.CompareTag("Monster"))
             {
                 coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-                gameObject.SetActive(false);
+                Explode();
             }
         }
 
-        // 일정 시간 후 비활성화
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            objPool.Release(this);
+        }
+
+        void Explode()
+        {
+            // 폭발 로직 + 애니메이션 실행
+            objPool.Release(this);
+        }
+
+        public void SetBulletPool(IObjectPool<Bullet_Rocket> pool)
+        {
+            objPool = pool;
         }
     }
 }

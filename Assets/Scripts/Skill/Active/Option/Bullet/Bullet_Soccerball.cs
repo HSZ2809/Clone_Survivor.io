@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -11,6 +12,8 @@ namespace ZUN
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
         [SerializeField] private Vector2 direction;
+
+        IObjectPool<Bullet_Soccerball> objPool;
 
         public float MoveSpeed { set { moveSpeed = value; } }
         public float CharMoveSpeed { get; set; }
@@ -82,7 +85,12 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            objPool.Release(this);
+        }
+
+        public void SetBulletPool(IObjectPool<Bullet_Soccerball> pool)
+        {
+            objPool = pool;
         }
     }
 }

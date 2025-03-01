@@ -163,8 +163,7 @@ MonoBehaviour:
   coefficient: 1
   cooldown: 3
   magazineSize: 3
-  prefab_bullet: {fileID: 1388926716547216169, guid: d293ad270a7f5d645b4c9b6f94bff2a5, type: 3}
-  objPool: []
+  bulletPrefab: {fileID: 1388926716547216169, guid: d293ad270a7f5d645b4c9b6f94bff2a5, type: 3}
 --- !u!1 &7202508693894374151
 GameObject:
   m_ObjectHideFlags: 0

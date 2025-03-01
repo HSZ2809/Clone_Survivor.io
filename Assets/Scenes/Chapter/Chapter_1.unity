@@ -4298,6 +4298,10 @@ PrefabInstance:
       value: ZUN.BGMCtrl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
+      propertyPath: events.Array.data[21].onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970760962419468653, guid: ef5104f2a6846054d88fec2b3a2152bb, type: 3}
       propertyPath: events.Array.data[30].onEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}

@@ -1,18 +1,23 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
     public class Bullet_Brick : Bullet
     {
-        [SerializeField] private float yForce = 1.0f;
-        [SerializeField] private float xForceRange = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        [SerializeField] private float yForce;
+        [SerializeField] private float xForceRange;
+        [SerializeField] private float disableTime;
+        [SerializeField] private int maxDurability;
+        int durability;
 
         [SerializeField] Rigidbody2D rb;
+        IObjectPool<Bullet_Brick> objPool;
 
         private void OnEnable()
         {
+            durability = maxDurability;
             float angle = Random.Range(-xForceRange, xForceRange);
             rb.AddForce(new Vector2(angle, yForce), ForceMode2D.Impulse);
             StartCoroutine(DisableBullet());
@@ -23,6 +28,10 @@ namespace ZUN
             if (coll.gameObject.CompareTag("Monster"))
             {
                 coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
+                durability -= 1;
+
+                if(durability < 1)
+                    objPool.Release(this);
             }
         }
 
@@ -30,7 +39,12 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            gameObject.SetActive(false);
+            objPool.Release(this);
+        }
+
+        public void SetBulletPool(IObjectPool<Bullet_Brick> pool)
+        {
+            objPool = pool;
         }
     }
 }

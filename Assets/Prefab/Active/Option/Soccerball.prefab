@@ -64,5 +64,4 @@ MonoBehaviour:
   cooldown: 15
   magazineSize: 1
   moveSpeed: 12
-  Bullet: {fileID: 6988003984139392093, guid: 1e691c2495550614485906fb6ab12b49, type: 3}
-  magazine: []
+  bulletPrefab: {fileID: 6988003984139392093, guid: 1e691c2495550614485906fb6ab12b49, type: 3}

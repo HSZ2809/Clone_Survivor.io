@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ZUN
 {
@@ -13,11 +13,11 @@ namespace ZUN
 
         [SerializeField] private float coefficient;
         [SerializeField] private float cooldown;
-        [SerializeField] private int magazineSize = 1;
+        [SerializeField] private int magazineSize = 3;
 
         [Header("Bullet")]
-        [SerializeField] private Bullet_Shotgun prefab_bullet = null;
-        [SerializeField] private List<Bullet_Shotgun> objPool = null;
+        [SerializeField] private Bullet_Shotgun bulletPrefab = null;
+        IObjectPool<Bullet_Shotgun> objPool;
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
@@ -26,48 +26,33 @@ namespace ZUN
 
         private void Start() 
         {
+            objPool = new ObjectPool<Bullet_Shotgun>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 15);
+
             shootDir = character.GetMoveDir();
             enumerator = Shoot();
             character.SetActiveSkill(this);
-
-            SetMag();
         }
 
         IEnumerator Shoot()
         {
-            int Angle = magazineSize / 2;
-
             while (true)
             {
-                for (int i = 0; i < objPool.Count; i++)
-                {
-                    objPool[i].gameObject.transform.position = transform.position;
-                    objPool[i].gameObject.transform.localRotation = shootDir.rotation;
-                    objPool[i].gameObject.transform.Rotate(new Vector3(0, 0, 4 * (Angle - i)));
-                    objPool[i].Damage = BulletDamage;
-                    objPool[i].gameObject.SetActive(true);
+                int Angle = magazineSize / 2;
 
-                    audioSource.PlayOneShot(clip);
+                audioSource.PlayOneShot(clip);
+
+                for (int i = 0; i < magazineSize; i++)
+                {
+                    Bullet_Shotgun bullet = objPool.Get();
+                    bullet.gameObject.transform.position = transform.position;
+                    bullet.gameObject.transform.localRotation = shootDir.rotation;
+                    bullet.gameObject.transform.Rotate(new Vector3(0, 0, 4 * (Angle - i)));
+                    bullet.Damage = BulletDamage;
+                    bullet.gameObject.SetActive(true);
                 }
-                
+
                 yield return new WaitForSeconds(Cooldown);
             }
-        }
-
-        void SetMag()
-        {
-            StopCoroutine(enumerator);
-
-            foreach (var obj in objPool)
-                obj.gameObject.SetActive(false);
-
-            while (magazineSize > objPool.Count)
-            {
-                Bullet_Shotgun bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
-                objPool.Add(bulletInstance);
-            }
-
-            StartCoroutine(enumerator);
         }
 
         public override void Upgrade()
@@ -100,8 +85,23 @@ namespace ZUN
                     Debug.LogWarning("Shotgun TryUpgrade() : invalid level");
                     break;
             }
+        }
 
-            SetMag();
+        Bullet_Shotgun CreateBullet()
+        {
+            Bullet_Shotgun bullet = Instantiate(bulletPrefab);
+            bullet.SetBulletPool(objPool);
+            return bullet;
+        }
+
+        void OnReleaseBullet(Bullet_Shotgun bullet)
+        {
+            bullet.gameObject.SetActive(false);
+        }
+
+        void OnDestroyBullet(Bullet_Shotgun bullet)
+        {
+            Destroy(bullet.gameObject);
         }
     }
 }
