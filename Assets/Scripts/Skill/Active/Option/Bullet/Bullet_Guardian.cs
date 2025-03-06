@@ -46,8 +46,18 @@ namespace ZUN
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
-                coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-                audioSource.Play();
+                IMon_Damageable mon_damage = coll.gameObject.GetComponent<IMon_Damageable>();
+                if (mon_damage != null)
+                {
+                    mon_damage.TakeDamage(damage);
+                    audioSource.Play();
+                }
+
+                IMon_KnockBackable mon_knockBack = coll.gameObject.GetComponent<IMon_KnockBackable>();
+                if (mon_knockBack != null)
+                {
+                    mon_knockBack.KnockBack();
+                }
             }
         }
 

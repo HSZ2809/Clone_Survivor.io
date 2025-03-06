@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Chaser : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class Mon_Chaser : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_KnockBackable
     {
         #region Inspector
         [Header("Status")]
@@ -20,6 +20,7 @@ namespace ZUN
         #endregion
 
         EXPObjPool EXPPool;
+        Rigidbody2D rb;
         Animator anim;
 
         public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
@@ -35,6 +36,7 @@ namespace ZUN
             gameObject.layer = LayerMask.NameToLayer(tag);
             cc2D = GetComponent<CircleCollider2D>();
             anim = GetComponent<Animator>();
+            rb = GetComponent<Rigidbody2D>();
         }
 
         private void OnEnable()
@@ -112,6 +114,11 @@ namespace ZUN
         public void Die()
         {
             anim.SetTrigger("Die");
+        }
+
+        public void KnockBack()
+        {
+            rb.AddForce((transform.position - character.transform.position).normalized * moveSpeed, ForceMode2D.Impulse);
         }
 
         void Release()
