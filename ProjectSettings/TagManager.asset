@@ -67,5 +67,8 @@ TagManager:
   - name: Bullet
     uniqueID: 795831043
     locked: 0
+  - name: DamageText
+    uniqueID: 4128835429
+    locked: 0
   m_RenderingLayers:
   - Default

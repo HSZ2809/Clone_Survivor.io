@@ -6,7 +6,7 @@ namespace ZUN
 {
     public class EXPShard : MonoBehaviour
     {
-        IObjectPool<EXPShard> shardPool;
+        IObjectPool<EXPShard> pool;
 
         public enum Type
         {
@@ -49,9 +49,9 @@ namespace ZUN
         //    }
         //}
 
-        public void SetShardPool(IObjectPool<EXPShard> pool)
+        public void SetPool(IObjectPool<EXPShard> pool)
         {
-            shardPool = pool;
+            this.pool = pool;
         }
 
         public void GetEXP(Character character)
@@ -83,7 +83,7 @@ namespace ZUN
 
             transform.position = target.position;
             character.AddExp(exp);
-            shardPool.Release(this);
+            pool.Release(this);
         }
     }
 }

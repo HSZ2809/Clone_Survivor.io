@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bouncebloom : BossMonster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet
+    public class Bouncebloom : BossMonster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet, IMon_Bleeding
     {
         #region Inspector
         [Header("Status")]
@@ -21,6 +21,8 @@ namespace ZUN
         #endregion
 
         [SerializeField] Animator anim;
+        ParticleSystem bleeding;
+        ObjectPool_DamageText damageTextPool;
         readonly WaitForSeconds waitTime = new(3);
 
         public float MaxHp { get; set; }
@@ -33,6 +35,8 @@ namespace ZUN
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
+            damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
+            bleeding = GetComponent<ParticleSystem>();
         }
 
         private void OnEnable()
@@ -135,7 +139,14 @@ namespace ZUN
 
         public void ShowDamage(float damage)
         {
-            // 데미지 표시 로직
+            DamageText damageText = damageTextPool.Pool.Get();
+            damageText.transform.position = transform.position;
+            damageText.SetText(damage.ToString());
+        }
+
+        public void Bleeding()
+        {
+            bleeding.Play();
         }
 
         public void DropTreasureBox()

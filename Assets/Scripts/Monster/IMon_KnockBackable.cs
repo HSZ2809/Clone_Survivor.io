@@ -1,4 +1,7 @@
-public interface IMon_KnockBackable
+namespace ZUN
 {
-    void KnockBack();
+    public interface IMon_KnockBackable
+    {
+        void KnockBack();
+    }
 }

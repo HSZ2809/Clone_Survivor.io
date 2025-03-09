@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Mon_Shooter : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet, IMon_KnockBackable
+    public class Mon_Shooter : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet, IMon_KnockBackable, IMon_Bleeding
     {
         #region Inspector
         [Header("Status")]
@@ -24,9 +24,11 @@ namespace ZUN
         [SerializeField] EXPShard.Type shardType;
         #endregion
 
-        EXPObjPool EXPPool;
+        ObjectPool_ExpShard EXPPool;
+        ObjectPool_DamageText damageTextPool;
         Rigidbody2D rb;
         Animator anim;
+        ParticleSystem bleeding;
         IObjectPool<MonsterBullet> bulletPool;
         readonly WaitForSeconds waitTime = new (10.0f);
 
@@ -38,13 +40,15 @@ namespace ZUN
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<EXPObjPool>();
+            EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_ExpShard>();
             bulletPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<MonsterBulletManager>().BulletPool;
+            damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
             tag = "Monster";
             gameObject.layer = LayerMask.NameToLayer(tag);
             cc2D = GetComponent<CircleCollider2D>();
             anim = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
+            bleeding = GetComponent<ParticleSystem>();
         }
 
         private void OnEnable()
@@ -71,7 +75,6 @@ namespace ZUN
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Bullet"))
-            // if (!DOTween.IsTweening(sr.gameObject.transform))
             {
                 sr.gameObject.transform.DORewind();
                 sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0).Restart();
@@ -132,7 +135,9 @@ namespace ZUN
 
         public void ShowDamage(float damage)
         {
-            // 데미지 표시 로직
+            DamageText damageText = damageTextPool.Pool.Get();
+            damageText.transform.position = transform.position;
+            damageText.SetText(damage.ToString());
         }
 
         public void DropShard()
@@ -150,6 +155,11 @@ namespace ZUN
         public void KnockBack()
         {
             rb.AddForce((transform.position - character.transform.position).normalized * moveSpeed, ForceMode2D.Impulse);
+        }
+
+        public void Bleeding()
+        {
+            bleeding.Play();
         }
 
         void Release()

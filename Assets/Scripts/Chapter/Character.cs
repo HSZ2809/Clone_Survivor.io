@@ -44,6 +44,7 @@ namespace ZUN
 
         ChapterCtrl chapterCtrl;
         Manager_Inventory inventory;
+        ParticleSystem bleeding;
 
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }
@@ -76,6 +77,7 @@ namespace ZUN
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
+            bleeding = GetComponent<ParticleSystem>();
         }
 
         private void Update()
@@ -153,6 +155,7 @@ namespace ZUN
 
         public void TakeDamage(float damage)
         {
+            bleeding.Play();
             hp -= damage;
             hpBar.fillAmount = hp / maxHp;
         }

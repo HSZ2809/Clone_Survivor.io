@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.U2D.IK;
 
 namespace ZUN
 {
-    public class Mon_MidBoss : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class Mon_MidBoss : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_Bleeding
     {
         #region Inspector
         [Header("Status")]
@@ -21,6 +19,9 @@ namespace ZUN
         [SerializeField] private TreasureBox treasureBox;
         #endregion
 
+        ObjectPool_DamageText damageTextPool;
+        ParticleSystem bleeding;
+
         public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
@@ -32,6 +33,8 @@ namespace ZUN
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
+            damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
+            bleeding = GetComponent<ParticleSystem>();
         }
 
         private void Update()
@@ -72,7 +75,14 @@ namespace ZUN
 
         public void ShowDamage(float damage)
         {
-            // 데미지 표시 로직
+            DamageText damageText = damageTextPool.Pool.Get();
+            damageText.transform.position = transform.position;
+            damageText.SetText(damage.ToString());
+        }
+
+        public void Bleeding()
+        {
+            bleeding.Play();
         }
 
         void DropTreasureBox()

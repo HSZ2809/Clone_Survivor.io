@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class CarionCrawler : BossMonster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class CarionCrawler : BossMonster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_Bleeding
     {
         #region Inspector
         [SerializeField] float hp;
@@ -25,6 +25,8 @@ namespace ZUN
         #endregion
 
         IObjectPool<MonsterBullet> bulletPool;
+        ObjectPool_DamageText damageTextPool;
+        ParticleSystem bleeding;
 
         readonly Vector2 originX = new (1, 1);
         readonly Vector2 flipX = new (-1, 1);
@@ -43,6 +45,8 @@ namespace ZUN
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             bulletPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<MonsterBulletManager>().BulletPool;
+            damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
+            bleeding = GetComponent<ParticleSystem>();
         }
 
         private void Update()
@@ -97,7 +101,14 @@ namespace ZUN
 
         public void ShowDamage(float damage)
         {
-            // 데미지 표시 로직
+            DamageText damageText = damageTextPool.Pool.Get();
+            damageText.transform.position = transform.position;
+            damageText.SetText(damage.ToString());
+        }
+
+        public void Bleeding()
+        {
+            bleeding.Play();
         }
 
         void StartPattern_Rush()

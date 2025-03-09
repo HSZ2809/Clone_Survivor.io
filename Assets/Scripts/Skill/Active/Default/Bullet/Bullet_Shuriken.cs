@@ -7,8 +7,8 @@ namespace ZUN
     public class Bullet_Shuriken : Bullet
     {
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private float moveSpeed = 1.0f;
-        [SerializeField] private float disableTime = 1.0f;
+        [SerializeField] private float moveSpeed;
+        [SerializeField] private float disableTime;
 
         IObjectPool<Bullet_Shuriken> objPool;
 
@@ -24,11 +24,18 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (coll.gameObject.CompareTag("Monster"))
+            //if (coll.gameObject.CompareTag("Monster"))
+            //{
+            //    StopCoroutine(DisableBullet());
+            //    coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
+            //    objPool.Release(this);
+            //}
+            if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
             {
-                coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-                objPool.Release(this);
+                mon_Damageable.TakeDamage(damage);
             }
+
+            objPool.Release(this);
         }
 
         // 일정 시간 후 비활성화
