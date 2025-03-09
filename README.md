@@ -3,12 +3,10 @@
 > 탕탕특공대 모작 <br/>
 > 기간 : 2025.01 ~ 2025.02 <br/>
 > Unity2D <br/>
-<<<<<<< Updated upstream
 
 <img src="https://github.com/user-attachments/assets/4e225a86-47ca-45ab-bc11-13bd53c2ee26" width=400> <br/>
 <img src="https://github.com/user-attachments/assets/d12fc5d8-b4e2-4dc4-9608-e0af1de893ae" width=600> <br/>
 
-<br/>
 <br/>
 
 ## Manager Class
@@ -16,18 +14,15 @@
 - 다른 씬의 로드, 언로드 시에도 Destroy 되지 않고 남도록 씬 이동 로직을 구성
 
 <br/>
-<br/>
 
 ## Object Pooling
 - 오브젝트의 생성과 파괴가 잦지만 같은 오브젝트를 많이 사용하는 게임 특성상, 생성한 오브젝트를 파괴하지 않고 오브젝트 풀링 기법으로 재활용해서 사용
 
 <br/>
-<br/>
 
 ## Lobby
 - 설정 변경, 장비 변경 등 다른 기능을 사용하기 위한 로비
 
-<br/>
 <br/>
 
 ## Chapter
@@ -36,13 +31,11 @@
 - 진행하는 동안, 시간의 흐름에 따라 다양한 이벤트 발생
 
 <br/>
-<br/>
 
 ## Character
 - 쳅터 등의 컨텐츠 진입 시 플레이어가 컨트롤하여 게임을 플레이하는 매개체
 - 플레이 시 필요한 스테이터스, 충돌 판정, Skill 등록 등의 기능을 수행
 
-<br/>
 <br/>
 
 ## Skill
@@ -55,13 +48,8 @@
 - 각 Skill은 업그레이드 시 효과가 강화
 
 <br/>
-<br/>
 
 ## Monster
 - 캐릭터를 적대하는 오브젝트
 - Moster 형을 상속받는 다양한 몬스터가 있다
 - interface를 사용해서 Skill과 상호작용하여, 종류에 구애받지 않고 필요한 메소드만 실행시키도록 설계
-=======
->
-> 
->>>>>>> Stashed changes
