@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2845366054442328731}
   - component: {fileID: 7965762797575570523}
   - component: {fileID: 2372830951701270882}
+  - component: {fileID: 4891468122353074117}
   - component: {fileID: -29833347140986097}
   m_Layer: 0
   m_Name: Bullet_Rocket
@@ -124,8 +125,30 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 1.2}
+  m_Size: {x: 1, y: 1.5}
   m_Direction: 0
+--- !u!95 &4891468122353074117
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447045352441321217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dc110522d9e9754dbe18f51ac62ba5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &-29833347140986097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,4 +164,4 @@ MonoBehaviour:
   damage: 1
   moveSpeed: 10
   disableTime: 3
-  collider: {fileID: 2372830951701270882}
+  explodeRange: 3

@@ -1,0 +1,427 @@
+fileFormatVersion: 2
+guid: 5983497b6dfd5134b94e1a84567b4b0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4512586499197301732
+    second: Rocket_Explore_0
+  - first:
+      213: -7051123835721210506
+    second: Rocket_Explore_1
+  - first:
+      213: -3940825753037785902
+    second: Rocket_Explore_2
+  - first:
+      213: 6962069981816425530
+    second: Rocket_Explore_3
+  - first:
+      213: 1337050348340023346
+    second: Rocket_Explore_4
+  - first:
+      213: -5220325230593160571
+    second: Rocket_Explore_5
+  - first:
+      213: -4565681704625847286
+    second: Rocket_Explore_6
+  - first:
+      213: -8651079780782366918
+    second: Rocket_Explore_7
+  - first:
+      213: -888654377364938357
+    second: Rocket_Explore_8
+  - first:
+      213: -3878605428398111535
+    second: Rocket_Explore_9
+  - first:
+      213: -1626474225855995419
+    second: Rocket_Explore_10
+  - first:
+      213: -3192056960413065335
+    second: Rocket_Explore_11
+  - first:
+      213: 4719704206068651658
+    second: Rocket_Explore_12
+  - first:
+      213: -3451383777993104514
+    second: Rocket_Explore_13
+  - first:
+      213: -2118879661389437394
+    second: Rocket_Explore_14
+  - first:
+      213: -4596830421008942672
+    second: Rocket_Explore_15
+  - first:
+      213: 8924178806566453491
+    second: Rocket_Explore_16
+  - first:
+      213: -6710850119961259807
+    second: Rocket_Explore_17
+  - first:
+      213: -1345323297234108298
+    second: Rocket_Explore_18
+  - first:
+      213: -8711982136822499967
+    second: Rocket_Explore_19
+  - first:
+      213: 6779633275230525471
+    second: Rocket_Explore_20
+  - first:
+      213: 4985049549797662620
+    second: Rocket_Explore_21
+  - first:
+      213: -5993119149334675826
+    second: Rocket_Explore_22
+  - first:
+      213: 7181819789257390214
+    second: Rocket_Explore_23
+  - first:
+      213: -4587222417029103325
+    second: Rocket_Explore_24
+  - first:
+      213: 2890285348376218092
+    second: Rocket_Explore_25
+  - first:
+      213: -3600824384019641433
+    second: Rocket_Explore_26
+  - first:
+      213: -1158767102620569620
+    second: Rocket_Explore_27
+  - first:
+      213: -7495950663770213497
+    second: Rocket_Explore_28
+  - first:
+      213: 7664536501896024983
+    second: Rocket_Explore_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rocket_Explore_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f18f9c0fe4c2094ead8b64c35fbb64e
+      internalID: -2083051941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f882dcfc988954448a8d93742b3f88d
+      internalID: 1410221035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b1dc0ac7f45844983f3e728d87a8db
+      internalID: -98112990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d768c5b4e6391d47bfa0ba7e3c064ed
+      internalID: 1479409813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5722ff1cab882246b659ae917b8c896
+      internalID: 1425210703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160f05cb610b0f643acd565b9aba73a9
+      internalID: -1102274363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548d54367f47e2b4595a83c38980a118
+      internalID: 275324407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc642456bbac8c0439dd6552ad672652
+      internalID: -311462574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket_Explore_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd589b800ddb33f4ab6f09db758d2e3b
+      internalID: 896771378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6f353087ee569ea4090978d1f3734d5c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rocket_Explore_0: -2083051941
+      Rocket_Explore_1: 1410221035
+      Rocket_Explore_2: -98112990
+      Rocket_Explore_3: 1479409813
+      Rocket_Explore_4: 1425210703
+      Rocket_Explore_5: -1102274363
+      Rocket_Explore_6: 275324407
+      Rocket_Explore_7: -311462574
+      Rocket_Explore_8: 896771378
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

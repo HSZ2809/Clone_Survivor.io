@@ -34,7 +34,7 @@ namespace ZUN
 
             img_skill.sprite = skill.Sprite;
             txt_skillName.text = skill.SkillName;
-            txt_upgradeInfo.text = skill.UpgradeInfos[skill.Level - 1];
+            txt_upgradeInfo.text = skill.UpgradeInfos[skill.Level];
 
             if (skill.Level == 6)
             {

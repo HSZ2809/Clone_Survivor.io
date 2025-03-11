@@ -65,6 +65,11 @@ namespace ZUN
                     audioSource.Play();
                 }
             }
+
+            if (coll.gameObject.TryGetComponent<IBlockable>(out var monsterBullet))
+            {
+                monsterBullet.Block();
+            }
         }
 
         public void BulletEnable()

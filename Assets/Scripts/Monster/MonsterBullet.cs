@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class MonsterBullet : MonoBehaviour
+    public class MonsterBullet : MonoBehaviour, IBlockable
     {
         [SerializeField] private float moveSpeed = 1.5f;
         [SerializeField] private float disableTime = 5.0f;
@@ -55,6 +55,11 @@ namespace ZUN
         }
 
         public void ReleaseBullet()
+        {
+            bulletPool.Release(this);
+        }
+
+        public void Block()
         {
             bulletPool.Release(this);
         }

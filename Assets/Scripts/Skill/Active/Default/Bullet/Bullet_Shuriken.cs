@@ -24,12 +24,6 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            //if (coll.gameObject.CompareTag("Monster"))
-            //{
-            //    StopCoroutine(DisableBullet());
-            //    coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
-            //    objPool.Release(this);
-            //}
             if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
             {
                 mon_Damageable.TakeDamage(damage);

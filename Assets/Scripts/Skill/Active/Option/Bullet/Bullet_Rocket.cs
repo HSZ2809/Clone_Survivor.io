@@ -8,24 +8,36 @@ namespace ZUN
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
-        // [SerializeField] CapsuleCollider2D collider;
+        [SerializeField] private float explodeRange;
+        private bool isExplode;
 
         IObjectPool<Bullet_Rocket> objPool;
+        LayerMask monsterLayer;
+        Animator anim;
+
+        private void Start()
+        {
+            anim = GetComponent<Animator>();
+            monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
+        }
 
         private void OnEnable()
         {
+            isExplode = false;
             StartCoroutine(DisableBullet());
         }
 
         private void Update()
         {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            if (!isExplode)
+                transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
+                isExplode = true;
                 coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
                 Explode();
             }
@@ -39,7 +51,19 @@ namespace ZUN
 
         void Explode()
         {
-            // 폭발 로직 + 애니메이션 실행
+            Collider2D[] monsterCol = Physics2D.OverlapCircleAll(transform.position, explodeRange, monsterLayer);
+            foreach (var coll in monsterCol)
+            {
+                if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
+                {
+                    mon_Damageable.TakeDamage(damage);
+                }
+            }
+            anim.SetTrigger("Explode");
+        }
+
+        void ReleaseBullet()
+        {
             objPool.Release(this);
         }
 
