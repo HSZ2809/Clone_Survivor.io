@@ -191,6 +191,7 @@ MonoBehaviour:
     \uC99D\uAC00"
   - "\uC8FD\uC74C\uC758 \uC218\uB808\uBC14\uD034"
   level: 0
+  maxLevel: 5
   character: {fileID: 0}
   synergyID: test
   audioSource: {fileID: -6036366785939260033}

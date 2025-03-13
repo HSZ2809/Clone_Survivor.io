@@ -110,7 +110,13 @@ namespace ZUN
 
         IEnumerator RegenerationHp()
         {
-            Hp += MaxHp * regeneration;
+            while (true)
+            {
+                Hp += MaxHp * regeneration;
+                hpBar.fillAmount = hp / maxHp;
+
+                yield return new WaitForSeconds(5.0f);
+            }    
         }
 
         public void SetActiveSkill(ActiveSkill newActive)
@@ -167,7 +173,7 @@ namespace ZUN
 
         public void StartRegenerationHp()
         {
-            StartCoroutine(RegenerationHp);
+            StartCoroutine(RegenerationHp());
         }
 
         public void UpgradeRegeneration(float plus)

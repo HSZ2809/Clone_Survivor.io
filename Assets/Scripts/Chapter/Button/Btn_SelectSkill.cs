@@ -2,15 +2,18 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening
+using DG.Tweening;
 
 namespace ZUN
 {
     public class Btn_SelectSkill : MonoBehaviour
     {
-        public ChapterCtrl chapterCtrl;
+        [SerializeField] ChapterCtrl chapterCtrl;
 
-        [SerializeField] Sprite[] sprite;
+        [SerializeField] Sprite[] bgSprite;
+        [SerializeField] Sprite[] starSprite;
+
+        [Space]
         [SerializeField] Image panelImage;
         [SerializeField] TextMeshProUGUI newTxt;
         [SerializeField] Image[] stars;
@@ -30,22 +33,27 @@ namespace ZUN
             skillName.text = skill.SkillName;
             skillImage.sprite = skill.Sprite;
             upgradeInfo.text = skill.UpgradeInfos[skill.Level];
+
             int index = 0;
             while (index < skill.Level)
             {
-                // stars[i]. 알파를 1로 변경
-                stars[i].gameObject.SetActive(true);
+                stars[index].sprite = starSprite[1];
                 index += 1;
-            }
-            StartCoroutine(BlinkStar(stars[index]));
+            }              
+            stars[index].sprite = starSprite[1]; // 점멸 효과 추가 필요
 
-            panelImage.sprite = sprite[(int)skillType];
-            if(skill.Level < 1)
+            // StartCoroutine(BlinkStar(stars[skill.Level]));
+
+            panelImage.sprite = bgSprite[(int)skillType];
+            if (skill.Level < 1)
                 newTxt.gameObject.SetActive(true);
         }
 
         private void OnDisable()
         {
+            foreach (Image star in stars)
+                star.sprite = starSprite[0];
+
             if (newTxt.gameObject.activeSelf)
                 newTxt.gameObject.SetActive(false);
         }
@@ -53,7 +61,7 @@ namespace ZUN
         IEnumerator BlinkStar(Image star)
         {
             star.DOFade(1.0f, 1.0f).SetLoops(2, LoopType.Yoyo).OnComplete(() => {
-                StartCoroutine(BlinkStar(stars[index]))
+                StartCoroutine(BlinkStar(star));
             });
 
             yield return null;

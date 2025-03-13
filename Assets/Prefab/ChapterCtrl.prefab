@@ -559,12 +559,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162981555751813947}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 318407681210685000}
+  m_Father: {fileID: 3742269601786333482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3329,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4253412560035527859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3465,6 +3465,7 @@ MonoBehaviour:
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}
   panelImage: {fileID: 8654459735696770386}
   newTxt: {fileID: 5025226938703489892}
+  stars: []
   skill: {fileID: 0}
   skillType: 0
   skillName: {fileID: 7479514296129007375}
@@ -9828,6 +9829,42 @@ MonoBehaviour:
   attackPower: 15
   minDistance: 20
   maxDistance: 21
+--- !u!1 &3557389914301831625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3742269601786333482}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3742269601786333482
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557389914301831625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3905722298319436483}
+  m_Father: {fileID: 318407681210685000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3574500098481340689
 GameObject:
   m_ObjectHideFlags: 0
@@ -14150,7 +14187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5639763752782334944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18712,7 +18749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &261010341541102929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18848,6 +18885,7 @@ MonoBehaviour:
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}
   panelImage: {fileID: 6148717523190189492}
   newTxt: {fileID: 8768730740535508091}
+  stars: []
   skill: {fileID: 0}
   skillType: 0
   skillName: {fileID: 462725047502391765}
@@ -21151,8 +21189,8 @@ MonoBehaviour:
     onEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: ZUN.EXPObjPool, Assembly-CSharp
+        - m_Target: {fileID: 8950471005577862453}
+          m_TargetAssemblyTypeName: ZUN.ObjectPool_ExpShard, Assembly-CSharp
           m_MethodName: InitShard
           m_Mode: 1
           m_Arguments:
@@ -22262,7 +22300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4662a6e18cc254428d72a0d378cdaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perfab: {fileID: 0}
+  perfab: {fileID: 6714480925623549741, guid: 2fb1d18bd43bc04468c34ef8642db7a8, type: 3}
 --- !u!1 &8187445639962142932
 GameObject:
   m_ObjectHideFlags: 0
@@ -23214,7 +23252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &318407681210685000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23230,8 +23268,8 @@ RectTransform:
   - {fileID: 6457102352845601412}
   - {fileID: 1177294010057330773}
   - {fileID: 7717830801387268361}
-  - {fileID: 3905722298319436483}
   - {fileID: 7397331973054045336}
+  - {fileID: 3742269601786333482}
   m_Father: {fileID: 5639763752782334944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -23351,6 +23389,7 @@ MonoBehaviour:
   - {fileID: -7704971176068250886, guid: 82a2a5d7b1ba17e4fb30b28c9526a50b, type: 3}
   panelImage: {fileID: 4653972684007606003}
   newTxt: {fileID: 2216024184336534365}
+  stars: []
   skill: {fileID: 0}
   skillType: 0
   skillName: {fileID: 23678512935936687}

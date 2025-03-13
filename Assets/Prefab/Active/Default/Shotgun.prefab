@@ -155,6 +155,7 @@ MonoBehaviour:
   - "\uCD1D\uC54C 3\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uC8FD\uC74C\uC758 \uC218\uB808\uBC14\uD034"
   level: 0
+  maxLevel: 5
   character: {fileID: 0}
   synergyID: test
   audioSource: {fileID: 3624656395468084708}

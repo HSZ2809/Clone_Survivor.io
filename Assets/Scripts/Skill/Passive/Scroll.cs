@@ -12,7 +12,7 @@ namespace ZUN
         private void Start()
         {
             character.SetPassiveSkill(this);
-            addExpGain = character.ExpGain * coefficient;
+            // addExpGain = character.ExpGain * coefficient;
             character.UpgradeExpGain(addExpGain);
         }
 
