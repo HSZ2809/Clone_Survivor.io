@@ -65,7 +65,6 @@ namespace ZUN
         public float AtkSpeed { get { return atkSpeed; } }
         public float BulletSpeed { get { return bulletSpeed; } }
         public float MoveSpeed { get { return moveSpeed; } }
-        public float ExpGain { get { return expGain; } }
         public float Duration { get { return duration; } }
         public Transform GetMoveDir() { return moveDirection; }
         public Image ReloadBar() { return reloadBar; }
@@ -134,7 +133,7 @@ namespace ZUN
 
         public void AddExp(int _exp)
         {
-            exp += _exp;
+            exp += _exp * expGain;
             
             if (exp >= maxExp)
             {
