@@ -19,7 +19,7 @@ namespace ZUN
         public Sprite Sprite { get { return sprite; } }
         public string[] UpgradeInfos { get { return upgradeInfos; } }
         public int Level { get { return level; } }
-        public int MaxLevel ( get ( return maxLevel; } }
+        public int MaxLevel { get { return maxLevel; } }
 
         public abstract void Upgrade();
 
