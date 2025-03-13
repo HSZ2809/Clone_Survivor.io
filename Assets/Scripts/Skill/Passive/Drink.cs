@@ -12,6 +12,7 @@ namespace ZUN
         {
             character.SetPassiveSkill(this);
             character.UpgradeRegeneration(regeneration);
+            character.StartRegenerationHp();
         }
 
         public override void Upgrade()
