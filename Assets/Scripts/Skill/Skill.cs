@@ -11,6 +11,7 @@ namespace ZUN
         [SerializeField] protected Sprite sprite;
         [SerializeField] protected string[] upgradeInfos;
         [SerializeField] protected int level;
+        [SerializeField] protected int maxLevel;
 
         public string ID { get { return id; } }
         public string SkillName { get { return skillName; } }
@@ -18,6 +19,7 @@ namespace ZUN
         public Sprite Sprite { get { return sprite; } }
         public string[] UpgradeInfos { get { return upgradeInfos; } }
         public int Level { get { return level; } }
+        public int MaxLevel ( get ( return maxLevel; } }
 
         public abstract void Upgrade();
 
