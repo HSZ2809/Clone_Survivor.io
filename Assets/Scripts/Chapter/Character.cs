@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -107,6 +108,11 @@ namespace ZUN
             }
         }
 
+        IEnumerator RegenerationHp()
+        {
+            Hp += MaxHp * regeneration;
+        }
+
         public void SetActiveSkill(ActiveSkill newActive)
         {
             if (AmountOfActive < actives.Length)
@@ -157,6 +163,11 @@ namespace ZUN
             bleeding.Play();
             hp -= damage;
             hpBar.fillAmount = hp / maxHp;
+        }
+
+        public void StartRegenerationHp()
+        {
+            StartCoroutine(RegenerationHp);
         }
 
         public void UpgradeRegeneration(float plus)
