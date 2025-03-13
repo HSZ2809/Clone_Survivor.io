@@ -103,9 +103,9 @@ namespace ZUN
             {
                 for(int i = 0; i < charActives.Length; i++)
                 {
-                    if (charActives[i].Level < 5)
+                    if (charActives[i].Level < charActives[i].MaxLevel)
                         shuffleBox.Add(charActives[i]);
-                    else if(charActives[i].Level == 5)
+                    else if(charActives[i].Level == charActives[i].MaxLevel)
                     {
                         string synergyID = charActives[i].SynergyID;
 
@@ -121,9 +121,9 @@ namespace ZUN
                     if (charActives[i] == null)
                         continue;
 
-                    if (charActives[i].Level < 5)
+                    if (charActives[i].Level < charActives[i].MaxLevel)
                         shuffleBox.Add(charActives[i]);
-                    else if (charActives[i].Level == 5)
+                    else if (charActives[i].Level == charActives[i].MaxLevel)
                     {
                         string synergyID = charActives[i].SynergyID;
 
@@ -169,7 +169,7 @@ namespace ZUN
                     if (charPassives[i] == null)
                         continue;
 
-                    if (charPassives[i].Level < 5)
+                    if (charPassives[i].Level < charPassives[i].MaxLevel)
                         shuffleBox.Add(charPassives[i]);
                 }
 
@@ -239,9 +239,9 @@ namespace ZUN
                 if (charActives[i] == null)
                     break;
 
-                if (charActives[i].Level < 5)
+                if (charActives[i].Level < charActives[i].MaxLevel)
                     shuffleBox.Add(charActives[i]);
-                else if (charActives[i].Level == 5)
+                else if (charActives[i].Level == charActives[i].MaxLevel)
                 {
                     string synergyID = charActives[i].SynergyID;
 
@@ -255,7 +255,7 @@ namespace ZUN
                 if (charPassives[i] == null)
                     break;
 
-                if (charPassives[i].Level < 5)
+                if (charPassives[i].Level < charPassives[i].MaxLevel)
                     shuffleBox.Add(charPassives[i]);
             }
 
@@ -283,7 +283,7 @@ namespace ZUN
 
                 skill.Upgrade();
                 lotteryResults[i].SetData(skill);
-                if (skill.Level == 6)
+                if (skill.Level == skill.MaxLevel)
                     shuffleBox.Remove(skill);
                 // 패널 위치로 이동
                 lotteryResults[i].gameObject.SetActive(true);
