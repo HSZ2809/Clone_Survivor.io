@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class TreasureBox : MonoBehaviour
+    public class TreasureBox : MonoBehaviour, IGetDropedItem
     {
         [SerializeField] private Collider2D col;
         [SerializeField] private float initialSpeed;
         float gravity = 50f;
 
-        public void GetTreasureBox(Character character)
+        public void GetDropedItem(Character character)
         {
             StartCoroutine(DraggedToChar(character));
         }
