@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class EXPShard : MonoBehaviour
+    public class EXPShard : MonoBehaviour, IGetDropedItem
     {
         IObjectPool<EXPShard> pool;
 
@@ -54,7 +54,7 @@ namespace ZUN
             this.pool = pool;
         }
 
-        public void GetEXP(Character character)
+        public void GetDropedItem(Character character)
         {
             StartCoroutine(DraggedToChar(character));
         }
