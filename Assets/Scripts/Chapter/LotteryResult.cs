@@ -26,7 +26,7 @@ namespace ZUN
                 img_bg.sprite = bgSprite[PASSIVE];
             else
             {
-                if (skill.Level == 6)
+                if (skill.MaxLevel == 1)
                     img_bg.sprite = bgSprite[FINALACT];
                 else
                     img_bg.sprite = bgSprite[ACTIVE];
@@ -36,7 +36,7 @@ namespace ZUN
             txt_skillName.text = skill.SkillName;
             txt_upgradeInfo.text = skill.UpgradeInfos[skill.Level];
 
-            if (skill.Level == 6)
+            if (skill.MaxLevel == 1)
             {
                 img_star[2].sprite = starSprite[RED];
                 img_star[2].gameObject.SetActive(true);
