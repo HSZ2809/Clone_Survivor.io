@@ -43,6 +43,8 @@ namespace ZUN
         [SerializeField] float itemRange;
         #endregion
 
+        bool isInLevelUpRoutine = false;
+
         ChapterCtrl chapterCtrl;
         Manager_Inventory inventory;
         ParticleSystem bleeding;
@@ -119,6 +121,28 @@ namespace ZUN
             }    
         }
 
+        IEnumerator LevelUp()
+        {
+            // expBar 특수효과 on
+            exp -= maxExp;
+            maxExp *= 1.5f;
+            level += 1;
+            txt_level.text = "Lv." + level.ToString();
+            chapterCtrl.LevelUp(ref actives, ref passives);
+
+            if (exp >= maxExp)
+            {
+                yield return new WaitForSeconds(1.0f);
+                StartCoroutine(LevelUp());
+            }
+            else
+            {
+                // expBar 특수효과 off
+                expBar.fillAmount = exp / maxExp;
+                isInLevelUpRoutine = false;
+            }
+        }
+
         public void SetActiveSkill(ActiveSkill newActive)
         {
             if (AmountOfActive < actives.Length)
@@ -147,16 +171,13 @@ namespace ZUN
         {
             exp += _exp * expGain;
             
-            if (exp >= maxExp)
+            if (exp >= maxExp && !isInLevelUpRoutine)
             {
-                exp -= maxExp;
-                maxExp *= 2;
-                level += 1;
-                txt_level.text = "Lv." + level.ToString();
-                chapterCtrl.LevelUp(ref actives, ref passives);
+                isInLevelUpRoutine = true;
+                StartCoroutine(LevelUp());
             }
-
-            expBar.fillAmount = exp / maxExp;
+            else if (!isInLevelUpRoutine)
+                expBar.fillAmount = exp / maxExp;
         }
 
         public void GetTreasureBox()
