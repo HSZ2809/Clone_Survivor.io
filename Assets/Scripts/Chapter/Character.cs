@@ -100,13 +100,12 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Exp"))
+            if (other.CompareTag("DropedItem"))
             {
-                other.GetComponent<EXPShard>().GetEXP(this);
-            }
-            else if (other.CompareTag("TreasureBox"))
-            {
-                other.GetComponent<TreasureBox>().GetTreasureBox(this);
+                if (other.gameObject.TryGetComponent<IGetDropedItem>(out var dropedItem))
+                {
+                    dropedItem.GetDropedItem(this);
+                }
             }
         }
 
