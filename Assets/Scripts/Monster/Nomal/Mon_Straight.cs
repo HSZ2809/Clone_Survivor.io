@@ -93,7 +93,7 @@ namespace ZUN
             transform.Translate(moveSpeed * Time.deltaTime * moveDirection);
         }
 
-        public void TakeDamage(float damage)
+        public float TakeDamage(float damage)
         {
             hp -= damage;
             ShowDamage(damage);
@@ -103,6 +103,8 @@ namespace ZUN
                 cc2D.enabled = false;
                 Die();
             }
+
+            return hp;
         }
 
         public void ShowDamage(float damage)

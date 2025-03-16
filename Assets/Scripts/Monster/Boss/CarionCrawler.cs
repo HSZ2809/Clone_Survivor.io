@@ -85,7 +85,7 @@ namespace ZUN
             transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
         }
 
-        public void TakeDamage(float damage)
+        public float TakeDamage(float damage)
         {
             hp -= damage;
             bossHpBar.fillAmount = hp / MaxHp;
@@ -97,6 +97,8 @@ namespace ZUN
                 bossHpUI.SetActive(false);
                 anim.SetTrigger("Die");
             }
+
+            return hp;
         }
 
         public void ShowDamage(float damage)

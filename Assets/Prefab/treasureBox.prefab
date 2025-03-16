@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 305376096704458547}
   m_Layer: 8
   m_Name: treasureBox
-  m_TagString: TreasureBox
+  m_TagString: DropedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168299259
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1482835937284080288, guid: 3cdc57282c55407468000d07331599b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

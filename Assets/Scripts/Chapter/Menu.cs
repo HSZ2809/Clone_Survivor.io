@@ -4,6 +4,7 @@ namespace ZUN
 {
     public class Menu : MonoBehaviour
     {
+        Manager_Scene manager_Scene;
         Character character;
 
         [SerializeField] private GameObject pause = null;
@@ -15,6 +16,7 @@ namespace ZUN
 
         private void Awake()
         {
+            manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
         }
 
@@ -57,11 +59,11 @@ namespace ZUN
 
         public void Home()
         {
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                Application.Quit();
-            #endif
+            //#if UNITY_EDITOR
+            //UnityEditor.EditorApplication.isPlaying = false;              
+            //#endif
+
+            manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
         }
     }
 }

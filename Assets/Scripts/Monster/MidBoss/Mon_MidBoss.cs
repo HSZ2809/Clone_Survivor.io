@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace ZUN
@@ -48,6 +49,23 @@ namespace ZUN
                 Move();
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Bullet"))
+            {
+                sr.gameObject.transform.DORewind();
+                sr.gameObject.transform.DOShakeScale(0.3f, 1, 3, 0).Restart();
+            }
+        }
+
+        private void OnCollisionStay2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("Character"))
+            {
+                character.TakeDamage(ap);
+            }
+        }
+
         public override void SetMonsterSpec(float _maxHp, float _ap)
         {
             MaxHp = _maxHp;
@@ -61,7 +79,7 @@ namespace ZUN
             transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
         }
 
-        public void TakeDamage(float damage)
+        public float TakeDamage(float damage)
         {
             hp -= damage;
             ShowDamage(damage);
@@ -71,6 +89,8 @@ namespace ZUN
                 cc2D.enabled = false;
                 anim.SetTrigger("Die");
             }
+
+            return hp;
         }
 
         public void ShowDamage(float damage)

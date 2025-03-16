@@ -43,9 +43,11 @@ namespace ZUN
             }
         }
 
-        public void TakeDamage(float damage)
+        public float TakeDamage(float damage)
         {
             ShowDamage(damage);
+
+            return 0;
         }
 
         public void ShowDamage(float damage)

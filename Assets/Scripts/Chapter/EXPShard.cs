@@ -74,7 +74,7 @@ namespace ZUN
                 yield return null;
             }
 
-            while (Vector3.Distance(transform.position, target.position) > 0.1f)
+            while (Vector3.Distance(transform.position, target.position) > 0.3f)
             {
                 speed += gravity * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);

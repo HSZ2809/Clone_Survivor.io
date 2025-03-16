@@ -6,15 +6,14 @@ TagManager:
   tags:
   - Manager_Scene
   - Character
-  - Exp
   - Monster
   - Wall
   - Manager
   - ChapterCtrl
   - MonsterBullet
-  - TreasureBox
   - Fence
   - Bullet
+  - DropedItem
   layers:
   - Default
   - TransparentFX

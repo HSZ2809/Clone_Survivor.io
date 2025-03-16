@@ -120,7 +120,7 @@ namespace ZUN
             }
         }
 
-        public void TakeDamage(float damage)
+        public float TakeDamage(float damage)
         {
             hp -= damage;
             ShowDamage(damage);
@@ -131,6 +131,8 @@ namespace ZUN
                 StopCoroutine(Shoot());
                 Die();
             }
+
+            return hp;
         }
 
         public void ShowDamage(float damage)
