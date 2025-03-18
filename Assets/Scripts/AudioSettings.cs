@@ -9,8 +9,8 @@ namespace ZUN
         private bool isMusicMute;
         private bool isEffeckSoundMute;
 
-        public float MusicVolume { get { (isMusicMute) ? 0.0f : 1.0f; } }
-        public float EffectVolume { get { (isEffectSoundMute) ? 0.0f : 1.0f; } }
+        public float MusicVolume { get { return (isMusicMute) ? 0.0f : 1.0f; } }
+        public float EffectVolume { get { return (isEffectSoundMute) ? 0.0f : 1.0f; } }
 
         public void OnOffMusic()
         {
