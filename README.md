@@ -23,6 +23,8 @@
 ## Lobby
 - 설정 변경, 장비 변경 등 다른 기능을 사용하기 위한 로비
 
+<img src="https://github.com/user-attachments/assets/b063bd33-3ee9-4e2e-965d-60677e46fc99" width=200> <br/>
+
 <br/>
 
 ## Chapter
@@ -47,9 +49,17 @@
   > 보유 시, 캐릭터의 스테이터스를 강화하는 Skill
 - 각 Skill은 업그레이드 시 효과가 강화
 
+<img src="https://github.com/user-attachments/assets/7655f27c-d0f8-41d0-b8cf-6fc0877006f1" width=200> <br/>
+
 <br/>
 
 ## Monster
 - 캐릭터를 적대하는 오브젝트
 - Moster 형을 상속받는 다양한 몬스터가 있다
 - interface를 사용해서 Skill과 상호작용하여, 종류에 구애받지 않고 필요한 메소드만 실행시키도록 설계
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/0ab0b955-e6ef-40fc-b2df-ebefaf859048" alt="Image 1" width="200" style="display:inline-block;">
+  <img src="https://github.com/user-attachments/assets/a96f420b-6e69-4881-ab6a-0b84211855bc" alt="Image 2" width="200" style="display:inline-block;">
+  <img src="https://github.com/user-attachments/assets/2dfe9036-c666-45ce-b80d-dbde0228e555" alt="Image 3" width="200" style="display:inline-block;">
+</p>
