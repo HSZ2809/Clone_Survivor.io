@@ -1,8 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class Magnet : MonoBehaviour, IGetDropedItem
+namespace ZUN
 {
+    public class Magnet : MonoBehaviour, IGetDropedItem
+    {
         [SerializeField] private Collider2D col;
         [SerializeField] private float initialSpeed;
         float gravity = 50f;
@@ -44,4 +46,5 @@ public class Magnet : MonoBehaviour, IGetDropedItem
             
             Destroy(this);
         }
+    }
 }
