@@ -8,7 +8,7 @@ namespace ZUN
     public class Shuriken : ActiveSkill
     {
         [Space]
-        [SerializeField] private AudioSource audioSource;
+        // [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
         [SerializeField] private SpriteRenderer handSprite;
         [SerializeField] private Transform shootDir;
@@ -61,7 +61,7 @@ namespace ZUN
                     bullet.Damage = BulletDamage;
                     bullet.gameObject.SetActive(true);
 
-                    audioSource.PlayOneShot(clip);
+                    manager_Audio.SoundEffectPlayer.PlayOneShot(clip);
                 }
 
                 for(float waitTime = 0.0f; waitTime < Cooldown; waitTime += Time.deltaTime)
