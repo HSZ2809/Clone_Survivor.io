@@ -24,13 +24,20 @@ namespace ZUN
 
         IEnumerator enumerator;
 
-        private void Start() 
+        private void Awake()
         {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            level = 1;
             objPool = new ObjectPool<Bullet_Shotgun>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 15);
-
             shootDir = character.GetMoveDir();
             enumerator = Shoot();
             character.SetActiveSkill(this);
+        }
+
+        private void OnEnable()
+        {
+            StartCoroutine(enumerator);
         }
 
         IEnumerator Shoot()
