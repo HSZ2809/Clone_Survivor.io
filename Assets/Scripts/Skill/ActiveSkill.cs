@@ -4,17 +4,9 @@ namespace ZUN
 {
     public abstract class ActiveSkill : Skill
     {
-        protected Character character;
         protected Manager_Audio manager_Audio;
+        // synergyID -> ScriptableObject 로 교환 필요
         [SerializeField] protected string synergyID;
-
         public string SynergyID { get { return synergyID; } }
-
-        private void Awake()
-        {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
-            level = 1;
-        }
     }
 }
