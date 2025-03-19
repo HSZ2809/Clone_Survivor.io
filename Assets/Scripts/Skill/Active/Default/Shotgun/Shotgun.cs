@@ -19,19 +19,10 @@ namespace ZUN
         [SerializeField] private Bullet_Shotgun bulletPrefab = null;
         IObjectPool<Bullet_Shotgun> objPool;
 
-        Manager_Audio manager_Audio;
-
         public float BulletDamage { get { return coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
-
-        private void Awake()
-        {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
-            level = 1;
-        }
 
         private void Start() 
         {
