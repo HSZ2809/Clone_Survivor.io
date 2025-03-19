@@ -15,10 +15,16 @@ namespace ZUN
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        private void Start()
+        private void Awake()
         {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            level = 1;
             character.SetActiveSkill(this);
+        }
 
+        private void OnEnable()
+        {
             ActiveSkillOn();
         }
 
