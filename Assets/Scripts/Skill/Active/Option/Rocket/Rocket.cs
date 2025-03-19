@@ -27,14 +27,19 @@ namespace ZUN
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        private void Start()
+        private void Awake()
         {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            level = 1;
             objPool = new ObjectPool<Bullet_Rocket>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 3);
-
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
             enumerator = Shoot();
             character.SetActiveSkill(this);
+        }
 
+        private void OnEnable()
+        {
             StartCoroutine(enumerator);
         }
 
