@@ -4,6 +4,9 @@ namespace ZUN
 {
     public abstract class Skill : MonoBehaviour
     {
+        protected Character character;
+        public enum SkillType { ACTIVE = 0, PASSIVE  = 1 };
+        
         [Header("Skill Info")]
         [SerializeField] protected string id;
         [SerializeField] protected string skillName;
@@ -22,7 +25,5 @@ namespace ZUN
         public int MaxLevel { get { return maxLevel; } }
 
         public abstract void Upgrade();
-
-        public enum SkillType { ACTIVE = 0, PASSIVE  = 1 };
     }
 }
