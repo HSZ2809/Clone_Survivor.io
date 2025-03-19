@@ -1,36 +1,34 @@
 using UnityEngine;
-using System;
 
 namespace ZUN
 {
     public class Manager_Audio : MonoBehaviour
     {
-        public AudioSettings audioSettings;
+        [SerializeField] AudioSettings audioSettings;
 
-        public event EventHandler OnToggleMusic;
-        public event EventHandler OnToggleEffectSound;
+        [Space]
+        [SerializeField] AudioSource musicPlayer = new();
+        [SerializeField] AudioSource soundEffectPlayer = new();
+
+        public AudioSource MusicPlayer { get { return musicPlayer; } }
+        public AudioSource SoundEffectPlayer { get { return soundEffectPlayer; } }
+
+        private void Start()
+        {
+            musicPlayer.volume = audioSettings.MusicVolume;
+            soundEffectPlayer.volume = audioSettings.EffectVolume;
+        }
 
         public void ToggleMusic()
         {
-            audioSettings.OnOffMusic();
-            
-            OnToggleMusic?.Invoke(this, EventArgs.Empty);
+            audioSettings.ToggleMusic();
+            musicPlayer.volume = audioSettings.MusicVolume;
         }
 
         public void ToggleEffectSound()
         {
-            audioSettings.OnOffEffectSound();
-
-            OnToggleEffectSound?.Invoke(this, EventArgs.Empty);
-        }
-
-        public void ToggleSound()
-        {
-            audioSettings.OnOffMusic();
-            audioSettings.OnOffEffectSound();
-
-            OnToggleMusic?.Invoke(this, EventArgs.Empty);
-            OnToggleEffectSound?.Invoke(this, EventArgs.Empty);
+            audioSettings.ToggleEffectSound();
+            soundEffectPlayer.volume = audioSettings.EffectVolume;
         }
     }
 }

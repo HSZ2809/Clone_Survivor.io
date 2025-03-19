@@ -38,7 +38,7 @@ namespace ZUN
 
             transform.position = target.position;
 
-            character.Hp += character.MaxHp * 0.3;
+            character.Hp += character.MaxHp * 0.3f;
             
             Destroy(this);
         }

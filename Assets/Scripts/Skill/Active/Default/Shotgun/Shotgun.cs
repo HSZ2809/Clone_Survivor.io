@@ -27,7 +27,7 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
             level = 1;
             objPool = new ObjectPool<Bullet_Shotgun>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 15);
             shootDir = character.GetMoveDir();

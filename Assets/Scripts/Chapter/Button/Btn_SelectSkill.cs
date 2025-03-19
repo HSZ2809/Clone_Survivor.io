@@ -22,17 +22,17 @@ namespace ZUN
         public Skill skill;
 
         [Space]
-        [SerializeField] Skill.SkillType skillType;
+        [SerializeField] SkillInformation.SkillType skillType;
         [SerializeField] TextMeshProUGUI skillName;
         [SerializeField] Image skillImage;
         [SerializeField] TextMeshProUGUI upgradeInfo;
 
         private void OnEnable()
         {
-            skillType = skill.Type;
-            skillName.text = skill.SkillName;
-            skillImage.sprite = skill.Sprite;
-            upgradeInfo.text = skill.UpgradeInfos[skill.Level];
+            skillType = skill.skillInfo.Type;
+            skillName.text = skill.skillInfo.SkillName;
+            skillImage.sprite = skill.skillInfo.Sprite;
+            upgradeInfo.text = skill.skillInfo.UpgradeInfos[skill.Level];
 
             int index = 0;
             while (index < skill.Level)

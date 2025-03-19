@@ -28,7 +28,7 @@ namespace ZUN
                     break;
 
                 activesDisplay[i].img_bg.gameObject.SetActive(true);
-                activesDisplay[i].img_skill.sprite = character.Actives[i].Sprite;
+                activesDisplay[i].img_skill.sprite = character.Actives[i].skillInfo.Sprite;
                 for (int k = 0; k < character.Actives[i].Level; k++)
                     activesDisplay[i].img_star[k].sprite = yellowStar;
             }
@@ -39,7 +39,7 @@ namespace ZUN
                     break;
 
                 passivesDisplay[i].img_bg.gameObject.SetActive(true);
-                passivesDisplay[i].img_skill.sprite = character.Passives[i].Sprite;
+                passivesDisplay[i].img_skill.sprite = character.Passives[i].skillInfo.Sprite;
                 for(int k = 0; k < character.Passives[i].Level; k++)
                     passivesDisplay[i].img_star[k].sprite = yellowStar;
             }
