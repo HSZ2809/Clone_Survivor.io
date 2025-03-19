@@ -7,7 +7,7 @@ namespace ZUN
     public class Shotgun : ActiveSkill
     {
         [Space]
-        [SerializeField] private AudioSource audioSource;
+        // [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir = null;
 
@@ -19,10 +19,19 @@ namespace ZUN
         [SerializeField] private Bullet_Shotgun bulletPrefab = null;
         IObjectPool<Bullet_Shotgun> objPool;
 
+        Manager_Audio manager_Audio;
+
         public float BulletDamage { get { return coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
+
+        private void Awake()
+        {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            level = 1;
+        }
 
         private void Start() 
         {
@@ -39,7 +48,7 @@ namespace ZUN
             {
                 int Angle = magazineSize / 2;
 
-                audioSource.PlayOneShot(clip);
+                manager_Audio.SoundEffectPlayer.PlayOneShot(clip);
 
                 for (int i = 0; i < magazineSize; i++)
                 {
