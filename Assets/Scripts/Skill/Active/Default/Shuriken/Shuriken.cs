@@ -32,16 +32,21 @@ namespace ZUN
         readonly WaitForFixedUpdate waitForFixedUpdate = new();
         readonly WaitForSeconds firerate = new(0.1f);
 
-        private void Start()
+        private void Awake()
         {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            manager_Audio = GameObject.FindObjectWithTag("Manager").GetComponent<Manager_Audio>();
+            level = 1;
             objPool = new ObjectPool<Bullet_Shuriken>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 5);
-
             handSprite.sortingLayerName = "Weapon";
             monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
             reloadBar = character.ReloadBar();
             enumerator = Shoot();
             character.SetActiveSkill(this);
+        }
 
+        private void OnEnable()
+        {
             StartCoroutine(enumerator);
         }
 
