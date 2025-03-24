@@ -1,16 +1,27 @@
 using UnityEngine;
 
-public class SupplyBox : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SupplyBox : MonoBehaviour
     {
+        [SerializeField] IGetDropedItem supply;
         
-    }
+        Character character;
+        float maxDistance;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void FixedUpdate()
+        {
+            if (maxDistance < GetDistance(character.transform.position, transform.position))
+                Destroy(this);
+        }
         
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Bullet"))
+            {
+                Instantiate(supply);
+                Destroy(this);
+            }
+        }
     }
 }
