@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class SupplyBoxSpawn : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SupplyBoxSpawn : MonoBehaviour
     {
-        
-    }
+        [SerializeField] SupplyBox supplyBox;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] Transform[] spawnTransforms;
+
+        public void SpawnSupplyBox()
+        {
+            int randomIndex = Random.Range(0, spawnTransforms.Length);
+            
+            SupplyBox box = Instantiate(supplyBox);
+            box.transform.position = spawnTransforms[randomIndex].position;
+            // box.SetActive(true);
+        }
     }
 }
