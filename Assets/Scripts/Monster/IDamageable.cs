@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_Damageable
+    public interface IDamageable
     {
         float TakeDamage(float damage);
         void ShowDamage(float damage);
