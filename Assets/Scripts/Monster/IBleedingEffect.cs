@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_Bleeding
+    public interface IBleedingEffect
     {
         void Bleeding();
     }
