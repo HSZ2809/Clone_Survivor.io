@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_MidBoss : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_Bleeding
+    public class Mon_MidBoss : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -29,8 +29,7 @@ namespace ZUN
 
         private void Awake()
         {
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
+            SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();

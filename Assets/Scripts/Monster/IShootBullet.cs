@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_ShootBullet
+    public interface IShootBullet
     {
         void ShootBullet();
     }

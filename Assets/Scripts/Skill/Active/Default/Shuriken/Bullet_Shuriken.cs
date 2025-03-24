@@ -6,7 +6,6 @@ namespace ZUN
 {
     public class Bullet_Shuriken : Bullet
     {
-        [SerializeField] private AudioSource audioSource;
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
 
@@ -27,7 +26,7 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
+            if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
             {
                 if (!isReleased)
                 {

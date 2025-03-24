@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_Movement
+    public interface IMovement
     {
         float MoveSpeed { get; set; }
 

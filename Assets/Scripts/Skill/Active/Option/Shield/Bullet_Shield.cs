@@ -12,14 +12,14 @@ namespace ZUN
         [SerializeField] private float attackTerm = 1.0f;
         [SerializeField] private float range = 1.0f;
 
-        private HashSet<IMon_Damageable> monstersInArea = new HashSet<IMon_Damageable>();
-        private Dictionary<IMon_Damageable, Coroutine> activeCoroutines = new Dictionary<IMon_Damageable, Coroutine>();
+        private HashSet<IDamageable> monstersInArea = new HashSet<IDamageable>();
+        private Dictionary<IDamageable, Coroutine> activeCoroutines = new Dictionary<IDamageable, Coroutine>();
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
-                if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var monster) && !monstersInArea.Contains(monster))
+                if (coll.gameObject.TryGetComponent<IDamageable>(out var monster) && !monstersInArea.Contains(monster))
                 {
                     monstersInArea.Add(monster);
 
@@ -33,7 +33,7 @@ namespace ZUN
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
-                if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var monster) && monstersInArea.Contains(monster))
+                if (coll.gameObject.TryGetComponent<IDamageable>(out var monster) && monstersInArea.Contains(monster))
                 {
                     monstersInArea.Remove(monster);
 
@@ -50,7 +50,7 @@ namespace ZUN
             }
         }
 
-        IEnumerator Attack(IMon_Damageable monster)
+        IEnumerator Attack(IDamageable monster)
         {
             while (true)
             {

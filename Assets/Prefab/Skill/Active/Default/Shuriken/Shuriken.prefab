@@ -162,7 +162,7 @@ AudioSource:
   m_GameObject: {fileID: 9110315383043644760}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6462938686924352714, guid: 5b035ab3ba236d14f91f395b7183382b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
   skillInfo: {fileID: 11400000, guid: debc36e408c2fdb4fbeeefa2f3576c02, type: 2}
   level: 0
   synergyID: test
+  audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 1d6fe01c1f4518a4fafc677a3840b24d, type: 3}
   handSprite: {fileID: 4231129112234039560}
   shootDir: {fileID: 4765015687711468970}

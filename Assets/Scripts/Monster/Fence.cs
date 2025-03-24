@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Fence : MonoBehaviour, IMon_Damageable, IMon_Attackable, IMon_Destroyable
+    public class Fence : MonoBehaviour, IDamageable, IAttackable, IDestroyable
     {
         #region Inspector
         [Header("Status")]

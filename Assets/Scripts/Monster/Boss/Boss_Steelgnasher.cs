@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Boss_Steelgnasher : BossMonster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_Bleeding
+    public class Boss_Steelgnasher : BossMonster, IMovement, IDamageable, IAttackable, IDestroyable, IBleeding
     {
         #region Inspector
         [SerializeField] float hp;
@@ -37,8 +37,7 @@ namespace ZUN
 
         private void Awake()
         {
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
+            SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();

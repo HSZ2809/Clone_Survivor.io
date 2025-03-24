@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bouncebloom : BossMonster, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet, IMon_Bleeding
+    public class Bouncebloom : BossMonster, IDamageable, IAttackable, IDestroyable, IShootBullet, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -30,8 +30,7 @@ namespace ZUN
 
         private void Awake()
         {
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
+            SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();

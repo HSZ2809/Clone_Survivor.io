@@ -27,7 +27,7 @@ namespace ZUN
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
+            if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
             {
                 mon_Damageable.TakeDamage(damage);
                 durability -= 1;

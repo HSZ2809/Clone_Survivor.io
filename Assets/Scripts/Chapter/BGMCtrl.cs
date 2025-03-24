@@ -5,41 +5,36 @@ namespace ZUN
 {
     public class BGMCtrl : MonoBehaviour
     {
-        Manager_Audio manager_audio;
+        [SerializeField] AudioSource bgm;
 
         [SerializeField] AudioClip defaultClip;
         [SerializeField] AudioClip bossClip;
 
-        private void Awake()
-        {
-            manager_audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
-        }
-
         private void Start()
         {
-            manager_audio.MusicPlayer.clip = defaultClip;
-            manager_audio.MusicPlayer.Play();
+            bgm.clip = defaultClip;
+            bgm.Play();
         }
 
         public void SetBossClip()
         {
-            manager_audio.MusicPlayer.DOFade(0f, 1f).OnComplete(() =>
+            bgm.DOFade(0f, 1f).OnComplete(() =>
             {
-                manager_audio.MusicPlayer.clip = bossClip;
-                manager_audio.MusicPlayer.Play();
+                bgm.clip = bossClip;
+                bgm.Play();
 
-                manager_audio.MusicPlayer.DOFade(1f, 1f);
+                bgm.DOFade(1f, 1f);
             });
         }
 
         public void SetDefaultClip()
         {
-            manager_audio.MusicPlayer.DOFade(0f, 1f).OnComplete(() =>
+            bgm.DOFade(0f, 1f).OnComplete(() =>
             {
-                manager_audio.MusicPlayer.clip = defaultClip;
-                manager_audio.MusicPlayer.Play();
+                bgm.clip = defaultClip;
+                bgm.Play();
 
-                manager_audio.MusicPlayer.DOFade(1f, 1f);
+                bgm.DOFade(1f, 1f);
             });
         }
     }

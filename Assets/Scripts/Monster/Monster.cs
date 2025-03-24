@@ -10,5 +10,10 @@ namespace ZUN
         protected CircleCollider2D cc2D;
 
         public abstract void SetMonsterSpec(float MaxHp, float ap);
+        protected void SetTagAndLayer()
+        {
+            tag = "Monster";
+            gameObject.layer = LayerMask.NameToLayer("Target");
+        }
     }
 }

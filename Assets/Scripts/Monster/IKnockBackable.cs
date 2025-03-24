@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_KnockBackable
+    public interface IKnockBackable
     {
         void KnockBack();
     }

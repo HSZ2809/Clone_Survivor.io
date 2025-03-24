@@ -30,10 +30,9 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
             level = 1;
             objPool = new ObjectPool<Bullet_Rocket>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 3);
-            monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
+            monsterLayer = (1 << LayerMask.NameToLayer("Target"));
             enumerator = Shoot();
             character.SetActiveSkill(this);
         }

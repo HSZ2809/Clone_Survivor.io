@@ -27,11 +27,11 @@ namespace ZUN
             sizeupSequence.SetAutoKill(false);
 
             sizedownSequence = DOTween.Sequence();
+            sizedownSequence.Append(transform.DOScale(0.0f, 0.3f));
             sizedownSequence.OnStart(() =>
             {
                 cc2D.enabled = false;
             });
-            sizedownSequence.Append(transform.DOScale(0.0f, 0.3f));
 
             sizedownSequence.Pause();
             sizedownSequence.SetAutoKill(false);
@@ -46,19 +46,19 @@ namespace ZUN
         {
             if (coll.gameObject.CompareTag("Monster"))
             {
-                IMon_KnockBackable mon_knockBack = coll.gameObject.GetComponent<IMon_KnockBackable>();
+                IKnockBackable mon_knockBack = coll.gameObject.GetComponent<IKnockBackable>();
                 if (mon_knockBack != null)
                 {
                     mon_knockBack.KnockBack();
                 }
 
-                IMon_Bleeding mon_bleeding = coll.gameObject.GetComponent<IMon_Bleeding>();
+                IBleeding mon_bleeding = coll.gameObject.GetComponent<IBleeding>();
                 if (mon_bleeding != null)
                 {
                     mon_bleeding.Bleeding();
                 }
 
-                IMon_Damageable mon_damage = coll.gameObject.GetComponent<IMon_Damageable>();
+                IDamageable mon_damage = coll.gameObject.GetComponent<IDamageable>();
                 if (mon_damage != null)
                 {
                     mon_damage.TakeDamage(damage);

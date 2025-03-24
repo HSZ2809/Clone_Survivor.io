@@ -41,10 +41,10 @@ namespace ZUN
             // 자석 취득 시 사운드 + 시각 효과 추가 필요
             GameObject[] dropItems = GameObject.FindGameObjectsWithTag("DropedItem");
             foreach (GameObject dropItem in dropItems)
-                if (TryGetComponent<EXPShard>(out var shard))
+                if (dropItem.TryGetComponent<EXPShard>(out var shard))
                     shard.GetDropedItem(character);
             
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

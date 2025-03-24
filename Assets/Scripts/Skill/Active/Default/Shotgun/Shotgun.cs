@@ -7,7 +7,7 @@ namespace ZUN
     public class Shotgun : ActiveSkill
     {
         [Space]
-        // [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir = null;
 
@@ -27,7 +27,6 @@ namespace ZUN
         private void Awake()
         {
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
             level = 1;
             objPool = new ObjectPool<Bullet_Shotgun>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 15);
             shootDir = character.GetMoveDir();
@@ -46,7 +45,7 @@ namespace ZUN
             {
                 int Angle = magazineSize / 2;
 
-                manager_Audio.SoundEffectPlayer.PlayOneShot(clip);
+                audioSource.PlayOneShot(clip);
 
                 for (int i = 0; i < magazineSize; i++)
                 {

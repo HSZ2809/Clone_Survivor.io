@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Mon_Shooter : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_ShootBullet, IMon_KnockBackable, IMon_Bleeding
+    public class Mon_Shooter : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IShootBullet, IKnockBackable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -43,8 +43,7 @@ namespace ZUN
             EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_ExpShard>();
             bulletPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<MonsterBulletManager>().BulletPool;
             damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
+            SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             anim = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();

@@ -44,7 +44,7 @@ namespace ZUN
                 Vector2 normal = other.contacts[0].normal;
                 direction = Vector2.Reflect(direction, normal);
 
-                other.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
+                other.gameObject.GetComponent<IDamageable>().TakeDamage(damage);
 
                 audioSource.PlayOneShot(clip);
             }

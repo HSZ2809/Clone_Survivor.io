@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Manager_Scene
   - Character
-  - Monster
   - Wall
   - Manager
   - ChapterCtrl
@@ -14,6 +13,8 @@ TagManager:
   - Fence
   - Bullet
   - DropedItem
+  - Monster
+  - SupplyBox
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Character
   - Water
   - UI
-  - Monster
+  - Target
   - Bullet
   - DropedItem
   - Wall

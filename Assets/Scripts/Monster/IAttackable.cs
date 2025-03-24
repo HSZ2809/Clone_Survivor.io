@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface Attackable
+    public interface IAttackable
     {
         float Ap { get; set; }
     }

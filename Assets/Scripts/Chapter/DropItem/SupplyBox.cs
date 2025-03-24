@@ -4,14 +4,14 @@ namespace ZUN
 {
     public class SupplyBox : MonoBehaviour
     {
-        [SerializeField] IGetDropedItem supply;
+        [SerializeField] GameObject supply;
         
-        Character character;
-        float maxDistance;
+        public Character character;
+        [SerializeField] float maxDistance;
 
         private void FixedUpdate()
         {
-            if (maxDistance < GetDistance(character.transform.position, transform.position))
+            if (maxDistance < Vector3.Distance(character.transform.position, transform.position))
                 Destroy(this);
         }
         
@@ -19,7 +19,7 @@ namespace ZUN
         {
             if (other.gameObject.CompareTag("Bullet"))
             {
-                Instantiate(supply);
+                Instantiate(supply, transform.position, transform.rotation);
                 Destroy(this);
             }
         }

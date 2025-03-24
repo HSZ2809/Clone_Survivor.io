@@ -42,7 +42,7 @@ namespace ZUN
             // 화면 전체가 0.3f 에 걸쳐서 하얗게 되었다가 다시 돌아오는 로직 필요
             GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
             foreach (GameObject monster in monsters)
-                if (TryGetComponent<IMon_Damageable>(out var damageable))
+                if (TryGetComponent<IDamageable>(out var damageable))
                     damageable.TakeDamage(attackPoint);
             
             Destroy(this);

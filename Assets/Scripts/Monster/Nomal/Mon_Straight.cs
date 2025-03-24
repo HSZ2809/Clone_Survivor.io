@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Straight : Monster, IMon_Movement, IMon_Damageable, IMon_Attackable, IMon_Destroyable, IMon_KnockBackable, IMon_Bleeding
+    public class Mon_Straight : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
     {
         #region Inspector
         [SerializeField] float hp;
@@ -36,8 +36,7 @@ namespace ZUN
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
             EXPPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_ExpShard>();
             damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
-            tag = "Monster";
-            gameObject.layer = LayerMask.NameToLayer(tag);
+            SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             rb = GetComponent<Rigidbody2D>();
             bleeding = GetComponent<ParticleSystem>();

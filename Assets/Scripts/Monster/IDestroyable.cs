@@ -1,6 +1,6 @@
 namespace ZUN
 {
-    public interface IMon_Destroyable
+    public interface IDestroyable
     {
         void Die();
     }

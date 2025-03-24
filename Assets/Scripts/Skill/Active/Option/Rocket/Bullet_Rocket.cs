@@ -18,7 +18,7 @@ namespace ZUN
         private void Start()
         {
             anim = GetComponent<Animator>();
-            monsterLayer = (1 << LayerMask.NameToLayer("Monster"));
+            monsterLayer = (1 << LayerMask.NameToLayer("Target"));
         }
 
         private void OnEnable()
@@ -39,7 +39,7 @@ namespace ZUN
             {
                 StopCoroutine(DisableBullet());
                 isExplode = true;
-                coll.gameObject.GetComponent<IMon_Damageable>().TakeDamage(damage);
+                coll.gameObject.GetComponent<IDamageable>().TakeDamage(damage);
                 Explode();
             }
         }
@@ -55,7 +55,7 @@ namespace ZUN
             Collider2D[] monsterCol = Physics2D.OverlapCircleAll(transform.position, explodeRange, monsterLayer);
             foreach (var coll in monsterCol)
             {
-                if (coll.gameObject.TryGetComponent<IMon_Damageable>(out var mon_Damageable))
+                if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
                 {
                     mon_Damageable.TakeDamage(damage);
                 }
