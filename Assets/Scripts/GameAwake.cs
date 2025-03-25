@@ -8,14 +8,14 @@ namespace ZUN
     {
         [SerializeField] private string sceneName;
         [SerializeField] private float sceneChangeTime = 2.0f;
-        private Manager_Scene manager_Scene;
-        private Scene currentScene;
+        //private Manager_Scene manager_Scene;
+        //private Scene currentScene;
 
-        private void Awake()
-        {
-            manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
-            currentScene = gameObject.scene;
-        }
+        //private void Awake()
+        //{
+        //    manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
+        //    currentScene = gameObject.scene;
+        //}
 
         private void Start()
         {
@@ -26,7 +26,7 @@ namespace ZUN
         {
             yield return new WaitForSeconds(sceneChangeTime);
 
-            manager_Scene.LoadScene(sceneName, currentScene.buildIndex);
+            AsyncOperation async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         }
     }
 }
