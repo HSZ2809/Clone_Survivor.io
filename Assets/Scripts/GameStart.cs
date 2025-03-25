@@ -14,33 +14,33 @@ namespace ZUN
 
         [SerializeField] private string sceneName;
         [SerializeField] private float sceneChangeTime;
-        private Manager_Scene manager_Scene;
-        private Scene currentScene;
+        //private Manager_Scene manager_Scene;
+        //private Scene currentScene;
 
 
-        private void Awake()
-        {
-            manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
-            currentScene = gameObject.scene;
-        }
+        //private void Awake()
+        //{
+        //    manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
+        //    currentScene = gameObject.scene;
+        //}
 
         private void Start()
         {
-            StartCoroutine(SceneLoading(sceneName));
+            StartCoroutine(SceneLoading());
         }
 
-        IEnumerator SceneLoading(string sceneName)
+        IEnumerator SceneLoading()
         {
-            yield return new WaitForSeconds(sceneChangeTime);
+            AsyncOperation async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
-            manager_Scene.LoadScene(sceneName, currentScene.buildIndex);
-
-            while (!manager_Scene.Async.isDone)
+            while (!async.isDone)
             {
                 yield return null;
 
-                img_progress.fillAmount = Mathf.Lerp(img_progress.fillAmount, 1.0f, manager_Scene.Async.progress);
+                img_progress.fillAmount = Mathf.Lerp(img_progress.fillAmount, 1.0f, async.progress);
             }
+
+            yield return new WaitForSeconds(sceneChangeTime);
         }
     }
 }
