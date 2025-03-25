@@ -41,15 +41,6 @@ namespace ZUN
 
             async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-            //async.allowSceneActivation = false;
-
-            //while (async.progress < 0.9f)
-            //{
-            //    yield return null;
-            //}
-
-            //async.allowSceneActivation = true;
-
             while (!async.isDone)
             {
                 yield return null;
