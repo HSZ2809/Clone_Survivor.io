@@ -1,16 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class ItemSlot : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class ItemSlot : MonoBehaviour
     {
-        
-    }
+        Item item;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] Image           bg;
+        [SerializeField] Image           icon;
+        [SerializeField] TextMeshProUGUI amount;
+
+        [space]
+        [SerializeField] Image           tooltipBg;
+        [SerializeField] TextMeshProUGUI tooltip;
+
+        public void SetItem(Item _item)
+        {
+            item = _item;
+            icon = item.Data.IconSprite;
+            tooltip.text = item.Data.Tooltip;
+            amount.text = item.Amount.ToString();
+        }
+
+        public void UpdateSlot()
+        {
+            amount.text = item.Amount.ToString();
+        }
     }
 }
