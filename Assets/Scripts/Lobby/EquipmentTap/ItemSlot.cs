@@ -12,14 +12,14 @@ namespace ZUN
         [SerializeField] Image           icon;
         [SerializeField] TextMeshProUGUI amount;
 
-        [space]
+        [Space]
         [SerializeField] Image           tooltipBg;
         [SerializeField] TextMeshProUGUI tooltip;
 
         public void SetItem(Item _item)
         {
             item = _item;
-            icon = item.Data.IconSprite;
+            icon.sprite = item.Data.IconSprite;
             tooltip.text = item.Data.Tooltip;
             amount.text = item.Amount.ToString();
         }

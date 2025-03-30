@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SkillItem
+public class EquipmentItem
 {
     
 }

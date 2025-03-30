@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace ZUN
 {
-    [CreateAssetMenu(fileName = "SkillItemData", menuName = "Scriptable Objects/SkillItemData")]
-    public class SkillItemData : ScriptableObject
+    [CreateAssetMenu(fileName = "EquipmentData", menuName = "Scriptable Objects/EquipmentData")]
+    public class EquipmentData : ScriptableObject
     {
         [SerializeField] int           id;
         [SerializeField] string        itemName;
@@ -21,12 +21,12 @@ namespace ZUN
 
         public enum EquipmentType
         {
-            Weapom;
-            Cloth;
-            Necklace;
-            Belt;
-            Gloves;
-            Shoes;
+            Weapom,
+            Cloth,
+            Necklace,
+            Belt,
+            Gloves,
+            Shoes
         }
     }
 }
