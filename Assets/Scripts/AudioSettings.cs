@@ -6,10 +6,10 @@ namespace ZUN
     public class AudioSettings : ScriptableObject
     {
         private bool isMusicMute;
-        private bool isEffeckSoundMute;
+        private bool isEffectSoundMute;
 
-        public float MusicVolume { get { return (isMusicMute) ? 0.0f : 1.0f; } }
-        public float EffectVolume { get { return (isEffeckSoundMute) ? 0.0f : 1.0f; } }
+        public float MusicVolume { get { return (isMusicMute) ? -80.0f : 0.0f; } }
+        public float EffectVolume { get { return (isEffectSoundMute) ? -80.0f : 0.0f; } }
 
         public void ToggleMusic()
         {
@@ -18,7 +18,7 @@ namespace ZUN
 
         public void ToggleEffectSound()
         {
-            isEffeckSoundMute = !isEffeckSoundMute;
+            isEffectSoundMute = !isEffectSoundMute;
         }
     }
 }
