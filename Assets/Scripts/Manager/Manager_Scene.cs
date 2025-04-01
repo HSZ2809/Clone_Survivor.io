@@ -6,6 +6,7 @@ namespace ZUN
 {
     public class Manager_Scene : MonoBehaviour
     {
+        [SerializeField] IrisTransition transition;
         private bool isSceneChangeable = true;
         AsyncOperation async;
 
@@ -32,6 +33,8 @@ namespace ZUN
             Debug.Log("Manager_Scene >> Scene Load : " + sceneName);
             #endif
 
+            transition.gameObject.SetActive(true);
+
             async = SceneManager.UnloadSceneAsync(origin);
 
             while (!async.isDone)
@@ -47,6 +50,8 @@ namespace ZUN
             }
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+
+            transition.IrisIn();
 
             isSceneChangeable = true;
         }

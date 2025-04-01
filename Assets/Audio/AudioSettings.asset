@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f6abfe70de21146948716401576836, type: 3}
   m_Name: AudioSettings
   m_EditorClassIdentifier: 
-  volume: 1

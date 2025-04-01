@@ -1,34 +1,29 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace ZUN
 {
     public class Manager_Audio : MonoBehaviour
     {
         [SerializeField] AudioSettings audioSettings;
+        [SerializeField] AudioMixer audioMixer;
 
-        //[Space]
-        //[SerializeField] AudioSource musicPlayer = new();
-        //[SerializeField] AudioSource soundEffectPlayer = new();
-
-        //public AudioSource MusicPlayer { get { return musicPlayer; } }
-        //public AudioSource SoundEffectPlayer { get { return soundEffectPlayer; } }
-
-        //private void Start()
-        //{
-        //    musicPlayer.volume = audioSettings.MusicVolume;
-        //    soundEffectPlayer.volume = audioSettings.EffectVolume;
-        //}
+        private void Start()
+        {
+            audioMixer.SetFloat("BGM", audioSettings.MusicVolume);
+            audioMixer.SetFloat("SFX", audioSettings.EffectVolume);
+        }
 
         public void ToggleMusic()
         {
             audioSettings.ToggleMusic();
-            // musicPlayer.volume = audioSettings.MusicVolume;
+            audioMixer.SetFloat("BGM", audioSettings.MusicVolume);
         }
 
         public void ToggleEffectSound()
         {
             audioSettings.ToggleEffectSound();
-            // soundEffectPlayer.volume = audioSettings.EffectVolume;
+            audioMixer.SetFloat("SFX", audioSettings.EffectVolume);
         }
     }
 }

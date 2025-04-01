@@ -5,6 +5,7 @@ namespace ZUN
     public class Menu : MonoBehaviour
     {
         Manager_Scene manager_Scene;
+        Manager_Audio manager_Audio;
         Character character;
 
         [SerializeField] private GameObject pause = null;
@@ -17,6 +18,7 @@ namespace ZUN
         private void Awake()
         {
             manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
+            manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
         }
 
@@ -64,6 +66,12 @@ namespace ZUN
             //#endif
 
             manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
+        }
+
+        public void ToggleVolume()
+        {
+            manager_Audio.ToggleEffectSound();
+            manager_Audio.ToggleMusic();
         }
     }
 }
