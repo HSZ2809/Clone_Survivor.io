@@ -29,12 +29,12 @@ namespace ZUN
 
         IEnumerator LoadTargetScene(string sceneName, int origin)
         {
-            #if UNITY_EDITOR
-            Debug.Log("Manager_Scene >> Scene Load : " + sceneName);
-            #endif
 
-            transition.gameObject.SetActive(true);
+            // Debug.Log("Manager_Scene >> Scene Load : " + sceneName);
 
+            transition.IrisOut();
+            yield return new WaitForSecondsRealtime(transition.GetIrisOutClipLength());
+            
             async = SceneManager.UnloadSceneAsync(origin);
 
             while (!async.isDone)
@@ -48,9 +48,9 @@ namespace ZUN
             {
                 yield return null;
             }
-
+            
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
-
+            Time.timeScale = 1.0f;
             transition.IrisIn();
 
             isSceneChangeable = true;
