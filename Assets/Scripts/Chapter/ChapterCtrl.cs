@@ -13,17 +13,19 @@ namespace ZUN
         Character character;
 
         [Header("UI")]
-        [SerializeField] Image selectWindow;
-        [SerializeField] Btn_SelectSkill[] options;
-        [SerializeField] Btn_GetMeat getMeat;
+        [SerializeField] Image                 selectWindow;
+        [SerializeField] Btn_SelectSkill[]     options;
+        [SerializeField] Btn_GetMeat        getMeat;
         [SerializeField] TextMeshProUGUI txt_goldCount;
         [SerializeField] TextMeshProUGUI txt_killCount;
-        [SerializeField] Image[] img_ownedActive;
-        [SerializeField] Image[] img_ownedPassive;
-        [SerializeField] Image pnl_lottery;
-        [SerializeField] LotteryResult[] lotteryResults;
-        [SerializeField] Button closeLottery;
-        [SerializeField] ShowResult showResult;
+        [SerializeField] Image[]               img_ownedActive;
+        [SerializeField] Image[]               img_ownedPassive;
+        [SerializeField] Image                 pnl_lottery;
+        [SerializeField] LotteryResult[]      lotteryResults;
+        [SerializeField] Button                closeLottery;
+        [SerializeField] ShowResult          showResult;
+        [SerializeField] GameObject         maxExpEffect;
+        [SerializeField] TextMeshProUGUI txt_EffectLevel;
 
         int gold;
         public int KillCount { get; private set; }
@@ -55,7 +57,7 @@ namespace ZUN
 
         private void Start()
         {
-            transform.parent = character.transform;
+            // transform.parent = character.transform;
 
             /* 인벤토리의 기본 아이템 적용 */
             actives[0] = inventory.Active;
@@ -93,6 +95,9 @@ namespace ZUN
         public void LevelUp(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
         {
             Time.timeScale = 0;
+
+            maxExpEffect.SetActive(true);
+            txt_EffectLevel.text = "Lv." + character.Level.ToString();
 
             SetSkillDisplay();
 
@@ -340,6 +345,10 @@ namespace ZUN
                 option.gameObject.SetActive(false);
 
             selectWindow.gameObject.SetActive(false);
+
+            if (character.Exp < character.MaxExp)
+                maxExpEffect.SetActive(false);
+
             Time.timeScale = 1;
         }
 

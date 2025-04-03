@@ -70,5 +70,8 @@ TagManager:
   - name: DamageText
     uniqueID: 4128835429
     locked: 0
+  - name: UI
+    uniqueID: 3108916493
+    locked: 0
   m_RenderingLayers:
   - Default

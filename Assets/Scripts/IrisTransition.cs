@@ -37,14 +37,9 @@ namespace ZUN
             return irisOutClip.length;
         }
 
-        public float GetIrisInClipLength()
-        {
-            return irisInClip.length;
-        }
-
-        private void SetGameObjectFalse()
-        {
-            gameObject.SetActive(false);
-        }
+        //public float GetIrisInClipLength()
+        //{
+        //    return irisInClip.length;
+        //}
     }
 }

@@ -9,6 +9,7 @@ namespace ZUN
     {
         #region Inspector
         [Header("Components")]
+        [SerializeField] GameObject GameCtrl;
         [SerializeField] Transform moveDirection = null;
         [SerializeField] SpriteRenderer dirArrow;
         [SerializeField] Image expBar;
@@ -52,7 +53,10 @@ namespace ZUN
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }
 
-        public float MaxHp { get { return maxHp; } }
+        public int Level => level;
+        public float MaxExp => maxExp;
+        public float Exp => exp;
+        public float MaxHp => maxHp;
         public float Hp 
         { 
             get { return hp; }
@@ -89,7 +93,7 @@ namespace ZUN
 
             Vector3 direction = new Vector3(h, v, 0).normalized;
 
-            transform.Translate(Time.deltaTime * moveSpeed * direction);
+            GameCtrl.transform.Translate(Time.deltaTime * moveSpeed * direction);
 
             if (h != 0.0f || v != 0.0f)
             {
@@ -122,7 +126,6 @@ namespace ZUN
 
         IEnumerator LevelUp()
         {
-            // expBar 특수효과 on
             exp -= maxExp;
             maxExp *= 1.5f;
             level += 1;
@@ -136,7 +139,6 @@ namespace ZUN
             }
             else
             {
-                // expBar 특수효과 off
                 expBar.fillAmount = exp / maxExp;
                 isInLevelUpRoutine = false;
             }

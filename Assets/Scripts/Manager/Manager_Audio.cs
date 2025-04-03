@@ -6,7 +6,12 @@ namespace ZUN
     public class Manager_Audio : MonoBehaviour
     {
         [SerializeField] AudioSettings audioSettings;
-        [SerializeField] AudioMixer audioMixer;
+        [SerializeField] AudioMixer    audioMixer;
+
+        [Space]
+        [SerializeField] AudioSource   buttonClickSource;
+
+        public AudioSource ButtonClickSource => buttonClickSource;
 
         private void Start()
         {
