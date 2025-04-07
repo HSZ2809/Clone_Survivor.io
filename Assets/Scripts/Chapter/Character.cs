@@ -9,7 +9,6 @@ namespace ZUN
     {
         #region Inspector
         [Header("Components")]
-        [SerializeField] GameObject GameCtrl;
         [SerializeField] Transform moveDirection = null;
         [SerializeField] SpriteRenderer dirArrow;
         [SerializeField] Image expBar;
@@ -93,7 +92,7 @@ namespace ZUN
 
             Vector3 direction = new Vector3(h, v, 0).normalized;
 
-            GameCtrl.transform.Translate(Time.deltaTime * moveSpeed * direction);
+            transform.Translate(Time.deltaTime * moveSpeed * direction);
 
             if (h != 0.0f || v != 0.0f)
             {

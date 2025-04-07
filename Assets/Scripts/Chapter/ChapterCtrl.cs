@@ -25,7 +25,6 @@ namespace ZUN
         [SerializeField] Button                closeLottery;
         [SerializeField] ShowResult          showResult;
         [SerializeField] GameObject         maxExpEffect;
-        [SerializeField] TextMeshProUGUI txt_EffectLevel;
 
         int gold;
         public int KillCount { get; private set; }
@@ -97,7 +96,6 @@ namespace ZUN
             Time.timeScale = 0;
 
             maxExpEffect.SetActive(true);
-            txt_EffectLevel.text = "Lv." + character.Level.ToString();
 
             SetSkillDisplay();
 

@@ -9,18 +9,23 @@ namespace ZUN
         public Character character;
         [SerializeField] float maxDistance;
 
+        private void Awake()
+        {
+            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+        }
+
         private void FixedUpdate()
         {
             if (maxDistance < Vector3.Distance(character.transform.position, transform.position))
-                Destroy(this);
+                Destroy(gameObject);
         }
-        
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Bullet"))
             {
                 Instantiate(supply, transform.position, transform.rotation);
-                Destroy(this);
+                Destroy(gameObject);
             }
         }
     }
