@@ -29,10 +29,10 @@ namespace ZUN
 
         private void OnEnable()
         {
-            skillType = skill.skillInfo.Type;
-            skillName.text = skill.skillInfo.SkillName;
-            skillImage.sprite = skill.skillInfo.Sprite;
-            upgradeInfo.text = skill.skillInfo.UpgradeInfos[skill.Level];
+            skillType = skill.SkillInfo.Type;
+            skillName.text = skill.SkillInfo.SkillName;
+            skillImage.sprite = skill.SkillInfo.Sprite;
+            upgradeInfo.text = skill.SkillInfo.UpgradeInfos[skill.Level];
 
             int index = 0;
             while (index < skill.Level)

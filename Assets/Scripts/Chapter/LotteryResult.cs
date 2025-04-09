@@ -21,21 +21,21 @@ namespace ZUN
 
         public void SetData(Skill skill)
         {
-            if (skill.skillInfo.Type == SkillInformation.SkillType.PASSIVE)
+            if (skill.SkillInfo.Type == SkillInformation.SkillType.PASSIVE)
                 img_bg.sprite = bgSprite[PASSIVE];
             else
             {
-                if (skill.skillInfo.MaxLevel == 1)
+                if (skill.SkillInfo.MaxLevel == 1)
                     img_bg.sprite = bgSprite[FINALACT];
                 else
                     img_bg.sprite = bgSprite[ACTIVE];
             }
 
-            img_skill.sprite = skill.skillInfo.Sprite;
-            txt_skillName.text = skill.skillInfo.SkillName;
-            txt_upgradeInfo.text = skill.skillInfo.UpgradeInfos[skill.Level - 1];
+            img_skill.sprite = skill.SkillInfo.Sprite;
+            txt_skillName.text = skill.SkillInfo.SkillName;
+            txt_upgradeInfo.text = skill.SkillInfo.UpgradeInfos[skill.Level - 1];
 
-            if (skill.skillInfo.MaxLevel == 1)
+            if (skill.SkillInfo.MaxLevel == 1)
             {
                 img_star[2].sprite = starSprite[RED];
                 img_star[2].gameObject.SetActive(true);

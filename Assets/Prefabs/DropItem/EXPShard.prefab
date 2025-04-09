@@ -143,8 +143,8 @@ MonoBehaviour:
   exp: 0
   initialSpeed: 15
   sprites:
-  - {fileID: -6451518820673859229, guid: 7c848dc045bc8494bae1b1274b34d558, type: 3}
-  - {fileID: -8122256234953540473, guid: d3de8985036542c42a754ed2759dbc83, type: 3}
-  - {fileID: -3278824693638888010, guid: f9c59e8168261c04ea415546b372ad49, type: 3}
-  - {fileID: 8783538163472203977, guid: affe5694f550d3447945f9eccfe5678c, type: 3}
+  - {fileID: 21300000, guid: 7c848dc045bc8494bae1b1274b34d558, type: 3}
+  - {fileID: 21300000, guid: d3de8985036542c42a754ed2759dbc83, type: 3}
+  - {fileID: 21300000, guid: f9c59e8168261c04ea415546b372ad49, type: 3}
+  - {fileID: 21300000, guid: affe5694f550d3447945f9eccfe5678c, type: 3}
   amount: 0a000000140000001e00000028000000

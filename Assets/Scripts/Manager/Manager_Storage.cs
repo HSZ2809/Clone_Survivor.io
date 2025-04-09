@@ -6,7 +6,7 @@ namespace ZUN
     {
         private void Start()
         {
-            Debug.Log("Manager_Storage : create");
+            
         }
     }
 }

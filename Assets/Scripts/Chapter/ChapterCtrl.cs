@@ -10,7 +10,7 @@ namespace ZUN
     public class ChapterCtrl : MonoBehaviour
     {
         Manager_Inventory inventory;
-        Character character;
+        Character             character;
 
         [Header("UI")]
         [SerializeField] Image                 selectWindow;
@@ -26,7 +26,7 @@ namespace ZUN
         [SerializeField] ShowResult          showResult;
         [SerializeField] GameObject         maxExpEffect;
 
-        int gold;
+        public int gold;
         public int KillCount { get; private set; }
         public bool PauseTimer { get; set; }
 
@@ -106,13 +106,13 @@ namespace ZUN
             {
                 for(int i = 0; i < charActives.Length; i++)
                 {
-                    if (charActives[i].Level < charActives[i].skillInfo.MaxLevel)
+                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
                         shuffleBox.Add(charActives[i]);
-                    else if(charActives[i].Level == charActives[i].skillInfo.MaxLevel)
+                    else if(charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
                     {
                         string synergyID = charActives[i].SynergyID;
 
-                        if (Array.FindIndex(charPassives, element => element != null && element.skillInfo.ID == synergyID) > -1)
+                        if (Array.FindIndex(charPassives, element => element != null && element.SkillInfo.ID == synergyID) > -1)
                             shuffleBox.Add(charActives[i]);
                     }
                 }
@@ -124,13 +124,13 @@ namespace ZUN
                     if (charActives[i] == null)
                         continue;
 
-                    if (charActives[i].Level < charActives[i].skillInfo.MaxLevel)
+                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
                         shuffleBox.Add(charActives[i]);
-                    else if (charActives[i].Level == charActives[i].skillInfo.MaxLevel)
+                    else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
                     {
                         string synergyID = charActives[i].SynergyID;
 
-                        if (Array.FindIndex(charPassives, element => element != null && element.skillInfo.ID == synergyID) > -1)
+                        if (Array.FindIndex(charPassives, element => element != null && element.SkillInfo.ID == synergyID) > -1)
                             shuffleBox.Add(charActives[i]);
                     }
                 }
@@ -144,7 +144,7 @@ namespace ZUN
                         if (charActives[i] == null)
                             break;
 
-                        if (charActives[i].skillInfo.ID == skill.skillInfo.ID)
+                        if (charActives[i].SkillInfo.ID == skill.SkillInfo.ID)
                         {
                             check = true;
                             break;
@@ -172,7 +172,7 @@ namespace ZUN
                     if (charPassives[i] == null)
                         continue;
 
-                    if (charPassives[i].Level < charPassives[i].skillInfo.MaxLevel)
+                    if (charPassives[i].Level < charPassives[i].SkillInfo.MaxLevel)
                         shuffleBox.Add(charPassives[i]);
                 }
 
@@ -185,7 +185,7 @@ namespace ZUN
                         if (charPassives[i] == null)
                             break;
 
-                        if (charPassives[i].skillInfo.ID == skill.skillInfo.ID)
+                        if (charPassives[i].SkillInfo.ID == skill.SkillInfo.ID)
                         {
                             check = true;
                             break;
@@ -242,13 +242,13 @@ namespace ZUN
                 if (charActives[i] == null)
                     break;
 
-                if (charActives[i].Level < charActives[i].skillInfo.MaxLevel)
+                if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
                     shuffleBox.Add(charActives[i]);
-                else if (charActives[i].Level == charActives[i].skillInfo.MaxLevel)
+                else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
                 {
                     string synergyID = charActives[i].SynergyID;
 
-                    if (Array.FindIndex(charPassives, element => element != null && element.skillInfo.ID == synergyID) > -1)
+                    if (Array.FindIndex(charPassives, element => element != null && element.SkillInfo.ID == synergyID) > -1)
                         shuffleBox.Add(charActives[i]);
                 }
             }
@@ -258,7 +258,7 @@ namespace ZUN
                 if (charPassives[i] == null)
                     break;
 
-                if (charPassives[i].Level < charPassives[i].skillInfo.MaxLevel)
+                if (charPassives[i].Level < charPassives[i].SkillInfo.MaxLevel)
                     shuffleBox.Add(charPassives[i]);
             }
 
@@ -286,7 +286,7 @@ namespace ZUN
 
                 skill.Upgrade();
                 lotteryResults[i].SetData(skill);
-                if (skill.Level == skill.skillInfo.MaxLevel)
+                if (skill.Level == skill.SkillInfo.MaxLevel)
                     shuffleBox.Remove(skill);
                 // 패널 위치로 이동
                 lotteryResults[i].gameObject.SetActive(true);
@@ -313,7 +313,7 @@ namespace ZUN
                     break;
 
                 img_ownedActive[i].gameObject.SetActive(true);
-                img_ownedActive[i].sprite = character.Actives[i].skillInfo.Sprite;
+                img_ownedActive[i].sprite = character.Actives[i].SkillInfo.Sprite;
             }
 
             for (int i = 0; i < character.Passives.Length; i++)
@@ -322,7 +322,7 @@ namespace ZUN
                     break;
 
                 img_ownedPassive[i].gameObject.SetActive(true);
-                img_ownedPassive[i].sprite = character.Passives[i].skillInfo.Sprite;
+                img_ownedPassive[i].sprite = character.Passives[i].SkillInfo.Sprite;
             }
         }
 

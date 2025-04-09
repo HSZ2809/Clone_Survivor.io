@@ -6,14 +6,14 @@ namespace ZUN
     {
         Manager_Scene manager_Scene;
         Manager_Audio manager_Audio;
-        Character character;
+        Character         character;
 
         [SerializeField] private GameObject pause = null;
 
         [Space]
         [SerializeField] private SkillDisplay[] activesDisplay;
         [SerializeField] private SkillDisplay[] passivesDisplay;
-        [SerializeField] private Sprite yellowStar;
+        [SerializeField] private Sprite          yellowStar;
 
         private void Awake()
         {
@@ -30,7 +30,7 @@ namespace ZUN
                     break;
 
                 activesDisplay[i].img_bg.gameObject.SetActive(true);
-                activesDisplay[i].img_skill.sprite = character.Actives[i].skillInfo.Sprite;
+                activesDisplay[i].img_skill.sprite = character.Actives[i].SkillInfo.Sprite;
                 for (int k = 0; k < character.Actives[i].Level; k++)
                     activesDisplay[i].img_star[k].sprite = yellowStar;
             }
@@ -41,7 +41,7 @@ namespace ZUN
                     break;
 
                 passivesDisplay[i].img_bg.gameObject.SetActive(true);
-                passivesDisplay[i].img_skill.sprite = character.Passives[i].skillInfo.Sprite;
+                passivesDisplay[i].img_skill.sprite = character.Passives[i].SkillInfo.Sprite;
                 for(int k = 0; k < character.Passives[i].Level; k++)
                     passivesDisplay[i].img_star[k].sprite = yellowStar;
             }

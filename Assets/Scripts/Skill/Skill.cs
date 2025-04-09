@@ -6,9 +6,11 @@ namespace ZUN
     {
         protected Character character;
 
-        public SkillInformation skillInfo;
+        [SerializeField] protected SkillInformation skillInfo;
         [SerializeField] protected int level;
-        public int Level { get { return level; } }
+
+        public SkillInformation SkillInfo => skillInfo;
+        public int Level => level;
 
         public abstract void Upgrade();
     }
