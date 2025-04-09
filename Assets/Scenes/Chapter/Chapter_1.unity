@@ -44297,7 +44297,11 @@ MonoBehaviour:
   - {fileID: 8751589761210594292}
   closeLottery: {fileID: 6504633744344303604}
   showResult: {fileID: 5160433742689007343}
+<<<<<<< Updated upstream
   tempObject: {fileID: 1999726036}
+=======
+  maxExpEffect: {fileID: 2057620785}
+>>>>>>> Stashed changes
   gold: 0
   playTime: 0
   events:
