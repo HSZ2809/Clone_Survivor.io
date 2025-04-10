@@ -5,72 +5,47 @@ namespace ZUN
 {
     public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
-        [SerializeField] private Camera mainCam;
-        [SerializeField] private RectTransform canvasRect;
         [SerializeField] private RectTransform lever;
         [SerializeField] private RectTransform stickBase;
+
         private Vector2 baseOriginalLocation;
         private Vector2 leverCenter;
         private float radius;
         private readonly float joystickSize = 25.0f;
 
-        private void Awake()
-        {
-            mainCam = Camera.main;
-        }
-
         private void Start()
         {
-            baseOriginalLocation = stickBase.anchoredPosition;
-            leverCenter = stickBase.anchoredPosition;
+            baseOriginalLocation = stickBase.position;
+            leverCenter = stickBase.position;
             radius = Screen.height / joystickSize;
         }
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect, eventData.position, mainCam, out Vector2 localPoint))
-            {
-                LocationSet(localPoint);
-            }
-            else
-            {
-                Debug.Log("OnPointerDown Error");
-            }
+            LocationSet(eventData.position);
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect, eventData.position, mainCam, out Vector2 localPoint))
-            {
-                ProcessInput(localPoint);
-            }
-            else
-            {
-                Debug.Log("OnDrag Error");
-            }
+            ProcessInput(eventData.position);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            lever.anchoredPosition = Vector2.zero;
-
             BackOriginalLocation();
             UpdatePositionValues();
         }
 
         private void LocationSet(Vector2 eventData)
         {
-            //stickBase.transform.position = eventData;
-
-            stickBase.anchoredPosition = eventData;
+            stickBase.transform.position = eventData;
             leverCenter = eventData;
         }
 
         private void BackOriginalLocation()
         {
-            stickBase.anchoredPosition = baseOriginalLocation;
+            stickBase.transform.position = baseOriginalLocation;
+            lever.transform.position = baseOriginalLocation;
             leverCenter = baseOriginalLocation;
         }
 
@@ -80,10 +55,17 @@ namespace ZUN
 
             tempVector = Vector2.ClampMagnitude(tempVector, radius);
 
-            //lever.transform.position = (Vector2)leverCenter + tempVector;
-            lever.anchoredPosition = tempVector;
+            lever.transform.position = leverCenter + tempVector;
 
             UpdatePositionValues();
+        }
+
+        private void UpdatePositionValues()
+        {
+            Vector2 leverPosition = ((Vector2)lever.position - leverCenter) / radius;
+
+            HorizontalAxis = leverPosition.x;
+            VerticalAxis = leverPosition.y;
         }
 
         public float HorizontalAxis
@@ -96,14 +78,6 @@ namespace ZUN
         {
             private set;
             get;
-        }
-
-        private void UpdatePositionValues()
-        {
-            Vector2 leverPosition = (lever.anchoredPosition) / radius;
-
-            HorizontalAxis = leverPosition.x;
-            VerticalAxis = leverPosition.y;
         }
 
         public float GetHorizontalAxis()

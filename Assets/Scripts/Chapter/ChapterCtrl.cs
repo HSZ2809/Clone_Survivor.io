@@ -13,7 +13,7 @@ namespace ZUN
         Character             character;
 
         [Header("UI")]
-        [SerializeField] Image                 selectWindow;
+        [SerializeField] GameObject         selectWindow;
         [SerializeField] Btn_SelectSkill[]     options;
         [SerializeField] Btn_GetMeat        getMeat;
         [SerializeField] TextMeshProUGUI txt_goldCount;
@@ -24,7 +24,7 @@ namespace ZUN
         [SerializeField] LotteryResult[]      lotteryResults;
         [SerializeField] Button                closeLottery;
         [SerializeField] ShowResult          showResult;
-        [SerializeField] GameObject         maxExpEffect;
+        [SerializeField] GameObject         tempObject;
 
         public int gold;
         public int KillCount { get; private set; }
@@ -95,8 +95,7 @@ namespace ZUN
         {
             Time.timeScale = 0;
 
-            maxExpEffect.SetActive(true);
-
+            tempObject.transform.SetAsLastSibling();
             SetSkillDisplay();
 
             List<Skill> shuffleBox = new();
@@ -343,9 +342,7 @@ namespace ZUN
                 option.gameObject.SetActive(false);
 
             selectWindow.gameObject.SetActive(false);
-
-            if (character.Exp < character.MaxExp)
-                maxExpEffect.SetActive(false);
+            tempObject.transform.SetAsFirstSibling();
 
             Time.timeScale = 1;
         }

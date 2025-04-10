@@ -1,3 +1,4 @@
+using Coffee.UIExtensions;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,11 @@ namespace ZUN
         [SerializeField] TextMeshProUGUI txt_level;
         [SerializeField] Image hpBar;
         [SerializeField] Image reloadBar;
+        [SerializeField] UIParticle expMaxEffect;
+
+        ChapterCtrl chapterCtrl;
+        Manager_Inventory inventory;
+        ParticleSystem bleeding;
 
         [Header("Skill")]
         [SerializeField] ActiveSkill[] actives = new ActiveSkill[6];
@@ -41,13 +47,9 @@ namespace ZUN
         [SerializeField] float regeneration;
         [SerializeField] float duration;
         [SerializeField] float itemRange;
-        #endregion
 
         bool isInLevelUpRoutine = false;
-
-        ChapterCtrl chapterCtrl;
-        Manager_Inventory inventory;
-        ParticleSystem bleeding;
+        #endregion
 
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }
@@ -129,7 +131,11 @@ namespace ZUN
             maxExp *= 1.5f;
             level += 1;
             txt_level.text = "Lv." + level.ToString();
+            expMaxEffect.Play();
+
             chapterCtrl.LevelUp(ref actives, ref passives);
+
+            yield return null;
 
             if (exp >= maxExp)
             {
@@ -138,6 +144,7 @@ namespace ZUN
             }
             else
             {
+                // expMaxEffect.Stop();
                 expBar.fillAmount = exp / maxExp;
                 isInLevelUpRoutine = false;
             }
@@ -197,6 +204,7 @@ namespace ZUN
             StartCoroutine(RegenerationHp());
         }
 
+        #region StatusUpgrade
         public void UpgradeRegeneration(float plus)
         {
             regeneration += plus;
@@ -226,5 +234,6 @@ namespace ZUN
         {
             moveSpeed += plus;
         }
+        #endregion
     }
 }
