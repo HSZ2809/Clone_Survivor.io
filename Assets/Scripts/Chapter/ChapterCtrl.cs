@@ -10,21 +10,21 @@ namespace ZUN
     public class ChapterCtrl : MonoBehaviour
     {
         Manager_Inventory inventory;
-        Character             character;
+        Character         character;
 
         [Header("UI")]
-        [SerializeField] GameObject         selectWindow;
-        [SerializeField] Btn_SelectSkill[]     options;
-        [SerializeField] Btn_GetMeat        getMeat;
-        [SerializeField] TextMeshProUGUI txt_goldCount;
-        [SerializeField] TextMeshProUGUI txt_killCount;
-        [SerializeField] Image[]               img_ownedActive;
-        [SerializeField] Image[]               img_ownedPassive;
-        [SerializeField] Image                 pnl_lottery;
-        [SerializeField] LotteryResult[]      lotteryResults;
-        [SerializeField] Button                closeLottery;
-        [SerializeField] ShowResult          showResult;
-        [SerializeField] GameObject         tempObject;
+        [SerializeField] GameObject        selectWindow;
+        [SerializeField] Btn_SelectSkill[] options;
+        [SerializeField] Btn_GetMeat       getMeat;
+        [SerializeField] TextMeshProUGUI   txt_goldCount;
+        [SerializeField] TextMeshProUGUI   txt_killCount;
+        [SerializeField] Image[]           img_ownedActive;
+        [SerializeField] Image[]           img_ownedPassive;
+        [SerializeField] Image             pnl_lottery;
+        [SerializeField] LotteryResult[]   lotteryResults;
+        [SerializeField] Button            closeLottery;
+        [SerializeField] ShowResult        showResult;
+        [SerializeField] GameObject        tempObject;
 
         public int gold;
         public int KillCount { get; private set; }
