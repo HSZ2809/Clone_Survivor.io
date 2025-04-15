@@ -125,29 +125,23 @@ namespace ZUN
             }    
         }
 
-        IEnumerator LevelUp()
+        void LevelUp()
         {
             exp -= maxExp;
             maxExp *= 1.5f;
             level += 1;
             txt_level.text = "Lv." + level.ToString();
+            expMaxEffect.gameObject.SetActive(true);
             expMaxEffect.Play();
 
-            chapterCtrl.LevelUp(ref actives, ref passives);
+            chapterCtrl.ShowLevelUpReward(ref actives, ref passives);
+        }
 
-            yield return null;
+        IEnumerator DelayLevelUpExecution()
+        {
+            yield return new WaitForSeconds(1.0f);
 
-            if (exp >= maxExp)
-            {
-                yield return new WaitForSeconds(1.0f);
-                StartCoroutine(LevelUp());
-            }
-            else
-            {
-                // expMaxEffect.Stop();
-                expBar.fillAmount = exp / maxExp;
-                isInLevelUpRoutine = false;
-            }
+            LevelUp();
         }
 
         public void SetActiveSkill(ActiveSkill newActive)
@@ -177,14 +171,30 @@ namespace ZUN
         public void AddExp(int _exp)
         {
             exp += _exp * expGain;
-            
+
             if (exp >= maxExp && !isInLevelUpRoutine)
             {
                 isInLevelUpRoutine = true;
-                StartCoroutine(LevelUp());
+                expBar.fillAmount = 1.0f;
+                LevelUp();
             }
             else if (!isInLevelUpRoutine)
                 expBar.fillAmount = exp / maxExp;
+        }
+
+        public void LevelUpCheck()
+        {
+            if (exp >= maxExp)
+            {
+                StartCoroutine(DelayLevelUpExecution());
+            }
+            else
+            {
+                expMaxEffect.Stop();
+                expMaxEffect.gameObject.SetActive(false);
+                expBar.fillAmount = exp / maxExp;
+                isInLevelUpRoutine = false;
+            }
         }
 
         public void GetTreasureBox()

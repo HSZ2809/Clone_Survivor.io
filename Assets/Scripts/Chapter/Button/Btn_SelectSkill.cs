@@ -1,8 +1,6 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 namespace ZUN
 {
@@ -18,8 +16,7 @@ namespace ZUN
         [SerializeField] TextMeshProUGUI newTxt;
         [SerializeField] Image[] stars;
 
-        [Space]
-        public Skill skill;
+        Skill skill;
 
         [Space]
         [SerializeField] SkillInformation.SkillType skillType;
@@ -27,8 +24,12 @@ namespace ZUN
         [SerializeField] Image skillImage;
         [SerializeField] TextMeshProUGUI upgradeInfo;
 
-        private void OnEnable()
+        public void SetSkill(Skill _skill)
         {
+            ResetButton();
+
+            skill = _skill;
+
             skillType = skill.SkillInfo.Type;
             skillName.text = skill.SkillInfo.SkillName;
             skillImage.sprite = skill.SkillInfo.Sprite;
@@ -49,22 +50,13 @@ namespace ZUN
                 newTxt.gameObject.SetActive(true);
         }
 
-        private void OnDisable()
+        public void ResetButton()
         {
             foreach (Image star in stars)
                 star.sprite = starSprite[0];
 
             if (newTxt.gameObject.activeSelf)
                 newTxt.gameObject.SetActive(false);
-        }
-
-        IEnumerator BlinkStar(Image star)
-        {
-            star.DOFade(1.0f, 1.0f).SetLoops(2, LoopType.Yoyo).OnComplete(() => {
-                StartCoroutine(BlinkStar(star));
-            });
-
-            yield return null;
         }
 
         public void Select()

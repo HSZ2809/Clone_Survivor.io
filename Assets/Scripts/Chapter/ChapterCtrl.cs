@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,21 +11,24 @@ namespace ZUN
     public class ChapterCtrl : MonoBehaviour
     {
         Manager_Inventory inventory;
-        Character         character;
+        Character character;
 
         [Header("UI")]
-        [SerializeField] GameObject        selectWindow;
+        [SerializeField] GameObject selectWindow;
         [SerializeField] Btn_SelectSkill[] options;
-        [SerializeField] Btn_GetMeat       getMeat;
-        [SerializeField] TextMeshProUGUI   txt_goldCount;
-        [SerializeField] TextMeshProUGUI   txt_killCount;
-        [SerializeField] Image[]           img_ownedActive;
-        [SerializeField] Image[]           img_ownedPassive;
-        [SerializeField] Image             pnl_lottery;
-        [SerializeField] LotteryResult[]   lotteryResults;
-        [SerializeField] Button            closeLottery;
-        [SerializeField] ShowResult        showResult;
-        [SerializeField] GameObject        tempObject;
+        [SerializeField] Btn_GetMeat getMeat;
+        [SerializeField] TextMeshProUGUI txt_goldCount;
+        [SerializeField] TextMeshProUGUI txt_killCount;
+        [SerializeField] Image[] img_ownedActive;
+        [SerializeField] Image[] img_ownedPassive;
+        [SerializeField] Image pnl_lottery;
+        [SerializeField] LotteryResult[] lotteryResults;
+        [SerializeField] Button closeLottery;
+        [SerializeField] ShowResult showResult;
+
+        [SerializeField] GameObject levelUi;
+        [SerializeField] Animator anim_levelUpReward;
+        [SerializeField] AnimationClip closeRewardPage;
 
         public int gold;
         public int KillCount { get; private set; }
@@ -91,12 +95,13 @@ namespace ZUN
             #endif
         }
 
-        public void LevelUp(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
+        public void ShowLevelUpReward(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
         {
             Time.timeScale = 0;
-
-            tempObject.transform.SetAsLastSibling();
+            
+            levelUi.transform.SetAsLastSibling();
             SetSkillDisplay();
+            anim_levelUpReward.SetTrigger("OpenRewardPage");
 
             List<Skill> shuffleBox = new();
 
@@ -204,7 +209,7 @@ namespace ZUN
 
                 getMeat.gameObject.SetActive(true);
 
-                selectWindow.gameObject.SetActive(true);
+                //selectWindow.SetActive(true);
                 return;
             }
 
@@ -215,7 +220,7 @@ namespace ZUN
                     for ( ; i < options.Length; i++)
                         options[i].gameObject.SetActive(false);
 
-                    selectWindow.gameObject.SetActive(true);
+                    //selectWindow.SetActive(true);
 
                     return;
                 }
@@ -223,11 +228,11 @@ namespace ZUN
                 Skill skill = GetRandomSkill(ref shuffleBox);
                 shuffleBox.Remove(skill);
 
-                options[i].skill = skill;
+                options[i].SetSkill(skill);
                 options[i].gameObject.SetActive(true);
             }
 
-            selectWindow.gameObject.SetActive(true);
+            //selectWindow.SetActive(true);
         }
 
         public void StartLottery(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
@@ -338,11 +343,17 @@ namespace ZUN
             else
                 InitSkill(skill);
 
-            foreach (Btn_SelectSkill option in options)
-                option.gameObject.SetActive(false);
+            StartCoroutine(CloseRewardPage());
+        }
 
-            selectWindow.gameObject.SetActive(false);
-            tempObject.transform.SetAsFirstSibling();
+        IEnumerator CloseRewardPage()
+        {
+            anim_levelUpReward.SetTrigger("CloseRewardPage");
+            yield return new WaitForSecondsRealtime(closeRewardPage.length);
+
+            // selectWindow.SetActive(false);
+            levelUi.transform.SetAsFirstSibling();
+            character.LevelUpCheck();
 
             Time.timeScale = 1;
         }

@@ -19,6 +19,7 @@ namespace ZUN
 
         private void OnEnable()
         {
+            isReleased = false;
             durability = maxDurability;
             float angle = Random.Range(-xForceRange, xForceRange);
             rb.AddForce(new Vector2(angle, yForce), ForceMode2D.Impulse);
@@ -37,7 +38,6 @@ namespace ZUN
                     StopCoroutine(DisableBullet());
                     objPool.Release(this);
                 }
-                    
             }
         }
 

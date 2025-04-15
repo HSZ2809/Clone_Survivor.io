@@ -5699,7 +5699,7 @@ MonoBehaviour:
   bossName: "\uAC15\uCCA0 \uC774\uBE68"
   hp: 0
   ap: 0
-  moveSpeed: 0
+  moveSpeed: 3
   anim: {fileID: 4194720641676498070}
   sprites: {fileID: 1653162506291790886}
   treasureBox: {fileID: 305376096704458547, guid: dbeee97ea7da18043b8cdffe846febc0, type: 3}
