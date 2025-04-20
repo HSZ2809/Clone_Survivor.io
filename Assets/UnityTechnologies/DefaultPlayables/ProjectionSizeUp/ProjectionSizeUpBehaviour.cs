@@ -1,27 +1,25 @@
 using System;
-using UnityEngine;
 using UnityEngine.Playables;
 
 namespace ZUN
 {
     [Serializable]
-    public class WarningSignBehaviour : PlayableBehaviour
+    public class ProjectionSizeUpBehaviour : PlayableBehaviour
     {
-        WarningSign m_TrackBinding;
-        [SerializeField] WarningSign.WarningType type;
+        ProjectionSizeUp m_TrackBinding;
 
         bool triggered = false;
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            m_TrackBinding = playerData as WarningSign;
+            m_TrackBinding = playerData as ProjectionSizeUp;
 
             if (m_TrackBinding == null)
                 return;
 
             if (!triggered)
             {
-                m_TrackBinding.StartWarning(type);
+                m_TrackBinding.CamProjectionSizeUp();
                 triggered = true;
             }
         }

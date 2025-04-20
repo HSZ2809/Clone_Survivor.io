@@ -6,10 +6,9 @@ using UnityEngine.Timeline;
 namespace ZUN
 {
     [Serializable]
-    public class WarningSignClip : PlayableAsset, ITimelineClipAsset
+    public class MidBossSpawnClip : PlayableAsset, ITimelineClipAsset
     {
-        public WarningSignBehaviour template = new WarningSignBehaviour();
-        [SerializeField] WarningSign.WarningType type;
+        public MidBossSpawnBehaviour template = new MidBossSpawnBehaviour();
 
         public ClipCaps clipCaps
         {
@@ -18,7 +17,7 @@ namespace ZUN
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
-            var playable = ScriptPlayable<WarningSignBehaviour>.Create(graph, template);
+            var playable = ScriptPlayable<MidBossSpawnBehaviour>.Create(graph, template);
 
             return playable;
         }

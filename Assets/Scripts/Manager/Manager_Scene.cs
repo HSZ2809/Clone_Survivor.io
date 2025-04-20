@@ -48,7 +48,7 @@ namespace ZUN
             {
                 yield return null;
             }
-            
+
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
             Time.timeScale = 1.0f;
             transition.IrisIn();

@@ -6,10 +6,9 @@ using UnityEngine.Timeline;
 namespace ZUN
 {
     [Serializable]
-    public class WarningSignClip : PlayableAsset, ITimelineClipAsset
+    public class ProjectionSizeUpClip : PlayableAsset, ITimelineClipAsset
     {
-        public WarningSignBehaviour template = new WarningSignBehaviour();
-        [SerializeField] WarningSign.WarningType type;
+        public ProjectionSizeUpBehaviour template = new ProjectionSizeUpBehaviour();
 
         public ClipCaps clipCaps
         {
@@ -18,7 +17,7 @@ namespace ZUN
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
-            var playable = ScriptPlayable<WarningSignBehaviour>.Create(graph, template);
+            var playable = ScriptPlayable<ProjectionSizeUpBehaviour>.Create(graph, template);
 
             return playable;
         }

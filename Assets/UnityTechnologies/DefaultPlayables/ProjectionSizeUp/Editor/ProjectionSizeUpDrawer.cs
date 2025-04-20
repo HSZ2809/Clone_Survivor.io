@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace ZUN
 {
-    [CustomPropertyDrawer(typeof(MonsterSpawnBehaviour))]
-    public class MonsterSpawnDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(ProjectionSizeUpBehaviour))]
+    public class ProjectionSizeUpDrawer : PropertyDrawer
     {
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            int fieldCount = 1;
+            int fieldCount = 3;
             return fieldCount * EditorGUIUtility.singleLineHeight;
         }
 

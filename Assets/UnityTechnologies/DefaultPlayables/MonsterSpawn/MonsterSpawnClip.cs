@@ -3,19 +3,27 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-[Serializable]
-public class MonsterSpawnClip : PlayableAsset, ITimelineClipAsset
+namespace ZUN
 {
-    public MonsterSpawnBehaviour template = new MonsterSpawnBehaviour ();
-
-    public ClipCaps clipCaps
+    [Serializable]
+    public class MonsterSpawnClip : PlayableAsset, ITimelineClipAsset
     {
-        get { return ClipCaps.Blending; }
-    }
+        public MonsterSpawnBehaviour template = new MonsterSpawnBehaviour();
+        [SerializeField] int amount;
 
-    public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
-    {
-        var playable = ScriptPlayable<MonsterSpawnBehaviour>.Create (graph, template);
-        return playable;
+        public ClipCaps clipCaps
+        {
+            get { return ClipCaps.None; }
+        }
+
+        public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
+        {
+            var playable = ScriptPlayable<MonsterSpawnBehaviour>.Create(graph, template);
+            MonsterSpawnBehaviour behaviour = playable.GetBehaviour();
+
+            behaviour.amount = amount;
+
+            return playable;
+        }
     }
 }

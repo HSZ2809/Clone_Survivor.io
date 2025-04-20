@@ -22,42 +22,46 @@ namespace ZUN
         [SerializeField] int bossTransitionTime;
         [SerializeField] string bossString;
 
-        //public enum WarningType
+        [Header("WarningType")]
+        [SerializeField] WarningType type;
+
+        public enum WarningType
+        {
+            ZOMBIE, BOSS
+        }
+
+        //public void ZombieWarning()
         //{
-        //    ZOMBIE, BOSS
+        //    // WarningType 별로 경고 문구, 시퀀스 시간 변경
+        //    warningText.text = zombieString;
+        //    StartWarning();
         //}
 
-        public void ZombieWarning()
-        {
-            // WarningType 별로 경고 문구, 시퀀스 시간 변경
-            warningText.text = zombieString;
-            StartWarning(zombieTransitionTime);
-        }
+        //public void BossWarning()
+        //{
+        //    // WarningType 별로 경고 문구, 시퀀스 시간 변경
+        //    warningText.text = bossString;
+        //    StartWarning();
+        //}
 
-        public void BossWarning()
+        public void StartWarning(WarningType type)
         {
-            // WarningType 별로 경고 문구, 시퀀스 시간 변경
-            warningText.text = bossString;
-            StartWarning(bossTransitionTime);
-        }
+            int totalTime;
 
-        private void StartWarning(int totalTime)
-        {
-            //int totalTime;
-            //switch(type)
-            //{
-            //    case WarningType.ZOMBIE:
-            //        totalTime = zombieTransitionTime;
-            //        warningText.text = zombieString;
-            //        break;
-            //    case WarningType.BOSS:
-            //        totalTime = bossTransitionTime;
-            //        warningText.text = bossString;
-            //        break;
-            //    default:
-            //        Debug.LogWarning("WarningSign : Enexpected WarningType");
-            //        return;
-            //}
+            switch (type)
+            {
+                case WarningType.ZOMBIE:
+                    totalTime = zombieTransitionTime;
+                    warningText.text = zombieString;
+                    break;
+                case WarningType.BOSS:
+                    totalTime = bossTransitionTime;
+                    warningText.text = bossString;
+                    break;
+                default:
+                    Debug.LogWarning("WarningSign : Enexpected WarningType");
+                    return;
+            }
 
             int blinkSequenceRepeat = totalTime * 10;
             int pulseSequenceRepeat = (totalTime * 10) - 4;

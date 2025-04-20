@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
-using System.Collections.Generic;
 
 namespace ZUN
 {
-    [TrackColor(1f, 0.4562354f, 0f)]
-    [TrackClipType(typeof(MonsterSpawnClip))]
-    [TrackBindingType(typeof(MonsterSpawn))]
-    public class MonsterSpawnTrack : TrackAsset
+    [TrackColor(1f, 0.454902f, 0f)]
+    [TrackClipType(typeof(MidBossSpawnClip))]
+    [TrackBindingType(typeof(MidBossSpawn))]
+    public class MidBossSpawnTrack : TrackAsset
     {
         public override void GatherProperties(PlayableDirector director, IPropertyCollector driver)
         {
 #if UNITY_EDITOR
-            MonsterSpawn trackBinding = director.GetGenericBinding(this) as MonsterSpawn;
+            MidBossSpawn trackBinding = director.GetGenericBinding(this) as MidBossSpawn;
             if (trackBinding == null)
                 return;
 #endif

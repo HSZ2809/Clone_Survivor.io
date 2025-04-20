@@ -1,27 +1,26 @@
 using System;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace ZUN
 {
     [Serializable]
-    public class WarningSignBehaviour : PlayableBehaviour
+    public class MidBossSpawnBehaviour : PlayableBehaviour
     {
-        WarningSign m_TrackBinding;
-        [SerializeField] WarningSign.WarningType type;
-
-        bool triggered = false;
+        MidBossSpawn m_TrackBinding;
+        bool triggered;
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            m_TrackBinding = playerData as WarningSign;
+            m_TrackBinding = playerData as MidBossSpawn;
 
             if (m_TrackBinding == null)
                 return;
 
             if (!triggered)
             {
-                m_TrackBinding.StartWarning(type);
+                m_TrackBinding.SetMidBoss();
                 triggered = true;
             }
         }
