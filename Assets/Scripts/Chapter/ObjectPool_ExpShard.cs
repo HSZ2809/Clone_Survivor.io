@@ -7,15 +7,21 @@ namespace ZUN
     {
         public IObjectPool<EXPShard> Pool { get; private set; }
         [SerializeField] EXPShard perfab;
+        [SerializeField] int initialValue = 10;
 
         private void Awake()
         {
             Pool = new ObjectPool<EXPShard>(CreateShard, null, OnReleaseShard, OnDestroyShard, maxSize: 500);
         }
 
-        public void InitShard()
+        private void Start()
         {
-            for(int i = 0; i < 10; i++)
+            InitShard(initialValue);
+        }
+
+        public void InitShard(int _initialValue)
+        {
+            for(int i = 0; i < _initialValue; i++)
             {
                 EXPShard shard = Pool.Get();
                 shard.SetType(EXPShard.Type.SMALL);

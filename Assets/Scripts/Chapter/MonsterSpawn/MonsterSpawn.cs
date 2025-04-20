@@ -21,9 +21,6 @@ namespace ZUN
         [SerializeField] float minDistance = 17f;
         [SerializeField] float maxDistance = 21f;
 
-        //[SerializeField]
-        //TimedEvent[] tests;
-
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
 
