@@ -1996,6 +1996,10 @@ PlayableDirector:
     value: {fileID: 9203978314806472759}
   - key: {fileID: 1316444641082273995, guid: 29f54ec228f71734e8167e45be3d86db, type: 2}
     value: {fileID: 2005650489652159587}
+  - key: {fileID: 6440376608067614224, guid: 29f54ec228f71734e8167e45be3d86db, type: 2}
+    value: {fileID: 8627305132116024025}
+  - key: {fileID: -9013798044596546476, guid: 29f54ec228f71734e8167e45be3d86db, type: 2}
+    value: {fileID: 4163451840706934679}
   m_ExposedReferences:
     m_References:
     - 85ca84bcd4dd28745852bb4bf23040a5: {fileID: 0}
@@ -13253,7 +13257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 3005147358795117211, guid: cbe7834f23fe29f4faba1906d0f51ddd, type: 3}
+  boss: {fileID: 0}
   hp: 3000
   attackPower: 30
   bossHpUI: {fileID: 2544417867775749249}
@@ -14417,7 +14421,7 @@ GameObject:
   - component: {fileID: 1284941149137680404}
   - component: {fileID: 8183484393318421545}
   - component: {fileID: 1182262268861870431}
-  - component: {fileID: 8261281985357225224}
+  - component: {fileID: 8183484393318421546}
   m_Layer: 0
   m_Name: ChapterCtrl
   m_TagString: ChapterCtrl
@@ -42341,6 +42345,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perfab: {fileID: 9196344863446389852, guid: 97aa0e91649424d42b6b14d23ddf8e4e, type: 3}
   initialValue: 10
+--- !u!114 &8183484393318421546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292001267773495981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ab53c370e00774aaeacca452c7dd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_time: {fileID: 7380599870471554815}
 --- !u!1 &8187142393319549553
 GameObject:
   m_ObjectHideFlags: 0
@@ -42593,19 +42610,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 15.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8261281985357225224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2292001267773495981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39ab53c370e00774aaeacca452c7dd19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text_time: {fileID: 7380599870471554815}
 --- !u!224 &8261803547627079604
 RectTransform:
   m_ObjectHideFlags: 0
