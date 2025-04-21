@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace ZUN
@@ -25,32 +24,16 @@ namespace ZUN
         [SerializeField] LotteryResult[] lotteryResults;
         [SerializeField] Button closeLottery;
         [SerializeField] ShowResult showResult;
-
         [SerializeField] GameObject levelUi;
         [SerializeField] Animator anim_levelUpReward;
         [SerializeField] AnimationClip closeRewardPage;
 
         public int gold;
         public int KillCount { get; private set; }
-        public bool PauseTimer { get; set; }
-
-        [Header("PlayTime")]
-        [SerializeField] float playTime;
-
-        [Header("Event")]
-        [SerializeField] TimedEvent[] events;
 
         [Header("Appearance Item List")]
         [SerializeField] ActiveSkill[] actives = null;
         [SerializeField] PassiveSkill[] passives = null;
-
-        [System.Serializable] public class TimedEvent
-        {
-            public float triggerTime;
-            public UnityEvent onEvent;
-        }
-
-        public float PlayTime { get { return playTime; } }
 
         private void Awake()
         {
@@ -67,22 +50,8 @@ namespace ZUN
             InitSkill(inventory.Active);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            if(!PauseTimer)
-            {
-                playTime += Time.deltaTime;
-
-                foreach (var timedEvent in events)
-                {
-                    if (playTime >= timedEvent.triggerTime && timedEvent.onEvent != null)
-                    {
-                        timedEvent.onEvent.Invoke();
-                        timedEvent.onEvent = null;
-                    }
-                }
-            }
-
             // 디버그용 시간 가속
             #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))

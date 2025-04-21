@@ -6,8 +6,7 @@ namespace ZUN
 {
     public class BossSpawn : MonoBehaviour
     {
-        //Character character;
-
+        #region Inspector
         [Header("Boss")]
         [SerializeField] BossMonster boss;
         [SerializeField] float hp;
@@ -17,22 +16,28 @@ namespace ZUN
         [SerializeField] GameObject bossHpUI;
         [SerializeField] Image bossHpBar;
         [SerializeField] TextMeshProUGUI bossName;
+        #endregion
 
-        //[Header("Range")]
-        //[SerializeField] float disistance = 16.45f;
-
+        Timer timer;
+        BGMCtrl bgmCtrl;
         Animator animator;
 
         private void Awake()
         {
-            //character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            GameObject chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl");
+            if (chapterCtrl != null )
+            {
+                chapterCtrl.TryGetComponent<Timer>(out timer);
+                chapterCtrl.TryGetComponent<BGMCtrl>(out bgmCtrl);
+            }
             animator = GetComponent<Animator>();
         }
 
         public void SetReady()
         {
             transform.parent = null;
-
+            timer.PauseTimer = true;
+            bgmCtrl.SetBossClip();
             RemoveMonster();
             bossHpUI.SetActive(true);
             bossName.text = boss.GetBossName();
@@ -42,7 +47,6 @@ namespace ZUN
 
         private void SetBoss()
         {
-            // Vector2 setLoc = character.transform.position + new Vector3(0, disistance);
             BossMonster mon = Instantiate(boss, transform.position, transform.rotation);
             mon.SetMonsterSpec(hp, attackPower);
             mon.SetBossHpUI(bossHpUI);

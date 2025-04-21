@@ -9,6 +9,8 @@ namespace ZUN
         protected GameObject bossHpUI;
         protected Image bossHpBar;
 
+        protected Timer timer;
+
         public string GetBossName()
         {
             return bossName;

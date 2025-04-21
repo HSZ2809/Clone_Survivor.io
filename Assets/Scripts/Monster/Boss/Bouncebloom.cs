@@ -23,6 +23,8 @@ namespace ZUN
         [SerializeField] Animator anim;
         ParticleSystem bleeding;
         ObjectPool_DamageText damageTextPool;
+        BGMCtrl bgmCtrl;
+
         readonly WaitForSeconds waitTime = new(3);
 
         public float MaxHp { get; set; }
@@ -33,8 +35,14 @@ namespace ZUN
             SetTagAndLayer();
             cc2D = GetComponent<CircleCollider2D>();
             character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
-            damageTextPool = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ObjectPool_DamageText>();
+            GameObject chapterCtrlObj = GameObject.FindGameObjectWithTag("ChapterCtrl");
+            if (chapterCtrlObj != null)
+            {
+                chapterCtrl = chapterCtrlObj.GetComponent<ChapterCtrl>();
+                damageTextPool = chapterCtrlObj.GetComponent<ObjectPool_DamageText>();
+                timer = chapterCtrlObj.GetComponent<Timer>();
+                chapterCtrlObj.TryGetComponent<BGMCtrl>(out bgmCtrl);
+            }
             bleeding = GetComponent<ParticleSystem>();
         }
 
@@ -159,7 +167,8 @@ namespace ZUN
 
         public void Die()
         {
-            chapterCtrl.PauseTimer = false;
+            timer.PauseTimer = false;
+            bgmCtrl.SetDefaultClip();
             Destroy(gameObject);
         }
     }
