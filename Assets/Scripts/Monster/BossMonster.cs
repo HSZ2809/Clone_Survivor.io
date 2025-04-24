@@ -8,7 +8,7 @@ namespace ZUN
         [SerializeField] protected string bossName;
         protected GameObject bossHpUI;
         protected Image bossHpBar;
-
+        protected TimeLineCtrl timeLineCtrl;
         protected Timer timer;
 
         public string GetBossName()

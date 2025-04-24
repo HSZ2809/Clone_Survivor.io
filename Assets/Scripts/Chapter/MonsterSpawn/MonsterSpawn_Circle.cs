@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ZUN
@@ -13,6 +14,7 @@ namespace ZUN
         [SerializeField] float hp;
         [SerializeField] float ap;
         [SerializeField] Monster[] objPool;
+        Queue<Monster> testPool;
 
         [Header("Amount of monsters")]
         [SerializeField] int amount;

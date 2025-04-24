@@ -51,6 +51,7 @@ namespace ZUN
                 damageTextPool = chapterCtrlObj.GetComponent<ObjectPool_DamageText>();
                 timer = chapterCtrlObj.GetComponent<Timer>();
                 chapterCtrlObj.TryGetComponent<BGMCtrl>(out bgmCtrl);
+                chapterCtrlObj.TryGetComponent<TimeLineCtrl>(out timeLineCtrl);
             }
             bleeding = GetComponent<ParticleSystem>();
         }
@@ -193,6 +194,7 @@ namespace ZUN
         {
             timer.PauseTimer = false;
             bgmCtrl.SetDefaultClip();
+            timeLineCtrl.Play();
             Destroy(gameObject);
         }
     }

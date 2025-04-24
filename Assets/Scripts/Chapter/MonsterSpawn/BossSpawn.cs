@@ -21,6 +21,7 @@ namespace ZUN
         Timer timer;
         BGMCtrl bgmCtrl;
         Animator animator;
+        TimeLineCtrl timeLineCtrl;
 
         private void Awake()
         {
@@ -29,12 +30,14 @@ namespace ZUN
             {
                 chapterCtrl.TryGetComponent<Timer>(out timer);
                 chapterCtrl.TryGetComponent<BGMCtrl>(out bgmCtrl);
+                chapterCtrl.TryGetComponent<TimeLineCtrl>(out timeLineCtrl);
             }
             animator = GetComponent<Animator>();
         }
 
         public void SetReady()
         {
+            timeLineCtrl.Pause();
             transform.parent = null;
             timer.PauseTimer = true;
             bgmCtrl.SetBossClip();

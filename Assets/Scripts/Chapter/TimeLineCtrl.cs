@@ -1,22 +1,16 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class TEST : MonoBehaviour
+public class TimeLineCtrl : MonoBehaviour
 {
-    // public int testInt = 0;
     public PlayableDirector playableDirector;
 
-    private void Awake()
-    {
-        playableDirector = GetComponent<PlayableDirector>();
-    }
-
-    public void TestMethod1()
+    public void Pause()
     {
         playableDirector.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
 
-    public void TestMethod2()
+    public void Play()
     {
         playableDirector.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }

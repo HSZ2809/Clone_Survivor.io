@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.SceneManagement;
 
 namespace ZUN
 {
@@ -21,28 +22,21 @@ namespace ZUN
 
         public void InitShard(int _initialValue)
         {
-            for(int i = 0; i < _initialValue; i++)
+            for (int i = 0; i < _initialValue; i++)
             {
                 EXPShard shard = Pool.Get();
+                SceneManager.MoveGameObjectToScene(shard.gameObject, gameObject.scene);
                 shard.SetType(EXPShard.Type.SMALL);
 
-                Vector3 randomVec3;
-                float randomAngle;
-                float randomDistance;
-                float x;
-                float y;
+                float randomAngle = Random.Range(0f, 2f * Mathf.PI);
+                float randomDistance = Random.Range(7.0f, 12.0f);
 
-                randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
-                randomDistance = UnityEngine.Random.Range(7.0f, 12.0f);
+                float x = Mathf.Cos(randomAngle) * randomDistance;
+                float y = Mathf.Sin(randomAngle) * randomDistance;
 
-                x = Mathf.Cos(randomAngle) * randomDistance;
-                y = Mathf.Sin(randomAngle) * randomDistance;
+                Vector2 randomVec2 = new (transform.position.x + x, transform.position.y + y);
 
-                randomVec3.x = transform.position.x + x;
-                randomVec3.y = transform.position.y + y;
-                randomVec3.z = 0.0f;
-
-                shard.gameObject.transform.position = randomVec3;
+                shard.gameObject.transform.position = randomVec2;
                 shard.gameObject.SetActive(true);
             }
         }
