@@ -6,9 +6,9 @@ using UnityEngine.Timeline;
 namespace ZUN
 {
     [Serializable]
-    public class MonsterSpawnClip : PlayableAsset, ITimelineClipAsset
+    public class MonsterSpawnerClip : PlayableAsset, ITimelineClipAsset
     {
-        public MonsterSpawnBehaviour template = new MonsterSpawnBehaviour();
+        public MonsterSpawnerBehaviour template = new MonsterSpawnerBehaviour();
         [SerializeField] int amount;
 
         public ClipCaps clipCaps
@@ -18,8 +18,8 @@ namespace ZUN
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
-            var playable = ScriptPlayable<MonsterSpawnBehaviour>.Create(graph, template);
-            MonsterSpawnBehaviour behaviour = playable.GetBehaviour();
+            var playable = ScriptPlayable<MonsterSpawnerBehaviour>.Create(graph, template);
+            MonsterSpawnerBehaviour behaviour = playable.GetBehaviour();
 
             behaviour.amount = amount;
 

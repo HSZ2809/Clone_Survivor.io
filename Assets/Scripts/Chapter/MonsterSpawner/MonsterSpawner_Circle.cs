@@ -1,35 +1,20 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ZUN
 {
-    public class MonsterSpawn_Circle : MonsterSpawn
+    public class MonsterSpawner_Circle : MonsterSpawner
     {
-        Character character;
-
-        [Header("Monster")]
-        [SerializeField] Monster monster;
-        [SerializeField] float hp;
-        [SerializeField] float ap;
-        [SerializeField] Monster[] objPool;
-        Queue<Monster> testPool;
-
-        [Header("Amount of monsters")]
-        [SerializeField] int amount;
-
+        #region Inspector
         [Header("Range")]
         [SerializeField] float minDistance = 17f;
         [SerializeField] float maxDistance = 21f;
+        #endregion
 
+        [SerializeField] Monster[] objPool;
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
-
-        private void Awake()
-        {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-        }
 
         private void Start()
         {

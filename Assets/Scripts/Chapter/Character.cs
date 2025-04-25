@@ -18,14 +18,9 @@ namespace ZUN
         [SerializeField] Image reloadBar;
         [SerializeField] UIParticle expMaxEffect;
 
-        ChapterCtrl chapterCtrl;
-        Manager_Inventory inventory;
-        ParticleSystem bleeding;
-
         [Header("Skill")]
         [SerializeField] ActiveSkill[] actives = new ActiveSkill[6];
         [SerializeField] PassiveSkill[] passives = new PassiveSkill[6];
-
 
         [Header("Connected Joystick")]
         [SerializeField] Joystick joystick;
@@ -47,9 +42,13 @@ namespace ZUN
         [SerializeField] float regeneration;
         [SerializeField] float duration;
         [SerializeField] float itemRange;
+        #endregion
+
+        ChapterCtrl chapterCtrl;
+        Manager_Inventory inventory;
+        ParticleSystem bleeding;
 
         bool isInLevelUpRoutine = false;
-        #endregion
 
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }

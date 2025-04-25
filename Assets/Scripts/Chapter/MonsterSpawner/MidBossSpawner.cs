@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class MidBossSpawn : MonoBehaviour
+    public class MidBossSpawner : MonoBehaviour
     {
         Character character;
 

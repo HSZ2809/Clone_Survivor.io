@@ -4,15 +4,15 @@ using UnityEngine.Playables;
 namespace ZUN
 {
     [Serializable]
-    public class MonsterSpawnBehaviour : PlayableBehaviour
+    public class MonsterSpawnerBehaviour : PlayableBehaviour
     {
-        MonsterSpawn_Circle m_TrackBinding;
+        MonsterSpawner m_TrackBinding;
         public int amount;
         bool triggered;
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            m_TrackBinding = playerData as MonsterSpawn_Circle;
+            m_TrackBinding = playerData as MonsterSpawner;
 
             if (m_TrackBinding == null)
                 return;

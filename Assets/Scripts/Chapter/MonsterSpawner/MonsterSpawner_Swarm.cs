@@ -4,30 +4,16 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class MonsterSpawn_SetPos : MonsterSpawn
+    public class MonsterSpawner_Swarm : MonsterSpawner
     {
-        Character character;
-
-        [Header("Monster")]
-        [SerializeField] Monster monster;
-        [SerializeField] float hp;
-        [SerializeField] float attackPower;
-        [SerializeField] Monster[] objPool;
-
-        [Header("Amount of monsters")]
-        [SerializeField] int amount;
         [SerializeField] int swarmSize;
 
         [Header("Range")]
         [SerializeField] float distance;
 
+        [SerializeField] Monster[] objPool = new Monster[1];
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new(5.0f);
-
-        private void Awake()
-        {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-        }
 
         private void Start()
         {
@@ -48,7 +34,7 @@ namespace ZUN
                 for (int i = before; i < after; i++)
                 {
                     Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon.SetMonsterSpec(hp, attackPower);
+                    mon.SetMonsterSpec(hp, ap);
                     objPool[i] = mon;
                 }
             }

@@ -6,14 +6,14 @@ using UnityEngine.Timeline;
 namespace ZUN
 {
     [Serializable]
-    public class MidBossSpawnBehaviour : PlayableBehaviour
+    public class MidBossSpawnerBehaviour : PlayableBehaviour
     {
-        MidBossSpawn m_TrackBinding;
+        MidBossSpawner m_TrackBinding;
         bool triggered;
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            m_TrackBinding = playerData as MidBossSpawn;
+            m_TrackBinding = playerData as MidBossSpawner;
 
             if (m_TrackBinding == null)
                 return;

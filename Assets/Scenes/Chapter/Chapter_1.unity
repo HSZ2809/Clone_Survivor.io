@@ -13241,10 +13241,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8247822782111526625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b8ce904cd4dbda4083e9c07e0b3cbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
+  boss: {fileID: 3005147358795117211, guid: cbe7834f23fe29f4faba1906d0f51ddd, type: 3}
   hp: 3000
   attackPower: 30
   bossHpUI: {fileID: 2544417867775749249}
@@ -14410,6 +14410,7 @@ GameObject:
   - component: {fileID: 1182262268861870431}
   - component: {fileID: 8183484393318421546}
   - component: {fileID: 8183484393318421547}
+  - component: {fileID: 8183484393318421548}
   m_Layer: 0
   m_Name: ChapterCtrl
   m_TagString: ChapterCtrl
@@ -22489,10 +22490,10 @@ MonoBehaviour:
   monster: {fileID: 6967121792191880138, guid: cd910bce5c83df4418494583b3a479fc, type: 3}
   hp: 20
   ap: 2
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!212 &3528383865508150297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24482,11 +24483,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 736990880547716438, guid: 2288eff257c7c3444a111dd973fa2c07, type: 3}
   hp: 5
-  attackPower: 5
-  objPool: []
+  ap: 0
   amount: 0
   swarmSize: 15
   distance: 25
+  objPool: []
 --- !u!224 &4171472966666128358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27641,10 +27642,10 @@ MonoBehaviour:
   monster: {fileID: 6967121792191880138, guid: 126f24d664ed48547969909a098c9346, type: 3}
   hp: 50
   ap: 5
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!1 &5069690016196752532
 GameObject:
   m_ObjectHideFlags: 0
@@ -28241,10 +28242,10 @@ MonoBehaviour:
   monster: {fileID: 6967121792191880138, guid: 6da8779cecd8d0040ad41a759faaac52, type: 3}
   hp: 100
   ap: 10
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!222 &5219734800833443816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30353,7 +30354,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6778126501332030074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b8ce904cd4dbda4083e9c07e0b3cbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: -1438298476729955681, guid: 4232db596ae799147962fcea77c7b92a, type: 3}
@@ -30521,10 +30522,10 @@ MonoBehaviour:
   monster: {fileID: 9055629590452625329, guid: 278b2704dc2d8c2499de940c83253e13, type: 3}
   hp: 10
   ap: 3
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!114 &5893373214467648651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30540,10 +30541,10 @@ MonoBehaviour:
   monster: {fileID: 2196970772980682461, guid: 15d289245c16c7d4fa693d00cf34e0e1, type: 3}
   hp: 10
   ap: 3
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!222 &5919975247894264440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32934,7 +32935,7 @@ GameObject:
   - component: {fileID: 2191795558531443549}
   - component: {fileID: 8755719599623514542}
   m_Layer: 0
-  m_Name: BossSpawn_2
+  m_Name: BossSpawner_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33199,7 +33200,7 @@ GameObject:
   - component: {fileID: 3185702824029822450}
   - component: {fileID: 5864643712532586666}
   m_Layer: 0
-  m_Name: BossSpawn_1
+  m_Name: BossSpawner_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42359,6 +42360,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 2081383548}
+--- !u!114 &8183484393318421548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292001267773495981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5d94c60a2a1034bad6ea35fdf24589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  supplyBox: {fileID: 5530564975238382222, guid: 58a18969c9de53f43a86215fb89b0cd3, type: 3}
+  spawnTransforms:
+  - {fileID: 1934580921}
+  - {fileID: 823805155}
+  - {fileID: 1649799080}
+  - {fileID: 706771732}
+  - {fileID: 584849761}
+  - {fileID: 1598131109}
+  - {fileID: 383503581}
+  - {fileID: 585454123}
+  - {fileID: 267276758}
+  - {fileID: 1478639158}
+  - {fileID: 1309626539}
+  - {fileID: 285705271}
 --- !u!1 &8187142393319549553
 GameObject:
   m_ObjectHideFlags: 0
@@ -42570,7 +42597,7 @@ GameObject:
   - component: {fileID: 4127820044715832704}
   - component: {fileID: 2005650489652159587}
   m_Layer: 0
-  m_Name: BossSpawn_3
+  m_Name: BossSpawner_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43998,11 +44025,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: {fileID: 736990880547716438, guid: 2df419c917b64e0408be376367505466, type: 3}
   hp: 1
-  attackPower: 2
-  objPool: []
+  ap: 0
   amount: 0
   swarmSize: 15
   distance: 25
+  objPool: []
 --- !u!1 &8632788259739878984
 GameObject:
   m_ObjectHideFlags: 0
@@ -44358,7 +44385,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6660914752071370809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048fa1e7df847744dafe134b004350b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b8ce904cd4dbda4083e9c07e0b3cbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 5247058017918715569, guid: dc780c8f0d0da5a4ebd2189524348ef1, type: 3}
@@ -45348,10 +45375,10 @@ MonoBehaviour:
   monster: {fileID: 6967121792191880138, guid: da29311894769e14d9025558aa706994, type: 3}
   hp: 75
   ap: 5
-  objPool: []
   amount: 0
   minDistance: 17
   maxDistance: 21
+  objPool: []
 --- !u!222 &9211642792594812991
 CanvasRenderer:
   m_ObjectHideFlags: 0

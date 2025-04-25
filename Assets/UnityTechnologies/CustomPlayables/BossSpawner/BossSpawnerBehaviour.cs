@@ -4,14 +4,14 @@ using UnityEngine.Playables;
 namespace ZUN
 {
     [Serializable]
-    public class BossSpawnBehaviour : PlayableBehaviour
+    public class BossSpawnerBehaviour : PlayableBehaviour
     {
-        BossSpawn m_TrackBinding;
+        BossSpawner m_TrackBinding;
         bool triggered;
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            m_TrackBinding = playerData as BossSpawn;
+            m_TrackBinding = playerData as BossSpawner;
 
             if (m_TrackBinding == null)
                 return;

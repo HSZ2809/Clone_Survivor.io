@@ -6,9 +6,9 @@ using UnityEngine.Timeline;
 namespace ZUN
 {
     [Serializable]
-    public class BossSpawnClip : PlayableAsset, ITimelineClipAsset
+    public class MidBossSpawnerClip : PlayableAsset, ITimelineClipAsset
     {
-        public BossSpawnBehaviour template = new BossSpawnBehaviour();
+        public MidBossSpawnerBehaviour template = new MidBossSpawnerBehaviour();
 
         public ClipCaps clipCaps
         {
@@ -17,7 +17,7 @@ namespace ZUN
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
-            var playable = ScriptPlayable<BossSpawnBehaviour>.Create(graph, template);
+            var playable = ScriptPlayable<MidBossSpawnerBehaviour>.Create(graph, template);
 
             return playable;
         }

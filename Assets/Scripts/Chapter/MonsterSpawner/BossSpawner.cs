@@ -4,8 +4,9 @@ using UnityEngine.UI;
 
 namespace ZUN
 {
-    public class BossSpawn : MonoBehaviour
+    public class BossSpawner : MonoBehaviour
     {
+
         #region Inspector
         [Header("Boss")]
         [SerializeField] BossMonster boss;

@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace ZUN
 {
-    [CustomPropertyDrawer(typeof(BossSpawnBehaviour))]
-    public class BossSpawnDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(MidBossSpawnerBehaviour))]
+    public class MidBossSpawnerDrawer : PropertyDrawer
     {
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {

@@ -2098,18 +2098,6 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 59dca4319a8aefc45a7ac6bc61fcfe4c, type: 2}
---- !u!114 &-2179789005023899766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c6e3b7704c02346a489b4bbfd574c5, type: 3}
-  m_Name: BossSpawnClip
-  m_EditorClassIdentifier: 
 --- !u!114 &-1843619340403911615
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2125,6 +2113,18 @@ MonoBehaviour:
   template:
     amount: 0
   amount: 200
+--- !u!114 &-1760958862747483773
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02380bda49ace44842bf2afb318f3a, type: 3}
+  m_Name: BossSpawnerClip
+  m_EditorClassIdentifier: 
 --- !u!114 &-1630849134463843456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 900
     m_ClipIn: 0
-    m_Asset: {fileID: 3122455258115235398}
+    m_Asset: {fileID: 1984233616094128577}
     m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1316444641082273995}
@@ -2377,9 +2377,21 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: BossSpawnClip
+    m_DisplayName: BossSpawnerClip
   m_Markers:
     m_Objects: []
+--- !u!114 &1984233616094128577
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02380bda49ace44842bf2afb318f3a, type: 3}
+  m_Name: BossSpawnerClip
+  m_EditorClassIdentifier: 
 --- !u!114 &2152333042396869565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2437,18 +2449,6 @@ MonoBehaviour:
   template:
     amount: 0
   amount: 200
---- !u!114 &3122455258115235398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c6e3b7704c02346a489b4bbfd574c5, type: 3}
-  m_Name: BossSpawnClip
-  m_EditorClassIdentifier: 
 --- !u!114 &3212581385196985149
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2779,7 +2779,7 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 300
     m_ClipIn: 0
-    m_Asset: {fileID: -2179789005023899766}
+    m_Asset: {fileID: 8614638900136736002}
     m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5492806107586426357}
@@ -2844,7 +2844,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: BossSpawnClip
+    m_DisplayName: BossSpawnerClip
   m_Markers:
     m_Objects: []
 --- !u!114 &5539405175578284604
@@ -3302,18 +3302,6 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects: []
---- !u!114 &7896852207191957499
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c6e3b7704c02346a489b4bbfd574c5, type: 3}
-  m_Name: BossSpawnClip
-  m_EditorClassIdentifier: 
 --- !u!114 &8128774054624354209
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3514,7 +3502,7 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 600
     m_ClipIn: 0
-    m_Asset: {fileID: 7896852207191957499}
+    m_Asset: {fileID: -1760958862747483773}
     m_Duration: 1
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8569676964600152556}
@@ -3579,7 +3567,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: BossSpawnClip
+    m_DisplayName: BossSpawnerClip
   m_Markers:
     m_Objects: []
 --- !u!114 &8614068767789188336
@@ -4157,6 +4145,18 @@ MonoBehaviour:
     m_DisplayName: MonsterSpawnClip
   m_Markers:
     m_Objects: []
+--- !u!114 &8614638900136736002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b02380bda49ace44842bf2afb318f3a, type: 3}
+  m_Name: BossSpawnerClip
+  m_EditorClassIdentifier: 
 --- !u!114 &8755673912208791937
 MonoBehaviour:
   m_ObjectHideFlags: 1
