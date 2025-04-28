@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Mon_Shooter : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IShootBullet, IKnockBackable, IBleeding
+    public class Mon_Shooter : NomalMonster, IMovement, IDamageable, IAttackable, IDestroyable, IShootBullet, IKnockBackable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -60,7 +60,7 @@ namespace ZUN
         private void Update()
         {
             if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
-                gameObject.SetActive(false);
+                Release();
 
             if (character.transform.position.x > transform.position.x)
                 sr.flipX = false;
@@ -168,6 +168,7 @@ namespace ZUN
             sr.gameObject.transform.DOKill();
             sr.gameObject.transform.DORewind();
             gameObject.SetActive(false);
+            monsterSpawner.Release(this);
         }
     }
 }

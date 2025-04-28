@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Straight : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
+    public class Mon_Straight : NomalMonster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
     {
         #region Inspector
         [SerializeField] float hp;
@@ -52,12 +52,15 @@ namespace ZUN
                 sr.flipX = false;
             else
                 sr.flipX = true;
+
+            float randomValue = Random.Range(-1, 1);
+            rb.AddForce(new Vector2(randomValue, randomValue));
         }
 
         private void Update()
         {
             if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
-                gameObject.SetActive(false);
+                Release();
 
             if (hp > 0)
                 Move();
@@ -139,6 +142,7 @@ namespace ZUN
             sr.gameObject.transform.DOKill();
             sr.gameObject.transform.DORewind();
             gameObject.SetActive(false);
+            monsterSpawner.Release(this);
         }
     }
 }

@@ -4860,8 +4860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   ap: 0
-  moveSpeed: 5
-  limitDistance: 40
+  moveSpeed: 7
+  limitDistance: 50
   anim: {fileID: 8315070986946350262}
   sr: {fileID: 2105557037792253662}
   shardType: 0

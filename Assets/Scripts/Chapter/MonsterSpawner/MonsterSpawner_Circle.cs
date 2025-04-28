@@ -12,7 +12,6 @@ namespace ZUN
         [SerializeField] float maxDistance = 21f;
         #endregion
 
-        [SerializeField] Monster[] objPool;
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new (1.0f);
 
@@ -24,21 +23,6 @@ namespace ZUN
         public override void SetAmount(int _amount)
         {
             StopCoroutine(enumerator);
-
-            if (objPool.Length < _amount)
-            {
-                int before = objPool.Length;
-                int after = _amount;
-
-                Array.Resize(ref objPool, after);
-
-                for(int i = before; i < after; i++)
-                {
-                    Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon.SetMonsterSpec(hp, ap);
-                    objPool[i] = mon;
-                }
-            }
 
             amount = _amount;
             
@@ -55,22 +39,29 @@ namespace ZUN
 
             while (true)
             {
-                for (int i = 0; i < amount; i++)
+                while (amount >= currentAmount)
                 {
-                    if (!objPool[i].gameObject.activeSelf)
+                    randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
+                    randomDistance = UnityEngine.Random.Range(minDistance, maxDistance);
+
+                    x = Mathf.Cos(randomAngle) * randomDistance;
+                    y = Mathf.Sin(randomAngle) * randomDistance;
+
+                    randomVec2.x = transform.position.x + x;
+                    randomVec2.y = transform.position.y + y;
+
+                    objPool.TryDequeue(out NomalMonster _monster);
+
+                    if (_monster == null)
                     {
-                        randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
-                        randomDistance = UnityEngine.Random.Range(minDistance, maxDistance);
-
-                        x = Mathf.Cos(randomAngle) * randomDistance;
-                        y = Mathf.Sin(randomAngle) * randomDistance;
-
-                        randomVec2.x = character.transform.position.x + x;
-                        randomVec2.y = character.transform.position.y + y;
-
-                        objPool[i].gameObject.transform.position = randomVec2;
-                        objPool[i].gameObject.SetActive(true);
+                        _monster = Instantiate(monster);
+                        _monster.SetMonsterSpec(hp, ap);
+                        _monster.SetSpawner(this);
                     }
+
+                    _monster.transform.position = randomVec2;
+                    _monster.gameObject.SetActive(true);
+                    currentAmount += 1;
                 }
 
                 yield return waitTime;

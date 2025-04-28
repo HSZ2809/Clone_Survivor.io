@@ -6,12 +6,10 @@ namespace ZUN
 {
     public class MonsterSpawner_Swarm : MonsterSpawner
     {
+        [Header("Spawn")]
+        [SerializeField] Transform[] spawnTransform;
         [SerializeField] int swarmSize;
 
-        [Header("Range")]
-        [SerializeField] float distance;
-
-        [SerializeField] Monster[] objPool = new Monster[1];
         IEnumerator enumerator;
         readonly WaitForSeconds waitTime = new(5.0f);
 
@@ -24,21 +22,6 @@ namespace ZUN
         {
             StopCoroutine(enumerator);
 
-            if (objPool.Length < _amount)
-            {
-                int before = objPool.Length;
-                int after = _amount;
-
-                Array.Resize(ref objPool, after);
-
-                for (int i = before; i < after; i++)
-                {
-                    Monster mon = Instantiate(monster, transform.position, transform.rotation);
-                    mon.SetMonsterSpec(hp, ap);
-                    objPool[i] = mon;
-                }
-            }
-
             amount = _amount;
 
             StartCoroutine(enumerator);
@@ -46,46 +29,35 @@ namespace ZUN
 
         IEnumerator SummonMonster()
         {
-            // Transform moveDir;
-            Vector2 randomVec2 = new(0, 0);
             int randomNum;
+            bool transformCheck = true;
 
-            while (true)
+            if (spawnTransform == null)
             {
-                // moveDir = character.GetMoveDir();
-                randomNum = UnityEngine.Random.Range(0, 3);
+                Debug.LogWarning("spawnTransform missing");
+                transformCheck = false;
+            }    
 
-                switch (randomNum)
+            while (transformCheck)
+            {
+                while (amount - swarmSize >= currentAmount)
                 {
-                    case 0:
-                        randomVec2.x = 1;
-                        randomVec2.y = 1;
-                        break;
-                    case 1:
-                        randomVec2.x = 1;
-                        randomVec2.y = -1;
-                        break;
-                    case 2:
-                        randomVec2.x = -1;
-                        randomVec2.y = 1;
-                        break;
-                    case 3:
-                        randomVec2.x = -1;
-                        randomVec2.y = -1;
-                        break;
-                }
+                    randomNum = UnityEngine.Random.Range(0, spawnTransform.Length);
 
-                randomVec2 = randomVec2.normalized;
-                randomVec2.x = character.transform.position.x + randomVec2.x * distance;
-                randomVec2.y = character.transform.position.y + randomVec2.y * distance;
-
-                for (int i = 0; i < amount; i++)
-                {
-                    if (!objPool[i].gameObject.activeSelf)
+                    for (int i = 0; i < swarmSize; i++)
                     {
-                        objPool[i].gameObject.transform.position = randomVec2;
-                        objPool[i].gameObject.SetActive(true);
-                        yield return null;
+                        objPool.TryDequeue(out NomalMonster _monster);
+
+                        if (_monster == null)
+                        {
+                            _monster = Instantiate(monster);
+                            _monster.SetMonsterSpec(hp, ap);
+                            _monster.SetSpawner(this);    
+                        }
+
+                        _monster.transform.position = spawnTransform[randomNum].position;
+                        _monster.gameObject.SetActive(true);
+                        currentAmount += 1;
                     }
                 }
 

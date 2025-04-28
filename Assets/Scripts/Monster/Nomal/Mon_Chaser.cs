@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Chaser : Monster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
+    public class Mon_Chaser : NomalMonster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -51,9 +51,9 @@ namespace ZUN
         private void Update()
         {
             if (Vector3.Distance(transform.position, character.transform.position) > limitDistance)
-                gameObject.SetActive(false);
+                Release();
 
-            if(character.transform.position.x > transform.position.x)
+            if (character.transform.position.x > transform.position.x)
                 sr.flipX = false;
             else
                 sr.flipX = true;
@@ -137,6 +137,7 @@ namespace ZUN
             sr.gameObject.transform.DOKill();
             sr.gameObject.transform.DORewind();
             gameObject.SetActive(false);
+            monsterSpawner.Release(this);
         }
     }
 }

@@ -17,6 +17,7 @@ namespace ZUN
         [SerializeField] Image hpBar;
         [SerializeField] Image reloadBar;
         [SerializeField] UIParticle expMaxEffect;
+        [SerializeField] ShowResult showResult;
 
         [Header("Skill")]
         [SerializeField] ActiveSkill[] actives = new ActiveSkill[6];
@@ -136,6 +137,11 @@ namespace ZUN
             chapterCtrl.ShowLevelUpReward(ref actives, ref passives);
         }
 
+        void Die()
+        {
+            showResult.gameObject.SetActive(true);
+        }
+
         IEnumerator DelayLevelUpExecution()
         {
             yield return new WaitForSeconds(1.0f);
@@ -206,6 +212,9 @@ namespace ZUN
             bleeding.Play();
             hp -= damage;
             hpBar.fillAmount = hp / maxHp;
+
+            if (hp <= 0)
+                Die();
         }
 
         public void StartRegenerationHp()

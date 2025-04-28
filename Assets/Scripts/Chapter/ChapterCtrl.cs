@@ -27,6 +27,7 @@ namespace ZUN
         [SerializeField] GameObject levelUi;
         [SerializeField] Animator anim_levelUpReward;
         [SerializeField] AnimationClip closeRewardPage;
+        [SerializeField] Timer timer;
 
         public int gold;
         public int KillCount { get; private set; }
@@ -52,6 +53,11 @@ namespace ZUN
 
         private void Update()
         {
+            if (timer.PlayTime > 900f)
+            {
+                showResult.gameObject.SetActive(true);
+            }
+
             // 디버그용 시간 가속
             #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))

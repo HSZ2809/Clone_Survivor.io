@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ZUN
@@ -6,7 +7,7 @@ namespace ZUN
     {
         #region Inspector
         [Header("Monster")]
-        [SerializeField] protected Monster monster;
+        [SerializeField] protected NomalMonster monster;
         [SerializeField] protected float hp;
         [SerializeField] protected float ap;
 
@@ -14,11 +15,13 @@ namespace ZUN
         [SerializeField] protected int amount;
         #endregion
 
-        protected Character character;
+        protected int currentAmount;
+        protected Queue<NomalMonster> objPool = new Queue<NomalMonster>();
 
-        private void Awake()
+        public void Release(NomalMonster _monster)
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            objPool.Enqueue(_monster);
+            currentAmount -= 1;
         }
 
         public abstract void SetAmount(int _amount);
