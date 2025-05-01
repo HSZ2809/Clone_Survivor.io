@@ -38,8 +38,24 @@ namespace ZUN
 
         private void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
+            //character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            //inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
+
+            if (!GameObject.FindGameObjectWithTag("Character").TryGetComponent<Character>(out character))
+            {
+#if UNITY_EDITOR
+                Debug.LogWarning("Character not found");
+#endif
+                Application.Quit();
+            }
+
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Inventory>(out inventory))
+            {
+#if UNITY_EDITOR
+                Debug.LogWarning("Inventory not found");
+#endif
+                Application.Quit();
+            }
         }
 
         private void Start()

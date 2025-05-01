@@ -4,16 +4,38 @@ namespace ZUN
 {
     public class Btn_SetActive : MonoBehaviour
     {
-        public GameObject target;
-
-        public void SetActiveTrue()
+        [System.Serializable]
+        public class GameObjectActivePair
         {
-            target.SetActive(true);
+            public GameObject gameObject;
+            public bool isActive;
+
+            public void ApplyActiveState()
+            {
+                if (gameObject != null)
+                    gameObject.SetActive(isActive);
+            }
         }
 
-        public void SetActiveFalse()
+        [SerializeField] GameObjectActivePair[] gameObjectActivePairs;
+        Manager_Alert manager_Alert;
+
+        private void Awake()
         {
-            target.SetActive(false);
+            manager_Alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
+        }
+
+        public void ApplyActiveStates()
+        {
+            if (gameObjectActivePairs.Length < 1)
+                manager_Alert.GetPopup("대상을 찾지 못했습니다");
+            else
+            {
+                foreach (var pair in gameObjectActivePairs)
+                {
+                    pair.ApplyActiveState();
+                }
+            }
         }
     }
 }

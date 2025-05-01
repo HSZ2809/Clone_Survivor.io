@@ -39,7 +39,7 @@ namespace ZUN
 
             while (true)
             {
-                while (amount >= currentAmount)
+                while (amount > currentAmount)
                 {
                     randomAngle = UnityEngine.Random.Range(0f, 2f * Mathf.PI);
                     randomDistance = UnityEngine.Random.Range(minDistance, maxDistance);

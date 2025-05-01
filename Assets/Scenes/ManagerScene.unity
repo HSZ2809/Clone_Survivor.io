@@ -198,7 +198,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 1047794712}
   - component: {fileID: 1047794711}
   - component: {fileID: 1047794710}
+  - component: {fileID: 1047794715}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Manager
@@ -293,6 +294,20 @@ Transform:
   - {fileID: 1751565750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047794715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047794709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c58d66f8c6db94d9d04d15fdac75e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 258261407}
+  prefab: {fileID: 1624421765943324685, guid: e855a50f15bb9bd41a7d73330a07d9ba, type: 3}
 --- !u!1 &1290288738
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,8 +477,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6462938686924352714, guid: 5b035ab3ba236d14f91f395b7183382b, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cc7d6fd15c4212749b0f203a1831f082, type: 3}
+  m_Resource: {fileID: 8300000, guid: cc7d6fd15c4212749b0f203a1831f082, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

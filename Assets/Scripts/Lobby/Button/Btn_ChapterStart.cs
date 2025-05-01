@@ -6,14 +6,23 @@ namespace ZUN
 {
     public class Btn_ChapterStart : MonoBehaviour
     {
-        [SerializeField] private string sceneName;
-        [SerializeField] private float sceneChangeTime = 2.0f;
-        private Manager_Scene manager_Scene;
-        private Scene currentScene;
+        [SerializeField] string sceneName;
+        [SerializeField] float sceneChangeTime = 2.0f;
+        Manager_Scene manager_Scene;
+        Manager_Alert manager_Alert;
+        Scene currentScene;
 
         private void Awake()
         {
-            manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
+            GameObject manager = GameObject.FindGameObjectWithTag("Manager");
+            if (manager == null)
+                Debug.LogWarning("Manager not found");
+            else
+            {
+                manager.TryGetComponent<Manager_Scene>(out manager_Scene);
+                manager.TryGetComponent<Manager_Alert>(out manager_Alert);
+            }
+
             currentScene = gameObject.scene;
         }
 
@@ -22,11 +31,14 @@ namespace ZUN
             StartCoroutine(SceneChange());
         }
 
-        private IEnumerator SceneChange()
+        IEnumerator SceneChange()
         {
             yield return new WaitForSeconds(sceneChangeTime);
 
-            manager_Scene.LoadScene(sceneName, currentScene.buildIndex);
+            if (currentScene == null)
+                manager_Alert.GetPopup("Scene change fail");
+            else
+                manager_Scene.LoadScene(sceneName, currentScene.buildIndex);
         }
     }
 }

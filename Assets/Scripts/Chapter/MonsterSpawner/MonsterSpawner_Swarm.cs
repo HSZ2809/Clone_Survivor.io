@@ -40,7 +40,7 @@ namespace ZUN
 
             while (transformCheck)
             {
-                while (amount - swarmSize >= currentAmount)
+                while (amount - swarmSize > currentAmount)
                 {
                     randomNum = UnityEngine.Random.Range(0, spawnTransform.Length);
 
