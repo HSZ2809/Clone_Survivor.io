@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 56107558}
   - component: {fileID: 56107557}
   m_Layer: 5
-  m_Name: TMP_SFX
+  m_Name: TMP_Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,6 +1562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123801103}
+  - component: {fileID: 123801104}
   m_Layer: 5
   m_Name: Joystick
   m_TagString: Untagged
@@ -1591,6 +1592,25 @@ RectTransform:
   m_AnchoredPosition: {x: 145, y: -250}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &123801104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123801102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718075b5d088c7c48bd6e8914e2d3d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingImage: {fileID: 856966548}
+  toggleImage: {fileID: 2047420210}
+  button: {fileID: 2047420209}
+  sprite_settingOn: {fileID: 21300000, guid: 2a7ab437a4ac7d745bc96ce00cabdb13, type: 3}
+  sprite_settingOff: {fileID: 21300000, guid: 77a8b014c8e943843b46789b846ee078, type: 3}
+  sprite_toggleOn: {fileID: 21300000, guid: c8003c513d6e0234db7581181c989bb0, type: 3}
+  sprite_toggleOff: {fileID: 21300000, guid: 606a38dc40b29ff4e9aa1adc44007247, type: 3}
 --- !u!1 &127839537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2057,7 @@ GameObject:
   - component: {fileID: 177824310}
   - component: {fileID: 177824309}
   m_Layer: 5
-  m_Name: Btn
+  m_Name: Btn_BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2719,6 +2739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300045575}
+  - component: {fileID: 300045576}
   m_Layer: 5
   m_Name: Effect
   m_TagString: Untagged
@@ -2748,6 +2769,25 @@ RectTransform:
   m_AnchoredPosition: {x: 495, y: -150}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &300045576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300045574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718075b5d088c7c48bd6e8914e2d3d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingImage: {fileID: 1125605931}
+  toggleImage: {fileID: 1984261968}
+  button: {fileID: 1984261967}
+  sprite_settingOn: {fileID: 21300000, guid: e08fb0fcc69288244861946150b7a490, type: 3}
+  sprite_settingOff: {fileID: 21300000, guid: e08fb0fcc69288244861946150b7a490, type: 3}
+  sprite_toggleOn: {fileID: 21300000, guid: c8003c513d6e0234db7581181c989bb0, type: 3}
+  sprite_toggleOff: {fileID: 21300000, guid: 606a38dc40b29ff4e9aa1adc44007247, type: 3}
 --- !u!1 &310036937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3823,8 +3863,9 @@ GameObject:
   - component: {fileID: 479734982}
   - component: {fileID: 479734981}
   - component: {fileID: 479734980}
+  - component: {fileID: 479734983}
   m_Layer: 5
-  m_Name: Btn
+  m_Name: Btn_Vibration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3931,6 +3972,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479734978}
   m_CullTransparentMesh: 1
+--- !u!114 &479734983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479734978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb47887a4819c074e99f503dfacad3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &512767499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,6 +4872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618351171}
+  - component: {fileID: 618351172}
   m_Layer: 5
   m_Name: Vibration
   m_TagString: Untagged
@@ -4848,6 +4902,25 @@ RectTransform:
   m_AnchoredPosition: {x: 145, y: -150}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &618351172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618351170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718075b5d088c7c48bd6e8914e2d3d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingImage: {fileID: 1485225520}
+  toggleImage: {fileID: 479734981}
+  button: {fileID: 479734980}
+  sprite_settingOn: {fileID: 21300000, guid: 073b237198d26734baaff24bcec49a7a, type: 3}
+  sprite_settingOff: {fileID: 21300000, guid: e4cf5404e8997fb498b412653aa0637a, type: 3}
+  sprite_toggleOn: {fileID: 21300000, guid: c8003c513d6e0234db7581181c989bb0, type: 3}
+  sprite_toggleOff: {fileID: 21300000, guid: 606a38dc40b29ff4e9aa1adc44007247, type: 3}
 --- !u!1 &622748779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,7 +5322,7 @@ GameObject:
   - component: {fileID: 655516102}
   - component: {fileID: 655516101}
   m_Layer: 5
-  m_Name: TMP_SFX
+  m_Name: TMP_Vibration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6099,7 +6172,7 @@ GameObject:
   - component: {fileID: 790319140}
   - component: {fileID: 790319139}
   m_Layer: 5
-  m_Name: Btn
+  m_Name: Btn_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10467,6 +10540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53489676f1a6197459d6358333b1413b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggleSettings:
+  - {fileID: 1709246517}
+  - {fileID: 1704529515}
+  - {fileID: 618351172}
+  - {fileID: 300045576}
+  - {fileID: 123801104}
 --- !u!1 &1292208602
 GameObject:
   m_ObjectHideFlags: 0
@@ -12736,7 +12815,7 @@ GameObject:
   - component: {fileID: 1605670233}
   - component: {fileID: 1605670232}
   m_Layer: 5
-  m_Name: TMP_SFX
+  m_Name: TMP_Joystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14185,6 +14264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704529514}
+  - component: {fileID: 1704529515}
   m_Layer: 5
   m_Name: BGM
   m_TagString: Untagged
@@ -14214,6 +14294,25 @@ RectTransform:
   m_AnchoredPosition: {x: 495, y: -50}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1704529515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704529513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718075b5d088c7c48bd6e8914e2d3d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingImage: {fileID: 1310500826}
+  toggleImage: {fileID: 177824310}
+  button: {fileID: 177824309}
+  sprite_settingOn: {fileID: 21300000, guid: 128e0a41db867534b9090700b936a219, type: 3}
+  sprite_settingOff: {fileID: 21300000, guid: f0fffc0c01da7a14f8fc2db9a1adea05, type: 3}
+  sprite_toggleOn: {fileID: 21300000, guid: c8003c513d6e0234db7581181c989bb0, type: 3}
+  sprite_toggleOff: {fileID: 21300000, guid: 606a38dc40b29ff4e9aa1adc44007247, type: 3}
 --- !u!1 &1709246515
 GameObject:
   m_ObjectHideFlags: 0
@@ -14223,6 +14322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1709246516}
+  - component: {fileID: 1709246517}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -14252,6 +14352,25 @@ RectTransform:
   m_AnchoredPosition: {x: 145, y: -50}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1709246517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709246515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718075b5d088c7c48bd6e8914e2d3d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingImage: {fileID: 1227839611}
+  toggleImage: {fileID: 790319140}
+  button: {fileID: 790319139}
+  sprite_settingOn: {fileID: 21300000, guid: 6488f91a334e1c64dac649fe3a46e26c, type: 3}
+  sprite_settingOff: {fileID: 21300000, guid: ef9e6519249cb6b4897cbe5a17de3c4a, type: 3}
+  sprite_toggleOn: {fileID: 21300000, guid: c8003c513d6e0234db7581181c989bb0, type: 3}
+  sprite_toggleOff: {fileID: 21300000, guid: 606a38dc40b29ff4e9aa1adc44007247, type: 3}
 --- !u!1 &1726861461
 GameObject:
   m_ObjectHideFlags: 0
@@ -14266,7 +14385,6 @@ GameObject:
   - component: {fileID: 1726861463}
   - component: {fileID: 1726861467}
   - component: {fileID: 1726861466}
-  - component: {fileID: 1726861468}
   m_Layer: 5
   m_Name: Btn_Close
   m_TagString: Untagged
@@ -14412,18 +14530,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34f518875f002ec429e4398bfa039f86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1726861468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726861461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53489676f1a6197459d6358333b1413b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1739415302
@@ -14965,7 +15071,7 @@ GameObject:
   - component: {fileID: 1787264076}
   - component: {fileID: 1787264075}
   m_Layer: 5
-  m_Name: TMP_SFX
+  m_Name: TMP_BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16479,8 +16585,9 @@ GameObject:
   - component: {fileID: 1984261969}
   - component: {fileID: 1984261968}
   - component: {fileID: 1984261967}
+  - component: {fileID: 1984261970}
   m_Layer: 5
-  m_Name: Btn
+  m_Name: Btn_Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16587,6 +16694,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984261965}
   m_CullTransparentMesh: 1
+--- !u!114 &1984261970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984261965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb47887a4819c074e99f503dfacad3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1996199255
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,8 +16929,9 @@ GameObject:
   - component: {fileID: 2047420211}
   - component: {fileID: 2047420210}
   - component: {fileID: 2047420209}
+  - component: {fileID: 2047420212}
   m_Layer: 5
-  m_Name: Btn
+  m_Name: Btn_Joystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16918,6 +17038,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047420207}
   m_CullTransparentMesh: 1
+--- !u!114 &2047420212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047420207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb47887a4819c074e99f503dfacad3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056030538
 GameObject:
   m_ObjectHideFlags: 0
