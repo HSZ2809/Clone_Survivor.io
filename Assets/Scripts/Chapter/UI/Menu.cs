@@ -6,14 +6,14 @@ namespace ZUN
     {
         Manager_Scene manager_Scene;
         Manager_Audio manager_Audio;
-        Character         character;
+        Character character;
 
         [SerializeField] private GameObject pause = null;
 
         [Space]
         [SerializeField] private SkillDisplay[] activesDisplay;
         [SerializeField] private SkillDisplay[] passivesDisplay;
-        [SerializeField] private Sprite          yellowStar;
+        [SerializeField] private Sprite yellowStar;
 
         private void Awake()
         {

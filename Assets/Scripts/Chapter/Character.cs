@@ -47,6 +47,7 @@ namespace ZUN
 
         ChapterCtrl chapterCtrl;
         Manager_Inventory inventory;
+        Manager_Vibration vibration;
         ParticleSystem bleeding;
 
         bool isInLevelUpRoutine = false;
@@ -84,6 +85,7 @@ namespace ZUN
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
             inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
+            vibration = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Vibration>();
             bleeding = GetComponent<ParticleSystem>();
         }
 
@@ -212,6 +214,7 @@ namespace ZUN
             bleeding.Play();
             hp -= damage;
             hpBar.fillAmount = hp / maxHp;
+            vibration.TriggerVibration();
 
             if (hp <= 0)
                 Die();

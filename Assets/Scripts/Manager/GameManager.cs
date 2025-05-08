@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [System.Serializable]
+        public struct Manager
+        {
+            public Manager_Alert alert;
+            public Manager_Audio audio;
+            public Manager_Inventory inventory;
+            public Manager_Scene scene;
+            public Manager_Storage storage;
+            public Manager_Vibration vibration;
+        }
+        public Manager manager;
     }
 }

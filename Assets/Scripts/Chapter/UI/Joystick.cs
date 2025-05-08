@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace ZUN
 {
@@ -8,16 +9,29 @@ namespace ZUN
         [SerializeField] private RectTransform lever;
         [SerializeField] private RectTransform stickBase;
 
-        private Vector2 baseOriginalLocation;
-        private Vector2 leverCenter;
-        private float radius;
-        private readonly float joystickSize = 25.0f;
+        [Space]
+        [SerializeField] private Image[] joystickImages;
+
+        Manager_Joystick manager_Joystick;
+        Vector2 baseOriginalLocation;
+        Vector2 leverCenter;
+        float radius;
+        readonly float joystickSize = 25.0f;
+
+        private void Awake()
+        {
+            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Joystick>();
+        }
 
         private void Start()
         {
             baseOriginalLocation = stickBase.position;
             leverCenter = stickBase.position;
             radius = Screen.height / joystickSize;
+
+            foreach (var image in joystickImages)
+                if (!manager_Joystick.IsJoystickVisible)
+                    image.enabled = false;
         }
 
         public void OnPointerDown(PointerEventData eventData)

@@ -22090,6 +22090,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lever: {fileID: 8661079382414339688}
   stickBase: {fileID: 5990985450894714589}
+  joystickImages:
+  - {fileID: 3800914548229839227}
+  - {fileID: 7271341681086668731}
 --- !u!224 &3266711269237211800
 RectTransform:
   m_ObjectHideFlags: 0

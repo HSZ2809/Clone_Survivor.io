@@ -15,7 +15,7 @@ namespace ZUN
         [SerializeField] Sprite sprite_toggleOn;
         [SerializeField] Sprite sprite_toggleOff;
 
-        bool isStatOff;
+        bool isStateOn;
 
         public Button Button => button;
 
@@ -43,18 +43,18 @@ namespace ZUN
                 return;
             }
 
-            if (isStatOff)
-            {
-                settingImage.sprite = sprite_settingOn;
-                toggleImage.sprite = sprite_toggleOn;
-            }
-            else
+            if (isStateOn)
             {
                 settingImage.sprite = sprite_settingOff;
                 toggleImage.sprite = sprite_toggleOff;
             }
+            else
+            {
+                settingImage.sprite = sprite_settingOn;
+                toggleImage.sprite = sprite_toggleOn;
+            }
 
-            isStatOff = !isStatOff;
+            isStateOn = !isStateOn;
         }
 
         public void InitializeButton(bool state)
@@ -65,7 +65,7 @@ namespace ZUN
                 return;
             }
 
-            if (!state)
+            if (state)
             {
                 settingImage.sprite = sprite_settingOn;
                 toggleImage.sprite = sprite_toggleOn;
@@ -76,7 +76,7 @@ namespace ZUN
                 toggleImage.sprite = sprite_toggleOff;
             }
 
-            isStatOff = state;
+            isStateOn = state;
         }
     }
 }

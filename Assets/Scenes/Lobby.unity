@@ -3863,7 +3863,6 @@ GameObject:
   - component: {fileID: 479734982}
   - component: {fileID: 479734981}
   - component: {fileID: 479734980}
-  - component: {fileID: 479734983}
   m_Layer: 5
   m_Name: Btn_Vibration
   m_TagString: Untagged
@@ -3972,18 +3971,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479734978}
   m_CullTransparentMesh: 1
---- !u!114 &479734983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479734978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb47887a4819c074e99f503dfacad3f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &512767499
 GameObject:
   m_ObjectHideFlags: 0
@@ -10540,12 +10527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53489676f1a6197459d6358333b1413b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleSettings:
-  - {fileID: 1709246517}
-  - {fileID: 1704529515}
-  - {fileID: 618351172}
-  - {fileID: 300045576}
-  - {fileID: 123801104}
+  sfx: {fileID: 1709246517}
+  bgm: {fileID: 1704529515}
+  vibration: {fileID: 618351172}
+  visualEffect: {fileID: 300045576}
+  showJoystick: {fileID: 123801104}
 --- !u!1 &1292208602
 GameObject:
   m_ObjectHideFlags: 0
@@ -16929,7 +16915,6 @@ GameObject:
   - component: {fileID: 2047420211}
   - component: {fileID: 2047420210}
   - component: {fileID: 2047420209}
-  - component: {fileID: 2047420212}
   m_Layer: 5
   m_Name: Btn_Joystick
   m_TagString: Untagged
@@ -17038,18 +17023,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047420207}
   m_CullTransparentMesh: 1
---- !u!114 &2047420212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047420207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb47887a4819c074e99f503dfacad3f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2056030538
 GameObject:
   m_ObjectHideFlags: 0
