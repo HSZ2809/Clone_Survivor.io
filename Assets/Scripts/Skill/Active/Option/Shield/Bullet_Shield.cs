@@ -6,7 +6,6 @@ namespace ZUN
 {
     public class Bullet_Shield : Bullet
     {
-        [SerializeField] private SpriteRenderer[] Runes;
         [SerializeField] private SpriteRenderer glow;
 
         [SerializeField] private float attackTerm = 1.0f;

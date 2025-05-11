@@ -27,10 +27,10 @@ namespace ZUN
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        private void Awake()
+        protected override void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            level = 1;
+            base.Awake();
+
             objPool = new ObjectPool<Bullet_Rocket>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 3);
             monsterLayer = (1 << LayerMask.NameToLayer("Target"));
             enumerator = Shoot();
@@ -137,6 +137,7 @@ namespace ZUN
         {
             Bullet_Rocket bullet = Instantiate(bulletPrefab);
             bullet.SetBulletPool(objPool);
+            bullet.InitializeSpriteAlpha(manager_VisualEffect.IsEffectReduced);
             return bullet;
         }
 

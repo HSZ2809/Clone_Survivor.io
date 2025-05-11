@@ -267,8 +267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0defdae8b09d04bad8ca9becaf0f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr:
+  - {fileID: 6253051507513596979}
   damage: 1
   audioSource: {fileID: 3877783181645920636}
-  sr: {fileID: 6253051507513596979}
+  sprite: {fileID: 744312761429389388}
   cc2D: {fileID: 5850236179975263516}
   rotationSpeed: 500

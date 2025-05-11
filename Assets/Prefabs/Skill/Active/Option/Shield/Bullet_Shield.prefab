@@ -673,6 +673,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82002153f4e717641b773450d756970f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr:
+  - {fileID: 7875473744891778512}
+  - {fileID: 3709645766630325675}
+  - {fileID: 6829043423849313733}
+  - {fileID: 1776579761324513279}
+  - {fileID: 7939572510396979461}
   damage: 1
   Runes:
   - {fileID: 7875473744891778512}

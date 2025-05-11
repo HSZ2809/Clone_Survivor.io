@@ -6,7 +6,7 @@ namespace ZUN
     public class Bullet_Guardian : Bullet
     {
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private SpriteRenderer sr;
+        [SerializeField] private GameObject sprite;
         [SerializeField] private CircleCollider2D cc2D;
 
         [SerializeField] private float rotationSpeed;
@@ -39,7 +39,7 @@ namespace ZUN
 
         private void Update()
         {
-            sr.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            sprite.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
 
         private void OnTriggerEnter2D(Collider2D coll)

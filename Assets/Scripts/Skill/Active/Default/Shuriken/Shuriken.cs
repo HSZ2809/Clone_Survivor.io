@@ -32,10 +32,10 @@ namespace ZUN
         readonly WaitForFixedUpdate waitForFixedUpdate = new();
         readonly WaitForSeconds firerate = new(0.1f);
 
-        private void Awake()
+        protected override void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            level = 1;
+            base.Awake();
+
             objPool = new ObjectPool<Bullet_Shuriken>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 5);
             audioSource = GetComponent<AudioSource>();
             handSprite.sortingLayerName = "Weapon";
@@ -154,6 +154,7 @@ namespace ZUN
         {
             Bullet_Shuriken bullet = Instantiate(bulletPrefab);
             bullet.SetBulletPool(objPool);
+            bullet.InitializeSpriteAlpha(manager_VisualEffect.IsEffectReduced);
             return bullet;
         }
 

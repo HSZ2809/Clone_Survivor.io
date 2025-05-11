@@ -15,10 +15,10 @@ namespace ZUN
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
-        private void Awake()
+        protected override void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            level = 1;
+            base.Awake();
+
             character.SetActiveSkill(this);
         }
 
@@ -32,6 +32,7 @@ namespace ZUN
             Bullet_Shield bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
             bulletInstance.Damage = BulletDamage;
             bulletInstance.transform.parent = transform;
+            bulletInstance.InitializeSpriteAlpha(manager_VisualEffect.IsEffectReduced);
             magazine = bulletInstance;
         }
 

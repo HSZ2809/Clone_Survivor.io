@@ -30,7 +30,7 @@ namespace ZUN
         private void Update()
         {
             if (!isExplode)
-                transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+                transform.Translate(moveSpeed * Time.deltaTime * Vector3.up);
         }
 
         private void OnTriggerEnter2D(Collider2D coll)
