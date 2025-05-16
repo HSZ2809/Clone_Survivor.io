@@ -2,11 +2,15 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public abstract class ActiveSkill : Skill
+    public class ActiveSkill : Skill
     {
         protected Manager_VisualEffect manager_VisualEffect;
-        // synergyID -> ScriptableObject 로 교환 필요
         [SerializeField] protected string synergyID;
+        [SerializeField] SkillCtrl[] prefab_skillCtrls = new SkillCtrl[2];
+        const int nomal = 0, final = 1;
+
+        SkillCtrl skillCtrl;
+
         public string SynergyID { get { return synergyID; } }
 
         protected override void Awake()
@@ -14,6 +18,28 @@ namespace ZUN
             base.Awake();
 
             manager_VisualEffect = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_VisualEffect>();
+        }
+
+        private void Start()
+        {
+            skillCtrl = Instantiate(prefab_skillCtrls[nomal], transform);
+            character.SetActiveSkill(this);
+        }
+
+        public override void Upgrade()
+        {
+            level += 1;
+
+            if (level > SkillInfo.MaxLevel)
+                return;
+
+            if (level < SkillInfo.MaxLevel)
+                skillCtrl.Upgrade(level);
+            else
+            {
+                Destroy(skillCtrl.gameObject);
+                skillCtrl = Instantiate(prefab_skillCtrls[final], transform);
+            }
         }
     }
 }

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Sneakers
   skillName: "\uC6B4\uB3D9\uD654"
-  type: 0
-  sprite: {fileID: 21300000, guid: cb3547e2e8f4faa4d80ec5ef37d52ee0, type: 3}
+  type: 1
+  sprite:
+  - {fileID: 21300000, guid: cb3547e2e8f4faa4d80ec5ef37d52ee0, type: 3}
   upgradeInfos:
   - "\uC774\uB3D9\uC18D\uB3C4 +10%"
   - "\uC774\uB3D9\uC18D\uB3C4 +20%"

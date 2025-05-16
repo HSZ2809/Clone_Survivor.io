@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace ZUN
         [SerializeField] Image panelImage;
         [SerializeField] TextMeshProUGUI newTxt;
         [SerializeField] Image[] stars;
+        [SerializeField] Animator[] starsAnim;
 
         Skill skill;
 
@@ -24,6 +26,30 @@ namespace ZUN
         [SerializeField] Image skillImage;
         [SerializeField] TextMeshProUGUI upgradeInfo;
 
+        private void OnEnable()
+        {
+            int index;
+
+            if (skill.Level >= 5)
+                index = 2;
+            else
+                index = skill.Level;
+
+            starsAnim[index].Play("StarBlink");
+        }
+
+        private void OnDisable()
+        {
+            int index;
+
+            if (skill.Level >= 5)
+                index = 2;
+            else
+                index = skill.Level;
+
+            stars[index].color = Color.white;
+        }
+
         public void SetSkill(Skill _skill)
         {
             ResetButton();
@@ -32,18 +58,26 @@ namespace ZUN
 
             skillType = skill.SkillInfo.Type;
             skillName.text = skill.SkillInfo.SkillName;
-            skillImage.sprite = skill.SkillInfo.Sprite;
+
             upgradeInfo.text = skill.SkillInfo.UpgradeInfos[skill.Level];
 
             int index = 0;
-            while (index < skill.Level)
+            if (skill.Level >= 5)
             {
+                index = 2;
+                stars[index].sprite = starSprite[2];
+                skillImage.sprite = skill.SkillInfo.Sprite[1];
+            }
+            else
+            {
+                while (index < skill.Level)
+                {
+                    stars[index].sprite = starSprite[1];
+                    index += 1;
+                }
                 stars[index].sprite = starSprite[1];
-                index += 1;
-            }              
-            stars[index].sprite = starSprite[1]; // 점멸 효과 추가 필요
-
-            // StartCoroutine(BlinkStar(stars[skill.Level]));
+                skillImage.sprite = skill.SkillInfo.Sprite[0];
+            }
 
             panelImage.sprite = bgSprite[(int)skillType];
             if (skill.Level < 1)

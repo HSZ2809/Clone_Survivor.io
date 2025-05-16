@@ -15,11 +15,14 @@ MonoBehaviour:
   id: Shield
   skillName: "\uBC29\uC5B4\uB9C9"
   type: 0
-  sprite: {fileID: 21300000, guid: e3ebf6ee558a9da48975f661d5730a7a, type: 3}
+  sprite:
+  - {fileID: 21300000, guid: e3ebf6ee558a9da48975f661d5730a7a, type: 3}
+  - {fileID: 21300000, guid: 9da9a3fdf62562244a54da07edc79766, type: 3}
   upgradeInfos:
   - "\uC735\uD574\uC2DC\uD0A4\uB294 \uBC29\uC5B4\uB9C9\uC744 \uC0DD\uC131"
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uC601\uC5ED \uD655\uB300 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
-  maxLevel: 5
+  - "\uC9C4\uD654"
+  maxLevel: 6

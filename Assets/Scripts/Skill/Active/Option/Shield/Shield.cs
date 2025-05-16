@@ -6,12 +6,11 @@ namespace ZUN
     {
         [Header("Spac")]
         [SerializeField] private float coefficient = 0.0f;
-        // [SerializeField] private float attackTerm = 1.0f;
         [SerializeField] private float range = 1.0f;
 
         [Header("Bullet")]
-        [SerializeField] private Bullet_Shield prefab_bullet = null;
-        [SerializeField] private Bullet_Shield magazine = null;
+        [SerializeField] private Bullet_Shield_Normal prefab_bullet = null;
+        Bullet_Shield_Normal magazine = null;
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
@@ -29,7 +28,7 @@ namespace ZUN
 
         public void ActiveSkillOn()
         {
-            Bullet_Shield bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
+            Bullet_Shield_Normal bulletInstance = Instantiate(prefab_bullet, transform.position, transform.rotation);
             bulletInstance.Damage = BulletDamage;
             bulletInstance.transform.parent = transform;
             bulletInstance.InitializeSpriteAlpha(manager_VisualEffect.IsEffectReduced);

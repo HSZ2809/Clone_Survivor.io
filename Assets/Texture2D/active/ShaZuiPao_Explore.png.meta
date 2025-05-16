@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: ed17c133497c0b641bfdbf624870acd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3050161143552415339
+    second: ShaZuiPao_Explore_0
+  - first:
+      213: -4311445188442160117
+    second: ShaZuiPao_Explore_1
+  - first:
+      213: -4975064608647709455
+    second: ShaZuiPao_Explore_2
+  - first:
+      213: -5585384765787914902
+    second: ShaZuiPao_Explore_3
+  - first:
+      213: -3150968189699156451
+    second: ShaZuiPao_Explore_4
+  - first:
+      213: 1484140212489683820
+    second: ShaZuiPao_Explore_5
+  - first:
+      213: 3426560189621419316
+    second: ShaZuiPao_Explore_6
+  - first:
+      213: -5043247293079262359
+    second: ShaZuiPao_Explore_7
+  - first:
+      213: 3482550783545941234
+    second: ShaZuiPao_Explore_8
+  - first:
+      213: -147008938051355034
+    second: ShaZuiPao_Explore_9
+  - first:
+      213: 3554616566017371805
+    second: ShaZuiPao_Explore_10
+  - first:
+      213: -7370790913233732685
+    second: ShaZuiPao_Explore_11
+  - first:
+      213: 6423334071221212284
+    second: ShaZuiPao_Explore_12
+  - first:
+      213: 7853307367425626653
+    second: ShaZuiPao_Explore_13
+  - first:
+      213: 1734980610066567193
+    second: ShaZuiPao_Explore_14
+  - first:
+      213: -4353475638314418343
+    second: ShaZuiPao_Explore_15
+  - first:
+      213: 7239989273574715377
+    second: ShaZuiPao_Explore_16
+  - first:
+      213: -4742505440037896330
+    second: ShaZuiPao_Explore_17
+  - first:
+      213: 2989546016128133931
+    second: ShaZuiPao_Explore_18
+  - first:
+      213: 1383703373826684593
+    second: ShaZuiPao_Explore_19
+  - first:
+      213: -5571041611385343494
+    second: ShaZuiPao_Explore_20
+  - first:
+      213: 9031538794163719398
+    second: ShaZuiPao_Explore_21
+  - first:
+      213: 3151755106856290605
+    second: ShaZuiPao_Explore_22
+  - first:
+      213: -4911586172245949341
+    second: ShaZuiPao_Explore_23
+  - first:
+      213: -256064178107324308
+    second: ShaZuiPao_Explore_24
+  - first:
+      213: -7232667032114416247
+    second: ShaZuiPao_Explore_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bba8b1b0b1cb9f42bc53d41388921f3
+      internalID: -1036910159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62016b8ae7742244696d977dc731570d
+      internalID: -734844302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123cdb65d67d42d4395fb80fc1ee9ae4
+      internalID: 358826539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737d79cde5107d045b1acecfa732370a
+      internalID: -733630290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7704fbb9eb74144b0f5cf1bbd45377
+      internalID: 168638661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7fde5c8ea20da4288e28ebb8c5cd88
+      internalID: 858042501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a9d63ae5f25e64f88acc08857f9b54
+      internalID: 1053544729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585a6b5c6795d804e8c91819bcb225b2
+      internalID: -1159815350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShaZuiPao_Explore_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a82bba734ac4e428ae8928e442457d
+      internalID: 2042205306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 44e6d9272edd3e04282d5f477ffdba16
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ShaZuiPao_Explore_0: -1036910159
+      ShaZuiPao_Explore_1: -734844302
+      ShaZuiPao_Explore_2: 358826539
+      ShaZuiPao_Explore_3: -733630290
+      ShaZuiPao_Explore_4: 168638661
+      ShaZuiPao_Explore_5: 858042501
+      ShaZuiPao_Explore_6: 1053544729
+      ShaZuiPao_Explore_7: -1159815350
+      ShaZuiPao_Explore_8: 2042205306
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

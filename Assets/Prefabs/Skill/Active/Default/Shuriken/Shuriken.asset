@@ -15,11 +15,14 @@ MonoBehaviour:
   id: Shuriken
   skillName: "\uCFE0\uB098\uC774"
   type: 0
-  sprite: {fileID: 21300000, guid: 093861691136a9d4e978b0b54d6da4bc, type: 3}
+  sprite:
+  - {fileID: 21300000, guid: 093861691136a9d4e978b0b54d6da4bc, type: 3}
+  - {fileID: 21300000, guid: 1569169cd1a911d4b8fb4718d959868c, type: 3}
   upgradeInfos:
   - "\uCFE0\uB098\uC774 1\uAC1C \uBC1C\uC0AC"
   - "\uCFE0\uB098\uC774 1\uAC1C \uCD94\uAC00  \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCFE0\uB098\uC774 1\uAC1C \uCD94\uAC00  \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCFE0\uB098\uC774 1\uAC1C \uCD94\uAC00  \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCFE0\uB098\uC774 1\uAC1C \uCD94\uAC00  \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
-  maxLevel: 5
+  - "\uC720\uB839\uC218\uB9AC\uAC80 \uC9C4\uD654"
+  maxLevel: 6

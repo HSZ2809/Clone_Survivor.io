@@ -13,7 +13,9 @@ namespace ZUN
         [Space]
         [SerializeField] private SkillDisplay[] activesDisplay;
         [SerializeField] private SkillDisplay[] passivesDisplay;
-        [SerializeField] private Sprite yellowStar;
+        [SerializeField] private Sprite[] star;
+
+        readonly int EMPTY = 0, YELLOW = 1, RED = 2;
 
         private void Awake()
         {
@@ -30,9 +32,21 @@ namespace ZUN
                     break;
 
                 activesDisplay[i].img_bg.gameObject.SetActive(true);
-                activesDisplay[i].img_skill.sprite = character.Actives[i].SkillInfo.Sprite;
-                for (int k = 0; k < character.Actives[i].Level; k++)
-                    activesDisplay[i].img_star[k].sprite = yellowStar;
+
+                if (character.Actives[i].Level == character.Actives[i].SkillInfo.MaxLevel)
+                {
+                    activesDisplay[i].img_star[2].sprite = star[RED];
+
+                    activesDisplay[i].img_skill.sprite = character.Actives[i].SkillInfo.Sprite[1];
+                }
+                else
+                {
+                    for (int k = 0; k < character.Actives[i].Level; k++)
+                        activesDisplay[i].img_star[k].sprite = star[YELLOW];
+
+                    activesDisplay[i].img_skill.sprite = character.Actives[i].SkillInfo.Sprite[0];
+                }
+
             }
 
             for(int i = 0; i < character.Passives.Length; i++)
@@ -41,15 +55,17 @@ namespace ZUN
                     break;
 
                 passivesDisplay[i].img_bg.gameObject.SetActive(true);
-                passivesDisplay[i].img_skill.sprite = character.Passives[i].SkillInfo.Sprite;
+                passivesDisplay[i].img_skill.sprite = character.Passives[i].SkillInfo.Sprite[0];
                 for(int k = 0; k < character.Passives[i].Level; k++)
-                    passivesDisplay[i].img_star[k].sprite = yellowStar;
+                    passivesDisplay[i].img_star[k].sprite = star[YELLOW];
             }
         }
 
         private void OnDisable()
         {
-            /* 엑티브 스킬이 줄어들 시 대응 로직 */
+            foreach (var display in activesDisplay)
+                foreach (var img in  display.img_star)
+                    img.sprite = star[EMPTY];
         }
 
         public void Continue()

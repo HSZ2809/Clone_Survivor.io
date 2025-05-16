@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8291868288942675357
+--- !u!1 &3352720773120328308
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2760591952253411816}
-  - component: {fileID: 9023929729611267968}
+  - component: {fileID: 8997430265240389470}
+  - component: {fileID: -629473563026553919}
   m_Layer: 0
   m_Name: Soccerball
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2760591952253411816
+--- !u!4 &8997430265240389470
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8291868288942675357}
+  m_GameObject: {fileID: 3352720773120328308}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,23 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9023929729611267968
+--- !u!114 &-629473563026553919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8291868288942675357}
+  m_GameObject: {fileID: 3352720773120328308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed55051348ece1a498b2755e67f06424, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fdf3add44f874b40bdc896960ec125f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillInfo: {fileID: 11400000, guid: dd9d11162a700724787c0fc22516d336, type: 2}
   level: 0
-  synergyID: test
-  coefficient: 6
-  cooldown: 15
-  magazineSize: 1
-  moveSpeed: 12
-  bulletPrefab: {fileID: 6988003984139392093, guid: 1e691c2495550614485906fb6ab12b49, type: 3}
+  synergyID: Sneakers
+  prefab_skillCtrls:
+  - {fileID: 9023929729611267968, guid: 355f3d8abbd59d2449fe2d226fed3d65, type: 3}
+  - {fileID: 1859848844396569437, guid: 7b3e40100036f8647b429d79a186295e, type: 3}

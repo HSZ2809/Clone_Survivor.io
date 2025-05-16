@@ -15,11 +15,14 @@ MonoBehaviour:
   id: Brick
   skillName: "\uBCBD\uB3CC"
   type: 0
-  sprite: {fileID: 21300000, guid: ac057ae4acb40214394bdc09af217cb6, type: 3}
+  sprite:
+  - {fileID: 21300000, guid: ac057ae4acb40214394bdc09af217cb6, type: 3}
+  - {fileID: 21300000, guid: 7805be40c66b1dd4ab88c757460aba55, type: 3}
   upgradeInfos:
   - "\uBCBD\uB3CC 1\uAC1C \uD22C\uCC99"
   - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uBCBD\uB3CC 1\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
-  maxLevel: 5
+  - "\uB364\uBCA8 \uC9C4\uD654"
+  maxLevel: 6

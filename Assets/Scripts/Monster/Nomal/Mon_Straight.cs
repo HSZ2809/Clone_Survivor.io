@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 namespace ZUN
@@ -20,13 +21,16 @@ namespace ZUN
         [SerializeField] private EXPShard.Type shardType;
         #endregion
 
+        float slowMultiplier = 1.0f;
+
         ObjectPool_ExpShard EXPPool;
         ObjectPool_DamageText damageTextPool;
         Rigidbody2D rb;
         ParticleSystem bleeding;
         Vector2 moveDirection;
 
-        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float BaseMoveSpeed => moveSpeed;
+        public float CurrentMoveSpeed => moveSpeed * slowMultiplier;
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
 
@@ -92,7 +96,21 @@ namespace ZUN
 
         public void Move()
         {
-            transform.Translate(moveSpeed * Time.deltaTime * moveDirection);
+            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * CurrentMoveSpeed);
+        }
+
+        public void ApplySlowEffect(float slowMultiplier)
+        {
+            StartCoroutine(GetSlowEffect(slowMultiplier));
+        }
+
+        IEnumerator GetSlowEffect(float slowMultiplier)
+        {
+            this.slowMultiplier = slowMultiplier;
+
+            yield return new WaitForSeconds(1.0f);
+
+            this.slowMultiplier = 1.0f;
         }
 
         public float TakeDamage(float damage)

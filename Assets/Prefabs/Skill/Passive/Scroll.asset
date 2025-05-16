@@ -15,7 +15,8 @@ MonoBehaviour:
   id: Scroll
   skillName: "\uB2CC\uC790 \uC2A4\uD06C\uB864"
   type: 1
-  sprite: {fileID: 21300000, guid: 2c5352ad0b9fb9e498d055a7d176382f, type: 3}
+  sprite:
+  - {fileID: 21300000, guid: 2c5352ad0b9fb9e498d055a7d176382f, type: 3}
   upgradeInfos:
   - "EXP \uD68D\uB4DD +8%"
   - "EXP \uD68D\uB4DD +16%"

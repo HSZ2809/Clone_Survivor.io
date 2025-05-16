@@ -74,7 +74,7 @@ namespace ZUN
                 showResult.gameObject.SetActive(true);
             }
 
-            // 디버그용 시간 가속
+            /* 디버그용 시간 가속 */
             #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -101,9 +101,9 @@ namespace ZUN
             {
                 for(int i = 0; i < charActives.Length; i++)
                 {
-                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
+                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel - 1)
                         shuffleBox.Add(charActives[i]);
-                    else if(charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
+                    else if(charActives[i].Level == charActives[i].SkillInfo.MaxLevel - 1)
                     {
                         string synergyID = charActives[i].SynergyID;
 
@@ -119,9 +119,9 @@ namespace ZUN
                     if (charActives[i] == null)
                         continue;
 
-                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
+                    if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel - 1)
                         shuffleBox.Add(charActives[i]);
-                    else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
+                    else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel - 1)
                     {
                         string synergyID = charActives[i].SynergyID;
 
@@ -139,7 +139,7 @@ namespace ZUN
                         if (charActives[i] == null)
                             break;
 
-                        if (charActives[i].SkillInfo.ID == skill.SkillInfo.ID)
+                        if (charActives[i].SkillInfo == skill.SkillInfo)
                         {
                             check = true;
                             break;
@@ -219,8 +219,8 @@ namespace ZUN
                 Skill skill = GetRandomSkill(ref shuffleBox);
                 shuffleBox.Remove(skill);
 
-                options[i].SetSkill(skill);
                 options[i].gameObject.SetActive(true);
+                options[i].SetSkill(skill);
             }
 
             //selectWindow.SetActive(true);
@@ -237,9 +237,9 @@ namespace ZUN
                 if (charActives[i] == null)
                     break;
 
-                if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel)
+                if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel - 1)
                     shuffleBox.Add(charActives[i]);
-                else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel)
+                else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel - 1)
                 {
                     string synergyID = charActives[i].SynergyID;
 
@@ -308,7 +308,11 @@ namespace ZUN
                     break;
 
                 img_ownedActive[i].gameObject.SetActive(true);
-                img_ownedActive[i].sprite = character.Actives[i].SkillInfo.Sprite;
+
+                if (character.Actives[i].Level < 6)
+                    img_ownedActive[i].sprite = character.Actives[i].SkillInfo.Sprite[0];
+                else
+                    img_ownedActive[i].sprite = character.Actives[i].SkillInfo.Sprite[1];
             }
 
             for (int i = 0; i < character.Passives.Length; i++)
@@ -317,7 +321,7 @@ namespace ZUN
                     break;
 
                 img_ownedPassive[i].gameObject.SetActive(true);
-                img_ownedPassive[i].sprite = character.Passives[i].SkillInfo.Sprite;
+                img_ownedPassive[i].sprite = character.Passives[i].SkillInfo.Sprite[0];
             }
         }
 

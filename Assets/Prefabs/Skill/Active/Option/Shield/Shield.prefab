@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1626699850328310788}
-  - component: {fileID: 7689722093571103225}
+  - component: {fileID: -2385832974093560248}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7689722093571103225
+--- !u!114 &-2385832974093560248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,13 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9026937111881402280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8645b1c8902d73d46a0363686b3ec1c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fdf3add44f874b40bdc896960ec125f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillInfo: {fileID: 11400000, guid: 19a9f9120cafc7b4da72977878b4b5e4, type: 2}
   level: 0
-  synergyID: test
-  coefficient: 1
-  range: 1
-  prefab_bullet: {fileID: 564299865242549548, guid: 0434c5503db5c3d458df14215b69abe5, type: 3}
-  magazine: {fileID: 0}
+  synergyID: Drink
+  prefab_skillCtrls:
+  - {fileID: -3087952662363463643, guid: bf350c35f1231344b864b13094fd3eec, type: 3}
+  - {fileID: 4375442458781238654, guid: 7c176f7693781db40968b3e7dcb4be8d, type: 3}

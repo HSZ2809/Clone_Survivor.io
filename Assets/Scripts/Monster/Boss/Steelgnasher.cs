@@ -23,6 +23,8 @@ namespace ZUN
         [SerializeField] MonsterBullet bullet;
         #endregion
 
+        float slowMultiplier = 1.0f;
+
         ObjectPool_DamageText damageTextPool;
         ParticleSystem bleeding;
         BGMCtrl bgmCtrl;
@@ -30,7 +32,8 @@ namespace ZUN
         readonly Vector2 originX = new(1, 1);
         readonly Vector2 flipX = new(-1, 1);
 
-        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        public float BaseMoveSpeed => moveSpeed;
+        public float CurrentMoveSpeed => moveSpeed * slowMultiplier;
         public float MaxHp { get; set; }
         public float Ap { get => ap; set => ap = value; }
 
@@ -130,7 +133,21 @@ namespace ZUN
 
         public void Move()
         {
-            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * moveSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, character.transform.position, Time.deltaTime * CurrentMoveSpeed);
+        }
+
+        public void ApplySlowEffect(float slowMultiplier)
+        {
+            StartCoroutine(GetSlowEffect(slowMultiplier));
+        }
+
+        IEnumerator GetSlowEffect(float slowMultiplier)
+        {
+            this.slowMultiplier = slowMultiplier;
+
+            yield return new WaitForSeconds(1.0f);
+
+            this.slowMultiplier = 1.0f;
         }
 
         public float TakeDamage(float damage)

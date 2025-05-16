@@ -4,7 +4,7 @@ namespace ZUN
 {
     public abstract class Bullet : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer[] sr;
+        [SerializeField] protected SpriteRenderer[] sr;
         [SerializeField] protected float damage = 1.0f;
 
         private void Awake()

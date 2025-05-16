@@ -33,7 +33,10 @@ namespace ZUN
                     isReleased = true;
                     StopCoroutine(DisableBullet());
                     mon_Damageable.TakeDamage(damage);
-                    objPool.Release(this);
+                    if (objPool != null)
+                        objPool.Release(this);
+                    else
+                        Destroy(gameObject);
                 }
             }
         }
@@ -44,7 +47,10 @@ namespace ZUN
             if (!isReleased)
             {
                 isReleased = true;
-                objPool.Release(this);
+                if (objPool != null)
+                    objPool.Release(this);
+                else
+                    Destroy(gameObject);
             }
         }
 
