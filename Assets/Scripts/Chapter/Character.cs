@@ -51,6 +51,8 @@ namespace ZUN
         ParticleSystem bleeding;
 
         bool isInLevelUpRoutine = false;
+        readonly WaitForSeconds waitOneSec = new(1.0f);
+        readonly WaitForSeconds waitFiveSec = new(5.0f);
 
         public int AmountOfActive { get; private set; }
         public int AmountOfPassive { get; private set; }
@@ -123,7 +125,7 @@ namespace ZUN
                 Hp += MaxHp * regeneration;
                 hpBar.fillAmount = hp / maxHp;
 
-                yield return new WaitForSeconds(5.0f);
+                yield return waitFiveSec;
             }    
         }
 
@@ -146,7 +148,7 @@ namespace ZUN
 
         IEnumerator DelayLevelUpExecution()
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return waitOneSec;
 
             LevelUp();
         }
@@ -216,7 +218,7 @@ namespace ZUN
             hpBar.fillAmount = hp / maxHp;
             vibration.TriggerVibration();
 
-            if (hp <= 0)
+            if (hp <= 0.0f)
                 Die();
         }
 

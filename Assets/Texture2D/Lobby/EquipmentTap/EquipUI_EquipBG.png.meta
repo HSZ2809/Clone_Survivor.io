@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac7c03a3864a48540bf6201e28d12c47
+guid: 3ab072a33dbfd6b498b486b27b05a9aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8603435394111842153
-    second: Quantumball_0
+      213: -1857959974490346511
+    second: EquipUI_EquipBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quantumball_0
+      name: EquipUI_EquipBG_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 124
-        height: 124
+        x: 0
+        y: 0
+        width: 233
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 798d0fd87157a9880800000000000000
-      internalID: -8603435394111842153
+      spriteID: 1fbeb914f333736e0800000000000000
+      internalID: -1857959974490346511
       vertices: []
       indices: 
       edges: []

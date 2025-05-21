@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0fc1c3067382a48b00ed8c5f25c88f, type: 3}
+  m_Name: ShurikenData
+  m_EditorClassIdentifier: 
+  id: 1234
+  itemName: Shuriken
+  comment: test
+  iconSprite:
+  - {fileID: 21300000, guid: 093861691136a9d4e978b0b54d6da4bc, type: 3}
+  - {fileID: 21300000, guid: dc0fa5f16d8be6d46a19ca4ee5f65724, type: 3}
+  maxLevel: 0a000000140000001e0000002800000032000000
+  type: 0
+  initialAtk: 320000006400000096000000c8000000fa000000
+  increaseAtkPerLevel: 0200000005000000090000000c00000012000000
+  active: {fileID: 832819744722947389, guid: 5ff4f218ed7a05a48a85c9d19ea8eebd, type: 3}

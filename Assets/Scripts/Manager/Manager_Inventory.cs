@@ -4,18 +4,11 @@ namespace ZUN
 {
     public class Manager_Inventory : MonoBehaviour
     {
-        [SerializeField] ActiveSkill active;
-        //[SerializeField] Armor armor;
-        //[SerializeField] Necklace necklace;
-        //[SerializeField] Belt belt;
-        //[SerializeField] Glove gloves;
-        //[SerializeField] Shoe shoes;
-
-        public ActiveSkill Active { get { return active; } }
-
-        private void Start()
-        {
-            
-        }
+        public Weapon weapon;
+        public Armor armor;
+        public Necklace necklace;
+        public Belt belt;
+        public Gloves gloves;
+        public Shoes shoes;
     }
 }

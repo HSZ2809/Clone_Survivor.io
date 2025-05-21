@@ -1,12 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace ZUN
 {
     public class Manager_Storage : MonoBehaviour
     {
-        private void Start()
-        {
-            
-        }
+        public readonly List<Equipment> equipment;
+
+
     }
 }

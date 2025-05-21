@@ -6,27 +6,36 @@ namespace ZUN
 {
     public class ItemSlot : MonoBehaviour
     {
-        Item item;
+        Equipment equipment;
 
-        [SerializeField] Image           bg;
-        [SerializeField] Image           icon;
-        [SerializeField] TextMeshProUGUI amount;
+        [SerializeField] Image bg;
+        [SerializeField] Image icon;
+        [SerializeField] TextMeshProUGUI level;
 
-        [Space]
-        [SerializeField] Image           tooltipBg;
-        [SerializeField] TextMeshProUGUI tooltip;
+        [SerializeField] Sprite[] bgs;
 
-        public void SetItem(Item _item)
+        public void SetItem(Equipment _item)
         {
-            item = _item;
-            icon.sprite = item.Data.IconSprite;
-            tooltip.text = item.Data.Tooltip;
-            amount.text = item.Amount.ToString();
+            equipment = _item;
+
+            bg.sprite = bgs[(int)equipment.Tier];
+
+            if (equipment.Tier <= EquipmentTier.Elite)
+                icon.sprite = equipment.Data.IconSprite[0];
+            else
+                icon.sprite = equipment.Data.IconSprite[1];
+
+            level.text = equipment.Level.ToString();
         }
 
         public void UpdateSlot()
         {
-            amount.text = item.Amount.ToString();
+            level.text = equipment.Level.ToString();
+        }
+
+        public void PopupInfo()
+        {
+            // 아이템 설명 + 강화 창 팝업
         }
     }
 }

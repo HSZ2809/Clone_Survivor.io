@@ -63,8 +63,8 @@ namespace ZUN
             // transform.parent = character.transform;
 
             /* 인벤토리의 기본 아이템 적용 */
-            actives[0] = inventory.Active;
-            InitSkill(inventory.Active);
+            actives[0] = inventory.weapon.Data.SkillPrefab;
+            InitSkill(actives[0]);
         }
 
         private void Update()

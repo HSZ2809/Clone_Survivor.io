@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class EquipmentTapCtrl : MonoBehaviour
+namespace ZUN
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class EquipmentTapCtrl : MonoBehaviour
     {
-        
-    }
+        [SerializeField] ItemSlot itemSlotPrefab;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Manager_Storage storage;
+        Manager_Inventory inventory;
+
+        private void Awake()
+        {
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Inventory>(out inventory))
+                Debug.LogWarning("Inventory not found");
+
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out storage))
+                Debug.LogWarning("Storage not found");
+        }
     }
 }
