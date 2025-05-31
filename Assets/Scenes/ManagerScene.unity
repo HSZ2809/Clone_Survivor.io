@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302579899}
-  - component: {fileID: 302579898}
+  - component: {fileID: 302579900}
   m_Layer: 0
   m_Name: Manager_Status
   m_TagString: Untagged
@@ -220,20 +220,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &302579898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302579897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107dce368ce3f9847b2ee82d1c335e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHp: 500
-  baseAtk: 50
 --- !u!4 &302579899
 Transform:
   m_ObjectHideFlags: 0
@@ -249,6 +235,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1047794714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302579900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302579897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107dce368ce3f9847b2ee82d1c335e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHp: 500
+  baseAtk: 50
 --- !u!1 &447689745
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
   _audio: {fileID: 1751565752}
   _joystick: {fileID: 1186487211}
   _scene: {fileID: 447689746}
-  _status: {fileID: 302579898}
+  _status: {fileID: 302579900}
   _storage: {fileID: 1677454013}
   _vibration: {fileID: 1941307354}
   _visualEffect: {fileID: 1151963378}

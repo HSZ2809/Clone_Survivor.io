@@ -200,8 +200,8 @@ MonoBehaviour:
   sr:
   - {fileID: 7697628139751363324}
   damage: 1
-  yForce: 10
-  xForceRange: 10
+  yForce: 20
+  xForceRange: 8
   disableTime: 5
   maxDurability: 3
   rb: {fileID: 4572724941180197330}

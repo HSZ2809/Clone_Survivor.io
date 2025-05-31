@@ -35,7 +35,7 @@ namespace ZUN
         void ShowTooltip()
         {
             _tooltip.gameObject.SetActive(true);
-            _tooltip.SetTooltip(_item, transform as RectTransform);
+            _tooltip.SetTooltip(_item, transform);
         }
 
         public void SetTooltip(ItemTooltipCtrl tooltip)

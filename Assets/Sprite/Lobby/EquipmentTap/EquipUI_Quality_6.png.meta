@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EquipUI_Quality_6_0: 2925715951965476069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
