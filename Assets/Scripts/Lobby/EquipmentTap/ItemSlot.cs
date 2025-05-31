@@ -1,41 +1,46 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace ZUN
 {
     public class ItemSlot : MonoBehaviour
     {
-        Equipment equipment;
+        Item _item;
 
         [SerializeField] Image bg;
         [SerializeField] Image icon;
-        [SerializeField] TextMeshProUGUI level;
+        [SerializeField] TextMeshProUGUI amount;
+        [SerializeField] Button button;
 
-        [SerializeField] Sprite[] bgs;
+        ItemTooltipCtrl _tooltip;
 
-        public void SetItem(Equipment _item)
+        private void Start()
         {
-            equipment = _item;
-
-            bg.sprite = bgs[(int)equipment.Tier];
-
-            if (equipment.Tier <= EquipmentTier.Elite)
-                icon.sprite = equipment.Data.IconSprite[0];
-            else
-                icon.sprite = equipment.Data.IconSprite[1];
-
-            level.text = equipment.Level.ToString();
+            button.onClick.AddListener(() =>
+            {
+                ShowTooltip();
+            });
         }
 
-        public void UpdateSlot()
+        public void SetItem(Item item)
         {
-            level.text = equipment.Level.ToString();
+            _item = item;
+
+            bg.sprite = _item.Data.Background;
+            icon.sprite = _item.Data.ItemSprite;
+            amount.text = _item.Amount.ToString();
         }
 
-        public void PopupInfo()
+        void ShowTooltip()
         {
-            // 아이템 설명 + 강화 창 팝업
+            _tooltip.gameObject.SetActive(true);
+            _tooltip.SetTooltip(_item, transform as RectTransform);
+        }
+
+        public void SetTooltip(ItemTooltipCtrl tooltip)
+        {
+            _tooltip = tooltip;
         }
     }
 }

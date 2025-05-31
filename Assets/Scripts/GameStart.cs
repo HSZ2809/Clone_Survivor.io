@@ -15,6 +15,8 @@ namespace ZUN
         [SerializeField] private string sceneName;
         [SerializeField] private float sceneChangeTime;
 
+        public bool tempEquipmentDispenserLoding = false;
+
         private void Start()
         {
             StartCoroutine(SceneLoading());
@@ -23,13 +25,18 @@ namespace ZUN
         IEnumerator SceneLoading()
         {
             AsyncOperation async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            async.allowSceneActivation = false;
 
-            while (!async.isDone)
+            while (async.progress < 0.9f)
             {
-                yield return null;
-
                 img_progress.fillAmount = Mathf.Lerp(img_progress.fillAmount, 1.0f, async.progress);
+
+                yield return null;
             }
+
+            yield return new WaitUntil(() => tempEquipmentDispenserLoding);
+            img_progress.fillAmount = Mathf.Lerp(img_progress.fillAmount, 1.0f, async.progress);
+            async.allowSceneActivation =true;
 
             SceneManager.UnloadSceneAsync(gameObject.scene);
         }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Shield_Normal : SkillCtrl
+    public class Shield_Normal : ActiveSkillCtrl
     {
         [Header("Spac")]
         [SerializeField] float coefficient;

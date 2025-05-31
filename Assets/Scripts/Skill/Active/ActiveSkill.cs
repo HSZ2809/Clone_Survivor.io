@@ -6,10 +6,10 @@ namespace ZUN
     {
         protected Manager_VisualEffect manager_VisualEffect;
         [SerializeField] protected string synergyID;
-        [SerializeField] SkillCtrl[] prefab_skillCtrls = new SkillCtrl[2];
+        [SerializeField] ActiveSkillCtrl[] prefab_skillCtrls = new ActiveSkillCtrl[2];
         const int nomal = 0, final = 1;
 
-        SkillCtrl skillCtrl;
+        ActiveSkillCtrl skillCtrl;
 
         public string SynergyID { get { return synergyID; } }
 

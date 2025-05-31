@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Rocket_Fianl : SkillCtrl
+    public class Rocket_Fianl : ActiveSkillCtrl
     {
         [Space]
         [SerializeField] AudioSource audioSource;

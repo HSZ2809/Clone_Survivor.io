@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Soccerball_Final : SkillCtrl
+    public class Soccerball_Final : ActiveSkillCtrl
     {
         [Header("Spac")]
         [SerializeField] private float coefficient;

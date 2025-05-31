@@ -12,11 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76bc30b873bd2e41993d51acf6f53f3, type: 3}
   m_Name: MilitaryUniformData
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: MilitaryUniform
-  comment: test
-  iconSprite: []
-  maxLevel: 
-  type: 0
-  initialHp: 
-  increaseHpPerLevel: 
+  id: 1
+  equipmentName: "\uAD70\uC6A9 \uC81C\uBCF5"
+  comment: "\uBC14\uC774\uB7EC\uC2A4 \uD655\uC0B0 \uC774\uC804 \uC0AC\uC6A9\uD558\uB358
+    \uAD70\uBCF5: \uC2A4\uB9C8\uD2B8\uD558\uACE0 \uAC00\uBCBC\uC6C0"
+  iconSprite:
+  - {fileID: 21300000, guid: d80d5e0f255726b4a8843d96678cba51, type: 3}
+  - {fileID: 21300000, guid: 2267a8c9b70fb944fb69891dc4a12c82, type: 3}
+  maxLevel: 0a000000140000001e0000002800000032000000
+  type: 1
+  initialHp: 64000000c80000002c01000090010000f4010000
+  increaseHpPerLevel: 050000000a0000000f0000001400000019000000
+  coefficient:
+  - 0
+  - 0.15
+  - 0
+  - 0
+  - 0.2
+  tierSkillDescription:
+  - EMPTY
+  - HP +15%
+  - "\uC5D8\uB9AC\uD2B8/\uBCF4\uC2A4\uB97C \uCC98\uCE58\uD558\uBA74 \uC0AC\uAE30
+    \uD68C\uBCF5 (\uD788\uC5B4\uB85C\uAC00 \uB9DE\uC73C\uBA74 \uC0AC\uB77C\uC9D0).
+    3% HP/5s \uCE58\uC720"
+  - "\uC0AC\uAE30 \uCE58\uC720\uAC00 10% HP/5\uCD08\uB85C \uC99D\uAC00"
+  - HP +20%

@@ -9,7 +9,7 @@ namespace ZUN
 {
     public class ChapterCtrl : MonoBehaviour
     {
-        Manager_Inventory inventory;
+        Manager_Status status;
         Character character;
 
         [Header("UI")]
@@ -38,22 +38,19 @@ namespace ZUN
 
         private void Awake()
         {
-            //character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            //inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
-
             if (!GameObject.FindGameObjectWithTag("Character").TryGetComponent<Character>(out character))
             {
-#if UNITY_EDITOR
+                #if UNITY_EDITOR
                 Debug.LogWarning("Character not found");
-#endif
+                #endif
                 Application.Quit();
             }
 
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Inventory>(out inventory))
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Status>(out status))
             {
-#if UNITY_EDITOR
+                #if UNITY_EDITOR
                 Debug.LogWarning("Inventory not found");
-#endif
+                #endif
                 Application.Quit();
             }
         }
@@ -63,7 +60,7 @@ namespace ZUN
             // transform.parent = character.transform;
 
             /* 인벤토리의 기본 아이템 적용 */
-            actives[0] = inventory.weapon.Data.SkillPrefab;
+            actives[0] = status.inventory.weapon.Data.SkillPrefab;
             InitSkill(actives[0]);
         }
 

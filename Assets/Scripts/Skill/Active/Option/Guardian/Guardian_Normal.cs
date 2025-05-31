@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Guardian_Normal : SkillCtrl
+    public class Guardian_Normal : ActiveSkillCtrl
     {
         [Space]
         [SerializeField] AudioSource audioSource;

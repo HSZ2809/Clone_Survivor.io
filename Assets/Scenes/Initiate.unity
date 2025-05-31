@@ -619,6 +619,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263988914}
   m_CullTransparentMesh: 1
+--- !u!1 &1267385865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267385866}
+  - component: {fileID: 1267385867}
+  m_Layer: 0
+  m_Name: TempItemDispenser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267385866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267385865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267385867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267385865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c87ff9e718e21947a2f5d9c74bf2df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storage: {fileID: 0}
+  itemDatas:
+  - {fileID: 11400000, guid: 2196b17d98654cd4d9a9ef97b043dad5, type: 2}
+  - {fileID: 11400000, guid: 6dcebc171110a1c4585d1223b314243a, type: 2}
+  - {fileID: 11400000, guid: 10c0672470b888541bea2eb5fb9bf506, type: 2}
+  - {fileID: 11400000, guid: 24f4f71b4d9f2774bbd095f9b01529a3, type: 2}
+  - {fileID: 11400000, guid: 6b4bb48f09b4d28409c61d0cffe24d03, type: 2}
+  - {fileID: 11400000, guid: 84fe7e4e5f89eea43a38961c85cd2174, type: 2}
 --- !u!1 &1415576722
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +861,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -884,6 +936,7 @@ MonoBehaviour:
   tmp_tesk: {fileID: 1710619103}
   sceneName: Lobby
   sceneChangeTime: 1
+  tempEquipmentDispenserLoding: 0
 --- !u!1 &1710619101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1201,59 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &2065851344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065851345}
+  - component: {fileID: 2065851346}
+  m_Layer: 0
+  m_Name: TempEquipmentDispenser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065851345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065851344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2065851346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065851344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc4a44c0a9110145a3a68af9feb6575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 0}
+  storage: {fileID: 0}
+  gameStart: {fileID: 1636946114}
+  weaponData: {fileID: 11400000, guid: d84f05428d250ca4ea6beb0007d9bbb5, type: 2}
+  armorData: {fileID: 11400000, guid: 4a4b4e3a6f408584283589be7c0d77ba, type: 2}
+  necklaceData: {fileID: 11400000, guid: 5b742f344943835438c113566f486095, type: 2}
+  beltData: {fileID: 11400000, guid: 098134e4a5a52d24485ceb6085bdd51b, type: 2}
+  glovesData: {fileID: 11400000, guid: ffbe1697feee77843852cdeaf031023e, type: 2}
+  shoesData: {fileID: 11400000, guid: 9aeadf4d55234ee409bb13b0faeb15f1, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1155,3 +1261,5 @@ SceneRoots:
   - {fileID: 1761212622}
   - {fileID: 1636946113}
   - {fileID: 1513945325}
+  - {fileID: 2065851345}
+  - {fileID: 1267385866}

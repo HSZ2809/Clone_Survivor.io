@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Brick_Normal : SkillCtrl
+    public class Brick_Normal : ActiveSkillCtrl
     {
         [Space]
         [SerializeField] private AudioSource audioSource;

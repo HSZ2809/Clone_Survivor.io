@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Brick_Finall : SkillCtrl
+    public class Brick_Finall : ActiveSkillCtrl
     {
         [Space]
         [SerializeField] private AudioSource audioSource;

@@ -46,7 +46,7 @@ namespace ZUN
         #endregion
 
         ChapterCtrl chapterCtrl;
-        Manager_Inventory inventory;
+        Manager_Status status;
         Manager_Vibration vibration;
         ParticleSystem bleeding;
 
@@ -86,9 +86,16 @@ namespace ZUN
         private void Awake()
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
-            inventory = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Inventory>();
+            status = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Status>();
             vibration = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Vibration>();
             bleeding = GetComponent<ParticleSystem>();
+        }
+
+        private void Start()
+        {
+            maxHp = status.FinalHp;
+            hp = maxHp;
+            atk = status.FinalAtk;
         }
 
         private void Update()

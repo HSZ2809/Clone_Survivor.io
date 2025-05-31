@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Shuriken_Final : SkillCtrl
+    public class Shuriken_Final : ActiveSkillCtrl
     {
         private AudioSource audioSource;
         [SerializeField] private AudioClip clip;

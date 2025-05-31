@@ -5,16 +5,18 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Shuriken_Normal : SkillCtrl
+    public class Shuriken_Normal : ActiveSkillCtrl
     {
         [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir;
-        
+        Manager_Status manager_Status;
+
         private AudioSource audioSource;
         private Image reloadBar;
 
         [Header("Spac")]
         [SerializeField] private float coefficient;
+        private float reinforcement = 1.0f;
         [SerializeField] private float cooldown;
         [SerializeField] private int magazineSize;
         readonly float findRange = 10.0f;
@@ -24,7 +26,7 @@ namespace ZUN
         [SerializeField] private Bullet_Shuriken bulletPrefab;
         IObjectPool<Bullet_Shuriken> objPool;
 
-        public float BulletDamage { get { return coefficient * character.Atk; } }
+        public float BulletDamage { get { return reinforcement * coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
@@ -40,12 +42,18 @@ namespace ZUN
             monsterLayer = (1 << LayerMask.NameToLayer("Target"));
             reloadBar = character.ReloadBar();
             enumerator = Shoot();
+            manager_Status = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Status>();
         }
 
         private void OnEnable()
         {
             StartCoroutine(enumerator);
         }
+
+        //private void Start()
+        //{
+        //    TierUpgrade(manager_Status.inventory.weapon.Tier);
+        //}
 
         IEnumerator Shoot()
         {
@@ -139,6 +147,16 @@ namespace ZUN
 
             StartCoroutine(enumerator);
         }
+
+        //void TierUpgrade(EquipmentTier tier)
+        //{
+        //    if (tier >= EquipmentTier.Rare)
+        //        reinforcement = 1.3f;
+        //    if (tier >= EquipmentTier.Elite)
+        //        Upgrade(2);
+        //    if (tier >= EquipmentTier.Legend)
+        //        Debug.Log("갈라지는 효과");
+        //}
 
         Bullet_Shuriken CreateBullet()
         {

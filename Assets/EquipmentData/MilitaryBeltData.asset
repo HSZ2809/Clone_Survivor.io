@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c5d378b36a5f14cb92442cffba4fc8, type: 3}
+  m_Name: MilitaryBeltData
+  m_EditorClassIdentifier: 
+  id: 4
+  equipmentName: "\uAD70\uC6A9 \uBCA8\uD2B8"
+  comment: "\uD3C9\uBC94\uD55C \uB514\uC790\uC778\uC73C\uB85C \uAD70\uC5D0\uC11C
+    \uD754\uD788 \uCC29\uC6A9"
+  iconSprite:
+  - {fileID: 21300000, guid: 36b360453c76dda4da70486182f7348b, type: 3}
+  - {fileID: 21300000, guid: 7163c3ffdd2ba1047889340bd6d867fd, type: 3}
+  maxLevel: 0a000000140000001e00000028000000320000003c000000
+  type: 3
+  initialHp: 64000000c80000002c01000090010000f401000058020000
+  increaseHpPerLevel: 050000000a0000000f00000014000000190000001e000000
+  coefficient:
+  - 0
+  - 0.1
+  - 0
+  - 0
+  - 0.15
+  tierSkillDescription:
+  - EMPTY
+  - HP +10%
+  - "\uC5D8\uB9AC\uD2B8/\uBCF4\uC2A4\uB97C \uCC98\uCE58\uD558\uBA74 \uC0AC\uAE30\uB97C
+    \uD68C\uBCF5\uD558\uACE0 \uD788\uC5B4\uB85C\uC5D0\uAC8C 1 \uCDA9\uACA9\uD30C
+    \uBD80\uC5EC"
+  - "\uCDA9\uACA9\uD30C \uBC1C\uB3D9 \uC2DC 5\uCD08 \uB3D9\uC548 \uD1B5\uCE58\uC790
+    \uC0C1\uD0DC \uD68D\uB4DD: \uD53C\uD574\uB7C9 \uBC0F \uC774\uB3D9 \uC18D\uB3C4
+    +100%, \uBAA8\uB4E0 \uCFE8\uD0C0\uC784 \uAC10\uC18C\uAC00 \uCD5C\uB300\uD654"
+  - HP +15%

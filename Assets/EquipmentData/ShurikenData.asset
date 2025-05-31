@@ -12,14 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0fc1c3067382a48b00ed8c5f25c88f, type: 3}
   m_Name: ShurikenData
   m_EditorClassIdentifier: 
-  id: 1234
-  itemName: Shuriken
-  comment: test
+  id: 0
+  equipmentName: "\uCFE0\uB098\uC774"
+  comment: "\uD55C\uB54C \uACE0\uB300\uC758 \uB2CC\uC790 \uBB34\uAE30\uC600\uC73C\uB098
+    \uC9C0\uAE08\uC740 \uAC04\uD3B8\uD55C \uC6D0\uAC70\uB9AC \uBC1C\uC0AC\uCCB4\uB85C
+    \uC0AC\uC6A9\uB428"
   iconSprite:
   - {fileID: 21300000, guid: 093861691136a9d4e978b0b54d6da4bc, type: 3}
   - {fileID: 21300000, guid: dc0fa5f16d8be6d46a19ca4ee5f65724, type: 3}
-  maxLevel: 0a000000140000001e0000002800000032000000
+  maxLevel: 0a000000140000001e00000028000000320000003c000000
   type: 0
-  initialAtk: 320000006400000096000000c8000000fa000000
-  increaseAtkPerLevel: 0200000005000000090000000c00000012000000
-  active: {fileID: 832819744722947389, guid: 5ff4f218ed7a05a48a85c9d19ea8eebd, type: 3}
+  initialAtk: 320000006400000096000000c8000000fa0000002c010000
+  increaseAtkPerLevel: 0200000005000000090000000c0000001200000014000000
+  coefficient:
+  - 0.1
+  - 0
+  - 0
+  - 0.5
+  - 0
+  skillPrefab: {fileID: 832819744722947389, guid: 5ff4f218ed7a05a48a85c9d19ea8eebd, type: 3}
+  tierSkillDescription:
+  - "\uACF5\uACA9\uB825 +10%"
+  - "\uCFE0\uB098\uC774 \uD53C\uD574\uB7C9 +30%"
+  - "Lv.2 \uCFE0\uB098\uC774\uB97C \uBCF4\uC720\uD558\uACE0 \uC2DC\uC791"
+  - "\uACF5\uACA9\uB825 +15%"
+  - "\uCFE0\uB098\uC774\uAC00 \uC801\uC5D0\uAC8C \uB9DE\uC740 \uD6C4 \uAC08\uB77C"

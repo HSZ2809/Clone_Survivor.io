@@ -4,16 +4,13 @@ namespace ZUN
 {
     public class GameManager : MonoBehaviour
     {
-        [System.Serializable]
-        public struct Manager
-        {
-            public Manager_Alert alert;
-            public Manager_Audio audio;
-            public Manager_Inventory inventory;
-            public Manager_Scene scene;
-            public Manager_Storage storage;
-            public Manager_Vibration vibration;
-        }
-        public Manager manager;
+        public Manager_Alert _alert;
+        public Manager_Audio _audio;
+        public Manager_Joystick _joystick;
+        public Manager_Scene _scene;
+        public Manager_Status _status;
+        public Manager_Storage _storage;
+        public Manager_Vibration _vibration;
+        public Manager_VisualEffect _visualEffect;
     }
 }
