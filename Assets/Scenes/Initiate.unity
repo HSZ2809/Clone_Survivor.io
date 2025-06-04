@@ -1248,12 +1248,13 @@ MonoBehaviour:
   status: {fileID: 0}
   storage: {fileID: 0}
   gameStart: {fileID: 1636946114}
-  weaponData: {fileID: 11400000, guid: d84f05428d250ca4ea6beb0007d9bbb5, type: 2}
-  armorData: {fileID: 11400000, guid: 4a4b4e3a6f408584283589be7c0d77ba, type: 2}
-  necklaceData: {fileID: 11400000, guid: 5b742f344943835438c113566f486095, type: 2}
-  beltData: {fileID: 11400000, guid: 098134e4a5a52d24485ceb6085bdd51b, type: 2}
-  glovesData: {fileID: 11400000, guid: ffbe1697feee77843852cdeaf031023e, type: 2}
-  shoesData: {fileID: 11400000, guid: 9aeadf4d55234ee409bb13b0faeb15f1, type: 2}
+  EquipmentDatas:
+  - {fileID: 11400000, guid: d84f05428d250ca4ea6beb0007d9bbb5, type: 2}
+  - {fileID: 11400000, guid: 4a4b4e3a6f408584283589be7c0d77ba, type: 2}
+  - {fileID: 11400000, guid: 5b742f344943835438c113566f486095, type: 2}
+  - {fileID: 11400000, guid: 098134e4a5a52d24485ceb6085bdd51b, type: 2}
+  - {fileID: 11400000, guid: ffbe1697feee77843852cdeaf031023e, type: 2}
+  - {fileID: 11400000, guid: 9aeadf4d55234ee409bb13b0faeb15f1, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

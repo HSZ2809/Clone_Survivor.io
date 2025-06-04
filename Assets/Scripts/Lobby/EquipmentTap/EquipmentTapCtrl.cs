@@ -1,5 +1,6 @@
-using UnityEngine;
+using System;
 using TMPro;
+using UnityEngine;
 
 namespace ZUN
 {
@@ -7,8 +8,14 @@ namespace ZUN
     {
         [SerializeField] TextMeshProUGUI Hp;
         [SerializeField] TextMeshProUGUI Atk;
-        [SerializeField] Transform[] equipmentTransform;
-        [SerializeField] Transform content;
+        [SerializeField] Transform[] inventoryTransform;
+        public Transform[] InventoryTransform => inventoryTransform;
+        [SerializeField] readonly EquipmentSlot[] equipedItemSlots = new EquipmentSlot[Enum.GetValues(typeof(EquipmentType)).Length];
+        public EquipmentSlot[] EquipedItemSlots => equipedItemSlots;
+        [SerializeField] Transform equipmentArea;
+        public Transform EquipmentArea => equipmentArea;
+        [SerializeField] Transform itemArea;
+        public Transform ItemArea => itemArea;
         [SerializeField] EquipmentCtrlPopup popup;
         [SerializeField] ItemTooltipCtrl tooltip;
 
@@ -34,58 +41,24 @@ namespace ZUN
             Atk.text = status.FinalAtk.ToString();
 
             // Set Equipment Slot
-            Weapon weapon = status.inventory.weapon;
-            if (weapon != null)
+            for (int i = 0; i < status.Inventory.Length; i++)
             {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Weapom]);
-                slot.SetPopup(popup);
-                slot.SetItem(weapon);
-            }
-
-            Armor armor = status.inventory.armor;
-            if (armor != null)
-            {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Armor]);
-                slot.SetPopup(popup);
-                slot.SetItem(armor);
-            }
-
-            Necklace necklace = status.inventory.necklace;
-            if (necklace != null)
-            {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Necklace]);
-                slot.SetPopup(popup);
-                slot.SetItem(necklace);
-            }
-
-            Belt belt = status.inventory.belt;
-            if (belt != null)
-            {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Belt]);
-                slot.SetPopup(popup);
-                slot.SetItem(belt);
-            }
-
-            Gloves gloves = status.inventory.gloves;
-            if (gloves != null)
-            {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Gloves]);
-                slot.SetPopup(popup);
-                slot.SetItem(gloves);
-            }
-
-            Shoes shoes = status.inventory.shoes;
-            if (shoes != null)
-            {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentTransform[(int)EquipmentType.Shoes]);
-                slot.SetPopup(popup);
-                slot.SetItem(shoes);
+                Equipment equipment = status.Inventory[i];
+                if (equipment != null)
+                {
+                    EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
+                    slot.isEquipped = true;
+                    slot.SetPopup(popup);
+                    slot.SetItem(equipment);
+                    EquipedItemSlots[i] = slot;
+                }
             }
 
             // Set Storage EquipmentSlot
             foreach (Equipment equipment in storage.equipments)
             {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, content);
+                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentArea);
+                slot.isEquipped = false;
                 slot.SetPopup(popup);
                 slot.SetItem(equipment);
             }
@@ -93,7 +66,7 @@ namespace ZUN
             // Set Storage ItemSlot
             foreach (var itemDic in storage.items)
             {
-                ItemSlot slot = Instantiate(itemSlotPrefab, content);
+                ItemSlot slot = Instantiate(itemSlotPrefab, itemArea);
                 slot.SetTooltip(tooltip);
                 slot.SetItem(itemDic.Value);
             }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    [CreateAssetMenu(fileName = "ShurikenData", menuName = "Scriptable Objects/Equipmet Data/Weapom/ShurikenData")]
+    [CreateAssetMenu(fileName = "ShurikenData", menuName = "Scriptable Objects/Equipmet Data/Weapon/ShurikenData")]
     public class ShurikenData : WeaponData
     {
         [SerializeField] string[] tierSkillDescription = new string[5];

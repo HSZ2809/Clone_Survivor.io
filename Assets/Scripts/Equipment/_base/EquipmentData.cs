@@ -4,7 +4,7 @@ namespace ZUN
 {
     public enum EquipmentType
     {
-        Weapom,
+        Weapon,
         Armor,
         Necklace,
         Belt,
@@ -15,23 +15,28 @@ namespace ZUN
     public abstract class EquipmentData : ScriptableObject
     {
         [SerializeField] int id;
+        public int Id => id;
         [SerializeField] string equipmentName;
+        public string EquipmentName => equipmentName;
         [TextArea(2, 3)]
         [SerializeField] string comment;
-        [SerializeField] Sprite[] iconSprite;
-        [SerializeField] int[] maxLevel;
-        [SerializeField] EquipmentType type;
-
-        public int Id => id;
-        public string EquipmentName => equipmentName;
         public string Comment => comment;
+        [SerializeField] Sprite[] iconSprite;
         public Sprite[] IconSprite => iconSprite;
+        [SerializeField] int[] maxLevel;
         public int[] MaxLevel   => maxLevel;
+        [SerializeField] EquipmentType type;
         public EquipmentType Type 
         { 
             get {  return type; } 
             protected set { type = value; }
         }
+        [SerializeField] int[] initialStat;
+        public int[] InitialStat => initialStat;
+        [SerializeField] int[] increaseStatPerLevel;
+        public int[] IncreaseStatPerLevel => increaseStatPerLevel;
+        [SerializeField] float[] coefficient;
+        public float[] Coefficient => coefficient;
 
         public abstract Equipment Create(EquipmentTier tier);
         public abstract string[] GetTierSkillDescription();

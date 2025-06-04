@@ -6,14 +6,14 @@ namespace ZUN
 {
     public class EquipmentSlot : MonoBehaviour
     {
-        Equipment equipment;
+        Equipment _equipment;
 
-        [SerializeField] EquipmentType type;
         [SerializeField] Image bg;
         [SerializeField] Image icon;
         [SerializeField] TextMeshProUGUI level;
         [SerializeField] Sprite[] bgs;
         [SerializeField] Button button;
+        public bool isEquipped;
 
         EquipmentCtrlPopup popup;
 
@@ -25,30 +25,29 @@ namespace ZUN
             });
         }
 
-        public void SetItem(Equipment _item)
+        public void SetItem(Equipment equipment)
         {
-            equipment = _item;
-            type = equipment.Data.Type;
+            _equipment = equipment;
 
-            bg.sprite = bgs[(int)equipment.Tier];
+            bg.sprite = bgs[(int)_equipment.Tier];
 
-            if (equipment.Tier <= EquipmentTier.Elite)
-                icon.sprite = equipment.Data.IconSprite[0];
+            if (_equipment.Tier <= EquipmentTier.Elite)
+                icon.sprite = _equipment.Data.IconSprite[0];
             else
-                icon.sprite = equipment.Data.IconSprite[1];
+                icon.sprite = _equipment.Data.IconSprite[1];
 
             UpdateSlot();
         }
 
         public void UpdateSlot()
         {
-            level.text = "Lv." + equipment.Level.ToString();
+            level.text = "Lv." + _equipment.Level.ToString();
         }
 
         void PopupInfo()
         {
             popup.gameObject.SetActive(true);
-            popup.SetPopup(equipment);
+            popup.SetPopup(_equipment, this);
         }
 
         public void SetPopup(EquipmentCtrlPopup popup)

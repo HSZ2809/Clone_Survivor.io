@@ -7,7 +7,7 @@ namespace ZUN
     {
         public int Energy { get; private set; }
         public int Gem { get; private set; }
-        public int Gold { get; private set; }
+        public int Gold { get; set; }
 
         public readonly List<Equipment> equipments = new();
         public readonly Dictionary<string, Item> items = new();
@@ -17,7 +17,7 @@ namespace ZUN
             // 기능 확인용 임시 코드
             Energy = 30;
             Gem = 1000;
-            Gold = 100000;
+            Gold = 1000000;
         }
 
         public string GetGoldFormatKNotation()

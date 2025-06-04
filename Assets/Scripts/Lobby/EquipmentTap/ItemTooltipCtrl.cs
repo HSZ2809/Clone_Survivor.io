@@ -1,23 +1,3 @@
-//using TMPro;
-//using UnityEngine;
-
-//namespace ZUN
-//{
-//    public class ItemTooltipCtrl : MonoBehaviour
-//    {
-//        [SerializeField] TextMeshProUGUI itemName;
-//        [SerializeField] TextMeshProUGUI tooltip;
-
-//        [SerializeField] Canvas canvas;
-
-//        public void SetTooltip(Item item, Transform slotTransform)
-//        {
-//            itemName.text = item.Data.ItemName;
-//            tooltip.text = item.Data.Description;
-//        }
-//    }
-//}
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;

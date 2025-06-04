@@ -8,12 +8,7 @@ namespace ZUN
         public Manager_Storage storage;
         public GameStart gameStart;
 
-        public WeaponData weaponData;
-        public ArmorData armorData;
-        public NecklaceData necklaceData;
-        public BeltData beltData;
-        public GlovesData glovesData;
-        public ShoesData shoesData;
+        public EquipmentData[] EquipmentDatas;
 
         private void Awake()
         {
@@ -25,27 +20,19 @@ namespace ZUN
 
         public void Start()
         {
-            status.inventory.weapon = weaponData != null ? weaponData.Create(EquipmentTier.Common) as Weapon : null;
-            status.inventory.armor = armorData != null ? armorData.Create(EquipmentTier.Common) as Armor : null;
-            status.inventory.necklace = necklaceData != null ? necklaceData.Create(EquipmentTier.Common) as Necklace : null;
-            status.inventory.belt = beltData != null ? beltData.Create(EquipmentTier.Common) as Belt : null;
-            status.inventory.gloves = glovesData != null ? glovesData.Create(EquipmentTier.Common) as Gloves  : null;
-            status.inventory.shoes = shoesData != null ? shoesData.Create(EquipmentTier.Common) as Shoes : null;
-
-            if (weaponData != null)
+            for(int i = 0; i < status.Inventory.Length; i++)
             {
-                for (int i = 0; i < 20; i++)
-                {
-                    storage.equipments.Add(weaponData.Create(EquipmentTier.Common));
-                }
+                status.Inventory[i] = EquipmentDatas[i].Create(EquipmentTier.Common);
             }
-                
-            if (shoesData != null)
+
+            for (int i = 0; i < 20; i++)
             {
-                for (int i = 0; i < 20; i++)
-                {
-                    storage.equipments.Add(shoesData.Create(EquipmentTier.Common));
-                }
+                storage.equipments.Add(EquipmentDatas[(int)EquipmentType.Weapon].Create(EquipmentTier.Common));
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                storage.equipments.Add(EquipmentDatas[(int)EquipmentType.Armor].Create(EquipmentTier.Common));
             }
 
             gameStart.tempEquipmentDispenserLoding = true;

@@ -57,11 +57,9 @@ namespace ZUN
 
         private void Start()
         {
-            // transform.parent = character.transform;
-
             /* 인벤토리의 기본 아이템 적용 */
-            actives[0] = status.inventory.weapon.Data.SkillPrefab;
-            InitSkill(actives[0]);
+            Weapon weapon = status.Inventory[(int)EquipmentType.Weapon] as Weapon;
+            InitSkill(weapon.Data.SkillPrefab);
         }
 
         private void Update()
