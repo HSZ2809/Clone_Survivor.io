@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace ZUN
 {
     public class Shuriken : Weapon

@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 8a4e398228851814ea84bb036b7d73c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6094428688078082510
+    second: Role_A01_Store_0
+  - first:
+      213: -6200152640949316361
+    second: Role_A01_Store_1
+  - first:
+      213: 6031264145894580117
+    second: Role_A01_Store_2
+  - first:
+      213: 2867971323702149113
+    second: Role_A01_Store_3
+  - first:
+      213: -7328724722859581661
+    second: Role_A01_Store_4
+  - first:
+      213: 919377080595248198
+    second: Role_A01_Store_5
+  - first:
+      213: 3046183698490249478
+    second: Role_A01_Store_6
+  - first:
+      213: 1944078098639574262
+    second: Role_A01_Store_7
+  - first:
+      213: -4738488017157524558
+    second: Role_A01_Store_8
+  - first:
+      213: 376666008940518331
+    second: Role_A01_Store_9
+  - first:
+      213: 9202172649237143921
+    second: Role_A01_Store_10
+  - first:
+      213: 3577038452368378505
+    second: Role_A01_Store_11
+  - first:
+      213: -6277906281132517195
+    second: Role_A01_Store_12
+  - first:
+      213: 3729160085397376681
+    second: Role_A01_Store_13
+  - first:
+      213: -9061594046924685039
+    second: Role_A01_Store_14
+  - first:
+      213: -4553254951016038912
+    second: Role_A01_Store_15
+  - first:
+      213: 4263387812090754293
+    second: Role_A01_Store_16
+  - first:
+      213: 248683276850428475
+    second: Role_A01_Store_17
+  - first:
+      213: -2103469011995746156
+    second: Role_A01_Store_18
+  - first:
+      213: 6574393485097128112
+    second: Role_A01_Store_19
+  - first:
+      213: -3756043964739165909
+    second: Role_A01_Store_20
+  - first:
+      213: 4312575126904547516
+    second: Role_A01_Store_21
+  - first:
+      213: -1551049455621739182
+    second: Role_A01_Store_22
+  - first:
+      213: -9194020898113821489
+    second: Role_A01_Store_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Role_A01_Store_Glass
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 390
+        width: 193
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ee72ad56d3c6ba0800000000000000
+      internalID: -6094428688078082510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Fire
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 427
+        width: 86
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4140bd502a4f9a0800000000000000
+      internalID: -6200152640949316361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Eye
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 445
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f989229ca53b350800000000000000
+      internalID: 6031264145894580117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 426
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fff54749b41dc720800000000000000
+      internalID: 2867971323702149113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_4
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 417
+        width: 187
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fd45d91b32b4a90800000000000000
+      internalID: -7328724722859581661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 417
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644f38f659842cc00800000000000000
+      internalID: 919377080595248198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_6
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 403
+        width: 107
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601d8153fe7364a20800000000000000
+      internalID: 3046183698490249478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_7
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 423
+        width: 114
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f457050bb0cafa10800000000000000
+      internalID: 1944078098639574262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_9
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 424
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb1ddd4dbf2a3500800000000000000
+      internalID: 376666008940518331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 112
+        width: 206
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a845d358134a130800000000000000
+      internalID: 3577038452368378505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Shadow
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 426
+        width: 134
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b817e3cf7560e8a0800000000000000
+      internalID: -6277906281132517195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Head
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 268
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e76e80fb69fc0c0800000000000000
+      internalID: -4553254951016038912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Goggles
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 113
+        width: 114
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4366f60a89a2b30800000000000000
+      internalID: 4263387812090754293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Bag
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 329
+        width: 145
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3aff3a6f10837300800000000000000
+      internalID: 248683276850428475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_18
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 113
+        width: 111
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -55.5, y: -144}
+        - {x: 4.5, y: -144}
+        - {x: 11.5, y: -71}
+        - {x: 55.5, y: 37}
+        - {x: 0.5, y: 144}
+        - {x: -55.5, y: 144}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490a3f7041afec2e0800000000000000
+      internalID: -2103469011995746156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_19
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 317
+        width: 172
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b05bd4ca00fc3b50800000000000000
+      internalID: 6574393485097128112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_Body
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 113
+        width: 151
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21e8f81ae9dfdbc0800000000000000
+      internalID: -3756043964739165909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_21
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 113
+        width: 146
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -73, y: -45.5}
+        - {x: -73, y: -59.5}
+        - {x: -17, y: -81.5}
+        - {x: 73, y: -81.5}
+        - {x: 73, y: 22.5}
+        - {x: 57, y: 43.5}
+        - {x: 27, y: 66.5}
+        - {x: -4, y: 81.5}
+        - {x: -24, y: 81.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8a45a9a3859db30800000000000000
+      internalID: 4312575126904547516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_22
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 274
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d6a98ecb0997ae0800000000000000
+      internalID: -1551049455621739182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Role_A01_Store_23
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 151
+        width: 77
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -38.5, y: 46.5}
+        - {x: 0.5, y: -80.5}
+        - {x: 19.5, y: -80.5}
+        - {x: 38.5, y: -50.5}
+        - {x: 38.5, y: 72.5}
+        - {x: 14.5, y: 80.5}
+        - {x: -17.5, y: 80.5}
+        - {x: -34.5, y: 71.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4686684b6486080800000000000000
+      internalID: -9194020898113821489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 07d7b4d41e161c248a00f6e3b821c63a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Role_A01_Store_10: 9202172649237143921
+      Role_A01_Store_11: 3577038452368378505
+      Role_A01_Store_13: 3729160085397376681
+      Role_A01_Store_14: -9061594046924685039
+      Role_A01_Store_18: -2103469011995746156
+      Role_A01_Store_19: 6574393485097128112
+      Role_A01_Store_21: 4312575126904547516
+      Role_A01_Store_22: -1551049455621739182
+      Role_A01_Store_23: -9194020898113821489
+      Role_A01_Store_3: 2867971323702149113
+      Role_A01_Store_4: -7328724722859581661
+      Role_A01_Store_5: 919377080595248198
+      Role_A01_Store_6: 3046183698490249478
+      Role_A01_Store_7: 1944078098639574262
+      Role_A01_Store_8: -4738488017157524558
+      Role_A01_Store_9: 376666008940518331
+      Role_A01_Store_Bag: 248683276850428475
+      Role_A01_Store_Body: -3756043964739165909
+      Role_A01_Store_Eye: 6031264145894580117
+      Role_A01_Store_Fire: -6200152640949316361
+      Role_A01_Store_Glass: -6094428688078082510
+      Role_A01_Store_Goggles: 4263387812090754293
+      Role_A01_Store_Head: -4553254951016038912
+      Role_A01_Store_Shadow: -6277906281132517195
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

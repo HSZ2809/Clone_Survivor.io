@@ -7,7 +7,7 @@ namespace ZUN
         [SerializeField] Canvas canvas;
         [SerializeField] AlertPopup prefab;
 
-        public void GetPopup(string message)
+        public void ShowPopup(string message)
         {
             AlertPopup popup = Instantiate(prefab, canvas.transform, false);
             popup.SetMessage(message);

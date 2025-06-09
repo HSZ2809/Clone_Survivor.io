@@ -13,7 +13,7 @@ namespace ZUN
                 {
                     button.onClick.AddListener(() =>
                     {
-                        manager_Alert.GetPopup("현재 사용할 수 없는 버튼입니다");
+                        manager_Alert.ShowPopup("현재 사용할 수 없는 버튼입니다");
                     });
                 }
                 else

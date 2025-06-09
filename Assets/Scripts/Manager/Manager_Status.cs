@@ -22,6 +22,8 @@ namespace ZUN
                 
                 for(int i = (int)EquipmentType.Armor; i < inventory.Length; i += 2)
                 {
+                    if (inventory[i] == null) continue;
+
                     totalHp += inventory[i].Stat;
                     totalCoefficient += inventory[i].Coefficient;
                 }
@@ -41,6 +43,8 @@ namespace ZUN
 
                 for (int i = (int)EquipmentType.Weapon; i < inventory.Length; i += 2)
                 {
+                    if (inventory[i] == null) continue;
+
                     totalAtk += inventory[i].Stat;
                     totalCoefficient += inventory[i].Coefficient;
                 }

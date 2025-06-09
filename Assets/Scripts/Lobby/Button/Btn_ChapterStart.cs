@@ -36,7 +36,7 @@ namespace ZUN
             yield return new WaitForSeconds(sceneChangeTime);
 
             if (currentScene == null)
-                manager_Alert.GetPopup("Scene change fail");
+                manager_Alert.ShowPopup("Scene change fail");
             else
                 manager_Scene.LoadScene(sceneName, currentScene.buildIndex);
         }

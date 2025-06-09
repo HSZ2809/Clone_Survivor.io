@@ -15,11 +15,14 @@ MonoBehaviour:
   id: Shotgun
   skillName: "\uC0F7\uAC74"
   type: 0
-  sprite: {fileID: 21300000, guid: e5a8b2f5ae282a145b8d430f4ac045fd, type: 3}
+  sprite:
+  - {fileID: 21300000, guid: e5a8b2f5ae282a145b8d430f4ac045fd, type: 3}
+  - {fileID: 21300000, guid: c487c4a4a3bd82f429f44beb7cc7fa59, type: 3}
   upgradeInfos:
   - "\uCD1D\uC54C 3\uAC1C \uBC1C\uC0AC"
   - "\uCD1D\uC54C 3\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCD1D\uC54C 3\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCD1D\uC54C 3\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
   - "\uCD1D\uC54C 3\uAC1C \uCD94\uAC00 \\n\uD53C\uD574\uB7C9 \uC99D\uAC00"
-  maxLevel: 5
+  - "\uC9C4\uD654"
+  maxLevel: 6

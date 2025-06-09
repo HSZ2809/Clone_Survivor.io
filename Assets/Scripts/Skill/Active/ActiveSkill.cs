@@ -39,6 +39,7 @@ namespace ZUN
             {
                 Destroy(skillCtrl.gameObject);
                 skillCtrl = Instantiate(prefab_skillCtrls[final], transform);
+                skillCtrl.Upgrade(level);
             }
         }
     }

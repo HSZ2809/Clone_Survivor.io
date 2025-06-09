@@ -28,7 +28,7 @@ MonoBehaviour:
   - 0.1
   - 0
   - 0
-  - 0.5
+  - 0.15
   - 0
   skillPrefab: {fileID: 832819744722947389, guid: 5ff4f218ed7a05a48a85c9d19ea8eebd, type: 3}
   tierSkillDescription:

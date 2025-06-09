@@ -59,7 +59,8 @@ namespace ZUN
         {
             /* 인벤토리의 기본 아이템 적용 */
             Weapon weapon = status.Inventory[(int)EquipmentType.Weapon] as Weapon;
-            InitSkill(weapon.Data.SkillPrefab);
+            actives[0] = weapon.Data.SkillPrefab;
+            InitSkill(actives[0]);
         }
 
         private void Update()

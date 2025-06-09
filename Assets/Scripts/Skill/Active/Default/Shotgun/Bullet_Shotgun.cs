@@ -8,25 +8,42 @@ namespace ZUN
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float disableTime;
+        [SerializeField] TrailRenderer trail;
 
         IObjectPool<Bullet_Shotgun> objPool;
 
+        bool isReleased = false;
+
         private void OnEnable() 
         {
+            isReleased = false;
             StartCoroutine(DisableBullet());
+        }
+
+        private void OnDisable()
+        {
+            trail.Clear();
         }
 
         private void Update()
         {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            transform.Translate(moveSpeed * Time.deltaTime * Vector3.up);
         }
 
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (coll.gameObject.CompareTag("Monster"))
+            if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
             {
-                coll.gameObject.GetComponent<IDamageable>().TakeDamage(damage);
-                objPool.Release(this);
+                if (!isReleased)
+                {
+                    isReleased = true;
+                    StopCoroutine(DisableBullet());
+                    mon_Damageable.TakeDamage(damage);
+                    if (objPool != null)
+                        objPool.Release(this);
+                    else
+                        Destroy(gameObject);
+                }
             }
         }
 
@@ -34,7 +51,14 @@ namespace ZUN
         IEnumerator DisableBullet()
         {
             yield return new WaitForSeconds(disableTime);
-            objPool.Release(this);
+            if (!isReleased)
+            {
+                isReleased = true;
+                if (objPool != null)
+                    objPool.Release(this);
+                else
+                    Destroy(gameObject);
+            }
         }
 
         public void SetBulletPool(IObjectPool<Bullet_Shotgun> pool)

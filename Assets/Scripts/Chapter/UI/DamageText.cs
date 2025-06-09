@@ -7,7 +7,7 @@ namespace ZUN
 {
     public class DamageText : MonoBehaviour
     {
-        [SerializeField] TextMeshPro tmp;
+        [SerializeField] TextMeshPro tmp_damage;
 
         IObjectPool<DamageText> pool;
         readonly WaitForSeconds waitTime = new(1.0f);
@@ -29,9 +29,9 @@ namespace ZUN
             pool.Release(this);
         }
 
-        public void SetText(string text)
+        public void SetText(float damage)
         {
-            tmp.text = text;
+            tmp_damage.text = damage.ToString("F0");
         }
 
         public void SetPool(IObjectPool<DamageText> pool)

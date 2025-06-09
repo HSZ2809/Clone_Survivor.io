@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b120deaf30e614da8796a0c00b3f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tmp: {fileID: 7394403099845064790}
+  tmp_damage: {fileID: 7394403099845064790}
 --- !u!210 &7718567081291676082
 SortingGroup:
   m_ObjectHideFlags: 0

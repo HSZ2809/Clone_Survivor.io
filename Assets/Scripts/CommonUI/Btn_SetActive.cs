@@ -28,7 +28,7 @@ namespace ZUN
         public void ApplyActiveStates()
         {
             if (gameObjectActivePairs.Length < 1)
-                manager_Alert.GetPopup("대상을 찾지 못했습니다");
+                manager_Alert.ShowPopup("대상을 찾지 못했습니다");
             else
             {
                 foreach (var pair in gameObjectActivePairs)

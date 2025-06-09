@@ -1,37 +1,42 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Shotgun : ActiveSkill
+    public class Shotgun_Normal : ActiveSkillCtrl
     {
         [Space]
-        [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
-        [SerializeField] private Transform shootDir = null;
+        Transform shootDir;
 
-        [SerializeField] private float coefficient;
-        [SerializeField] private float cooldown;
-        [SerializeField] private int magazineSize = 3;
+        AudioSource audioSource;
+        Image reloadBar;
+
+        [SerializeField] float coefficient;
+        [SerializeField] float cooldown;
+        [SerializeField] int magazineSize = 3;
 
         [Header("Bullet")]
-        [SerializeField] private Bullet_Shotgun bulletPrefab = null;
+        [SerializeField] Bullet_Shotgun bulletPrefab;
         IObjectPool<Bullet_Shotgun> objPool;
 
         public float BulletDamage { get { return coefficient * character.Atk; } }
         public float Cooldown { get { return cooldown * character.AtkSpeed; } }
 
         IEnumerator enumerator;
+        readonly WaitForFixedUpdate waitForFixedUpdate = new();
 
         protected override void Awake()
         {
             base.Awake();
 
             objPool = new ObjectPool<Bullet_Shotgun>(CreateBullet, null, OnReleaseBullet, OnDestroyBullet, maxSize: 15);
+            audioSource = GetComponent<AudioSource>();
             shootDir = character.GetMoveDir();
+            reloadBar = character.ReloadBar();
             enumerator = Shoot();
-            character.SetActiveSkill(this);
         }
 
         private void OnEnable()
@@ -57,40 +62,43 @@ namespace ZUN
                     bullet.gameObject.SetActive(true);
                 }
 
-                yield return new WaitForSeconds(Cooldown);
+                for (float waitTime = 0.0f; waitTime < Cooldown; waitTime += Time.deltaTime)
+                {
+                    yield return waitForFixedUpdate;
+                    reloadBar.fillAmount = waitTime / Cooldown;
+                }
+                reloadBar.fillAmount = 0.0f;
             }
         }
 
-        public override void Upgrade()
+        public override void Upgrade(int level)
         {
-            level += 1;
+            StopCoroutine(enumerator);
 
             switch (level)
             {
                 case 2:
-                    magazineSize += 3;
+                    magazineSize = 6;
                     coefficient = 2;
                     break;
                 case 3:
-                    magazineSize += 3;
+                    magazineSize = 9;
                     coefficient = 3;
                     break;
                 case 4:
-                    magazineSize += 3;
+                    magazineSize = 13;
                     coefficient = 4;
                     break;
                 case 5:
-                    magazineSize += 3;
+                    magazineSize = 15;
                     coefficient = 5;
-                    break;
-                case 6:
-                    coefficient = 5;
-                    Debug.Log("Shotgun TryUpgrade() : evolution");
                     break;
                 default:
-                    Debug.LogWarning("Shotgun TryUpgrade() : invalid level");
+                    Debug.LogWarning("Shotgun_Normal TryUpgrade() : invalid level");
                     break;
             }
+
+            StartCoroutine(enumerator);
         }
 
         Bullet_Shotgun CreateBullet()

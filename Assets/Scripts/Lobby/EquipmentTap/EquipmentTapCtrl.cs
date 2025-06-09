@@ -36,9 +36,9 @@ namespace ZUN
 
         private void Start()
         {
-            // Set Hp, Atk
-            Hp.text = status.FinalHp.ToString();
+            // Set Atk, Hp
             Atk.text = status.FinalAtk.ToString();
+            Hp.text = status.FinalHp.ToString();
 
             // Set Equipment Slot
             for (int i = 0; i < status.Inventory.Length; i++)
@@ -47,6 +47,7 @@ namespace ZUN
                 if (equipment != null)
                 {
                     EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
+                    slot.transform.position = inventoryTransform[i].position;
                     slot.isEquipped = true;
                     slot.SetPopup(popup);
                     slot.SetItem(equipment);
@@ -70,6 +71,18 @@ namespace ZUN
                 slot.SetTooltip(tooltip);
                 slot.SetItem(itemDic.Value);
             }
+        }
+
+        public void SetAtk()
+        {
+            // 시각효과 추가 필요
+            Atk.text = status.FinalAtk.ToString();
+        }
+
+        public void SetHp()
+        {
+            // 시각효과 추가 필요
+            Hp.text = status.FinalHp.ToString();
         }
     }
 }

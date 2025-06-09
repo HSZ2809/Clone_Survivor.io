@@ -170,7 +170,7 @@ namespace ZUN
         {
             DamageText damageText = damageTextPool.Pool.Get();
             damageText.transform.position = transform.position;
-            damageText.SetText(damage.ToString());
+            damageText.SetText(damage);
         }
 
         public void Bleeding()

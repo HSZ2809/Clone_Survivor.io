@@ -9,7 +9,6 @@ namespace ZUN
     {
         [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir;
-        Manager_Status manager_Status;
 
         private AudioSource audioSource;
         private Image reloadBar;
@@ -42,18 +41,12 @@ namespace ZUN
             monsterLayer = (1 << LayerMask.NameToLayer("Target"));
             reloadBar = character.ReloadBar();
             enumerator = Shoot();
-            manager_Status = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Status>();
         }
 
         private void OnEnable()
         {
             StartCoroutine(enumerator);
         }
-
-        //private void Start()
-        //{
-        //    TierUpgrade(manager_Status.inventory.weapon.Tier);
-        //}
 
         IEnumerator Shoot()
         {

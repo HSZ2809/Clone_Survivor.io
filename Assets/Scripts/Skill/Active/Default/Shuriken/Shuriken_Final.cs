@@ -6,9 +6,10 @@ namespace ZUN
 {
     public class Shuriken_Final : ActiveSkillCtrl
     {
-        private AudioSource audioSource;
         [SerializeField] private AudioClip clip;
         [SerializeField] private Transform shootDir;
+
+        private AudioSource audioSource;
 
         [Header("Spac")]
         [SerializeField] private float coefficient;
@@ -22,7 +23,6 @@ namespace ZUN
         public float BulletDamage { get { return coefficient * character.Atk; } }
 
         IEnumerator enumerator;
-        readonly WaitForFixedUpdate waitForFixedUpdate = new();
         readonly WaitForSeconds firerate = new(0.1f);
 
         protected override void Awake()

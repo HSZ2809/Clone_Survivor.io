@@ -164,13 +164,18 @@ namespace ZUN
 
             if (_equipment.LevelupScrollCost > scrollAmount || _equipment.LevelupGoldCost > manager_Storage.Gold)
             {
-                manager_Alert.GetPopup("업그레이드 재료 부족!");
+                manager_Alert.ShowPopup("업그레이드 재료 부족!");
                 return;
             }
 
             manager_Storage.Gold -= _equipment.LevelupGoldCost;
             manager_Storage.items[scrollType].Amount -= _equipment.LevelupScrollCost;
             _equipment.Level += 1;
+
+            if (_slot.isEquipped)
+            {
+                UpdateStat();
+            }
 
             UpdatePopup();
         }
@@ -180,17 +185,18 @@ namespace ZUN
             int itemType = (int)_equipment.Data.Type;
             if (manager_Status.Inventory[itemType] != null)
             {
-                Debug.Log("TEST");
                 manager_Storage.equipments.Add(manager_Status.Inventory[itemType]);
                 EquipmentSlot slotTrans = equipmentTapCtrl.EquipedItemSlots[itemType];
                 slotTrans.transform.SetParent(equipmentTapCtrl.EquipmentArea, false);
                 slotTrans.isEquipped = false;
             }
             manager_Status.Inventory[itemType] = _equipment;
-            _slot.transform.SetParent(equipmentTapCtrl.transform);
+            _slot.transform.SetParent(equipmentTapCtrl.InventoryTransform[itemType]);
             _slot.transform.position = equipmentTapCtrl.InventoryTransform[itemType].position;
             equipmentTapCtrl.EquipedItemSlots[itemType] = _slot;
             _slot.isEquipped = true;
+            UpdateStat();
+
             gameObject.SetActive(false);
         }
 
@@ -201,7 +207,17 @@ namespace ZUN
             manager_Storage.equipments.Add(manager_Status.Inventory[itemType]);
             manager_Status.Inventory[itemType] = null;
             _slot.isEquipped = false;
+            UpdateStat();
+
             gameObject.SetActive(false);
+        }
+
+        void UpdateStat()
+        {
+            if ((int)_equipment.Data.Type % 2 == ATK)
+                equipmentTapCtrl.SetAtk();
+            else
+                equipmentTapCtrl.SetHp();
         }
     }
 }
