@@ -32,7 +32,7 @@ namespace ZUN
                 {
                     isReleased = true;
                     StopCoroutine(DisableBullet());
-                    mon_Damageable.TakeDamage(damage);
+                    mon_Damageable.TryTakeDamage(damage);
                     if (objPool != null)
                         objPool.Release(this);
                     else

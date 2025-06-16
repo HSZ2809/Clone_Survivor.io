@@ -14,8 +14,8 @@ namespace ZUN
 
     public abstract class EquipmentData : ScriptableObject
     {
-        [SerializeField] int id;
-        public int Id => id;
+        [SerializeField] string id;
+        public string Id => id;
         [SerializeField] string equipmentName;
         public string EquipmentName => equipmentName;
         [TextArea(2, 3)]

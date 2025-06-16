@@ -6,7 +6,7 @@ namespace ZUN
 
         public override void SetTierEffect(Character character)
         {
-
+            
         }
     }
 }

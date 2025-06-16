@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b77482d5d7d6c3439ae29609f02783b, type: 3}
   m_Name: MilitaryNecklaceData
   m_EditorClassIdentifier: 
-  id: 2
+  id: MilitaryNecklace
   equipmentName: "\uAD70\uC6A9 \uBAA9\uAC78\uC774"
   comment: "\uAD70\uB300 \uC791\uC704\uB97C \uB098\uD0C0\uB0C4. \uD63C\uC790\uC11C
     \uC774\uAC83\uACFC \uB9DE\uB2E5\uB728\uB9AC\uAE30\uB294 \uC2EB\uC744 \uAC83"

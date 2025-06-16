@@ -33,9 +33,10 @@ namespace ZUN
 
             btn_Confirm.onClick.AddListener(() =>
             {
-                Manager_Scene manager_Scene;
-                manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
-                manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
+                if (GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Scene>(out var manager_Scene))
+                    manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
+                else
+                    Debug.LogWarning("Manager_Scene not found");
             });
         }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Bouncebloom : BossMonster, IDamageable, IAttackable, IDestroyable, IShootBullet, IBleeding
+    public class Bouncebloom : BossMonster, IDamageable, IAttackable, IShootBullet, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -130,7 +130,7 @@ namespace ZUN
             }
         }
 
-        public float TakeDamage(float damage)
+        public bool TryTakeDamage(float damage)
         {
             hp -= damage;
             bossHpBar.fillAmount = hp / MaxHp;
@@ -144,7 +144,7 @@ namespace ZUN
                 anim.SetTrigger("Die");
             }
 
-            return hp;
+            return hp <= 0;
         }
 
         public void ShowDamage(float damage)

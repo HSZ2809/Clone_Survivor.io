@@ -44,7 +44,7 @@ namespace ZUN
                 direction = Vector2.Reflect(direction, normal);
 
                 if (other.gameObject.TryGetComponent<IDamageable>(out var damageable))
-                    damageable.TakeDamage(damage);
+                    damageable.TryTakeDamage(damage);
 
                 soccerball_Final.ShootBullet(transform);
                 soccerball_Final.ShootBullet(transform);

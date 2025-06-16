@@ -30,12 +30,13 @@ namespace ZUN
         {
             if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
             {
-                mon_Damageable.TakeDamage(damage);
+                mon_Damageable.TryTakeDamage(damage);
                 durability -= 1;
 
                 if(durability < 1 && !isReleased)
                 {
-                    StopCoroutine(DisableBullet());
+                    isReleased = true;
+
                     if (objPool != null)
                         objPool.Release(this);
                     else

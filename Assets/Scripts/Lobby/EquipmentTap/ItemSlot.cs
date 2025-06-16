@@ -22,6 +22,11 @@ namespace ZUN
                 ShowTooltip();
             });
         }
+        void ShowTooltip()
+        {
+            _tooltip.gameObject.SetActive(true);
+            _tooltip.SetTooltip(_item, transform);
+        }
 
         public void SetItem(Item item)
         {
@@ -32,10 +37,9 @@ namespace ZUN
             amount.text = _item.Amount.ToString();
         }
 
-        void ShowTooltip()
+        public void UpdateSlot()
         {
-            _tooltip.gameObject.SetActive(true);
-            _tooltip.SetTooltip(_item, transform);
+            amount.text = _item.Amount.ToString();
         }
 
         public void SetTooltip(ItemTooltipCtrl tooltip)

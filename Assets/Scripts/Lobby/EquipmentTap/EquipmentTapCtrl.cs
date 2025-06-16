@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZUN
 {
@@ -16,11 +18,17 @@ namespace ZUN
         public Transform EquipmentArea => equipmentArea;
         [SerializeField] Transform itemArea;
         public Transform ItemArea => itemArea;
-        [SerializeField] EquipmentCtrlPopup popup;
+        [SerializeField] ScrollRect scrollRect;
+        [SerializeField] EquipmentCtrl popup;
         [SerializeField] ItemTooltipCtrl tooltip;
+        [SerializeField] CharacterDisplay characterDisplay;
 
+        [Header("Prefab")]
         [SerializeField] EquipmentSlot equipmentSlotPrefab;
         [SerializeField] ItemSlot itemSlotPrefab;
+
+        public readonly List<EquipmentSlot> equipmentSlots = new();
+        public readonly List<ItemSlot> itemSlots = new();
 
         Manager_Storage storage;
         Manager_Status status;
@@ -39,6 +47,10 @@ namespace ZUN
             // Set Atk, Hp
             Atk.text = status.FinalAtk.ToString();
             Hp.text = status.FinalHp.ToString();
+
+            // Set Weapon Sprite
+            if (status.Inventory[(int)EquipmentType.Weapon] != null)
+                characterDisplay.img_weapon.sprite = status.Inventory[(int)EquipmentType.Weapon].ItemSprite;
 
             // Set Equipment Slot
             for (int i = 0; i < status.Inventory.Length; i++)
@@ -62,6 +74,7 @@ namespace ZUN
                 slot.isEquipped = false;
                 slot.SetPopup(popup);
                 slot.SetItem(equipment);
+                equipmentSlots.Add(slot);
             }
 
             // Set Storage ItemSlot
@@ -70,7 +83,28 @@ namespace ZUN
                 ItemSlot slot = Instantiate(itemSlotPrefab, itemArea);
                 slot.SetTooltip(tooltip);
                 slot.SetItem(itemDic.Value);
+                itemSlots.Add(slot);
             }
+
+            UpdateEquipSlots();
+        }
+
+        public void UpdateEquipSlots()
+        {
+            equipmentSlots.Sort(new EquipmentSlotComparer());
+            for (int i = 0; i < equipmentSlots.Count; i++)
+                equipmentSlots[i].transform.SetSiblingIndex(i);
+        }
+
+        public void UpdateItemSlots()
+        {
+            foreach (var itemSlot in itemSlots)
+                itemSlot.UpdateSlot();
+        }
+
+        public void ResetScrollView()
+        {
+            scrollRect.verticalNormalizedPosition = 1.0f;
         }
 
         public void SetAtk()

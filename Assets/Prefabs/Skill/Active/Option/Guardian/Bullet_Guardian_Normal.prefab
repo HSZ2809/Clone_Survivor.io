@@ -272,4 +272,4 @@ MonoBehaviour:
   damage: 0
   audioSource: {fileID: 3877783181645920636}
   cc2D: {fileID: 5850236179975263516}
-  rotationSpeed: 150
+  rotationSpeed: 400

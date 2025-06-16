@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Fence : MonoBehaviour, IDamageable, IAttackable, IDestroyable
+    public class Fence : MonoBehaviour, IDamageable, IAttackable
     {
         #region Inspector
         [Header("Status")]
@@ -43,11 +43,11 @@ namespace ZUN
             }
         }
 
-        public float TakeDamage(float damage)
+        public bool TryTakeDamage(float damage)
         {
             ShowDamage(damage);
 
-            return 0;
+            return false;
         }
 
         public void ShowDamage(float damage)

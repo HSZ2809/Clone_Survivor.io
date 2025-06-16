@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76bc30b873bd2e41993d51acf6f53f3, type: 3}
   m_Name: MilitaryUniformData
   m_EditorClassIdentifier: 
-  id: 1
+  id: MilitaryUniform
   equipmentName: "\uAD70\uC6A9 \uC81C\uBCF5"
   comment: "\uBC14\uC774\uB7EC\uC2A4 \uD655\uC0B0 \uC774\uC804 \uC0AC\uC6A9\uD558\uB358
     \uAD70\uBCF5: \uC2A4\uB9C8\uD2B8\uD558\uACE0 \uAC00\uBCBC\uC6C0"

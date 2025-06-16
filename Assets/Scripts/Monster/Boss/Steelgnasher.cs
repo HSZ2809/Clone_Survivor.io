@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Steelgnasher : BossMonster, IMovement, IDamageable, IAttackable, IDestroyable, IBleeding
+    public class Steelgnasher : BossMonster, IMovement, IDamageable, IAttackable, IBleeding
     {
         #region Inspector
         [SerializeField] float hp;
@@ -150,7 +150,7 @@ namespace ZUN
             this.slowMultiplier = 1.0f;
         }
 
-        public float TakeDamage(float damage)
+        public bool TryTakeDamage(float damage)
         {
             hp -= damage;
             bossHpBar.fillAmount = hp / MaxHp;
@@ -163,7 +163,7 @@ namespace ZUN
                 anim.SetTrigger("Die");
             }
 
-            return hp;
+            return hp <= 0;
         }
 
         public void ShowDamage(float damage)

@@ -39,6 +39,10 @@ namespace ZUN
                 return coefficient;
             }
         }
+        public Sprite ItemSprite
+        {
+            get { return (Tier < EquipmentTier.Elite) ? Data.IconSprite[0] : Data.IconSprite[1]; }
+        }
 
         public Equipment(EquipmentData data, EquipmentTier tier)
         {

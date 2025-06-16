@@ -43,7 +43,7 @@ namespace ZUN
             GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
             foreach (GameObject monster in monsters)
                 if (TryGetComponent<IDamageable>(out var damageable))
-                    damageable.TakeDamage(attackPoint);
+                    damageable.TryTakeDamage(attackPoint);
             
             Destroy(this);
         }

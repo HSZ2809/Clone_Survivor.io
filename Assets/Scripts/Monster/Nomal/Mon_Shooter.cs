@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 namespace ZUN
 {
-    public class Mon_Shooter : NomalMonster, IMovement, IDamageable, IAttackable, IDestroyable, IShootBullet, IKnockBackable, IBleeding
+    public class Mon_Shooter : NomalMonster, IMovement, IDamageable, IAttackable, IShootBullet, IKnockBackable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -136,7 +136,7 @@ namespace ZUN
             }
         }
 
-        public float TakeDamage(float damage)
+        public bool TryTakeDamage(float damage)
         {
             hp -= damage;
             ShowDamage(damage);
@@ -148,7 +148,7 @@ namespace ZUN
                 Die();
             }
 
-            return hp;
+            return hp <= 0;
         }
 
         public void ShowDamage(float damage)

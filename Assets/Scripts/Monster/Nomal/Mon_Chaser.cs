@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Mon_Chaser : NomalMonster, IMovement, IDamageable, IAttackable, IDestroyable, IKnockBackable, IBleeding
+    public class Mon_Chaser : NomalMonster, IMovement, IDamageable, IAttackable, IKnockBackable, IBleeding
     {
         #region Inspector
         [Header("Status")]
@@ -108,7 +108,7 @@ namespace ZUN
             this.slowMultiplier = 1.0f;
         }
 
-        public float TakeDamage(float damage)
+        public bool TryTakeDamage(float damage)
         {
             hp -= damage;
             ShowDamage(damage);
@@ -119,7 +119,7 @@ namespace ZUN
                 Die();
             }
 
-            return hp;
+            return hp <= 0;
         }
 
         public void ShowDamage(float damage)

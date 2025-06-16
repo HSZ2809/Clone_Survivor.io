@@ -40,7 +40,7 @@ namespace ZUN
         {
             if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
             {
-                mon_Damageable.TakeDamage(damage);
+                mon_Damageable.TryTakeDamage(damage);
                 durability -= 1;
 
                 if (durability < 1)
@@ -67,7 +67,7 @@ namespace ZUN
             {
                 if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
                 {
-                    mon_Damageable.TakeDamage(damage);
+                    mon_Damageable.TryTakeDamage(damage);
                 }
             }
             anim.Play("Bullet_Rocket_Final_Explode");

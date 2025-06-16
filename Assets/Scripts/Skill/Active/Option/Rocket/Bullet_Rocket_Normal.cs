@@ -39,7 +39,7 @@ namespace ZUN
             {
                 StopCoroutine(DisableBullet());
                 isExplode = true;
-                coll.gameObject.GetComponent<IDamageable>().TakeDamage(damage);
+                coll.gameObject.GetComponent<IDamageable>().TryTakeDamage(damage);
                 Explode();
             }
         }
@@ -57,7 +57,7 @@ namespace ZUN
             {
                 if (coll.gameObject.TryGetComponent<IDamageable>(out var mon_Damageable))
                 {
-                    mon_Damageable.TakeDamage(damage);
+                    mon_Damageable.TryTakeDamage(damage);
                 }
             }
             anim.SetTrigger("Explode");

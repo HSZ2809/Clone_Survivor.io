@@ -55,7 +55,7 @@ namespace ZUN
                     yield break;
                 }
 
-                if (damageable.TakeDamage(damage) <= 0)
+                if (damageable.TryTakeDamage(damage))
                 {
                     if (activeCoroutines.ContainsKey(monster))
                         activeCoroutines.Remove(monster);

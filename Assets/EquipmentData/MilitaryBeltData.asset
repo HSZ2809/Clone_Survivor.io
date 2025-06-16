@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c5d378b36a5f14cb92442cffba4fc8, type: 3}
   m_Name: MilitaryBeltData
   m_EditorClassIdentifier: 
-  id: 4
+  id: MilitaryBelt
   equipmentName: "\uAD70\uC6A9 \uBCA8\uD2B8"
   comment: "\uD3C9\uBC94\uD55C \uB514\uC790\uC778\uC73C\uB85C \uAD70\uC5D0\uC11C
     \uD754\uD788 \uCC29\uC6A9"

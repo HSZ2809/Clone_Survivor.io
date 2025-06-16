@@ -2,7 +2,7 @@ namespace ZUN
 {
     public interface IDamageable
     {
-        float TakeDamage(float damage);
+        bool TryTakeDamage(float damage);
         void ShowDamage(float damage);
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9d4f95e5ac15241a23a5f3acdae8bc, type: 3}
   m_Name: ShotgunData
   m_EditorClassIdentifier: 
-  id: 7
+  id: Shotgun
   equipmentName: "\uC0F7\uAC74"
   comment: "\uC0F7\uAC74 \uC55E\uC5D0\uC11C\uB294 \uB9CC\uC778\uC774 \uD3C9\uB4F1\uD558\uB2E4.
     \uC880\uBE44\uB9C8\uC800\uB3C4..."

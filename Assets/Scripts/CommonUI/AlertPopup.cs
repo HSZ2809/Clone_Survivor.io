@@ -8,9 +8,9 @@ namespace ZUN
     {
         [SerializeField] TextMeshProUGUI tmp_message;
 
-        readonly float scaleUpDuration = 0.2f;
-        readonly float scaleDownDuration = 0.5f;
-        readonly float moveUpDuration = 0.5f;
+        readonly float scaleUpDuration = 0.3f;
+        readonly float moveUpDuration = 0.3f;
+        readonly float fadeoutDuration = 1.0f;
         readonly float moveDistance = 70f;
 
         private void Start()
@@ -26,12 +26,12 @@ namespace ZUN
         void ShowPopup()
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            transform.DOScale(new Vector3(1f, 1f, 1f), scaleUpDuration)
+            transform.DOScale(new Vector3(1f, 1f, 1f), scaleUpDuration);
+            transform.DOMove(transform.position + Vector3.up * moveDistance, moveUpDuration)
+                        .SetEase(Ease.Linear)
                 .OnComplete(() =>
                 {
-                    transform.DOMove(transform.position + Vector3.up * moveDistance, moveUpDuration)
-                        .SetEase(Ease.Linear);
-                    transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), scaleDownDuration)
+                    tmp_message.DOFade(0f, fadeoutDuration).From(1f)
                         .SetEase(Ease.Linear)
                         .OnComplete(() =>
                         {
