@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZUN
 {
@@ -22,7 +23,20 @@ namespace ZUN
 
         private void Awake()
         {
-            manager_Alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
+            if (!TryGetComponent<Button>(out var button))
+                Debug.LogWarning("Button Component Missing!");
+            else
+            {
+                if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Alert>(out var manager_Alert))
+                    Debug.LogWarning("Manager_Alert Missing!");
+                else
+                {
+                    button.onClick.AddListener(() =>
+                    {
+                        ApplyActiveStates();
+                    });
+                }
+            }
         }
 
         public void ApplyActiveStates()

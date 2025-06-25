@@ -417,7 +417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1047794709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de503b10ddd28245b2011ab6bfd5b31, type: 3}
+  m_Script: {fileID: 11500000, guid: 8929eccc328f14b4d8c068cca23d55b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1047794718
@@ -453,19 +453,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047794709}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cdf87399575104408d911e022810c01, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f72624d317dfb942baab5aa3a5432e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alert: {fileID: 2058020812}
-  _audio: {fileID: 1751565752}
-  _joystick: {fileID: 1186487211}
-  _scene: {fileID: 447689746}
-  _status: {fileID: 302579900}
-  _storage: {fileID: 1677454013}
-  _vibration: {fileID: 1941307354}
-  _visualEffect: {fileID: 1151963378}
 --- !u!1 &1151963377
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +513,7 @@ GameObject:
   - component: {fileID: 1186487212}
   - component: {fileID: 1186487211}
   m_Layer: 0
-  m_Name: Manager_Joystick
+  m_Name: Manager_JoystickSetting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +528,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186487210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de503b10ddd28245b2011ab6bfd5b31, type: 3}
+  m_Script: {fileID: 11500000, guid: 8929eccc328f14b4d8c068cca23d55b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1186487212

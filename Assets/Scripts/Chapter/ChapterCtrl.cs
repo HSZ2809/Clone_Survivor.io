@@ -69,17 +69,6 @@ namespace ZUN
             {
                 showResult.gameObject.SetActive(true);
             }
-
-            /* 디버그용 시간 가속 */
-            #if UNITY_EDITOR
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if(Time.timeScale <= 1f)
-                    Time.timeScale = 5f;
-                else
-                    Time.timeScale = 1f;
-            }
-            #endif
         }
 
         public void ShowLevelUpReward(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "667318281167",
+    "firebase_url": "https://clone-survivor-io-default-rtdb.firebaseio.com",
+    "project_id": "clone-survivor-io",
+    "storage_bucket": "clone-survivor-io.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667318281167:android:07c10e02f9d0876ce768ba",
+        "android_client_info": {
+          "package_name": "com.ZUN.Clone_Survivor.io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667318281167-0hlt2jt1h8m26dutdpe9t0gmknusqmjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ZUN.Clone_Survivor.io",
+            "certificate_hash": "4bc88e2c3bcd7daf550ccb7f3fe67b1ff31d7f54"
+          }
+        },
+        {
+          "client_id": "667318281167-r605cl539j8rf3l460fur8fjvvfcig2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPI0bHItE9z1ENYhfisCBV3OmekdWH3Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667318281167-r605cl539j8rf3l460fur8fjvvfcig2e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

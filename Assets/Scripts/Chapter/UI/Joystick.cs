@@ -12,7 +12,7 @@ namespace ZUN
         [Space]
         [SerializeField] private Image[] joystickImages;
 
-        Manager_Joystick manager_Joystick;
+        Manager_JoystickSetting manager_Joystick;
         Vector2 baseOriginalLocation;
         Vector2 leverCenter;
         float radius;
@@ -20,7 +20,7 @@ namespace ZUN
 
         private void Awake()
         {
-            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Joystick>();
+            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_JoystickSetting>();
         }
 
         private void Start()

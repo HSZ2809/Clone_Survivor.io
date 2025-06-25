@@ -15,14 +15,14 @@ namespace ZUN
         Manager_Audio manager_Audio;
         Manager_Vibration manager_Vibration;
         Manager_VisualEffect manager_VisualEffect;
-        Manager_Joystick manager_Joystick;
+        Manager_JoystickSetting manager_Joystick;
 
         private void Awake()
         {
             manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
             manager_Vibration = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Vibration>();
             manager_VisualEffect = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_VisualEffect>();
-            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Joystick>();
+            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_JoystickSetting>();
         }
 
         private void Start()
