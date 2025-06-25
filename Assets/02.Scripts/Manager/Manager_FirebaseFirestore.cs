@@ -8,7 +8,5 @@ namespace ZUN
         public static Manager_FirebaseFirestore Instance;
 
         public FirebaseFirestore Firestore { get; private set; }
-
-
     }
 }
