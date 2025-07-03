@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17aac7f915e8bd439c642bfdadc8861, type: 3}
+  m_Name: Scroll_Shoes
+  m_EditorClassIdentifier: 
+  id: Scroll_Shoes
+  itemName: "\uC2E0\uBC1C \uC2A4\uD06C\uB864"
+  itemSprite: {fileID: 21300000, guid: 17c0f5ba4ba449341b178de56724dc25, type: 3}
+  description: "\uC2E0\uBC1C \uB808\uBCA8\uC5C5\uC5D0 \uC0AC\uC6A9\uB418\uB294 \uC544\uC774\uD15C"
+  background: {fileID: 21300000, guid: 5bb9f0db81de99b44b30e1ad6ceb3e46, type: 3}

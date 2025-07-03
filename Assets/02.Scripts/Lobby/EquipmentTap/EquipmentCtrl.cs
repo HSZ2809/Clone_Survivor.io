@@ -205,7 +205,7 @@ namespace ZUN
             UpdateStat();
             equipmentTapCtrl.ResetScrollView();
             if (_equipment.Data.Type == EquipmentType.Weapon)
-                characterDisplay.img_weapon.sprite = _equipment.ItemSprite;
+                characterDisplay.SetWeapon(_equipment.ItemSprite);
             equipmentTapCtrl.equipmentSlots.Remove(_slot);
             equipmentTapCtrl.UpdateEquipSlots();
 

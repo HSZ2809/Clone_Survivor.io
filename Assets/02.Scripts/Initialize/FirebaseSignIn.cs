@@ -1,4 +1,3 @@
-using Firebase.Auth;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +5,9 @@ namespace ZUN
 {
     public class FirebaseSignIn : MonoBehaviour
     {
-        [SerializeField] Manager_FirebaseAuth manager_FirebaseAuth;
+        Manager_FirebaseAuth manager_FirebaseAuth;
+        Manager_FirebaseFirestore manager_FirebaseFirestore;
+        UserDataManager userDataManager;
 
         [SerializeField] GameStart gameStart;
 
@@ -17,8 +18,9 @@ namespace ZUN
 
         void Awake()
         {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_FirebaseAuth>(out manager_FirebaseAuth))
-                Debug.LogWarning("FirebaseAuth not found");
+            manager_FirebaseAuth = Manager_FirebaseAuth.instance;
+            manager_FirebaseFirestore = Manager_FirebaseFirestore.instance;
+            userDataManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<UserDataManager>();
         }
 
         public async void OnClickSignIn()
@@ -30,11 +32,13 @@ namespace ZUN
 
             if (isSuccess)
             {
-                feedbacktxt.text = $"로그인 성공";
-                gameStart.TEST();
+                feedbacktxt.text = "로그인 성공";
+                string uid = manager_FirebaseAuth.Auth.CurrentUser.UserId;
+                await userDataManager.LoadAsync(uid);
+                gameStart.InitGameData();
             }
             else
-                feedbacktxt.text = $"로그인 실패";
+                feedbacktxt.text = "로그인 실패";
         }
     }
 }

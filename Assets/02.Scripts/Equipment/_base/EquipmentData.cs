@@ -38,7 +38,7 @@ namespace ZUN
         [SerializeField] float[] coefficient;
         public float[] Coefficient => coefficient;
 
-        public abstract Equipment Create(EquipmentTier tier);
+        public abstract Equipment Create(EquipmentTier tier, int level);
         public abstract string[] GetTierSkillDescription();
     }
 }

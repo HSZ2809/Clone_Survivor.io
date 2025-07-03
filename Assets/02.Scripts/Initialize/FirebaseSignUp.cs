@@ -1,4 +1,3 @@
-using Firebase.Auth;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +5,8 @@ namespace ZUN
 {
     public class FirebaseSignUp : MonoBehaviour
     {
-        [SerializeField] Manager_FirebaseAuth manager_FirebaseAuth;
+        Manager_FirebaseAuth manager_FirebaseAuth;
+        Manager_FirebaseFirestore manager_FirebaseFirestore;
 
         [Space]
         [SerializeField] TMP_InputField emailInput;
@@ -15,8 +15,8 @@ namespace ZUN
 
         void Awake()
         {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_FirebaseAuth>(out manager_FirebaseAuth))
-                Debug.LogWarning("FirebaseAuth not found");
+            manager_FirebaseAuth = Manager_FirebaseAuth.instance;
+            manager_FirebaseFirestore = Manager_FirebaseFirestore.instance;
         }
 
         public async void OnClickSignUp()
@@ -27,7 +27,11 @@ namespace ZUN
             bool isSuccess = await manager_FirebaseAuth.SignUpAsync(email, password);
 
             if (isSuccess)
+            {
                 feedbacktxt.text = $"회원가입 성공";
+                string uid = manager_FirebaseAuth.Auth.CurrentUser.UserId;
+                await manager_FirebaseFirestore.CreateUserDocumentAsync(uid, email);
+            }
             else
                 feedbacktxt.text = $"회원가입 실패";
         }

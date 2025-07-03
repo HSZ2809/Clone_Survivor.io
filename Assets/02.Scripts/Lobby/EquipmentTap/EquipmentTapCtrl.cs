@@ -50,22 +50,24 @@ namespace ZUN
 
             // Set Weapon Sprite
             if (status.Inventory[(int)EquipmentType.Weapon] != null)
-                characterDisplay.img_weapon.sprite = status.Inventory[(int)EquipmentType.Weapon].ItemSprite;
+                characterDisplay.SetWeapon(status.Inventory[(int)EquipmentType.Weapon].ItemSprite);
+            else
+                characterDisplay.SetWeapon(null);
 
-            // Set Equipment Slot
+            // Set Equipments Slot
             for (int i = 0; i < status.Inventory.Length; i++)
-            {
-                Equipment equipment = status.Inventory[i];
-                if (equipment != null)
                 {
-                    EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
-                    slot.transform.position = inventoryTransform[i].position;
-                    slot.isEquipped = true;
-                    slot.SetPopup(popup);
-                    slot.SetItem(equipment);
-                    EquipedItemSlots[i] = slot;
+                    Equipment equipment = status.Inventory[i];
+                    if (equipment != null)
+                    {
+                        EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
+                        slot.transform.position = inventoryTransform[i].position;
+                        slot.isEquipped = true;
+                        slot.SetPopup(popup);
+                        slot.SetEquipment(equipment);
+                        EquipedItemSlots[i] = slot;
+                    }
                 }
-            }
 
             // Set Storage EquipmentSlot
             foreach (Equipment equipment in storage.equipments)
@@ -73,7 +75,7 @@ namespace ZUN
                 EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentArea);
                 slot.isEquipped = false;
                 slot.SetPopup(popup);
-                slot.SetItem(equipment);
+                slot.SetEquipment(equipment);
                 equipmentSlots.Add(slot);
             }
 

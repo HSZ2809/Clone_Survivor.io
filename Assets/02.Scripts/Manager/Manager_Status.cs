@@ -5,12 +5,13 @@ namespace ZUN
 {
     public class Manager_Status : MonoBehaviour
     {
+        UserDataManager userDataManager;
+        GameDataProvider gameDataProvider;
+
         [SerializeField] readonly Equipment[] inventory = new Equipment[Enum.GetValues(typeof(EquipmentType)).Length];
         public Equipment[] Inventory => inventory;
 
         [SerializeField] float baseHp;
-        [SerializeField] float baseAtk;
-
         public float FinalHp
         {
             get
@@ -31,7 +32,8 @@ namespace ZUN
                 return totalHp * totalCoefficient;
             }
         }
-
+        
+        [SerializeField] float baseAtk;
         public float FinalAtk
         {
             get
@@ -50,6 +52,35 @@ namespace ZUN
                 }
 
                 return totalAtk * totalCoefficient;
+            }
+        }
+
+        private void Awake()
+        {
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userDataManager))
+                Debug.LogWarning("UserDataManager not found");
+
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameDataProvider>(out gameDataProvider))
+                Debug.LogWarning("GameDataProvider not found");
+        }
+
+        private void Start()
+        {
+            //userDataManager.OnChanged += InitInventory;
+        }
+
+        void InitInventory(UserData cache)
+        {
+            for (int i = 0; i < inventory.Length; i++)
+            {
+                if (cache.Inventory[i] != null)
+                {
+                    string id = cache.Inventory[i].Id;
+                    EquipmentTier tier = cache.Inventory[i].Tier;
+                    int level = cache.Inventory[i].Level;
+
+                    inventory[i] = gameDataProvider.CreateEquipment(id, tier, level);
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ namespace ZUN
             set
             {
                 if (_amount + value < 0)
-                    Debug.LogWarning("Item : Amount Set Error");
+                    Debug.LogWarning("Items : Amount Set Error");
                 else
                     _amount = value;
             }

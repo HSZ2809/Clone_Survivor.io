@@ -47,16 +47,6 @@ namespace ZUN
                 // 단순 처리라면 바로 await
                 var cred = await Auth.CreateUserWithEmailAndPasswordAsync(email, password);
                 Debug.Log("가입 성공");
-                /*
-                var uid = cred.User.UserId;
-                var doc = Firebase.Firestore.DefaultInstance
-                              .Collection("users").Document(uid);
-                await doc.SetAsync(new
-                {
-                    email = email,
-                    createdAt = Timestamp.GetCurrentTimestamp()
-                });
-                */
                 return true;
             }
             catch (System.Exception ex)

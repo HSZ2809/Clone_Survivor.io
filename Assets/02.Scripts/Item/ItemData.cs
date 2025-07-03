@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ZUN
 {
 
-    [CreateAssetMenu(fileName = "ItemData", menuName = "Scriptable Objects/Item Data")]
+    [CreateAssetMenu(fileName = "ItemData", menuName = "Scriptable Objects/Items Data")]
     public class ItemData : ScriptableObject
     {
         [SerializeField] string id;

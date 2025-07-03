@@ -11,9 +11,9 @@ namespace ZUN
             return tierSkillDescription;
         }
 
-        public override Equipment Create(EquipmentTier tier)
+        public override Equipment Create(EquipmentTier tier, int level)
         {
-            return new Shotgun(this, tier);
+            return new Shotgun(this, tier, level);
         }
     }
 }

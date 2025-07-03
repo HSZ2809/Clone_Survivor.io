@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceaba7ed0ea8b2545a54d248189143da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager_FirebaseAuth: {fileID: 0}
+  userDataManager: {fileID: 0}
   gameStart: {fileID: 1636946114}
   emailInput: {fileID: 968053775}
   passwordInput: {fileID: 912132811}
@@ -3210,7 +3210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1267385866
 Transform:
   m_ObjectHideFlags: 0
@@ -4477,7 +4477,6 @@ MonoBehaviour:
   tmp_tesk: {fileID: 1710619103}
   sceneName: Lobby
   sceneChangeTime: 1
-  tempEquipmentDispenserLoding: 0
   LoginComplete: 0
 --- !u!1 &1710619101
 GameObject:
@@ -5379,7 +5378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f4cfaff544c8041823404b3e8612f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager_FirebaseAuth: {fileID: 0}
   emailInput: {fileID: 452087688}
   passwordInput: {fileID: 2047744559}
   feedbacktxt: {fileID: 216818051}
@@ -5399,7 +5397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2065851345
 Transform:
   m_ObjectHideFlags: 0
@@ -5535,7 +5533,7 @@ GameObject:
   - component: {fileID: 2117291495}
   - component: {fileID: 2117291494}
   m_Layer: 0
-  m_Name: GoogleLogin
+  m_Name: FirebaseLogin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5553,7 +5551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f4cfaff544c8041823404b3e8612f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager_FirebaseAuth: {fileID: 0}
   emailInput: {fileID: 452087688}
   passwordInput: {fileID: 2047744559}
   feedbacktxt: {fileID: 216818051}

@@ -32,7 +32,7 @@ namespace ZUN
         public int gold;
         public int KillCount { get; private set; }
 
-        [Header("Appearance Item List")]
+        [Header("Appearance Items List")]
         [SerializeField] ActiveSkill[] actives = null;
         [SerializeField] PassiveSkill[] passives = null;
 

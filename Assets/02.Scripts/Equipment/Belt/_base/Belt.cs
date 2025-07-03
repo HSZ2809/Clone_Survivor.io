@@ -4,6 +4,6 @@ namespace ZUN
     {
         new public BeltData Data { get; private set; }
 
-        public Belt(BeltData data, EquipmentTier tier) : base(data, tier) => Data = data;
+        public Belt(BeltData data, EquipmentTier tier, int level) : base(data, tier, level) => Data = data;
     }
 }

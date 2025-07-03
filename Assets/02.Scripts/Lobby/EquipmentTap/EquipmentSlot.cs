@@ -27,7 +27,7 @@ namespace ZUN
             });
         }
 
-        public void SetItem(Equipment equipment)
+        public void SetEquipment(Equipment equipment)
         {
             _equipment = equipment;
 

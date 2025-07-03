@@ -2,7 +2,7 @@ namespace ZUN
 {
     public class Shuriken : Weapon
     {
-        public Shuriken(ShurikenData data, EquipmentTier tier) : base(data, tier) { }
+        public Shuriken(ShurikenData data, EquipmentTier tier, int level) : base(data, tier, level) { }
 
         public override void SetTierEffect(Character character)
         {
