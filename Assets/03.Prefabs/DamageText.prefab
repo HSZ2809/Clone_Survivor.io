@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2538417487684158631}
   - component: {fileID: 7394403099845064790}
   - component: {fileID: 7718567081291676082}
+  - component: {fileID: 8892765871391657572}
   m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
@@ -189,3 +190,16 @@ SortingGroup:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &8892765871391657572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135479961964882949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b120deaf30e614da8796a0c00b3f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmp_damage: {fileID: 7394403099845064790}

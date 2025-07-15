@@ -13,6 +13,7 @@ namespace ZUN
         [FirestoreProperty] public int Energy { get; set; }
         [FirestoreProperty] public int Gem { get; set; }
         [FirestoreProperty] public int Gold { get; set; }
+        [FirestoreProperty] public bool IsTutorialCompleted { get; set; }
         [FirestoreProperty] public EquipmentDataFair[] Inventory { get; set; }
         [FirestoreProperty] public List<EquipmentDataFair> Equipments { get; set; }
         [FirestoreProperty] public List<ItemDataFair> Items { get; set; }
@@ -26,6 +27,7 @@ namespace ZUN
             Energy = 30;
             Gem = 0;
             Gold = 0;
+            IsTutorialCompleted = false;
             Inventory = new EquipmentDataFair[6];
             Equipments = new List<EquipmentDataFair>();
             Items = new List<ItemDataFair>();

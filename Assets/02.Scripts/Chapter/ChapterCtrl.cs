@@ -32,9 +32,12 @@ namespace ZUN
         public int gold;
         public int KillCount { get; private set; }
 
-        [Header("Appearance Items List")]
-        [SerializeField] ActiveSkill[] actives = null;
-        [SerializeField] PassiveSkill[] passives = null;
+        [Header("Appearance Equipments List")]
+        [SerializeField] ActiveSkill[] actives;
+        [SerializeField] PassiveSkill[] passives;
+
+        [Header("Default Active")]
+        [SerializeField] ActiveSkill defaultActive;
 
         private void Awake()
         {
@@ -58,9 +61,18 @@ namespace ZUN
         private void Start()
         {
             /* 인벤토리의 기본 아이템 적용 */
-            Weapon weapon = status.Inventory[(int)EquipmentType.Weapon] as Weapon;
-            actives[0] = weapon.Data.SkillPrefab;
-            InitSkill(actives[0]);
+            if (status.Inventory[(int)EquipmentType.Weapon] == null)
+            {
+                actives[0] = defaultActive;
+                InitSkill(actives[0]);
+            }
+            else
+            {
+                Weapon weapon = status.Inventory[(int)EquipmentType.Weapon] as Weapon;
+                actives[0] = weapon.Data.SkillPrefab;
+                InitSkill(actives[0]);
+            }
+
         }
 
         private void Update()

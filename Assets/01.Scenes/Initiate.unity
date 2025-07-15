@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceaba7ed0ea8b2545a54d248189143da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userDataManager: {fileID: 0}
   gameStart: {fileID: 1636946114}
   emailInput: {fileID: 968053775}
   passwordInput: {fileID: 912132811}
@@ -5427,22 +5426,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: {fileID: 0}
   storage: {fileID: 0}
-  gameStart: {fileID: 1636946114}
-  invenDatas:
-  - {fileID: 11400000, guid: d84f05428d250ca4ea6beb0007d9bbb5, type: 2}
-  - {fileID: 11400000, guid: 4a4b4e3a6f408584283589be7c0d77ba, type: 2}
-  - {fileID: 11400000, guid: 5b742f344943835438c113566f486095, type: 2}
-  - {fileID: 11400000, guid: ffbe1697feee77843852cdeaf031023e, type: 2}
-  - {fileID: 11400000, guid: 098134e4a5a52d24485ceb6085bdd51b, type: 2}
-  - {fileID: 11400000, guid: 9aeadf4d55234ee409bb13b0faeb15f1, type: 2}
-  storageDatas:
-  - {fileID: 11400000, guid: d84f05428d250ca4ea6beb0007d9bbb5, type: 2}
-  - {fileID: 11400000, guid: 0ce1d7b04f11d1f45961698df0774428, type: 2}
-  - {fileID: 11400000, guid: 4a4b4e3a6f408584283589be7c0d77ba, type: 2}
-  - {fileID: 11400000, guid: 5b742f344943835438c113566f486095, type: 2}
-  - {fileID: 11400000, guid: ffbe1697feee77843852cdeaf031023e, type: 2}
-  - {fileID: 11400000, guid: 098134e4a5a52d24485ceb6085bdd51b, type: 2}
-  - {fileID: 11400000, guid: 9aeadf4d55234ee409bb13b0faeb15f1, type: 2}
+  gameStart: {fileID: 0}
+  invenDatas: []
+  storageDatas: []
 --- !u!1 &2110532256
 GameObject:
   m_ObjectHideFlags: 0

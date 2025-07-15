@@ -1,3 +1,5 @@
+using Firebase.Auth;
+using Firebase;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -6,11 +8,21 @@ namespace ZUN
 {
     public class UserDataManager : MonoBehaviour
     {
+        public static UserDataManager instance;
+
         [SerializeField] Manager_FirebaseAuth auth;
         [SerializeField] Manager_FirebaseFirestore firestore;
 
         public UserData Cache { get; private set; }
         public event Action<UserData> OnChanged;
+
+        void Awake()
+        {
+            if (instance != null)
+                Destroy(gameObject);
+            else
+                instance = this;
+        }
 
         public async Task<bool> LoadAsync(string uid)
         {
