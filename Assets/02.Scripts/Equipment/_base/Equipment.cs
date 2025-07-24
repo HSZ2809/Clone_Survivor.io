@@ -14,6 +14,7 @@ namespace ZUN
 
     public abstract class Equipment
     {
+        public string Uuid { get; private set; }
         public EquipmentData Data { get; private set; }
         public EquipmentTier Tier { get; private set; }
         public int Level { get; set; }
@@ -44,8 +45,9 @@ namespace ZUN
             get { return (Tier < EquipmentTier.Elite) ? Data.IconSprite[0] : Data.IconSprite[1]; }
         }
 
-        public Equipment(EquipmentData data, EquipmentTier tier, int level)
+        public Equipment(string uuid, EquipmentData data, EquipmentTier tier, int level)
         {
+            Uuid = uuid;
             Data = data;
             Tier = tier;
             Level = level;

@@ -11,9 +11,9 @@ namespace ZUN
             return tierSkillDescription;
         }
 
-        public override Equipment Create(EquipmentTier tier, int level)
+        public override Equipment Create(string uuid, EquipmentTier tier, int level)
         {
-            return new MilitaryBelt(this, tier, level);
+            return new MilitaryBelt(uuid, this, tier, level);
         }
     }
 }

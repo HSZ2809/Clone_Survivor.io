@@ -2,7 +2,7 @@ namespace ZUN
 {
     public class MilitaryGloves : Gloves
     {
-        public MilitaryGloves(MilitaryGlovesData data, EquipmentTier tier, int level) : base(data, tier, level) 
+        public MilitaryGloves(string uuid, MilitaryGlovesData data, EquipmentTier tier, int level) : base(uuid, data, tier, level) 
         { 
 
         }

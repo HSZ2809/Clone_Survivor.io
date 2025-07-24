@@ -53,11 +53,7 @@ namespace ZUN
             {
                 if (data.Inventory[i] != null)
                 {
-                    string id = data.Inventory[i].Id;
-                    EquipmentTier tier = data.Inventory[i].Tier;
-                    int level = data.Inventory[i].Level;
-
-                    status.Inventory[i] = gameData.CreateEquipment(id, tier, level);
+                    status.Inventory[i] = gameData.CreateEquipment(data.Inventory[i]);
                 }
             }
             
@@ -65,11 +61,7 @@ namespace ZUN
             {
                 for (int i = 0; i < data.Equipments.Count; i++)
                 {
-                    string id = data.Inventory[i].Id;
-                    EquipmentTier tier = data.Inventory[i].Tier;
-                    int level = data.Inventory[i].Level;
-
-                    storage.equipments.Add(gameData.CreateEquipment(id, tier, level));
+                    storage.equipments.Add(gameData.CreateEquipment(data.Inventory[i]));
                 }
             }
 

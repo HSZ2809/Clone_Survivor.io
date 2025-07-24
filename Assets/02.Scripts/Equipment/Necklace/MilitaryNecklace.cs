@@ -3,7 +3,7 @@ using ZUN;
 
 public class MilitaryNecklace : Necklace
 {
-    public MilitaryNecklace(MilitaryNecklaceData data, EquipmentTier tier, int level) : base(data, tier, level) { }
+    public MilitaryNecklace(string uuid, MilitaryNecklaceData data, EquipmentTier tier, int level) : base(uuid, data, tier, level) { }
 
     public override void SetTierEffect(Character character)
     {

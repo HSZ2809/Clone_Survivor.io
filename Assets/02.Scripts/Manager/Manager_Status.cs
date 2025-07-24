@@ -68,20 +68,5 @@ namespace ZUN
         {
             //userDataManager.OnChanged += InitInventory;
         }
-
-        void InitInventory(UserData cache)
-        {
-            for (int i = 0; i < inventory.Length; i++)
-            {
-                if (cache.Inventory[i] != null)
-                {
-                    string id = cache.Inventory[i].Id;
-                    EquipmentTier tier = cache.Inventory[i].Tier;
-                    int level = cache.Inventory[i].Level;
-
-                    inventory[i] = gameDataProvider.CreateEquipment(id, tier, level);
-                }
-            }
-        }
     }
 }

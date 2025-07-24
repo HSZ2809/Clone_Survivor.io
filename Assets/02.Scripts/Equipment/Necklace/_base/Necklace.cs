@@ -4,6 +4,6 @@ namespace ZUN
     {
         new public NecklaceData Data { get; private set; }
 
-        public Necklace(NecklaceData data, EquipmentTier tier, int level) : base(data, tier, level) => Data = data;
+        public Necklace(string uuid, NecklaceData data, EquipmentTier tier, int level) : base(uuid, data, tier, level) => Data = data;
     }
 }

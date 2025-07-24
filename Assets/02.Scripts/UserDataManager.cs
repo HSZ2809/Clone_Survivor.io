@@ -1,5 +1,3 @@
-using Firebase.Auth;
-using Firebase;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -45,7 +43,5 @@ namespace ZUN
         //    }
         //    return ok;
         //}
-
-        // …다른 필드 업데이트 메서드 필요…
     }
 }

@@ -6,6 +6,6 @@ namespace ZUN
     {
         new public ArmorData Data { get; private set; }
 
-        public Armor(ArmorData data, EquipmentTier tier, int level) : base(data, tier, level) => Data = data;
+        public Armor(string uuid, ArmorData data, EquipmentTier tier, int level) : base(uuid, data, tier, level) => Data = data;
     }
 }
