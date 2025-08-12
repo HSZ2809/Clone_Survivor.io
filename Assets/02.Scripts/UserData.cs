@@ -16,9 +16,9 @@ namespace ZUN
         [FirestoreProperty] public int Gem { get; set; }
         [FirestoreProperty] public int Gold { get; set; }
         [FirestoreProperty] public bool IsTutorialCompleted { get; set; }
-        [FirestoreProperty] public EquipmentInfomation[] Inventory { get; set; }
-        [FirestoreProperty] public List<EquipmentInfomation> Equipments { get; set; }
-        [FirestoreProperty] public List<ItemInfomation> Items { get; set; }
+        public string[] Inventory { get; set; }
+        public List<EquipmentInfo> Equipments { get; set; }
+        public Dictionary<string, int> Items { get; set; }
 
         public UserData(string email, string username, int userLevel)
         {
@@ -30,29 +30,24 @@ namespace ZUN
             Gem = 0;
             Gold = 0;
             IsTutorialCompleted = false;
-            Inventory = new EquipmentInfomation[6];
-            Equipments = new List<EquipmentInfomation>();
-            Items = new List<ItemInfomation>();
+            Inventory = new string[Enum.GetValues(typeof(EquipmentType)).Length];
+            Equipments = new List<EquipmentInfo>();
+            Items = new Dictionary<string, int>();
         }
 
-        public UserData() { }
+        public UserData()
+        {
+            Inventory = new string[Enum.GetValues(typeof(EquipmentType)).Length];
+            Equipments = new List<EquipmentInfo>();
+            Items = new Dictionary<string, int>();
+        }
     }
-
-    //[Serializable]
-    //[FirestoreData]
-    //public class EquipmentInfomation
-    //{
-    //    [FirestoreProperty] public string Uuid { get; set; }
-    //    [FirestoreProperty] public string Id { get; set; }
-    //    [FirestoreProperty] public EquipmentTier Tier { get; set; }
-    //    [FirestoreProperty] public int Level { get; set; }
-    //}
 
     [Serializable]
     [FirestoreData]
-    public class EquipmentInfomation
+    public class EquipmentInfo
     {
-        [FirestoreProperty]
+        [FirestoreDocumentId]
         public string Uuid { get; set; }
 
         [field: SerializeField]
@@ -66,13 +61,39 @@ namespace ZUN
         [field: SerializeField]
         [FirestoreProperty]
         public int Level { get; set; }
+
+        public EquipmentInfo(Equipment equip)
+        {
+            Uuid = equip.Uuid;
+            Id = equip.Data.Id;
+            Tier = equip.Tier;
+            Level = equip.Level;
+        }
+
+        public EquipmentInfo()
+        {
+            Uuid = Guid.NewGuid().ToString();
+        }
     }
 
+    [Serializable]
     [FirestoreData]
-    public class ItemInfomation
+    public class ItemInfo
     {
-        [FirestoreProperty] public string Uuid { get; set; }
-        [FirestoreProperty] public string Id { get; set; }
-        [FirestoreProperty] public int Amount { get; set; }
+        [field: SerializeField]
+        [FirestoreDocumentId]
+        public string Uid { get; set; }
+
+        [field: SerializeField]
+        [FirestoreProperty]
+        public int Amount { get; set; }
+
+        public ItemInfo(string id, int amount)
+        {
+            Uid = id;
+            Amount = amount;
+        }
+
+        public ItemInfo() { }
     }
 }

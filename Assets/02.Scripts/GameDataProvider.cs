@@ -20,7 +20,7 @@ namespace ZUN
                 itemDataDic.Add(item.Id, item);
         }
 
-        public Equipment CreateEquipment(EquipmentInfomation info)
+        public Equipment CreateEquipment(EquipmentInfo info)
         {
             string uuid = info.Uuid;
             string id = info.Id;
@@ -28,6 +28,11 @@ namespace ZUN
             int level = info.Level;
 
             return equipmentDataDic[id].Create(uuid, tier, level);
+        }
+
+        public Item CreateItem(ItemInfo info)
+        {
+            return itemDataDic[info.Uid].Create(info.Amount);
         }
     }
 }

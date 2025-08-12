@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectSettings>
-  <projectSetting name="com.google.external-dependency-managerAnalyticsEnabled" value="False" />
-  <projectSetting name="com.google.firebaseAnalyticsEnabled" value="False" />
+  <projectSetting name="com.google.external-dependency-managerAnalyticsCookie" value="5c13c8a053a14d45b6c025be7b8cd2d1" />
+  <projectSetting name="com.google.external-dependency-managerAnalyticsEnabled" value="True" />
+  <projectSetting name="com.google.firebaseAnalyticsCookie" value="1c2a4367b7944ec5b911ce0ca521dbf3" />
+  <projectSetting name="com.google.firebaseAnalyticsEnabled" value="True" />
   <projectSetting name="Google.VersionHandler.VerboseLoggingEnabled" value="True" />
   <projectSetting name="Google.VersionHandler.VersionHandlingEnabled" value="True" />
   <projectSetting name="GooglePlayServices.PromptBeforeAutoResolution" value="False" />

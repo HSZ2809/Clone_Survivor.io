@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -149,44 +150,134 @@ namespace ZUN
             }
         }
 
-        public void Levelup()
+        //public void Levelup()
+        //{
+        //    if (_equipment.Level == _equipment.Data.MaxLevel[(int)_equipment.Tier])
+        //    {
+        //        Debug.Log("equipment MaxLevel");
+        //        return;
+        //    }
+
+        //    string scrollType = "Scroll_" + _equipment.Data.Type.ToString();
+        //    int scrollAmount;
+        //    if (manager_Storage.items.ContainsKey(scrollType))
+        //        scrollAmount = manager_Storage.items[scrollType].Amount;
+        //    else
+        //        scrollAmount = 0;
+
+        //    if (_equipment.LevelupScrollCost > scrollAmount || _equipment.LevelupGoldCost > manager_Storage.Gold)
+        //    {
+        //        manager_Alert.ShowPopup("Not Enough Materials");
+        //        return;
+        //    }
+
+        //    manager_Storage.Gold -= _equipment.LevelupGoldCost;
+        //    manager_Storage.items[scrollType].Amount -= _equipment.LevelupScrollCost;
+        //    _equipment.Level += 1;
+
+        //    if (_slot.isEquipped)
+        //    {
+        //        UpdateStat();
+        //    }
+
+        //    equipmentTapCtrl.UpdateItemSlots();
+        //    equipmentTapCtrl.UpdateEquipSlots();
+        //    equipmentTapCtrl.ResetScrollView();
+        //    UpdatePopup();
+        //}
+
+        public async void LevelupAsync()
         {
-            if (_equipment.Level == _equipment.Data.MaxLevel[(int)_equipment.Tier])
+            var auth = Manager_FirebaseAuth.instance;
+            var userId = auth.Auth.CurrentUser.UserId;
+            var storage = manager_Storage;
+            var alert = manager_Alert;
+            var equipCtrl = equipmentTapCtrl;
+            var slot = _slot;
+            var equip = _equipment;
+
+            // 1. 최대 레벨 체크
+            if (equip.Level >= equip.Data.MaxLevel[(int)equip.Tier])
             {
-                Debug.Log("equipment MaxLevel");
+                Debug.Log("equipment is at max level");
                 return;
             }
 
-            string scrollType = "Scroll_" + _equipment.Data.Type.ToString();
-            int scrollAmount;
-            if (manager_Storage.items.ContainsKey(scrollType))
-                scrollAmount = manager_Storage.items[scrollType].Amount;
+            // 2. 레벨업 재료 확인
+            string scrollType = $"Scroll_{equip.Data.Type}";
+            if (!storage.items.TryGetValue(scrollType, out var scrollItem))
+            {
+                alert.ShowPopup("Not Enough Materials");
+                return;
+            }
+            int scrollAmount = scrollItem.Amount;
+            if (equip.LevelupScrollCost > scrollAmount ||
+                equip.LevelupGoldCost > storage.Gold)
+            {
+                alert.ShowPopup("Not Enough Materials");
+                return;
+            }
+
+            // 3. 로컬 상태 변경 (임시)
+            storage.Gold -= equip.LevelupGoldCost;
+            scrollItem.Amount -= equip.LevelupScrollCost;
+            equip.Level++;
+
+            // 4-1. 메인 문서 동시 업데이트 데이터 준비
+            var coreUpdates = new Dictionary<string, object>
+    {
+        { "Gold", storage.Gold }
+    };
+
+            // 4-2. 서브콜렉션 업데이트
+            // - 장비 레벨업
+            bool dbEquipOK = await UserDataManager.instance
+                .UpdateEquipmentAsync(userId, equip);
+
+            // - 메인 문서 골드 업데이트
+            bool dbCoreOK = await UserDataManager.instance
+                .UpdateUserCoreData(userId, coreUpdates);
+
+            // - 아이템(스크롤) 수량 업데이트
+            bool dbItemOK = await UserDataManager.instance
+                .UpdateItemAsync(userId, scrollItem.Data.Id, scrollItem.Amount);
+
+            // 5. 모두 성공했을 때만 UI/캐시 확정
+            if (dbEquipOK && dbCoreOK && dbItemOK)
+            {
+                if (slot.isEquipped)
+                    UpdateStat();
+
+                equipCtrl.UpdateItemSlots();
+                equipCtrl.UpdateEquipSlots();
+                equipCtrl.ResetScrollView();
+                UpdatePopup();
+            }
             else
-                scrollAmount = 0;
-
-            if (_equipment.LevelupScrollCost > scrollAmount || _equipment.LevelupGoldCost > manager_Storage.Gold)
             {
-                manager_Alert.ShowPopup("업그레이드 재료 부족!");
-                return;
+                // 6. 실패 시 로컬 롤백
+                storage.Gold += equip.LevelupGoldCost;
+                scrollItem.Amount += equip.LevelupScrollCost;
+                equip.Level--;
+
+                alert.ShowPopup("Level up failed. Please try again.");
             }
-
-            manager_Storage.Gold -= _equipment.LevelupGoldCost;
-            manager_Storage.items[scrollType].Amount -= _equipment.LevelupScrollCost;
-            _equipment.Level += 1;
-
-            if (_slot.isEquipped)
-            {
-                UpdateStat();
-            }
-
-            equipmentTapCtrl.UpdateItemSlots();
-            equipmentTapCtrl.UpdateEquipSlots();
-            equipmentTapCtrl.ResetScrollView();
-            UpdatePopup();
         }
 
-        public void WearEquipment()
+        public async void WearEquipment()
         {
+            UserDataManager dataManager = UserDataManager.instance;
+            Manager_FirebaseAuth AuthManager = Manager_FirebaseAuth.instance;
+
+            string uid = AuthManager.Auth.CurrentUser.UserId;
+
+            if(!await dataManager.EquipItemToSlot(uid, _equipment.Data.Type, _equipment.Uuid))
+            {
+                Debug.Log("EquipItemToSlot ERROR");
+                gameObject.SetActive(false);
+                return;
+            }
+
             int itemType = (int)_equipment.Data.Type;
             if (manager_Status.Inventory[itemType] != null)
             {
@@ -212,8 +303,20 @@ namespace ZUN
             gameObject.SetActive(false);
         }
 
-        public  void TakeOffEquipment()
+        public async void TakeOffEquipment()
         {
+            UserDataManager dataManager = UserDataManager.instance;
+            Manager_FirebaseAuth AuthManager = Manager_FirebaseAuth.instance;
+
+            string uid = AuthManager.Auth.CurrentUser.UserId;
+
+            if (!await dataManager.EquipItemToSlot(uid, _equipment.Data.Type, null))
+            {
+                Debug.Log("EquipItemToSlot ERROR");
+                gameObject.SetActive(false);
+                return;
+            }
+
             _slot.transform.SetParent(equipmentTapCtrl.EquipmentArea, false);
             int itemType = (int)_equipment.Data.Type;
             manager_Storage.equipments.Add(manager_Status.Inventory[itemType]);

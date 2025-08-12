@@ -48,6 +48,14 @@ namespace ZUN
 
                 await docRef.SetAsync(userData);
 
+                //var inventoryCol = docRef.Collection("inventory");
+                //var equipmentsCol = docRef.Collection("equipments");
+                //var itemsCol = docRef.Collection("items");
+
+                //await inventoryCol.Document("_init").SetAsync(new { created = true });
+                //await equipmentsCol.Document("_init").SetAsync(new { created = true });
+                //await itemsCol.Document("_init").SetAsync(new { created = true });
+
                 Debug.Log("유저 문서 생성 완료");
                 return true;
             }

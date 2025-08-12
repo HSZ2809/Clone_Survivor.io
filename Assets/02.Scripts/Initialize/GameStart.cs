@@ -47,22 +47,31 @@ namespace ZUN
 
         public void InitGameData()
         {
-            UserData data = userData.Cache;
-            
+            UserData data = userData.CacheData;
+
+            storage.Energy = data.Energy;
+            storage.Gem = data.Gem;
+            storage.Gold = data.Gold;
+
+            foreach (EquipmentInfo info in data.Equipments)
+            {
+                storage.equipments.Add(gameData.CreateEquipment(info));
+            }
+
             for (int i = 0; i < data.Inventory.Length; i++)
             {
                 if (data.Inventory[i] != null)
                 {
-                    status.Inventory[i] = gameData.CreateEquipment(data.Inventory[i]);
+                    status.Inventory[i] = storage.equipments.Find(e => e.Uuid == (data.Inventory[i]));
+                    storage.equipments.Remove(status.Inventory[i]);
                 }
             }
-            
-            if (data.Equipments != null)
+
+            foreach (var pair in data.Items)
             {
-                for (int i = 0; i < data.Equipments.Count; i++)
-                {
-                    storage.equipments.Add(gameData.CreateEquipment(data.Inventory[i]));
-                }
+                ItemInfo info = new (pair.Key, pair.Value);
+                Item item = gameData.CreateItem(info);
+                storage.items.Add(item.Data.Id ,item);
             }
 
             StartCoroutine(SceneLoading());
