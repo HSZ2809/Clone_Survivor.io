@@ -6,7 +6,6 @@ namespace ZUN
     public class FirebaseSignIn : MonoBehaviour
     {
         Manager_FirebaseAuth manager_FirebaseAuth;
-        Manager_FirebaseFirestore manager_FirebaseFirestore;
         UserDataManager userDataManager;
 
         [SerializeField] GameStart gameStart;
@@ -18,9 +17,17 @@ namespace ZUN
 
         void Awake()
         {
-            manager_FirebaseAuth = Manager_FirebaseAuth.instance;
-            manager_FirebaseFirestore = Manager_FirebaseFirestore.instance;
-            userDataManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<UserDataManager>();
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_FirebaseAuth>(out manager_FirebaseAuth))
+            {
+                feedbacktxt.text = "FirebaseAuth not found";
+                Debug.LogWarning("FirebaseAuth not found");
+            }
+
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userDataManager))
+            {
+                feedbacktxt.text = "UserDataManager not found";
+                Debug.LogWarning("UserDataManager not found");
+            }
         }
 
         public async void OnClickSignIn()
@@ -28,7 +35,8 @@ namespace ZUN
             string email = emailInput.text;
             string password = passwordInput.text;
 
-            bool isSuccess = await manager_FirebaseAuth.SignInAsync(email, password);
+            bool isSuccess = false;
+            isSuccess = await manager_FirebaseAuth.SignInAsync(email, password);
 
             if (isSuccess)
             {

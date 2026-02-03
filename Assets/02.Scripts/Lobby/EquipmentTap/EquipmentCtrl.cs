@@ -306,7 +306,7 @@ namespace ZUN
         public async void TakeOffEquipment()
         {
             UserDataManager dataManager = UserDataManager.instance;
-            Manager_FirebaseAuth AuthManager = Manager_FirebaseAuth.instance;
+            Manager_FirebaseAuth AuthManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_FirebaseAuth>();
 
             string uid = AuthManager.Auth.CurrentUser.UserId;
 

@@ -8,6 +8,7 @@ namespace ZUN
     public class Manager_FirebaseAuth : MonoBehaviour
     {
         public static Manager_FirebaseAuth instance;
+        Manager_Alert alert;
 
         public FirebaseAuth Auth { get; private set; }
 
@@ -18,18 +19,23 @@ namespace ZUN
             else
                 instance = this;
 
-            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
+            await Manager_FirebaseCore.InitializationTask;
+            Auth = FirebaseAuth.DefaultInstance;
 
-            if (depStatus == DependencyStatus.Available)
-                Auth = FirebaseAuth.DefaultInstance;
-            else
-            {
-                Application.Quit();
-#if UNITY_EDITOR
-                Debug.LogError($"Firebase dependency error: {depStatus}");
-                UnityEditor.EditorApplication.isPlaying = false;
-#endif
-            }
+//            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
+
+//            if (depStatus == DependencyStatus.Available)
+//                Auth = FirebaseAuth.DefaultInstance;
+//            else
+//            {
+//                Application.Quit();
+//#if UNITY_EDITOR
+//                Debug.LogError($"Firebase dependency error: {depStatus}");
+//                UnityEditor.EditorApplication.isPlaying = false;
+//#endif
+//            }
+
+            alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
         }
 
         /// <summary>
@@ -52,6 +58,7 @@ namespace ZUN
             catch (System.Exception ex)
             {
                 Debug.LogWarning($"가입 실패: {ex.Message}");
+                alert.ShowPopup($"가입 실패: {ex.Message}");
                 return false;
             }
         }
@@ -64,13 +71,15 @@ namespace ZUN
         {
             try
             {
-                await Auth.SignInWithEmailAndPasswordAsync(email, password);
+                var test = await Auth.SignInWithEmailAndPasswordAsync(email, password);
+                alert.ShowPopup($"로그인 : {test.User}");
                 Debug.Log("로그인 성공");
                 return true;
             }
             catch (System.Exception ex)
             {
                 Debug.LogWarning($"로그인 실패: {ex.Message}");
+                alert.ShowPopup($"로그인 실패: {ex.Message}");
                 return false;
             }
         }

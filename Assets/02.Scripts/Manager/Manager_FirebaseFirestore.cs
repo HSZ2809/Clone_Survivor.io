@@ -20,18 +20,21 @@ namespace ZUN
             else
                 instance = this;
 
-            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
+            await Manager_FirebaseCore.InitializationTask;
+            Firestore = FirebaseFirestore.DefaultInstance;
 
-            if (depStatus == DependencyStatus.Available)
-                Firestore = FirebaseFirestore.DefaultInstance;
-            else
-            {
-                Application.Quit();
-#if UNITY_EDITOR
-                Debug.LogError($"Firebase dependency error: {depStatus}");
-                UnityEditor.EditorApplication.isPlaying = false;
-#endif
-            }
+//            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
+
+//            if (depStatus == DependencyStatus.Available)
+//                Firestore = FirebaseFirestore.DefaultInstance;
+//            else
+//            {
+//                Application.Quit();
+//#if UNITY_EDITOR
+//                Debug.LogError($"Firebase dependency error: {depStatus}");
+//                UnityEditor.EditorApplication.isPlaying = false;
+//#endif
+//            }
         }
 
         /// <summary>

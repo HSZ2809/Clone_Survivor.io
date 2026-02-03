@@ -16,8 +16,6 @@ namespace ZUN
         [Space]
         [SerializeField] Image img_progress;
         [SerializeField] TMP_Text tmp_version;
-        [SerializeField] TMP_Text tmp_progress;
-        [SerializeField] TMP_Text tmp_tesk;
 
         [Space]
         [SerializeField] string sceneName;
