@@ -54,7 +54,7 @@
 - 메인 컨텐츠
 - 15분 동안 진행되는 스테이지를 HP가 0이 되지 않고 버티면 클리어
 - 진행하는 동안, 시간의 흐름에 따라 다양한 이벤트 발생
-- 이벤트 관리의를 위해 타임라인 사용
+- 이벤트 관리를 위해 타임라인 사용
 <img width="1908" height="854" alt="timeline" src="https://github.com/user-attachments/assets/f02ddc3d-40ef-4de7-bd44-4a2f090e66b4" />
 
 <br/>
