@@ -1,7 +1,6 @@
 # Clone_Survivor.io
 
 > 탕탕특공대 모작 <br/>
-> 기간 : 2025.01 ~ 2025.06 <br/>
 > Unity2D <br/>
 
 <img src="https://github.com/user-attachments/assets/4e225a86-47ca-45ab-bc11-13bd53c2ee26" width=400> <br/>
@@ -36,6 +35,18 @@
 - 설정 변경, 장비 변경 등 다른 기능을 사용하기 위한 로비
 
 <img src="https://github.com/user-attachments/assets/b063bd33-3ee9-4e2e-965d-60677e46fc99" width=200> <br/>
+
+<br/>
+
+## Settings
+- 소리, UI, 편의성 설정
+  > 효과음: 클릭음, ActiveSkill 발사음 등 음향 효과 토글 <br/>
+  > 배경음: BGM 토글 <br/>
+  > 진동: 쳅터 진행 중, 피격 시 진동 피드백 토글 <br/>
+  > 이팩트 약화: 쳅터 진행 중, ActiveSkill 발사체 반투명화 토글 <br/>
+  > 조이스틱 보이기: 쳅터 진행 중, 조이스틱 UI 시각화 토글
+
+<img src="https://github.com/user-attachments/assets/6e755e10-61c6-4141-921a-8a61feec471c" width=200> <br/>
 
 <br/>
 
