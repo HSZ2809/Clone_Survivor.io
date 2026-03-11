@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (5)
+  m_Name: Fly_Green
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (6)
+  m_Name: Ladybug_Green
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (2)
+  m_Name: Dog
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 344c8a4dd7fae9a489b0e9339b5c87e0, type: 3}
-  m_Name: Mid Boss Spawn Track (1)
+  m_Name: '#2 Mid Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (4)
+  m_Name: Fly_Purple
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (3)
+  m_Name: Zombie_2
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab86fd9c19bf7b04cb97b7993770bf29, type: 3}
-  m_Name: Boss Spawn Track (2)
+  m_Name: '#3 Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -2627,7 +2627,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab86fd9c19bf7b04cb97b7993770bf29, type: 3}
-  m_Name: Boss Spawn Track
+  m_Name: '#1 Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -2788,7 +2788,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 344c8a4dd7fae9a489b0e9339b5c87e0, type: 3}
-  m_Name: Mid Boss Spawn Track (2)
+  m_Name: '#3 Mid Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -2895,7 +2895,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: I Monster Spawn Track
+  m_Name: Ladybug_Purple
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -3056,7 +3056,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 344c8a4dd7fae9a489b0e9339b5c87e0, type: 3}
-  m_Name: Mid Boss Spawn Track
+  m_Name: '#1 Mid Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faac20995234fdf4288d6765766721cb, type: 3}
-  m_Name: Monster Spawn Track (1)
+  m_Name: Shooter_Purple
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -3488,7 +3488,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab86fd9c19bf7b04cb97b7993770bf29, type: 3}
-  m_Name: Boss Spawn Track (1)
+  m_Name: '#2 Boss'
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}

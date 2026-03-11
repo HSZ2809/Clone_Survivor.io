@@ -1,4 +1,3 @@
-using Firebase;
 using Firebase.Auth;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -19,7 +18,7 @@ namespace ZUN
             else
                 instance = this;
 
-            await Manager_FirebaseCore.InitializationTask;
+            await Manager_FirebaseCore.instance.InitializationTask;
             Auth = FirebaseAuth.DefaultInstance;
 
             alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
@@ -54,7 +53,6 @@ namespace ZUN
             try
             {
                 var test = await Auth.SignInWithEmailAndPasswordAsync(email, password);
-                alert.ShowPopup($"로그인 : {test.User}");
                 Debug.Log("로그인 성공");
                 return true;
             }

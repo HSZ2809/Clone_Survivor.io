@@ -19,7 +19,7 @@ namespace ZUN
             else
                 instance = this;
 
-            await Manager_FirebaseCore.InitializationTask;
+            await Manager_FirebaseCore.instance.InitializationTask;
             Firestore = FirebaseFirestore.DefaultInstance;
         }
 
