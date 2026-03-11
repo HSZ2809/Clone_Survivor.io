@@ -1,4 +1,3 @@
-using Firebase;
 using Firebase.Firestore;
 using System;
 using System.Collections.Generic;
@@ -22,19 +21,6 @@ namespace ZUN
 
             await Manager_FirebaseCore.InitializationTask;
             Firestore = FirebaseFirestore.DefaultInstance;
-
-//            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
-
-//            if (depStatus == DependencyStatus.Available)
-//                Firestore = FirebaseFirestore.DefaultInstance;
-//            else
-//            {
-//                Application.Quit();
-//#if UNITY_EDITOR
-//                Debug.LogError($"Firebase dependency error: {depStatus}");
-//                UnityEditor.EditorApplication.isPlaying = false;
-//#endif
-//            }
         }
 
         /// <summary>
@@ -50,14 +36,6 @@ namespace ZUN
                 UserData userData = new (email, "Player000001", 1);
 
                 await docRef.SetAsync(userData);
-
-                //var inventoryCol = docRef.Collection("inventory");
-                //var equipmentsCol = docRef.Collection("equipments");
-                //var itemsCol = docRef.Collection("items");
-
-                //await inventoryCol.Document("_init").SetAsync(new { created = true });
-                //await equipmentsCol.Document("_init").SetAsync(new { created = true });
-                //await itemsCol.Document("_init").SetAsync(new { created = true });
 
                 Debug.Log("유저 문서 생성 완료");
                 return true;

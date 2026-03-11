@@ -22,19 +22,6 @@ namespace ZUN
             await Manager_FirebaseCore.InitializationTask;
             Auth = FirebaseAuth.DefaultInstance;
 
-//            var depStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
-
-//            if (depStatus == DependencyStatus.Available)
-//                Auth = FirebaseAuth.DefaultInstance;
-//            else
-//            {
-//                Application.Quit();
-//#if UNITY_EDITOR
-//                Debug.LogError($"Firebase dependency error: {depStatus}");
-//                UnityEditor.EditorApplication.isPlaying = false;
-//#endif
-//            }
-
             alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
         }
 
@@ -46,11 +33,6 @@ namespace ZUN
         {
             try
             {
-                // await 후에도 ContinueWithOnMainThread를 쓰고 싶으면
-                // await Auth.CreateUserWithEmailAndPasswordAsync(email, password)
-                //       .ContinueWithOnMainThread(_ => {});
-
-                // 단순 처리라면 바로 await
                 var cred = await Auth.CreateUserWithEmailAndPasswordAsync(email, password);
                 Debug.Log("가입 성공");
                 return true;
