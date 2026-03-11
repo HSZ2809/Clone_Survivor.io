@@ -74,3 +74,4 @@ crashlytics-build.properties
 
 # Firebase settings config file
 /[Aa]ssets/google-services.json
+/[Aa]ssets/google-services.json.meta
