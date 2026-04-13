@@ -6,7 +6,7 @@ namespace ZUN
     public class Manager_Status : MonoBehaviour
     {
         UserDataManager userDataManager;
-        GameDataProvider gameDataProvider;
+        GameEntityFactory gameDataProvider;
 
         [SerializeField] readonly Equipment[] inventory = new Equipment[Enum.GetValues(typeof(EquipmentType)).Length];
         public Equipment[] Inventory => inventory;
@@ -60,7 +60,7 @@ namespace ZUN
             if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userDataManager))
                 Debug.LogWarning("UserDataManager not found");
 
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameDataProvider>(out gameDataProvider))
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out gameDataProvider))
                 Debug.LogWarning("GameDataProvider not found");
         }
 

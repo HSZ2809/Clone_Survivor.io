@@ -108,3 +108,6 @@ InitTestScene*.unity*
 
 # keystore files
 /*.keystore
+
+# slnx files
+*.slnx

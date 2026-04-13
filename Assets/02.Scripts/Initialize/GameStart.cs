@@ -8,7 +8,7 @@ namespace ZUN
 {
     public class GameStart : MonoBehaviour
     {
-        GameDataProvider gameData;
+        GameEntityFactory gameData;
         UserDataManager userData;
         Manager_Status status;
         Manager_Storage storage;
@@ -25,7 +25,7 @@ namespace ZUN
 
         private void Awake()
         {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameDataProvider>(out gameData))
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out gameData))
                 Debug.LogWarning("GameDataProvider not found");
 
             if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userData))

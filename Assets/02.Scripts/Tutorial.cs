@@ -7,7 +7,7 @@ namespace ZUN
     public class Tutorial : MonoBehaviour
     {
         UserDataManager dataManager;
-        GameDataProvider dataProvider;
+        GameEntityFactory dataProvider;
         Manager_Storage storage;
 
         [SerializeField] int energy;
@@ -25,7 +25,7 @@ namespace ZUN
 #endif
                 Application.Quit();
             }
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameDataProvider>(out dataProvider))
+            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out dataProvider))
             {
 #if UNITY_EDITOR
                 Debug.LogWarning("GameDataProvider not found");

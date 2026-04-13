@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using TMPro;
 
 namespace ZUN
@@ -13,10 +14,11 @@ namespace ZUN
 
         private void Awake()
         {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out storage))
-            {
-                Debug.LogWarning("Manager_Storage not found");
-            }
+            storage = FindFirstObjectByType<Manager_Storage>();
+
+            if (storage == null)
+                throw new InvalidOperationException("Manager_Storage is not assigned.");
+
         }
 
         private void OnEnable()
