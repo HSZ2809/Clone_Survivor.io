@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
@@ -12,16 +13,11 @@ namespace ZUN
         [Space]
         [SerializeField] private Image[] joystickImages;
 
-        Manager_JoystickSetting manager_Joystick;
+        [Inject] IManager_JoystickSetting manager_Joystick;
         Vector2 baseOriginalLocation;
         Vector2 leverCenter;
         float radius;
         readonly float joystickSize = 25.0f;
-
-        private void Awake()
-        {
-            manager_Joystick = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_JoystickSetting>();
-        }
 
         private void Start()
         {

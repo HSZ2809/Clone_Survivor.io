@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class GameEntityFactory : MonoBehaviour
+    public class GameEntityFactory : MonoBehaviour, IGameEntityFactory
     {
         [SerializeField] private GameDataAssets assets;
 

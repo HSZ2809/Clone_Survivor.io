@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
@@ -56,6 +57,8 @@ namespace ZUN
         {
             this.popup = popup;
         }
+
+        public class Factory : PlaceholderFactory<EquipmentSlot>{}
     }
 
     public class EquipmentSlotComparer : IComparer<EquipmentSlot>

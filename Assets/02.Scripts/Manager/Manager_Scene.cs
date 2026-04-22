@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 namespace ZUN
 {
-    public class Manager_Scene : MonoBehaviour
+    public class Manager_Scene : MonoBehaviour, IManager_Scene
     {
         [SerializeField] IrisTransition transition;
         private bool isSceneChangeable = true;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Manager_Vibration : MonoBehaviour
+    public class Manager_Vibration : MonoBehaviour, IManager_Vibration
     {
         readonly string isVibrationEnabledKey = "isVibrationEnabled";
 

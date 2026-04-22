@@ -3,32 +3,22 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
-    public class UserDataManager : MonoBehaviour
+    public class UserDataManager : MonoBehaviour, IUserDataManager
     {
-        public static UserDataManager instance;
-
-        [SerializeField] Manager_FirebaseAuth auth;
-        [SerializeField] Manager_FirebaseFirestore firestore;
+        [Inject] private readonly IManager_FirebaseFirestore _firestore;
 
         public UserData CacheData { get; private set; }
         public event Action<UserData> OnCoreDataChanged;
         public event Action<UserData> OnEquipDataChanged;
         public event Action<UserData> OnItemDataChanged;
 
-        void Awake()
-        {
-            if (instance != null)
-                Destroy(gameObject);
-            else
-                instance = this;
-        }
-
         public async Task<bool> LoadAsync(string uid)
         {
-            CacheData = await firestore.GetUserDataAsync(uid);
+            CacheData = await _firestore.GetUserDataAsync(uid);
             CacheData.Equipments = await LoadEquipmentsAsync(uid);
             CacheData.Inventory = await LoadInventoryAsync(uid);
             CacheData.Items = await LoadItemsAsync(uid);
@@ -40,7 +30,7 @@ namespace ZUN
         {
             try
             {
-                var docRef = firestore.Firestore.Collection("users").Document(uid);
+                var docRef = _firestore.Firestore.Collection("users").Document(uid);
 
                 await docRef.UpdateAsync(datas);
 
@@ -70,7 +60,7 @@ namespace ZUN
         // 장비 목록 로드
         public async Task<List<EquipmentInfo>> LoadEquipmentsAsync(string uid)
         {
-            var colRef = firestore.Firestore
+            var colRef = _firestore.Firestore
                 .Collection("users")
                 .Document(uid)
                 .Collection("equipments");
@@ -98,7 +88,7 @@ namespace ZUN
         {
             try
             {
-                var colRef = firestore.Firestore
+                var colRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("equipments");
@@ -129,7 +119,7 @@ namespace ZUN
 
             try
             {
-                var docRef = firestore.Firestore
+                var docRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("equipments")
@@ -165,7 +155,7 @@ namespace ZUN
         {
             try
             {
-                var docRef = firestore.Firestore
+                var docRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("equipments")
@@ -187,7 +177,7 @@ namespace ZUN
 
         public async Task<bool> EquipItemToSlot(string uid, EquipmentType slotType, string equipmentUuid)
         {
-            var slotDoc = firestore.Firestore
+            var slotDoc = _firestore.Firestore
                 .Collection("users")
                 .Document(uid)
                 .Collection("inventory")
@@ -205,9 +195,9 @@ namespace ZUN
             return true;
         }
 
-        public async Task<string[]> LoadInventoryAsync(string uid)
+        async Task<string[]> LoadInventoryAsync(string uid)
         {
-            var colRef = firestore.Firestore
+            var colRef = _firestore.Firestore
                 .Collection("users")
                 .Document(uid)
                 .Collection("inventory");
@@ -235,7 +225,7 @@ namespace ZUN
 
         public async Task<Dictionary<string, int>> LoadItemsAsync(string uid)
         {
-            var colRef = firestore.Firestore
+            var colRef = _firestore.Firestore
                 .Collection("users")
                 .Document(uid)
                 .Collection("items");
@@ -259,7 +249,7 @@ namespace ZUN
         {
             try
             {
-                var colRef = firestore.Firestore
+                var colRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("items");
@@ -290,7 +280,7 @@ namespace ZUN
         {
             try
             {
-                var docRef = firestore.Firestore
+                var docRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("items")
@@ -320,7 +310,7 @@ namespace ZUN
         {
             try
             {
-                var docRef = firestore.Firestore
+                var docRef = _firestore.Firestore
                     .Collection("users")
                     .Document(uid)
                     .Collection("items")

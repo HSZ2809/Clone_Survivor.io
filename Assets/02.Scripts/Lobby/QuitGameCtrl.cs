@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Zenject;
 
 namespace ZUN
 {
@@ -8,14 +9,11 @@ namespace ZUN
         readonly float exitDelay = 2.0f;
         float lastBackPressedTime;
 
-        Manager_Alert manager_Alert;
+        [Inject] IManager_Alert manager_Alert;
         InputAction quitAction;
 
         private void Awake()
         {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Alert>(out manager_Alert))
-                Debug.LogWarning("Manager_Alert Missing!");
-
             quitAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/escape");
             quitAction.performed += ctx => OnQuitPressed();
             quitAction.Enable();

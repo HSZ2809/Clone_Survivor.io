@@ -1,12 +1,13 @@
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
     public class Menu : MonoBehaviour
     {
-        Manager_Scene manager_Scene;
-        Manager_Audio manager_Audio;
-        Character character;
+        [Inject] private IManager_Scene manager_Scene;
+        [Inject] private IManager_Audio manager_Audio;
+        private Character character;
 
         [SerializeField] private GameObject pause = null;
 
@@ -19,9 +20,7 @@ namespace ZUN
 
         private void Awake()
         {
-            manager_Scene = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Scene>();
-            manager_Audio = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Audio>();
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character = FindFirstObjectByType<Character>();
         }
 
         private void OnEnable()

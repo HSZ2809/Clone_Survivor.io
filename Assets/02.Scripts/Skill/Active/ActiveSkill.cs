@@ -17,7 +17,7 @@ namespace ZUN
         {
             base.Awake();
 
-            manager_VisualEffect = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_VisualEffect>();
+            manager_VisualEffect = FindFirstObjectByType<Manager_VisualEffect>();
         }
 
         private void Start()

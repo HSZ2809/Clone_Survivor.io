@@ -1,14 +1,16 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
     public class Tutorial : MonoBehaviour
     {
-        UserDataManager dataManager;
-        GameEntityFactory dataProvider;
-        Manager_Storage storage;
+        [Inject] private IManager_FirebaseAuth firebaseAuth;
+        [Inject] private IUserDataManager dataManager;
+        [Inject] private IGameEntityFactory dataProvider;
+        [Inject] private IManager_Storage storage;
 
         [SerializeField] int energy;
         [SerializeField] int gem;
@@ -16,40 +18,15 @@ namespace ZUN
         [SerializeField] EquipmentInfo[] initialEquip;
         [SerializeField] ItemInfo[] initialItem;
 
-        private void Awake() 
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out dataManager))
-            {
-#if UNITY_EDITOR
-                Debug.LogWarning("UserDataManager not found");
-#endif
-                Application.Quit();
-            }
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out dataProvider))
-            {
-#if UNITY_EDITOR
-                Debug.LogWarning("GameDataProvider not found");
-#endif
-                Application.Quit();
-            }
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out storage))
-            {
-#if UNITY_EDITOR
-                Debug.LogWarning("Manager_Storage not found");
-#endif
-                Application.Quit();
-            }
-        }
-
         private async void Start()
         {
             try
             {
-                string uid = Manager_FirebaseAuth.instance.Auth.CurrentUser.UserId;
+                string uid = firebaseAuth.UserId;
 
-                if (UserDataManager.instance != null)
+                if (dataManager != null)
                 {
-                    if (!UserDataManager.instance.CacheData.IsTutorialCompleted)
+                    if (!dataManager.CacheData.IsTutorialCompleted)
                     {
                         // 장비 제공
                         foreach (EquipmentInfo equipInfo in initialEquip)
@@ -57,7 +34,7 @@ namespace ZUN
                             if (await dataManager.AddEquipmentAsync(uid, equipInfo))
                             {
                                 Equipment equip = dataProvider.CreateEquipment(equipInfo);
-                                storage.equipments.Add(equip);
+                                storage.Equipments.Add(equip);
                             }
                         }
 
@@ -67,7 +44,7 @@ namespace ZUN
                             if (await dataManager.AddItemAsync(uid, itemInfo))
                             {
                                 Item item = dataProvider.CreateItem(itemInfo);
-                                storage.items.Add(item.Data.Id, item);
+                                storage.Items.Add(item.Data.Id, item);
                             }
                         }
 

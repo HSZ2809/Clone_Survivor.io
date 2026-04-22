@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Manager_JoystickSetting : MonoBehaviour
+    public class Manager_JoystickSetting : MonoBehaviour, IManager_JoystickSetting
     {
         readonly string isJoystickVisibleKey = "isJoystickVisible";
 

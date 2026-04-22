@@ -11,7 +11,7 @@ namespace ZUN
 
         private void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character = FindFirstObjectByType<Character>();
         }
 
         private void FixedUpdate()

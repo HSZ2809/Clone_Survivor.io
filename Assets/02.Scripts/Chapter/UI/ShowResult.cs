@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Zenject;
 
 namespace ZUN
 {
@@ -20,6 +21,7 @@ namespace ZUN
 
         ChapterCtrl chapterCtrl;
         Timer timer;
+        [Inject] private IManager_Scene manager_Scene;
 
         private void Awake()
         {
@@ -33,10 +35,7 @@ namespace ZUN
 
             btn_Confirm.onClick.AddListener(() =>
             {
-                if (GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Scene>(out var manager_Scene))
-                    manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
-                else
-                    Debug.LogWarning("Manager_Scene not found");
+                manager_Scene.LoadScene("Lobby", gameObject.scene.buildIndex);
             });
         }
 

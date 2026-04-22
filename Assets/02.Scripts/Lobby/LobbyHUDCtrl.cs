@@ -1,36 +1,29 @@
 using UnityEngine;
 using System;
 using TMPro;
+using Zenject;
 
 namespace ZUN
 {
     public class LobbyHUDCtrl : MonoBehaviour
     {
-        Manager_Storage storage;
+        [Inject] private IManager_Storage storage;
+        [Inject] private IUserDataManager userDataManager;
 
         [SerializeField] TextMeshProUGUI energy;
         [SerializeField] TextMeshProUGUI gem;
         [SerializeField] TextMeshProUGUI gold;
 
-        private void Awake()
-        {
-            storage = FindFirstObjectByType<Manager_Storage>();
-
-            if (storage == null)
-                throw new InvalidOperationException("Manager_Storage is not assigned.");
-
-        }
-
         private void OnEnable()
         {
-            if (UserDataManager.instance != null)
-                UserDataManager.instance.OnCoreDataChanged += HandleCoreDataChanged;
+            if (userDataManager != null)
+                userDataManager.OnCoreDataChanged += HandleCoreDataChanged;
         }
 
         private void OnDisable()
         {
-            if (UserDataManager.instance != null)
-                UserDataManager.instance.OnCoreDataChanged -= HandleCoreDataChanged;
+            if (userDataManager != null)
+                userDataManager.OnCoreDataChanged -= HandleCoreDataChanged;
         }
 
         private void Start()

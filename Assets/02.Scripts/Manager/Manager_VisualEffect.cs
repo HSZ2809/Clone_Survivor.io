@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Manager_VisualEffect : MonoBehaviour
+    public class Manager_VisualEffect : MonoBehaviour, IManager_VisualEffect
     {
         readonly string isEffectReducedKey = "isEffectReduced";
 

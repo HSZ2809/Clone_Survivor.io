@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
@@ -45,9 +46,9 @@ namespace ZUN
         [SerializeField] float itemRange;
         #endregion
 
+        [Inject] private IManager_Status status;
+        [Inject] private IManager_Vibration vibration;
         ChapterCtrl chapterCtrl;
-        Manager_Status status;
-        Manager_Vibration vibration;
         ParticleSystem bleeding;
 
         bool isInLevelUpRoutine = false;
@@ -86,8 +87,6 @@ namespace ZUN
         private void Awake()
         {
             chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
-            status = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Status>();
-            vibration = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Vibration>();
             bleeding = GetComponent<ParticleSystem>();
         }
 

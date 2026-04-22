@@ -1,12 +1,13 @@
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
     public class FirebaseSignIn : MonoBehaviour
     {
-        Manager_FirebaseAuth manager_FirebaseAuth;
-        UserDataManager userDataManager;
+        [Inject] private IManager_FirebaseAuth manager_FirebaseAuth;
+        [Inject] private IUserDataManager userDataManager;
 
         [SerializeField] GameStart gameStart;
 
@@ -14,21 +15,6 @@ namespace ZUN
         [SerializeField] TMP_InputField emailInput;
         [SerializeField] TMP_InputField passwordInput;
         [SerializeField] TMP_Text feedbacktxt;
-
-        void Awake()
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_FirebaseAuth>(out manager_FirebaseAuth))
-            {
-                feedbacktxt.text = "FirebaseAuth not found";
-                Debug.LogWarning("FirebaseAuth not found");
-            }
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userDataManager))
-            {
-                feedbacktxt.text = "UserDataManager not found";
-                Debug.LogWarning("UserDataManager not found");
-            }
-        }
 
         public async void OnClickSignIn()
         {
@@ -41,7 +27,7 @@ namespace ZUN
             if (isSuccess)
             {
                 feedbacktxt.text = "로그인 성공";
-                string uid = manager_FirebaseAuth.Auth.CurrentUser.UserId;
+                string uid = manager_FirebaseAuth.UserId;
                 await userDataManager.LoadAsync(uid);
                 gameStart.InitGameData();
             }

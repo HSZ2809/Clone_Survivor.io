@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
@@ -42,23 +43,14 @@ namespace ZUN
 
         Equipment _equipment;
         EquipmentSlot _slot;
-        Manager_Storage manager_Storage;
-        Manager_Status manager_Status;
-        Manager_Alert manager_Alert;
+
+        [Inject] private readonly IManager_FirebaseAuth manager_FirebaseAuth;
+        [Inject] private readonly IUserDataManager userDataManager;
+        [Inject] private readonly IManager_Storage manager_Storage;
+        [Inject] private readonly IManager_Status manager_Status;
+        [Inject] private readonly IManager_Alert manager_Alert;
 
         const int ATK = 0, HP = 1;
-
-        private void Awake()
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out manager_Storage))
-                Debug.LogWarning("Manager_Storage not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Status>(out manager_Status))
-                Debug.LogWarning("Manager_Storage not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Alert>(out manager_Alert))
-                Debug.LogWarning("Manager_Alert not found");
-        }
 
         public void SetPopup(Equipment equipment, EquipmentSlot slot)
         {
@@ -72,7 +64,6 @@ namespace ZUN
             img_equipment.sprite = (_equipment.Tier < EquipmentTier.Elite) ? _equipment.Data.IconSprite[0] : _equipment.Data.IconSprite[1];
             equipmentTypeBg.sprite = equipmentTypeBgSprites[(int)_equipment.Tier];
             equipmentType.sprite = equipmentTypeSprites[(int)_equipment.Data.Type];
-            //tmp_stat.text = _equipment.Stat.ToString();
             if ((int)_equipment.Data.Type % 2 == ATK)
                 img_stat.sprite = stats[ATK];
             else
@@ -114,8 +105,8 @@ namespace ZUN
 
             string scrollType = "Scroll_" + _equipment.Data.Type.ToString();
             int scrollAmount;
-            if (manager_Storage.items.ContainsKey(scrollType))
-                scrollAmount = manager_Storage.items[scrollType].Amount;
+            if (manager_Storage.Items.ContainsKey(scrollType))
+                scrollAmount = manager_Storage.Items[scrollType].Amount;
             else
                 scrollAmount = 0;
 
@@ -150,46 +141,9 @@ namespace ZUN
             }
         }
 
-        //public void Levelup()
-        //{
-        //    if (_equipment.Level == _equipment.Data.MaxLevel[(int)_equipment.Tier])
-        //    {
-        //        Debug.Log("equipment MaxLevel");
-        //        return;
-        //    }
-
-        //    string scrollType = "Scroll_" + _equipment.Data.Type.ToString();
-        //    int scrollAmount;
-        //    if (manager_Storage.items.ContainsKey(scrollType))
-        //        scrollAmount = manager_Storage.items[scrollType].Amount;
-        //    else
-        //        scrollAmount = 0;
-
-        //    if (_equipment.LevelupScrollCost > scrollAmount || _equipment.LevelupGoldCost > manager_Storage.Gold)
-        //    {
-        //        manager_Alert.ShowPopup("Not Enough Materials");
-        //        return;
-        //    }
-
-        //    manager_Storage.Gold -= _equipment.LevelupGoldCost;
-        //    manager_Storage.items[scrollType].Amount -= _equipment.LevelupScrollCost;
-        //    _equipment.Level += 1;
-
-        //    if (_slot.isEquipped)
-        //    {
-        //        UpdateStat();
-        //    }
-
-        //    equipmentTapCtrl.UpdateItemSlots();
-        //    equipmentTapCtrl.UpdateEquipSlots();
-        //    equipmentTapCtrl.ResetScrollView();
-        //    UpdatePopup();
-        //}
-
         public async void LevelupAsync()
         {
-            var auth = Manager_FirebaseAuth.instance;
-            var userId = auth.Auth.CurrentUser.UserId;
+            var userId = manager_FirebaseAuth.UserId;
             var storage = manager_Storage;
             var alert = manager_Alert;
             var equipCtrl = equipmentTapCtrl;
@@ -205,7 +159,7 @@ namespace ZUN
 
             // 2. 레벨업 재료 확인
             string scrollType = $"Scroll_{equip.Data.Type}";
-            if (!storage.items.TryGetValue(scrollType, out var scrollItem))
+            if (!storage.Items.TryGetValue(scrollType, out var scrollItem))
             {
                 alert.ShowPopup("Not Enough Materials");
                 return;
@@ -231,15 +185,15 @@ namespace ZUN
 
             // 4-2. 서브콜렉션 업데이트
             // - 장비 레벨업
-            bool dbEquipOK = await UserDataManager.instance
+            bool dbEquipOK = await userDataManager
                 .UpdateEquipmentAsync(userId, equip);
 
             // - 메인 문서 골드 업데이트
-            bool dbCoreOK = await UserDataManager.instance
+            bool dbCoreOK = await userDataManager
                 .UpdateUserCoreData(userId, coreUpdates);
 
             // - 아이템(스크롤) 수량 업데이트
-            bool dbItemOK = await UserDataManager.instance
+            bool dbItemOK = await userDataManager
                 .UpdateItemAsync(userId, scrollItem.Data.Id, scrollItem.Amount);
 
             // 5. 모두 성공했을 때만 UI/캐시 확정
@@ -266,12 +220,9 @@ namespace ZUN
 
         public async void WearEquipment()
         {
-            UserDataManager dataManager = UserDataManager.instance;
-            Manager_FirebaseAuth AuthManager = Manager_FirebaseAuth.instance;
+            string uid = manager_FirebaseAuth.UserId;
 
-            string uid = AuthManager.Auth.CurrentUser.UserId;
-
-            if(!await dataManager.EquipItemToSlot(uid, _equipment.Data.Type, _equipment.Uuid))
+            if(!await userDataManager.EquipItemToSlot(uid, _equipment.Data.Type, _equipment.Uuid))
             {
                 Debug.Log("EquipItemToSlot ERROR");
                 gameObject.SetActive(false);
@@ -281,13 +232,13 @@ namespace ZUN
             int itemType = (int)_equipment.Data.Type;
             if (manager_Status.Inventory[itemType] != null)
             {
-                manager_Storage.equipments.Add(manager_Status.Inventory[itemType]);
+                manager_Storage.Equipments.Add(manager_Status.Inventory[itemType]);
                 EquipmentSlot slot = equipmentTapCtrl.EquipedItemSlots[itemType];
                 slot.transform.SetParent(equipmentTapCtrl.EquipmentArea, false);
                 slot.isEquipped = false;
                 equipmentTapCtrl.equipmentSlots.Add(slot);
             }
-            manager_Storage.equipments.Remove(_equipment);
+            manager_Storage.Equipments.Remove(_equipment);
             manager_Status.Inventory[itemType] = _equipment;
             _slot.transform.SetParent(equipmentTapCtrl.InventoryTransform[itemType]);
             _slot.transform.position = equipmentTapCtrl.InventoryTransform[itemType].position;
@@ -305,12 +256,9 @@ namespace ZUN
 
         public async void TakeOffEquipment()
         {
-            UserDataManager dataManager = UserDataManager.instance;
-            Manager_FirebaseAuth AuthManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_FirebaseAuth>();
+            string uid = manager_FirebaseAuth.UserId;
 
-            string uid = AuthManager.Auth.CurrentUser.UserId;
-
-            if (!await dataManager.EquipItemToSlot(uid, _equipment.Data.Type, null))
+            if (!await userDataManager.EquipItemToSlot(uid, _equipment.Data.Type, null))
             {
                 Debug.Log("EquipItemToSlot ERROR");
                 gameObject.SetActive(false);
@@ -319,7 +267,7 @@ namespace ZUN
 
             _slot.transform.SetParent(equipmentTapCtrl.EquipmentArea, false);
             int itemType = (int)_equipment.Data.Type;
-            manager_Storage.equipments.Add(manager_Status.Inventory[itemType]);
+            manager_Storage.Equipments.Add(manager_Status.Inventory[itemType]);
             manager_Status.Inventory[itemType] = null;
             _slot.isEquipped = false;
             UpdateStat();

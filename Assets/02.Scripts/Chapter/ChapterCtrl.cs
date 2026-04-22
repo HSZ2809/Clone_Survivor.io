@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
     public class ChapterCtrl : MonoBehaviour
     {
-        Manager_Status status;
+        [Inject] private IManager_Status status;
         Character character;
 
         [Header("UI")]
@@ -45,14 +46,6 @@ namespace ZUN
             {
                 #if UNITY_EDITOR
                 Debug.LogWarning("Character not found");
-                #endif
-                Application.Quit();
-            }
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Status>(out status))
-            {
-                #if UNITY_EDITOR
-                Debug.LogWarning("Inventory not found");
                 #endif
                 Application.Quit();
             }

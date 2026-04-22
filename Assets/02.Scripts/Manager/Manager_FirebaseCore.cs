@@ -1,23 +1,24 @@
 using Firebase;
-using System.Threading.Tasks;
+using System;
 using UnityEngine;
 
 namespace ZUN
 {
-    public class Manager_FirebaseCore : MonoBehaviour
+    public class Manager_FirebaseCore : MonoBehaviour, IManager_FirebaseCore
     {
-        public static Manager_FirebaseCore instance;
-        public Task InitializationTask { get; private set; }
+        public event Action OnFirebaseInitialized;
 
-        async void Awake()
+        private async void Start()
         {
-            if (instance != null)
-                Destroy(gameObject);
+            var result = await FirebaseApp.CheckAndFixDependenciesAsync();
+            if (result == DependencyStatus.Available)
+            {
+                OnFirebaseInitialized?.Invoke();
+            }
             else
-                instance = this;
-
-            InitializationTask = FirebaseApp.CheckAndFixDependenciesAsync();
-            await InitializationTask;
+            {
+                Debug.LogError("Firebase dependencies not available: " + result);
+            }
         }
     }
 }

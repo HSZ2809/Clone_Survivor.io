@@ -14,7 +14,7 @@ namespace ZUN
 
         protected virtual void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
+            character = FindFirstObjectByType<Character>();
             level = 1;
         }
 

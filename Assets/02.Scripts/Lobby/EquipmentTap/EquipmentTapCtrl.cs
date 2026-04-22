@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
@@ -23,24 +24,17 @@ namespace ZUN
         [SerializeField] ItemTooltipCtrl tooltip;
         [SerializeField] CharacterDisplay characterDisplay;
 
-        [Header("Prefab")]
-        [SerializeField] EquipmentSlot equipmentSlotPrefab;
-        [SerializeField] ItemSlot itemSlotPrefab;
+        // [Header("Prefab")]
+        // [SerializeField] EquipmentSlot equipmentSlotPrefab;
+        // [SerializeField] ItemSlot itemSlotPrefab;
+        [Inject] EquipmentSlot.Factory equipmentSlotFactory;
+        [Inject] ItemSlot.Factory itemSlotFactory;
 
         public readonly List<EquipmentSlot> equipmentSlots = new();
         public readonly List<ItemSlot> itemSlots = new();
 
-        Manager_Storage storage;
-        Manager_Status status;
-
-        private void Awake()
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Status>(out status))
-                Debug.LogWarning("Inventory not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out storage))
-                Debug.LogWarning("Storage not found");
-        }
+        [Inject] IManager_Storage storage;
+        [Inject] IManager_Status status;
 
         private void Start()
         {
@@ -60,7 +54,9 @@ namespace ZUN
                     Equipment equipment = status.Inventory[i];
                     if (equipment != null)
                     {
-                        EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
+                        //EquipmentSlot slot = Instantiate(equipmentSlotPrefab, inventoryTransform[i]);
+                        EquipmentSlot slot = equipmentSlotFactory.Create();
+                        slot.transform.SetParent(inventoryTransform[i], false);
                         slot.transform.position = inventoryTransform[i].position;
                         slot.isEquipped = true;
                         slot.SetPopup(popup);
@@ -70,9 +66,11 @@ namespace ZUN
                 }
 
             // Set Storage EquipmentSlot
-            foreach (Equipment equipment in storage.equipments)
+            foreach (Equipment equipment in storage.Equipments)
             {
-                EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentArea);
+                //EquipmentSlot slot = Instantiate(equipmentSlotPrefab, equipmentArea);
+                EquipmentSlot slot = equipmentSlotFactory.Create();
+                slot.transform.SetParent(equipmentArea, false);
                 slot.isEquipped = false;
                 slot.SetPopup(popup);
                 slot.SetEquipment(equipment);
@@ -80,9 +78,11 @@ namespace ZUN
             }
 
             // Set Storage ItemSlot
-            foreach (var itemDic in storage.items)
+            foreach (var itemDic in storage.Items)
             {
-                ItemSlot slot = Instantiate(itemSlotPrefab, itemArea);
+                //ItemSlot slot = Instantiate(itemSlotPrefab, itemArea);
+                ItemSlot slot = itemSlotFactory.Create();
+                slot.transform.SetParent(itemArea, false);
                 slot.SetTooltip(tooltip);
                 slot.SetItem(itemDic.Value);
                 itemSlots.Add(slot);

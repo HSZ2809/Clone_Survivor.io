@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ZUN
 {
-    public class Manager_Alert : MonoBehaviour
+    public class Manager_Alert : MonoBehaviour, IManager_Alert
     {
         [SerializeField] Canvas canvas;
         [SerializeField] AlertPopup prefab;

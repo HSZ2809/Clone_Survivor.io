@@ -3,15 +3,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 namespace ZUN
 {
     public class GameStart : MonoBehaviour
     {
-        GameEntityFactory gameData;
-        UserDataManager userData;
-        Manager_Status status;
-        Manager_Storage storage;
+        [Inject] private IGameEntityFactory gameData;
+        [Inject] private IUserDataManager userData;
+        [Inject] private IManager_Status status;
+        [Inject] private IManager_Storage storage;
 
         [Space]
         [SerializeField] Image img_progress;
@@ -22,21 +23,6 @@ namespace ZUN
         [SerializeField] float sceneChangeTime;
 
         public bool LoginComplete = false;
-
-        private void Awake()
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out gameData))
-                Debug.LogWarning("GameDataProvider not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userData))
-                Debug.LogWarning("UserDataManager not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Status>(out status))
-                Debug.LogWarning("Inventory not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Storage>(out storage))
-                Debug.LogWarning("Storage not found");
-        }
 
         private void Start()
         {
@@ -53,15 +39,15 @@ namespace ZUN
 
             foreach (EquipmentInfo info in data.Equipments)
             {
-                storage.equipments.Add(gameData.CreateEquipment(info));
+                storage.Equipments.Add(gameData.CreateEquipment(info));
             }
 
             for (int i = 0; i < data.Inventory.Length; i++)
             {
                 if (data.Inventory[i] != null)
                 {
-                    status.Inventory[i] = storage.equipments.Find(e => e.Uuid == (data.Inventory[i]));
-                    storage.equipments.Remove(status.Inventory[i]);
+                    status.Inventory[i] = storage.Equipments.Find(e => e.Uuid == (data.Inventory[i]));
+                    storage.Equipments.Remove(status.Inventory[i]);
                 }
             }
 
@@ -69,7 +55,7 @@ namespace ZUN
             {
                 ItemInfo info = new (pair.Key, pair.Value);
                 Item item = gameData.CreateItem(info);
-                storage.items.Add(item.Data.Id ,item);
+                storage.Items.Add(item.Data.Id ,item);
             }
 
             StartCoroutine(SceneLoading());

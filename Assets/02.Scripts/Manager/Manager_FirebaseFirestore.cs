@@ -3,25 +3,32 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
-    public class Manager_FirebaseFirestore : MonoBehaviour
+    public class Manager_FirebaseFirestore : MonoBehaviour, IManager_FirebaseFirestore
     {
-        public static Manager_FirebaseFirestore instance;
+        [Inject] private readonly IManager_FirebaseCore _core;
 
         public FirebaseFirestore Firestore { get; private set; }
 
-        async void Awake()
-        {
-            if (instance != null)
-                Destroy(gameObject);
-            else
-                instance = this;
+        // async void Awake()
+        // {
+        //     await _core.InitializationTask;
+        //     Firestore = FirebaseFirestore.DefaultInstance;
+        // }
 
-            await Manager_FirebaseCore.instance.InitializationTask;
-            Firestore = FirebaseFirestore.DefaultInstance;
+        void Awake()
+        {
+            _core.OnFirebaseInitialized += InitializeFirestore;
         }
+
+        void InitializeFirestore()
+        {
+            Firestore = FirebaseFirestore.DefaultInstance;
+            Debug.Log("Firestore 초기화 완료");
+        }   
 
         /// <summary>
         /// uid에 해당하는 users/{uid} 문서를 생성 후 초기 UserData값 입력.

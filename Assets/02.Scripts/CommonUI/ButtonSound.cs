@@ -1,25 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace ZUN
 {
     public class ButtonSound : MonoBehaviour
     {
+        [Inject] private IManager_Audio manager_Audio;
+
         private void Start()
         {
             if (TryGetComponent<Button>(out var button))
             {
-                if (GameObject.FindGameObjectWithTag("Manager").TryGetComponent<Manager_Audio>(out var manager_Audio))
+                button.onClick.AddListener(() =>
                 {
-                    button.onClick.AddListener(() =>
-                    {
-                        manager_Audio.ButtonClickSource.Play();
-                    });
-                }
-                else
-                {
-                    Debug.LogWarning("Manager_Audio Missing!");
-                }
+                    manager_Audio.ButtonClickSource.Play();
+                });
             }
             else
             {

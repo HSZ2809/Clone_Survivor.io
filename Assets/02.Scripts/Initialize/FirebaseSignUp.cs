@@ -1,23 +1,18 @@
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
     public class FirebaseSignUp : MonoBehaviour
     {
-        Manager_FirebaseAuth manager_FirebaseAuth;
-        Manager_FirebaseFirestore manager_FirebaseFirestore;
+        [Inject] private IManager_FirebaseAuth manager_FirebaseAuth;
+        [Inject] private IManager_FirebaseFirestore manager_FirebaseFirestore;
 
         [Space]
         [SerializeField] TMP_InputField emailInput;
         [SerializeField] TMP_InputField passwordInput;
         [SerializeField] TMP_Text feedbacktxt;
-
-        void Awake()
-        {
-            manager_FirebaseAuth = Manager_FirebaseAuth.instance;
-            manager_FirebaseFirestore = Manager_FirebaseFirestore.instance;
-        }
 
         public async void OnClickSignUp()
         {
@@ -29,7 +24,7 @@ namespace ZUN
             if (isSuccess)
             {
                 feedbacktxt.text = $"회원가입 성공";
-                string uid = manager_FirebaseAuth.Auth.CurrentUser.UserId;
+                string uid = manager_FirebaseAuth.UserId;
                 await manager_FirebaseFirestore.CreateUserDocumentAsync(uid, email);
             }
             else

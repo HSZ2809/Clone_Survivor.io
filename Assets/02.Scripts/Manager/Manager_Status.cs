@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
+//using Zenject;
 
 namespace ZUN
 {
-    public class Manager_Status : MonoBehaviour
+    public class Manager_Status : MonoBehaviour, IManager_Status
     {
-        UserDataManager userDataManager;
-        GameEntityFactory gameDataProvider;
+        //[Inject] private readonly UserDataManager userDataManager;
 
         [SerializeField] readonly Equipment[] inventory = new Equipment[Enum.GetValues(typeof(EquipmentType)).Length];
         public Equipment[] Inventory => inventory;
@@ -55,18 +55,9 @@ namespace ZUN
             }
         }
 
-        private void Awake()
-        {
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<UserDataManager>(out userDataManager))
-                Debug.LogWarning("UserDataManager not found");
-
-            if (!GameObject.FindGameObjectWithTag("Manager").TryGetComponent<GameEntityFactory>(out gameDataProvider))
-                Debug.LogWarning("GameDataProvider not found");
-        }
-
         private void Start()
         {
-            //userDataManager.OnChanged += InitInventory;
+            // userDataManager.OnEquipDataChanged += InitInventory;
         }
     }
 }

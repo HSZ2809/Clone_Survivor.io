@@ -3,13 +3,15 @@ using UnityEngine.Audio;
 
 namespace ZUN
 {
-    public class Manager_Audio : MonoBehaviour
+    public class Manager_Audio : MonoBehaviour, IManager_Audio
     {
         readonly string isBgmOnKey = "isBgmOn";
         readonly string isSfxOnKey = "isSfxOn";
+        bool _isBgmOn;
+        bool _isSfxOn;
 
-        public bool IsBgmOn { get; private set; }
-        public bool IsSfxOn { get; private set; }
+        public bool IsBgmOn { get { return _isBgmOn; } }
+        public bool IsSfxOn { get { return _isSfxOn; } }
 
         [SerializeField] AudioMixer audioMixer;
 
@@ -20,8 +22,8 @@ namespace ZUN
 
         private void Start()
         {
-            IsBgmOn = GetBool(isBgmOnKey);
-            IsSfxOn = GetBool(isSfxOnKey);
+            _isBgmOn = GetBool(isBgmOnKey);
+            _isSfxOn = GetBool(isSfxOnKey);
 
             float MusicVolume = IsBgmOn ? 0.0f : -80.0f;
             float EffectVolume = IsSfxOn ? 0.0f : -80.0f;
@@ -58,7 +60,7 @@ namespace ZUN
                 SetBool(isBgmOnKey, true);
             }
 
-            IsBgmOn = !IsBgmOn;
+            _isBgmOn = !_isBgmOn;
         }
 
         public void ToggleEffectSound()
@@ -78,7 +80,7 @@ namespace ZUN
                 SetBool(isSfxOnKey, true);
             }
 
-            IsSfxOn = !IsSfxOn;
+            _isSfxOn = !_isSfxOn;
         }
     }
 }

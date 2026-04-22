@@ -10,8 +10,8 @@ namespace ZUN
 
         protected virtual void Awake()
         {
-            character = GameObject.FindGameObjectWithTag("Character").GetComponent<Character>();
-            manager_VisualEffect = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_VisualEffect>();
+            character = FindFirstObjectByType<Character>();
+            manager_VisualEffect = FindFirstObjectByType<Manager_VisualEffect>();
         }
 
         public abstract void Upgrade(int level);

@@ -1,27 +1,35 @@
 using Firebase.Auth;
 using System.Threading.Tasks;
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
-    public class Manager_FirebaseAuth : MonoBehaviour
+    public class Manager_FirebaseAuth : MonoBehaviour, IManager_FirebaseAuth
     {
-        public static Manager_FirebaseAuth instance;
-        Manager_Alert alert;
+        [Inject] private readonly IManager_FirebaseCore _core;
+        [Inject] private readonly IManager_Alert _alert;
+        
+        public FirebaseAuth _auth;
 
-        public FirebaseAuth Auth { get; private set; }
+        public string UserId => _auth.CurrentUser.UserId;
 
-        async void Awake()
+
+        // async void Awake()
+        // {
+        //     await firebaseCoreManager.InitializationTask;
+        //     _auth = FirebaseAuth.DefaultInstance;
+        // }
+
+        void Awake()
         {
-            if (instance != null)
-                Destroy(gameObject);
-            else
-                instance = this;
+            _core.OnFirebaseInitialized += InitializeAuth;
+        }
 
-            await Manager_FirebaseCore.instance.InitializationTask;
-            Auth = FirebaseAuth.DefaultInstance;
-
-            alert = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager_Alert>();
+        void InitializeAuth()
+        {
+            _auth = FirebaseAuth.DefaultInstance;
+            Debug.Log("FirebaseAuth 초기화 완료");
         }
 
         /// <summary>
@@ -32,14 +40,14 @@ namespace ZUN
         {
             try
             {
-                var cred = await Auth.CreateUserWithEmailAndPasswordAsync(email, password);
+                var cred = await _auth.CreateUserWithEmailAndPasswordAsync(email, password);
                 Debug.Log("가입 성공");
                 return true;
             }
             catch (System.Exception ex)
             {
                 Debug.LogWarning($"가입 실패: {ex.Message}");
-                alert.ShowPopup($"가입 실패: {ex.Message}");
+                _alert.ShowPopup($"가입 실패: {ex.Message}");
                 return false;
             }
         }
@@ -52,14 +60,14 @@ namespace ZUN
         {
             try
             {
-                var test = await Auth.SignInWithEmailAndPasswordAsync(email, password);
+                var test = await _auth.SignInWithEmailAndPasswordAsync(email, password);
                 Debug.Log("로그인 성공");
                 return true;
             }
             catch (System.Exception ex)
             {
                 Debug.LogWarning($"로그인 실패: {ex.Message}");
-                alert.ShowPopup($"로그인 실패: {ex.Message}");
+                _alert.ShowPopup($"로그인 실패: {ex.Message}");
                 return false;
             }
         }

@@ -3,14 +3,20 @@ using System.Collections.Generic;
 
 namespace ZUN
 {
-    public class Manager_Storage : MonoBehaviour
+    public class Manager_Storage : MonoBehaviour, IManager_Storage
     {
         public int Energy { get; set; }
         public int Gem { get; set; }
         public int Gold { get; set; }
 
-        public readonly List<Equipment> equipments = new();
-        public readonly Dictionary<string, Item> items = new();
+        public List<Equipment> Equipments { get; private set; }
+        public Dictionary<string, Item> Items { get; private set; }
+
+        void Awake()
+        {
+            Equipments = new List<Equipment>();
+            Items = new Dictionary<string, Item>();
+        }
 
         public string GetGoldFormatKNotation()
         {
@@ -22,10 +28,10 @@ namespace ZUN
 
         public void AddItem(Item item)
         {
-            if (items.ContainsKey(item.Data.Id))
-                items[item.Data.Id].Amount += item.Amount;
+            if (Items.ContainsKey(item.Data.Id))
+                Items[item.Data.Id].Amount += item.Amount;
             else
-                items.Add(item.Data.Id, item);
+                Items.Add(item.Data.Id, item);
         }
     }
 }
