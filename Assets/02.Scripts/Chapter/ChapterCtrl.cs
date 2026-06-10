@@ -10,7 +10,8 @@ namespace ZUN
 {
     public class ChapterCtrl : MonoBehaviour
     {
-        [Inject] private IManager_Status status;
+        [Inject] private readonly IManager_Status status;
+        [Inject] private readonly DiContainer _container;
         Character character;
 
         [Header("UI")]
@@ -21,9 +22,6 @@ namespace ZUN
         [SerializeField] TextMeshProUGUI txt_killCount;
         [SerializeField] Image[] img_ownedActive;
         [SerializeField] Image[] img_ownedPassive;
-        [SerializeField] Image pnl_lottery;
-        [SerializeField] LotteryResult[] lotteryResults;
-        [SerializeField] Button closeLottery;
         [SerializeField] ShowResult showResult;
         [SerializeField] GameObject levelUi;
         [SerializeField] Animator anim_levelUpReward;
@@ -216,72 +214,6 @@ namespace ZUN
             //selectWindow.SetActive(true);
         }
 
-        public void StartLottery(ref ActiveSkill[] charActives, ref PassiveSkill[] charPassives)
-        {
-            Time.timeScale = 0;
-
-            List<Skill> shuffleBox = new();
-
-            for (int i = 0; i < charActives.Length; i++)
-            {
-                if (charActives[i] == null)
-                    break;
-
-                if (charActives[i].Level < charActives[i].SkillInfo.MaxLevel - 1)
-                    shuffleBox.Add(charActives[i]);
-                else if (charActives[i].Level == charActives[i].SkillInfo.MaxLevel - 1)
-                {
-                    string synergyID = charActives[i].SynergyID;
-
-                    if (Array.FindIndex(charPassives, element => element != null && element.SkillInfo.ID == synergyID) > -1)
-                        shuffleBox.Add(charActives[i]);
-                }
-            }
-
-            for (int i = 0; i < charPassives.Length; i++)
-            {
-                if (charPassives[i] == null)
-                    break;
-
-                if (charPassives[i].Level < charPassives[i].SkillInfo.MaxLevel)
-                    shuffleBox.Add(charPassives[i]);
-            }
-
-            int randomInt = UnityEngine.Random.Range(0, 100);
-            int amount;
-
-            if (randomInt <= 2)
-                amount = 5;
-            else if (randomInt <= 20)
-                amount = 3;
-            else
-                amount = 1;
-
-            for (int i = 0; i < amount; i++)
-            {
-                if (shuffleBox.Count < 1)
-                {
-                    // 햄 패널 생성, 햄 제공 로직
-                    // 패널 위치로 이동
-                    // lotteryResults[i].gameObject.SetActive(true);
-                    continue;
-                }
-
-                Skill skill = GetRandomSkill(ref shuffleBox);
-
-                skill.Upgrade();
-                lotteryResults[i].SetData(skill);
-                if (skill.Level == skill.SkillInfo.MaxLevel)
-                    shuffleBox.Remove(skill);
-                // 패널 위치로 이동
-                lotteryResults[i].gameObject.SetActive(true);
-            }
-
-            closeLottery.gameObject.SetActive(true);
-
-            pnl_lottery.gameObject.SetActive(true);
-        }
-
         private Skill GetRandomSkill(ref List<Skill> shuffleBox)
         {
             int randomIndex = UnityEngine.Random.Range(0, shuffleBox.Count);
@@ -343,19 +275,9 @@ namespace ZUN
             Time.timeScale = 1;
         }
 
-        public void CloseLottery()
-        {
-            foreach (LotteryResult lr in lotteryResults)
-                lr.gameObject.SetActive(false);
-
-            closeLottery.gameObject.SetActive(false);
-            pnl_lottery.gameObject.SetActive(false);
-            Time.timeScale = 1;
-        }
-
         public void InitSkill(Skill skill)
         {
-            Instantiate(skill, character.gameObject.transform);
+            _container.InstantiatePrefab(skill, character.gameObject.transform);
         }
 
         public void AddGoldCount(int gold)

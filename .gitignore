@@ -111,3 +111,8 @@ InitTestScene*.unity*
 
 # slnx files
 *.slnx
+
+# Claude Code
+CLAUDE.md
+.claude/
+docs/

@@ -1,28 +1,24 @@
 using UnityEngine;
+using Zenject;
 
 namespace ZUN
 {
     public class ActiveSkill : Skill
     {
-        protected Manager_VisualEffect manager_VisualEffect;
+        [Inject] private DiContainer _container;
+
         [SerializeField] protected string synergyID;
         [SerializeField] ActiveSkillCtrl[] prefab_skillCtrls = new ActiveSkillCtrl[2];
-        const int nomal = 0, final = 1;
+        const int NOMAL = 0, ENHANCE = 1;
 
         ActiveSkillCtrl skillCtrl;
 
         public string SynergyID { get { return synergyID; } }
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            manager_VisualEffect = FindFirstObjectByType<Manager_VisualEffect>();
-        }
-
         private void Start()
         {
-            skillCtrl = Instantiate(prefab_skillCtrls[nomal], transform);
+            skillCtrl = _container.InstantiatePrefab(prefab_skillCtrls[NOMAL], transform)
+                .GetComponent<ActiveSkillCtrl>();
             character.SetActiveSkill(this);
         }
 
@@ -38,7 +34,8 @@ namespace ZUN
             else
             {
                 Destroy(skillCtrl.gameObject);
-                skillCtrl = Instantiate(prefab_skillCtrls[final], transform);
+                skillCtrl = _container.InstantiatePrefab(prefab_skillCtrls[ENHANCE], transform)
+                    .GetComponent<ActiveSkillCtrl>();
                 skillCtrl.Upgrade(level);
             }
         }

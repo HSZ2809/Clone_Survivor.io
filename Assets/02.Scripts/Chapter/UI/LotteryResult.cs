@@ -19,7 +19,7 @@ namespace ZUN
         readonly int PASSIVE = 0, ACTIVE = 1, FINAL = 2;
         readonly int BG = 0, YELLOW = 1, RED = 2;
 
-        public void SetData(Skill skill)
+        public void SetData(Skill skill, int displayLevel)
         {
             if (skill.SkillInfo.Type == SkillInformation.SkillType.PASSIVE)
             {
@@ -28,7 +28,7 @@ namespace ZUN
             }
             else
             {
-                if (skill.Level == skill.SkillInfo.MaxLevel)
+                if (displayLevel == skill.SkillInfo.MaxLevel)
                 {
                     img_bg.sprite = bgSprite[FINAL];
                     img_skill.sprite = skill.SkillInfo.Sprite[1];
@@ -37,23 +37,22 @@ namespace ZUN
                 {
                     img_bg.sprite = bgSprite[ACTIVE];
                     img_skill.sprite = skill.SkillInfo.Sprite[0];
-                }     
+                }
             }
 
-            
             txt_skillName.text = skill.SkillInfo.SkillName;
-            txt_upgradeInfo.text = skill.SkillInfo.UpgradeInfos[skill.Level - 1];
+            txt_upgradeInfo.text = skill.SkillInfo.UpgradeInfos[displayLevel - 1];
 
-            if (skill.Level >= 6)
+            if (displayLevel >= 6)
             {
                 img_star[2].sprite = starSprite[RED];
                 img_star[2].gameObject.SetActive(true);
             }
             else
             {
-                for(int i = 0; i < img_star.Length; i++)
+                for (int i = 0; i < img_star.Length; i++)
                 {
-                    if (i < skill.Level)
+                    if (i < displayLevel)
                         img_star[i].sprite = starSprite[YELLOW];
                     else
                         img_star[i].sprite = starSprite[BG];

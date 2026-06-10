@@ -49,6 +49,7 @@ namespace ZUN
         [Inject] private IManager_Status status;
         [Inject] private IManager_Vibration vibration;
         ChapterCtrl chapterCtrl;
+        LotteryCtrl lotteryCtrl;
         ParticleSystem bleeding;
 
         bool isInLevelUpRoutine = false;
@@ -86,7 +87,9 @@ namespace ZUN
 
         private void Awake()
         {
-            chapterCtrl = GameObject.FindGameObjectWithTag("ChapterCtrl").GetComponent<ChapterCtrl>();
+            var ctrlGo = GameObject.FindGameObjectWithTag("ChapterCtrl");
+            chapterCtrl = ctrlGo.GetComponent<ChapterCtrl>();
+            lotteryCtrl = ctrlGo.GetComponent<LotteryCtrl>();
             bleeding = GetComponent<ParticleSystem>();
         }
 
@@ -214,7 +217,7 @@ namespace ZUN
 
         public void GetTreasureBox()
         {
-            chapterCtrl.StartLottery(ref actives, ref passives);
+            lotteryCtrl.StartLottery(ref actives, ref passives);
         }
 
         public void TakeDamage(float damage)
