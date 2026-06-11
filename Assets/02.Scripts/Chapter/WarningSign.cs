@@ -30,20 +30,6 @@ namespace ZUN
             ZOMBIE, BOSS
         }
 
-        //public void ZombieWarning()
-        //{
-        //    // WarningType 별로 경고 문구, 시퀀스 시간 변경
-        //    warningText.text = zombieString;
-        //    StartWarning();
-        //}
-
-        //public void BossWarning()
-        //{
-        //    // WarningType 별로 경고 문구, 시퀀스 시간 변경
-        //    warningText.text = bossString;
-        //    StartWarning();
-        //}
-
         public void StartWarning(WarningType type)
         {
             int totalTime;
@@ -59,7 +45,7 @@ namespace ZUN
                     warningText.text = bossString;
                     break;
                 default:
-                    Debug.LogWarning("WarningSign : Enexpected WarningType");
+                    Debug.LogWarning("WarningSign : Unexpected WarningType");
                     return;
             }
 

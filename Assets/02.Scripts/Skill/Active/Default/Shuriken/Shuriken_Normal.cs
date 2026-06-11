@@ -141,16 +141,6 @@ namespace ZUN
             StartCoroutine(enumerator);
         }
 
-        //void TierUpgrade(EquipmentTier tier)
-        //{
-        //    if (tier >= EquipmentTier.Rare)
-        //        reinforcement = 1.3f;
-        //    if (tier >= EquipmentTier.Elite)
-        //        Upgrade(2);
-        //    if (tier >= EquipmentTier.Legend)
-        //        Debug.Log("갈라지는 효과");
-        //}
-
         Bullet_Shuriken CreateBullet()
         {
             Bullet_Shuriken bullet = Instantiate(bulletPrefab);

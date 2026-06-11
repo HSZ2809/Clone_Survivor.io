@@ -52,7 +52,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[UpdateUserCoreData] 유저 데이터 업데이트 실패: {ex.Message}");
+                Debug.LogError($"[UpdateUserCoreData] Failed to update user data: {ex.Message}");
                 return false;
             }
         }
@@ -107,7 +107,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[AddEquipmentAsync] 실패: {ex}");
+                Debug.LogError($"[AddEquipmentAsync] Failed: {ex}");
                 return false;
             }
         }
@@ -145,7 +145,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[UpdateEquipmentAsync] 실패: {ex}");
+                Debug.LogError($"[UpdateEquipmentAsync] Failed: {ex}");
                 return false;
             }
         }
@@ -170,7 +170,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[RemoveEquipmentAsync] 실패: {ex}");
+                Debug.LogError($"[RemoveEquipmentAsync] Failed: {ex}");
                 return false;
             }
         }
@@ -216,7 +216,7 @@ namespace ZUN
                 }
                 else
                 {
-                    Debug.LogWarning($"LoadInventoryAsync: 알 수 없는 슬롯 키 '{doc.Id}'");
+                    Debug.LogWarning($"[LoadInventoryAsync] Unknown inventory slot key: '{doc.Id}'");
                 }
             }
 
@@ -271,7 +271,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[AddItemAsync] 실패: {ex}");
+                Debug.LogError($"[AddItemAsync] Failed: {ex}");
                 return false;
             }
         }
@@ -301,7 +301,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[UpdateItemAsync] 실패: {ex}");
+                Debug.LogError($"[UpdateItemAsync] Failed: {ex}");
                 return false;
             }
         }
@@ -327,7 +327,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[RemoveItemAsync] 실패: {ex}");
+                Debug.LogError($"[RemoveItemAsync] Failed: {ex}");
                 return false;
             }
         }

@@ -171,7 +171,11 @@ namespace ZUN
                 return;
             }
             else
-                Debug.Log("Active Overflow!");
+            {
+#if UNITY_EDITOR
+                Debug.LogWarning("Active skill slots are full.");
+#endif
+            }
         }
 
         public void SetPassiveSkill(PassiveSkill newPassive)
@@ -183,7 +187,11 @@ namespace ZUN
                 return;
             }
             else
-                Debug.Log("Passive Overflow!");
+            {
+#if UNITY_EDITOR
+                Debug.LogWarning("Passive skill slots are full.");
+#endif
+            }
         }
 
         public void AddExp(int _exp)

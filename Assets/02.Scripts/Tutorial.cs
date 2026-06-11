@@ -7,10 +7,10 @@ namespace ZUN
 {
     public class Tutorial : MonoBehaviour
     {
-        [Inject] private IManager_FirebaseAuth firebaseAuth;
-        [Inject] private IUserDataManager dataManager;
-        [Inject] private IGameEntityFactory dataProvider;
-        [Inject] private IManager_Storage storage;
+        [Inject] IManager_FirebaseAuth firebaseAuth;
+        [Inject] IUserDataManager dataManager;
+        [Inject] IGameEntityFactory dataProvider;
+        [Inject] IManager_Storage storage;
 
         [SerializeField] int energy;
         [SerializeField] int gem;
@@ -74,7 +74,7 @@ namespace ZUN
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[initialize] 실패: {ex}");
+                Debug.LogError($"[Tutorial.Start] Failed to complete tutorial initialization: {ex}");
             }
         }
     }

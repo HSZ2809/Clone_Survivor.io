@@ -3230,6 +3230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cf02fcf35319e4aa03ce312367a888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: {fileID: 1490603383}
   energy: {fileID: 1902492743}
   gem: {fileID: 1855982038}
   gold: {fileID: 725138287}
@@ -24950,8 +24951,6 @@ MonoBehaviour:
   popup: {fileID: 123698505056114277}
   tooltip: {fileID: 2908503511210877443}
   characterDisplay: {fileID: 1283785016}
-  equipmentSlotPrefab: {fileID: 540655533586101351, guid: 2acd26de5be95104ebe3452650088208, type: 3}
-  itemSlotPrefab: {fileID: 3861207192880573404, guid: 84d2cfc784e57e34099831d1f9c02f94, type: 3}
 --- !u!224 &5822558770870040918
 RectTransform:
   m_ObjectHideFlags: 0

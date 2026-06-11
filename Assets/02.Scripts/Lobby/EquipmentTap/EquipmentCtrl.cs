@@ -152,10 +152,7 @@ namespace ZUN
 
             // 1. 최대 레벨 체크
             if (equip.Level >= equip.Data.MaxLevel[(int)equip.Tier])
-            {
-                Debug.Log("equipment is at max level");
                 return;
-            }
 
             // 2. 레벨업 재료 확인
             string scrollType = $"Scroll_{equip.Data.Type}";
@@ -224,7 +221,7 @@ namespace ZUN
 
             if(!await userDataManager.EquipItemToSlot(uid, _equipment.Data.Type, _equipment.Uuid))
             {
-                Debug.Log("EquipItemToSlot ERROR");
+                Debug.LogError("[EquipItemToSlot] Failed to equip item to slot.");
                 gameObject.SetActive(false);
                 return;
             }
@@ -260,7 +257,7 @@ namespace ZUN
 
             if (!await userDataManager.EquipItemToSlot(uid, _equipment.Data.Type, null))
             {
-                Debug.Log("EquipItemToSlot ERROR");
+                Debug.LogError("[EquipItemToSlot] Failed to equip item to slot.");
                 gameObject.SetActive(false);
                 return;
             }

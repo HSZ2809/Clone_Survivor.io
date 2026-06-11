@@ -72,7 +72,6 @@ namespace ZUN
                     magazineSize += 1;
                     break;
                 case 6:
-                    Debug.Log("Soccerball TryUpgrade() : evolution");
                     break;
                 default:
                     Debug.LogWarning("Soccerball TryUpgrade() : invalid level");

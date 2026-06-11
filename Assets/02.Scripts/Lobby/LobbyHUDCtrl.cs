@@ -10,6 +10,7 @@ namespace ZUN
         [Inject] private IManager_Storage storage;
         [Inject] private IUserDataManager userDataManager;
 
+        [SerializeField] TextMeshProUGUI userName;
         [SerializeField] TextMeshProUGUI energy;
         [SerializeField] TextMeshProUGUI gem;
         [SerializeField] TextMeshProUGUI gold;
@@ -28,6 +29,7 @@ namespace ZUN
 
         private void Start()
         {
+            userName.text = userDataManager.CacheData.Name;
             RefreshUIFromStorage();
         }
 

@@ -29,9 +29,6 @@ namespace ZUN
 
         IEnumerator LoadTargetScene(string sceneName, int origin)
         {
-
-            // Debug.Log("Manager_Scene >> Scene Load : " + sceneName);
-
             transition.IrisOut();
             yield return new WaitForSecondsRealtime(transition.GetIrisOutClipLength());
             
